@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>demoHTML</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" charset="utf-8">
+		<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			
+			$(function(){
+				$("#getVersion").click(function(){
+					var appVersion = STAYREAL.getAppVersion();
+					console.log(appVersion);
+					alert(appVersion);
+				});
+
+				$("#getSum").click(function(){
+					var sum = STAYREAL.getSum(1, 2, 93);
+					console.log(sum);
+					alert(sum);
+				});
+			});
+		</script>
+	</head>
+        <br/>
+        <br/>
+		<a href="###" id="getVersion">getAppVersion</a>
+        <br/>
+		<a href="###" id="getSum">getSum</a>
+        <br/>
+        <br/>
+	</body>
+</html>
