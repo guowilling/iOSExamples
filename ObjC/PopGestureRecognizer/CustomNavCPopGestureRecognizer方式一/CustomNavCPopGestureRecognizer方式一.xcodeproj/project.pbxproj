@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		68B95B441CE9E03D0027E8DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B95B431CE9E03D0027E8DB /* main.m */; };
+		68B95B471CE9E03D0027E8DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B95B461CE9E03D0027E8DB /* AppDelegate.m */; };
+		68B95B4A1CE9E03D0027E8DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B95B491CE9E03D0027E8DB /* ViewController.m */; };
+		68B95B4D1CE9E03D0027E8DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B95B4B1CE9E03D0027E8DB /* Main.storyboard */; };
+		68B95B4F1CE9E03D0027E8DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68B95B4E1CE9E03D0027E8DB /* Assets.xcassets */; };
+		68B95B521CE9E03D0027E8DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B95B501CE9E03D0027E8DB /* LaunchScreen.storyboard */; };
+		68B95B5D1CE9E03D0027E8DB /* CustomNavCPopGestureRecognizer___Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B95B5C1CE9E03D0027E8DB /* CustomNavCPopGestureRecognizer___Tests.m */; };
+		68B95B681CE9E03E0027E8DB /* CustomNavCPopGestureRecognizer___UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B95B671CE9E03E0027E8DB /* CustomNavCPopGestureRecognizer___UITests.m */; };
+		68B95B791CE9E0690027E8DB /* NavigationInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B95B761CE9E0690027E8DB /* NavigationInteractiveTransition.m */; };
+		68B95B7A1CE9E0690027E8DB /* PopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B95B781CE9E0690027E8DB /* PopAnimation.m */; };
+		68B95B7D1CE9E0BD0027E8DB /* SRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B95B7C1CE9E0BD0027E8DB /* SRNavigationController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		68B95B591CE9E03D0027E8DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68B95B371CE9E03D0027E8DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68B95B3E1CE9E03D0027E8DB;
+			remoteInfo = "CustomNavCPopGestureRecognizer方式一";
+		};
+		68B95B641CE9E03E0027E8DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68B95B371CE9E03D0027E8DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68B95B3E1CE9E03D0027E8DB;
+			remoteInfo = "CustomNavCPopGestureRecognizer方式一";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		68B95B3F1CE9E03D0027E8DB /* CustomNavCPopGestureRecognizer方式一.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CustomNavCPopGestureRecognizer方式一.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68B95B431CE9E03D0027E8DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		68B95B451CE9E03D0027E8DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		68B95B461CE9E03D0027E8DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		68B95B481CE9E03D0027E8DB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		68B95B491CE9E03D0027E8DB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		68B95B4C1CE9E03D0027E8DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		68B95B4E1CE9E03D0027E8DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		68B95B511CE9E03D0027E8DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		68B95B531CE9E03D0027E8DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68B95B581CE9E03D0027E8DB /* CustomNavCPopGestureRecognizer方式一Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CustomNavCPopGestureRecognizer方式一Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68B95B5C1CE9E03D0027E8DB /* CustomNavCPopGestureRecognizer___Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CustomNavCPopGestureRecognizer___Tests.m"; sourceTree = "<group>"; };
+		68B95B5E1CE9E03D0027E8DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68B95B631CE9E03E0027E8DB /* CustomNavCPopGestureRecognizer方式一UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CustomNavCPopGestureRecognizer方式一UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68B95B671CE9E03E0027E8DB /* CustomNavCPopGestureRecognizer___UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CustomNavCPopGestureRecognizer___UITests.m"; sourceTree = "<group>"; };
+		68B95B691CE9E03E0027E8DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68B95B751CE9E0690027E8DB /* NavigationInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationInteractiveTransition.h; sourceTree = "<group>"; };
+		68B95B761CE9E0690027E8DB /* NavigationInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationInteractiveTransition.m; sourceTree = "<group>"; };
+		68B95B771CE9E0690027E8DB /* PopAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopAnimation.h; sourceTree = "<group>"; };
+		68B95B781CE9E0690027E8DB /* PopAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopAnimation.m; sourceTree = "<group>"; };
+		68B95B7B1CE9E0BD0027E8DB /* SRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRNavigationController.h; sourceTree = "<group>"; };
+		68B95B7C1CE9E0BD0027E8DB /* SRNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRNavigationController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		68B95B3C1CE9E03D0027E8DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68B95B551CE9E03D0027E8DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68B95B601CE9E03E0027E8DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		68B95B361CE9E03D0027E8DB = {
+			isa = PBXGroup;
+			children = (
+				68B95B411CE9E03D0027E8DB /* CustomNavCPopGestureRecognizer方式一 */,
+				68B95B5B1CE9E03D0027E8DB /* CustomNavCPopGestureRecognizer方式一Tests */,
+				68B95B661CE9E03E0027E8DB /* CustomNavCPopGestureRecognizer方式一UITests */,
+				68B95B401CE9E03D0027E8DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		68B95B401CE9E03D0027E8DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68B95B3F1CE9E03D0027E8DB /* CustomNavCPopGestureRecognizer方式一.app */,
+				68B95B581CE9E03D0027E8DB /* CustomNavCPopGestureRecognizer方式一Tests.xctest */,
+				68B95B631CE9E03E0027E8DB /* CustomNavCPopGestureRecognizer方式一UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		68B95B411CE9E03D0027E8DB /* CustomNavCPopGestureRecognizer方式一 */ = {
+			isa = PBXGroup;
+			children = (
+				68B95B451CE9E03D0027E8DB /* AppDelegate.h */,
+				68B95B461CE9E03D0027E8DB /* AppDelegate.m */,
+				68B95B481CE9E03D0027E8DB /* ViewController.h */,
+				68B95B491CE9E03D0027E8DB /* ViewController.m */,
+				68B95B7B1CE9E0BD0027E8DB /* SRNavigationController.h */,
+				68B95B7C1CE9E0BD0027E8DB /* SRNavigationController.m */,
+				68B95B751CE9E0690027E8DB /* NavigationInteractiveTransition.h */,
+				68B95B761CE9E0690027E8DB /* NavigationInteractiveTransition.m */,
+				68B95B771CE9E0690027E8DB /* PopAnimation.h */,
+				68B95B781CE9E0690027E8DB /* PopAnimation.m */,
+				68B95B4B1CE9E03D0027E8DB /* Main.storyboard */,
+				68B95B4E1CE9E03D0027E8DB /* Assets.xcassets */,
+				68B95B501CE9E03D0027E8DB /* LaunchScreen.storyboard */,
+				68B95B531CE9E03D0027E8DB /* Info.plist */,
+				68B95B421CE9E03D0027E8DB /* Supporting Files */,
+			);
+			path = "CustomNavCPopGestureRecognizer方式一";
+			sourceTree = "<group>";
+		};
+		68B95B421CE9E03D0027E8DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				68B95B431CE9E03D0027E8DB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		68B95B5B1CE9E03D0027E8DB /* CustomNavCPopGestureRecognizer方式一Tests */ = {
+			isa = PBXGroup;
+			children = (
+				68B95B5C1CE9E03D0027E8DB /* CustomNavCPopGestureRecognizer___Tests.m */,
+				68B95B5E1CE9E03D0027E8DB /* Info.plist */,
+			);
+			path = "CustomNavCPopGestureRecognizer方式一Tests";
+			sourceTree = "<group>";
+		};
+		68B95B661CE9E03E0027E8DB /* CustomNavCPopGestureRecognizer方式一UITests */ = {
+			isa = PBXGroup;
+			children = (
+				68B95B671CE9E03E0027E8DB /* CustomNavCPopGestureRecognizer___UITests.m */,
+				68B95B691CE9E03E0027E8DB /* Info.plist */,
+			);
+			path = "CustomNavCPopGestureRecognizer方式一UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		68B95B3E1CE9E03D0027E8DB /* CustomNavCPopGestureRecognizer方式一 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68B95B6C1CE9E03E0027E8DB /* Build configuration list for PBXNativeTarget "CustomNavCPopGestureRecognizer方式一" */;
+			buildPhases = (
+				68B95B3B1CE9E03D0027E8DB /* Sources */,
+				68B95B3C1CE9E03D0027E8DB /* Frameworks */,
+				68B95B3D1CE9E03D0027E8DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CustomNavCPopGestureRecognizer方式一";
+			productName = "CustomNavCPopGestureRecognizer方式一";
+			productReference = 68B95B3F1CE9E03D0027E8DB /* CustomNavCPopGestureRecognizer方式一.app */;
+			productType = "com.apple.product-type.application";
+		};
+		68B95B571CE9E03D0027E8DB /* CustomNavCPopGestureRecognizer方式一Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68B95B6F1CE9E03E0027E8DB /* Build configuration list for PBXNativeTarget "CustomNavCPopGestureRecognizer方式一Tests" */;
+			buildPhases = (
+				68B95B541CE9E03D0027E8DB /* Sources */,
+				68B95B551CE9E03D0027E8DB /* Frameworks */,
+				68B95B561CE9E03D0027E8DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68B95B5A1CE9E03D0027E8DB /* PBXTargetDependency */,
+			);
+			name = "CustomNavCPopGestureRecognizer方式一Tests";
+			productName = "CustomNavCPopGestureRecognizer方式一Tests";
+			productReference = 68B95B581CE9E03D0027E8DB /* CustomNavCPopGestureRecognizer方式一Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		68B95B621CE9E03E0027E8DB /* CustomNavCPopGestureRecognizer方式一UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68B95B721CE9E03E0027E8DB /* Build configuration list for PBXNativeTarget "CustomNavCPopGestureRecognizer方式一UITests" */;
+			buildPhases = (
+				68B95B5F1CE9E03E0027E8DB /* Sources */,
+				68B95B601CE9E03E0027E8DB /* Frameworks */,
+				68B95B611CE9E03E0027E8DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68B95B651CE9E03E0027E8DB /* PBXTargetDependency */,
+			);
+			name = "CustomNavCPopGestureRecognizer方式一UITests";
+			productName = "CustomNavCPopGestureRecognizer方式一UITests";
+			productReference = 68B95B631CE9E03E0027E8DB /* CustomNavCPopGestureRecognizer方式一UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		68B95B371CE9E03D0027E8DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = SR;
+				TargetAttributes = {
+					68B95B3E1CE9E03D0027E8DB = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					68B95B571CE9E03D0027E8DB = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 68B95B3E1CE9E03D0027E8DB;
+					};
+					68B95B621CE9E03E0027E8DB = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 68B95B3E1CE9E03D0027E8DB;
+					};
+				};
+			};
+			buildConfigurationList = 68B95B3A1CE9E03D0027E8DB /* Build configuration list for PBXProject "CustomNavCPopGestureRecognizer方式一" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 68B95B361CE9E03D0027E8DB;
+			productRefGroup = 68B95B401CE9E03D0027E8DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				68B95B3E1CE9E03D0027E8DB /* CustomNavCPopGestureRecognizer方式一 */,
+				68B95B571CE9E03D0027E8DB /* CustomNavCPopGestureRecognizer方式一Tests */,
+				68B95B621CE9E03E0027E8DB /* CustomNavCPopGestureRecognizer方式一UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		68B95B3D1CE9E03D0027E8DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68B95B521CE9E03D0027E8DB /* LaunchScreen.storyboard in Resources */,
+				68B95B4F1CE9E03D0027E8DB /* Assets.xcassets in Resources */,
+				68B95B4D1CE9E03D0027E8DB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68B95B561CE9E03D0027E8DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68B95B611CE9E03E0027E8DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		68B95B3B1CE9E03D0027E8DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68B95B4A1CE9E03D0027E8DB /* ViewController.m in Sources */,
+				68B95B471CE9E03D0027E8DB /* AppDelegate.m in Sources */,
+				68B95B7D1CE9E0BD0027E8DB /* SRNavigationController.m in Sources */,
+				68B95B7A1CE9E0690027E8DB /* PopAnimation.m in Sources */,
+				68B95B441CE9E03D0027E8DB /* main.m in Sources */,
+				68B95B791CE9E0690027E8DB /* NavigationInteractiveTransition.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68B95B541CE9E03D0027E8DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68B95B5D1CE9E03D0027E8DB /* CustomNavCPopGestureRecognizer___Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68B95B5F1CE9E03E0027E8DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68B95B681CE9E03E0027E8DB /* CustomNavCPopGestureRecognizer___UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		68B95B5A1CE9E03D0027E8DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68B95B3E1CE9E03D0027E8DB /* CustomNavCPopGestureRecognizer方式一 */;
+			targetProxy = 68B95B591CE9E03D0027E8DB /* PBXContainerItemProxy */;
+		};
+		68B95B651CE9E03E0027E8DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68B95B3E1CE9E03D0027E8DB /* CustomNavCPopGestureRecognizer方式一 */;
+			targetProxy = 68B95B641CE9E03E0027E8DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		68B95B4B1CE9E03D0027E8DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68B95B4C1CE9E03D0027E8DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		68B95B501CE9E03D0027E8DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68B95B511CE9E03D0027E8DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		68B95B6A1CE9E03E0027E8DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		68B95B6B1CE9E03E0027E8DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		68B95B6D1CE9E03E0027E8DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "CustomNavCPopGestureRecognizer方式一/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stayreal.gwl.CustomNavCPopGestureRecognizer---";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		68B95B6E1CE9E03E0027E8DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "CustomNavCPopGestureRecognizer方式一/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stayreal.gwl.CustomNavCPopGestureRecognizer---";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		68B95B701CE9E03E0027E8DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "CustomNavCPopGestureRecognizer方式一Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stayreal.gwl.CustomNavCPopGestureRecognizer---Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomNavCPopGestureRecognizer方式一.app/CustomNavCPopGestureRecognizer方式一";
+			};
+			name = Debug;
+		};
+		68B95B711CE9E03E0027E8DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "CustomNavCPopGestureRecognizer方式一Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stayreal.gwl.CustomNavCPopGestureRecognizer---Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomNavCPopGestureRecognizer方式一.app/CustomNavCPopGestureRecognizer方式一";
+			};
+			name = Release;
+		};
+		68B95B731CE9E03E0027E8DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "CustomNavCPopGestureRecognizer方式一UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stayreal.gwl.CustomNavCPopGestureRecognizer---UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "CustomNavCPopGestureRecognizer方式一";
+			};
+			name = Debug;
+		};
+		68B95B741CE9E03E0027E8DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "CustomNavCPopGestureRecognizer方式一UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stayreal.gwl.CustomNavCPopGestureRecognizer---UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "CustomNavCPopGestureRecognizer方式一";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		68B95B3A1CE9E03D0027E8DB /* Build configuration list for PBXProject "CustomNavCPopGestureRecognizer方式一" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68B95B6A1CE9E03E0027E8DB /* Debug */,
+				68B95B6B1CE9E03E0027E8DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68B95B6C1CE9E03E0027E8DB /* Build configuration list for PBXNativeTarget "CustomNavCPopGestureRecognizer方式一" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68B95B6D1CE9E03E0027E8DB /* Debug */,
+				68B95B6E1CE9E03E0027E8DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68B95B6F1CE9E03E0027E8DB /* Build configuration list for PBXNativeTarget "CustomNavCPopGestureRecognizer方式一Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68B95B701CE9E03E0027E8DB /* Debug */,
+				68B95B711CE9E03E0027E8DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68B95B721CE9E03E0027E8DB /* Build configuration list for PBXNativeTarget "CustomNavCPopGestureRecognizer方式一UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68B95B731CE9E03E0027E8DB /* Debug */,
+				68B95B741CE9E03E0027E8DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 68B95B371CE9E03D0027E8DB /* Project object */;
+}
