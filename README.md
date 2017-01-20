@@ -22,6 +22,11 @@
 * RegularExpression
 * SlideEditingTableViewCell
 * SRUploadProgressViewDemo
+* KVCDemo
+* KVODemo
+* iOSPassByValue
+* MethodSwizzling
+* MsgForward
 
 ### Swift
 * Nothing for the moment
