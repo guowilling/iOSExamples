@@ -1,0 +1,44 @@
+[
+      {
+            "title": "网易电影票", 
+            "id": "com.netease.movie",
+            "url": "http://itunes.apple.com/app/id583784224?mt=8", 
+            "icon": "movie@2x.png", 
+            "customUrl": "movieticket163"
+      },
+      {
+            "title": "网易新闻", 
+            "id": "com.netease.news", 
+            "url": "http://itunes.apple.com/app/id425349261?mt=8", 
+            "icon": "newsapp@2x.png", 
+            "customUrl": "newsapp"
+      }, 
+      {
+            "title": "网易公开课", 
+            "id": "com.netease.videoHD", 
+            "url": "http://itunes.apple.com/app/id415424368?mt=8", 
+            "icon": "open@2x.png", 
+            "customUrl": "ntesopen"
+      }, 
+      {
+            "title": "网易电视指南", 
+            "id": "com.netease.tvguide", 
+            "url": "http://itunes.apple.com/app/id480095986", 
+            "icon": "tvguide@2x.png", 
+            "customUrl": "tvguide"
+      }, 
+      {
+            "title": "网易阅读", 
+            "id": "com.netease.iphonereader", 
+            "url": "http://itunes.apple.com/app/id462186890?mt=8", 
+            "icon": "reader@2x.png", 
+            "customUrl": ""
+      },
+      {
+            "title": "网易云相册", 
+            "id": "com.netease.cloudphotos", 
+            "url": "http://itunes.apple.com/app/id451931841?mt=8", 
+            "icon": "cloudphotos@2x.png", 
+            "customUrl": ""
+      }
+]

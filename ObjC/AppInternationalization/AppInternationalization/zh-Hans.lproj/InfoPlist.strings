@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  AppInternationalization
+
+  Created by 郭伟林 on 16/12/12.
+  Copyright © 2016年 SR. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "App国际化";
+
+UILauchStoryboardName = "Launch Screen zh";
