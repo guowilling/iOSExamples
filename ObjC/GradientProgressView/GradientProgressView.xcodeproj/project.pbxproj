@@ -84,14 +84,10 @@
 		6E518BDC1DFB0FC5004A9828 /* GradientProgressView */ = {
 			isa = PBXGroup;
 			children = (
-				6E518BE01DFB0FC5004A9828 /* AppDelegate.h */,
-				6E518BE11DFB0FC5004A9828 /* AppDelegate.m */,
+				6E518C021DFB0FD6004A9828 /* GradientProgressView.h */,
+				6E518C031DFB0FD6004A9828 /* GradientProgressView.m */,
 				6E518BE31DFB0FC5004A9828 /* ViewController.h */,
 				6E518BE41DFB0FC5004A9828 /* ViewController.m */,
-				6E518BE61DFB0FC5004A9828 /* Main.storyboard */,
-				6E518BE91DFB0FC5004A9828 /* Assets.xcassets */,
-				6E518BEB1DFB0FC5004A9828 /* LaunchScreen.storyboard */,
-				6E518BEE1DFB0FC5004A9828 /* Info.plist */,
 				6E518BDD1DFB0FC5004A9828 /* Supporting Files */,
 			);
 			path = GradientProgressView;
@@ -100,9 +96,13 @@
 		6E518BDD1DFB0FC5004A9828 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6E518C021DFB0FD6004A9828 /* GradientProgressView.h */,
-				6E518C031DFB0FD6004A9828 /* GradientProgressView.m */,
 				6E518BDE1DFB0FC5004A9828 /* main.m */,
+				6E518BE01DFB0FC5004A9828 /* AppDelegate.h */,
+				6E518BE11DFB0FC5004A9828 /* AppDelegate.m */,
+				6E518BE61DFB0FC5004A9828 /* Main.storyboard */,
+				6E518BE91DFB0FC5004A9828 /* Assets.xcassets */,
+				6E518BEB1DFB0FC5004A9828 /* LaunchScreen.storyboard */,
+				6E518BEE1DFB0FC5004A9828 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

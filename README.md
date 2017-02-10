@@ -27,6 +27,11 @@
 * iOSPassByValue
 * MethodSwizzling
 * MsgForward
+* LotteryTurntable
+* DrawerInterface
+* AppInternationalization
+* GradientProgressView
+* iOSCommonAnimations
 
 ### Swift
 * Nothing for the moment
@@ -35,6 +40,10 @@
 
 * 宏定义&常量定义
 * 指针函数&函数指针
+* 链式编程思想
+* 响应式编程思想
+* 函数式编程思想
+* SortingAlgorithm
 
 **If you have any question, please issue or contact me.**   
 **If this repo helps you, please give it a star.**   
