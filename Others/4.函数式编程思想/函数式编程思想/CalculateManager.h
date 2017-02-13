@@ -12,8 +12,12 @@
 
 @property (nonatomic, assign) NSInteger result;
 
+@property (nonatomic, assign) BOOL isEqual;
+
 + (instancetype)sharedManager;
 
 - (instancetype)calculate:(NSInteger (^)(NSInteger result))calculateHandler;
+
+- (instancetype)isEqualTo:(BOOL (^)(NSInteger result))equleHandler;
 
 @end

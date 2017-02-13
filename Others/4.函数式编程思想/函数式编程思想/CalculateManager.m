@@ -27,4 +27,10 @@
     return self;
 }
 
+- (instancetype)isEqualTo:(BOOL (^)(NSInteger result))equleHandler {
+    
+    _isEqual = equleHandler(_result);
+    return self;
+}
+
 @end

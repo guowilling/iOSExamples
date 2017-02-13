@@ -19,14 +19,16 @@
     
     [super viewDidLoad];
 
-    NSInteger result = [[CalculateManager sharedManager] calculate:^NSInteger(NSInteger result) {
+    BOOL isEqual = [[[CalculateManager sharedManager] calculate:^NSInteger(NSInteger result) {
         result += 5;
         result -= 2;
         result *= 5;
         result /= 2;
         return result;
-    }].result;
-    NSLog(@"%zd", result);
+    }] isEqualTo:^BOOL(NSInteger result) {
+        return result == 7;
+    }].isEqual;
+    NSLog(@"%zd", isEqual);
 }
 
 @end
