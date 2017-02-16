@@ -123,10 +123,6 @@
 				68BBF6741D71919B00775499 /* ViewController.m */,
 				68BBF6AD1D719AE800775499 /* ProgressViewController.h */,
 				68BBF6AE1D719AE800775499 /* ProgressViewController.m */,
-				68BBF6761D71919B00775499 /* Main.storyboard */,
-				68BBF6791D71919B00775499 /* Assets.xcassets */,
-				68BBF67B1D71919B00775499 /* LaunchScreen.storyboard */,
-				68BBF67E1D71919B00775499 /* Info.plist */,
 				68BBF66D1D71919B00775499 /* Supporting Files */,
 			);
 			path = SRUploadProgressViewDemo;
@@ -136,6 +132,10 @@
 			isa = PBXGroup;
 			children = (
 				68BBF66E1D71919B00775499 /* main.m */,
+				68BBF6761D71919B00775499 /* Main.storyboard */,
+				68BBF6791D71919B00775499 /* Assets.xcassets */,
+				68BBF67B1D71919B00775499 /* LaunchScreen.storyboard */,
+				68BBF67E1D71919B00775499 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

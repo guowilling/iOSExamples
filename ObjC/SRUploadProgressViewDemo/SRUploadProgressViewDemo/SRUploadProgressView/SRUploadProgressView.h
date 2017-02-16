@@ -10,7 +10,7 @@
 
 typedef NS_ENUM(NSInteger, ProgressType) {
     ProgressTypeBall,
-    ProgressTypeWave,
+    ProgressTypeWave
 };
 
 @interface SRUploadProgressView : UIView

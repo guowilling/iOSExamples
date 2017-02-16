@@ -8,7 +8,7 @@
 
 #define LXDefaultFirstWaveColor   [UIColor colorWithRed:34/255.0 green:116/255.0 blue:210/255.0 alpha:1.0]
 #define LXDefaultSecondWaveColor  [UIColor colorWithRed:34/255.0 green:116/255.0 blue:210/255.0 alpha:0.5]
-#define LXWaveBorderColor  [UIColor colorWithRed:244/255.0 green:244/255.0 blue:248/255.0 alpha:1].CGColor
+#define LXWaveBorderColor         [UIColor colorWithRed:244/255.0 green:244/255.0 blue:248/255.0 alpha:1].CGColor
 #define LXWaveBorderWidth  2.0
 
 #import "WaveProgressView.h"
@@ -96,7 +96,7 @@
         _waveHeight = self.bounds.size.height;
         
         [self.layer addSublayer:self.firstWaveLayer];
-        if (!self.isOnlySingleWave) {
+        if (!self.isSingleWave) {
             [self.layer addSublayer:self.secondWaveLayer];
         }
         [self addSubview:self.progressLabel];
@@ -142,16 +142,14 @@
     
     self.offsetX += self.waveSpeed;
     
-    // First wave
     CGMutablePathRef pathRef = CGPathCreateMutable();
     CGFloat startOffY = waveHeight * sinf(self.offsetX * M_PI * 2 / self.bounds.size.width);
     CGFloat orignOffY = 0.0;
     CGPathMoveToPoint(pathRef, NULL, 0, startOffY);
     for (CGFloat i = 0.f; i <= self.bounds.size.width; i++) {
-        orignOffY = waveHeight * sinf(2 * M_PI / self.bounds.size.width * i + self.offsetX * M_PI * 2 / self.bounds.size.width) + self.waveHeight;
+        orignOffY = waveHeight * sinf(2 * M_PI / self.bounds.size.width * i + self.offsetX * 2 * M_PI / self.bounds.size.width) + self.waveHeight;
         CGPathAddLineToPoint(pathRef, NULL, i, orignOffY);
     }
-    
     CGPathAddLineToPoint(pathRef, NULL, self.bounds.size.width, orignOffY);
     CGPathAddLineToPoint(pathRef, NULL, self.bounds.size.width, self.bounds.size.height);
     CGPathAddLineToPoint(pathRef, NULL, 0, self.bounds.size.height);
@@ -161,25 +159,22 @@
     self.firstWaveLayer.fillColor = self.firstWaveColor.CGColor;
     CGPathRelease(pathRef);
     
-    // Second wave
-    if (!self.isOnlySingleWave) {
+    if (!self.isSingleWave) {
         CGMutablePathRef pathRef1 = CGPathCreateMutable();
-        CGFloat startOffY1 = waveHeight * sinf(self.offsetX * M_PI * 2 / self.bounds.size.width);
-        CGFloat orignOffY1 = 0.0;
-        CGPathMoveToPoint(pathRef1, NULL, 0, startOffY1);
+        CGFloat startOffY = waveHeight * sinf(self.offsetX * M_PI * 2 / self.bounds.size.width);
+        CGFloat orignOffY = 0.0;
+        CGPathMoveToPoint(pathRef1, NULL, 0, startOffY);
         for (CGFloat i = 0.f; i <= self.bounds.size.width; i++) {
-            orignOffY1 = waveHeight * cosf(2 * M_PI / self.bounds.size.width * i + self.offsetX * M_PI * 2 / self.bounds.size.width) + self.waveHeight;
-            CGPathAddLineToPoint(pathRef1, NULL, i, orignOffY1);
+            orignOffY = waveHeight * cosf(2 * M_PI / self.bounds.size.width * i + self.offsetX * 2 * M_PI / self.bounds.size.width) + self.waveHeight;
+            CGPathAddLineToPoint(pathRef1, NULL, i, orignOffY);
         }
-        
-        CGPathAddLineToPoint(pathRef1, NULL, self.bounds.size.width, orignOffY1);
+        CGPathAddLineToPoint(pathRef1, NULL, self.bounds.size.width, orignOffY);
         CGPathAddLineToPoint(pathRef1, NULL, self.bounds.size.width, self.bounds.size.height);
         CGPathAddLineToPoint(pathRef1, NULL, 0, self.bounds.size.height);
-        CGPathAddLineToPoint(pathRef1, NULL, 0, startOffY1);
+        CGPathAddLineToPoint(pathRef1, NULL, 0, startOffY);
         CGPathCloseSubpath(pathRef1);
         self.secondWaveLayer.path = pathRef1;
         self.secondWaveLayer.fillColor = self.secondWaveColor.CGColor;
-        
         CGPathRelease(pathRef1);
     }
 }

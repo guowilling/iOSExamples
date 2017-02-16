@@ -19,6 +19,6 @@
 @property (nonatomic, strong) UIColor *firstWaveColor;
 @property (nonatomic, strong) UIColor *secondWaveColor;
 
-@property (nonatomic, assign, getter=isOnlySingleWave) BOOL onlySingleWave;
+@property (nonatomic, assign, getter=isSingleWave) BOOL singleWave;
 
 @end
