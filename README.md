@@ -32,6 +32,10 @@
 * SRNewFeatures
 * ThirdLibrariesExtension
 * WavesView
+* CircularProgressDemo
+* MuticolorCircleViewDemo
+* CustomMapPin
+* GradientCircularProgressView
 
 ## Swift
 * Nothing for the moment
