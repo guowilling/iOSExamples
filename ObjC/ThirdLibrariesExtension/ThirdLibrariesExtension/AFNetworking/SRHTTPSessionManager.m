@@ -36,8 +36,7 @@ static SRHTTPSessionManager *instance;
     if (self = [super init]) {
         _sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:nil];
         _sessionManager.requestSerializer.timeoutInterval = 15.0;
-        _sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
-        [_sessionManager.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/plain", @"text/css", nil]];
+        _sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/plain", @"text/css", nil];
     }
     return self;
 }
