@@ -38,6 +38,7 @@
 * CustomMapPin
 * GradientCircularProgressView
 * ZoomCarouselViewDemo
+* BossHeaderRefreshDemo
 
 ## Swift
 
