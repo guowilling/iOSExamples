@@ -81,7 +81,13 @@ static SRHTTPSessionManager *instance;
                   parameters:parameters
                     progress:^(NSProgress * _Nonnull downloadProgress) { }
                      success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                         NSDictionary *result = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves | NSJSONReadingAllowFragments error:nil];
+                         if (success) {
+                             success(responseObject);
+                         }
+                         return;
+                         NSDictionary *result = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                                                options:NSJSONReadingMutableLeaves | NSJSONReadingAllowFragments
+                                                                                  error:nil];
                          if (success) {
                              success(result);
                          }
@@ -105,9 +111,8 @@ static SRHTTPSessionManager *instance;
                    parameters:parameters
                      progress:^(NSProgress * _Nonnull uploadProgress) { }
                       success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                          NSDictionary *result = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves | NSJSONReadingAllowFragments error:nil];
                           if (success) {
-                              success(result);
+                              success(responseObject);
                           }
                       }
                       failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -158,13 +163,14 @@ static SRHTTPSessionManager *instance;
 
 #pragma mark - Upload File
 
-- (void)POST:(NSString *)URLString
-   parameter:(NSDictionary *)parameter
-        data:(NSData *)fileData fieldName:(NSString *)fieldName
-    fileName:(NSString *)fileName
-    mimeType:(NSString *)mimeType
-     success:(void (^)(id))success
-     failure:(void (^)(NSError *))failure
+- (void)uploadFile:(NSString *)URLString
+         parameter:(NSDictionary *)parameter
+              data:(NSData *)fileData
+         fieldName:(NSString *)fieldName
+          fileName:(NSString *)fileName
+          mimeType:(NSString *)mimeType
+           success:(void (^)(id))success
+           failure:(void (^)(NSError *))failure
 {
     [self.sessionManager POST:URLString
                    parameters:parameter

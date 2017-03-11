@@ -22,42 +22,34 @@ typedef NS_ENUM(NSInteger, SRNetworkReachabilityStatus) {
 
 - (void)startMonitorReachabilityStatus;
 
-- (void)GET:(NSString *)URLString
- parameters:(NSDictionary *)parameters
+- (void)GET:(NSString *)URLString parameters:(NSDictionary *)parameters
     success:(void (^)(id))success
     failure:(void (^)(NSError *))failure;
 
-- (void)POST:(NSString *)URLString
-  parameters:(NSDictionary *)parameters
+- (void)POST:(NSString *)URLString parameters:(NSDictionary *)parameters
      success:(void (^)(id))success
      failure:(void (^)(NSError *))failure;
 
-/** Download file */
-- (void)downloadFile:(NSString *)URLString
-           parameter:(NSDictionary *)patameter
-           savedPath:(NSString *)savedPath
+/** Download File */
+- (void)downloadFile:(NSString *)URLString parameter:(NSDictionary *)patameter savedPath:(NSString *)savedPath
             progress:(void (^)(id downloadProgress, double progressValue))progress
             complete:(void (^)(NSData *data, NSError *error))complete;
 
-/** Upload file with POST */
-- (void)POST:(NSString *)URLString
-   parameter:(NSDictionary *)parameter
-        data:(NSData *)fileData
-   fieldName:(NSString *)fieldName
-    fileName:(NSString *)fileName
-    mimeType:(NSString *)mimeType
-     success:(void (^)(id))success
-     failure:(void (^)(NSError *))failure;
+/** Upload File with POST */
+- (void)uploadFile:(NSString *)URLString parameter:(NSDictionary *)parameter data:(NSData *)fileData
+         fieldName:(NSString *)fieldName
+          fileName:(NSString *)fileName
+          mimeType:(NSString *)mimeType
+           success:(void (^)(id))success
+           failure:(void (^)(NSError *))failure;
 
-/** Upload task from Data */
-- (void)uploadData:(NSString *)URLString
-          fromData:(NSData *)fromData
+/** Upload Task from Data */
+- (void)uploadData:(NSString *)URLString fromData:(NSData *)fromData
           progress:(void(^)(NSProgress *uploadProgress))progress
         completion:(void(^)(id object,NSError *error))completion;
 
-/** Upload task from URL */
-- (void)uploadData:(NSString *)URLString
-          fromFile:(NSURL *)fromFileURL
+/** Upload Task from URL */
+- (void)uploadData:(NSString *)URLString fromFile:(NSURL *)fromFileURL
           progress:(void(^)(NSProgress *uploadProgress))progress
         completion:(void(^)(id object,NSError *error))completion;
 
