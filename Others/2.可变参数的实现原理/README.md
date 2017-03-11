@@ -1,4 +1,4 @@
-# VariableArgument(可变参数的实现原理)
+# 可变参数的实现原理
 
 最近写了一个自定义的 ActionSheet, 参考系统的 UIActionSheet 的创建方式设计 API. 我们知道系统的 UIActionSheet 是使用可变参数来接收最后一个参数的, 我一直也只是知道怎么用, 于是这次查资料了解了可变参数的实现原理.
 

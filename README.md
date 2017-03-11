@@ -39,6 +39,7 @@
 * GradientCircularProgressView
 * ZoomCarouselViewDemo
 * BossHeaderRefreshDemo
+* SimpleMVVM
 
 ## Swift
 
@@ -46,10 +47,10 @@
 
 ## Others
 
-* 宏定义&常量定义
-* 指针函数&函数指针
 * 链式编程思想
 * 响应式编程思想
 * 函数式编程思想
-* SortingAlgorithm
-* SimpleMVVM
+* 指针函数 & 函数指针
+* 宏定义 & 常量定义
+* 可变参数的实现原理
+* 基本排序算法
