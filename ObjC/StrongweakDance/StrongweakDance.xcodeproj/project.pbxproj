@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E4680EF1E7826E900B8961D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4680EE1E7826E900B8961D /* main.m */; };
+		6E4680F21E7826E900B8961D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4680F11E7826E900B8961D /* AppDelegate.m */; };
+		6E4680F51E7826E900B8961D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4680F41E7826E900B8961D /* ViewController.m */; };
+		6E4680F81E7826E900B8961D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4680F61E7826E900B8961D /* Main.storyboard */; };
+		6E4680FA1E7826E900B8961D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E4680F91E7826E900B8961D /* Assets.xcassets */; };
+		6E4680FD1E7826E900B8961D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4680FB1E7826E900B8961D /* LaunchScreen.storyboard */; };
+		6E4681081E7826E900B8961D /* StrongweakDanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4681071E7826E900B8961D /* StrongweakDanceTests.m */; };
+		6E4681131E7826E900B8961D /* StrongweakDanceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4681121E7826E900B8961D /* StrongweakDanceUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6E4681041E7826E900B8961D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E4680E21E7826E900B8961D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E4680E91E7826E900B8961D;
+			remoteInfo = StrongweakDance;
+		};
+		6E46810F1E7826E900B8961D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E4680E21E7826E900B8961D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E4680E91E7826E900B8961D;
+			remoteInfo = StrongweakDance;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6E4680EA1E7826E900B8961D /* StrongweakDance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrongweakDance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E4680EE1E7826E900B8961D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6E4680F01E7826E900B8961D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6E4680F11E7826E900B8961D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6E4680F31E7826E900B8961D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6E4680F41E7826E900B8961D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6E4680F71E7826E900B8961D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6E4680F91E7826E900B8961D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6E4680FC1E7826E900B8961D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6E4680FE1E7826E900B8961D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E4681031E7826E900B8961D /* StrongweakDanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrongweakDanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E4681071E7826E900B8961D /* StrongweakDanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StrongweakDanceTests.m; sourceTree = "<group>"; };
+		6E4681091E7826E900B8961D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E46810E1E7826E900B8961D /* StrongweakDanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrongweakDanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E4681121E7826E900B8961D /* StrongweakDanceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StrongweakDanceUITests.m; sourceTree = "<group>"; };
+		6E4681141E7826E900B8961D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E4680E71E7826E900B8961D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E4681001E7826E900B8961D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E46810B1E7826E900B8961D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6E4680E11E7826E900B8961D = {
+			isa = PBXGroup;
+			children = (
+				6E4680EC1E7826E900B8961D /* StrongweakDance */,
+				6E4681061E7826E900B8961D /* StrongweakDanceTests */,
+				6E4681111E7826E900B8961D /* StrongweakDanceUITests */,
+				6E4680EB1E7826E900B8961D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6E4680EB1E7826E900B8961D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E4680EA1E7826E900B8961D /* StrongweakDance.app */,
+				6E4681031E7826E900B8961D /* StrongweakDanceTests.xctest */,
+				6E46810E1E7826E900B8961D /* StrongweakDanceUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E4680EC1E7826E900B8961D /* StrongweakDance */ = {
+			isa = PBXGroup;
+			children = (
+				6E4680F01E7826E900B8961D /* AppDelegate.h */,
+				6E4680F11E7826E900B8961D /* AppDelegate.m */,
+				6E4680F31E7826E900B8961D /* ViewController.h */,
+				6E4680F41E7826E900B8961D /* ViewController.m */,
+				6E4680ED1E7826E900B8961D /* Supporting Files */,
+			);
+			path = StrongweakDance;
+			sourceTree = "<group>";
+		};
+		6E4680ED1E7826E900B8961D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6E4680EE1E7826E900B8961D /* main.m */,
+				6E4680F61E7826E900B8961D /* Main.storyboard */,
+				6E4680F91E7826E900B8961D /* Assets.xcassets */,
+				6E4680FB1E7826E900B8961D /* LaunchScreen.storyboard */,
+				6E4680FE1E7826E900B8961D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6E4681061E7826E900B8961D /* StrongweakDanceTests */ = {
+			isa = PBXGroup;
+			children = (
+				6E4681071E7826E900B8961D /* StrongweakDanceTests.m */,
+				6E4681091E7826E900B8961D /* Info.plist */,
+			);
+			path = StrongweakDanceTests;
+			sourceTree = "<group>";
+		};
+		6E4681111E7826E900B8961D /* StrongweakDanceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6E4681121E7826E900B8961D /* StrongweakDanceUITests.m */,
+				6E4681141E7826E900B8961D /* Info.plist */,
+			);
+			path = StrongweakDanceUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6E4680E91E7826E900B8961D /* StrongweakDance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E4681171E7826E900B8961D /* Build configuration list for PBXNativeTarget "StrongweakDance" */;
+			buildPhases = (
+				6E4680E61E7826E900B8961D /* Sources */,
+				6E4680E71E7826E900B8961D /* Frameworks */,
+				6E4680E81E7826E900B8961D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StrongweakDance;
+			productName = StrongweakDance;
+			productReference = 6E4680EA1E7826E900B8961D /* StrongweakDance.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6E4681021E7826E900B8961D /* StrongweakDanceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E46811A1E7826E900B8961D /* Build configuration list for PBXNativeTarget "StrongweakDanceTests" */;
+			buildPhases = (
+				6E4680FF1E7826E900B8961D /* Sources */,
+				6E4681001E7826E900B8961D /* Frameworks */,
+				6E4681011E7826E900B8961D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E4681051E7826E900B8961D /* PBXTargetDependency */,
+			);
+			name = StrongweakDanceTests;
+			productName = StrongweakDanceTests;
+			productReference = 6E4681031E7826E900B8961D /* StrongweakDanceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6E46810D1E7826E900B8961D /* StrongweakDanceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E46811D1E7826E900B8961D /* Build configuration list for PBXNativeTarget "StrongweakDanceUITests" */;
+			buildPhases = (
+				6E46810A1E7826E900B8961D /* Sources */,
+				6E46810B1E7826E900B8961D /* Frameworks */,
+				6E46810C1E7826E900B8961D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E4681101E7826E900B8961D /* PBXTargetDependency */,
+			);
+			name = StrongweakDanceUITests;
+			productName = StrongweakDanceUITests;
+			productReference = 6E46810E1E7826E900B8961D /* StrongweakDanceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E4680E21E7826E900B8961D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Willing Guo";
+				TargetAttributes = {
+					6E4680E91E7826E900B8961D = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					6E4681021E7826E900B8961D = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6E4680E91E7826E900B8961D;
+					};
+					6E46810D1E7826E900B8961D = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6E4680E91E7826E900B8961D;
+					};
+				};
+			};
+			buildConfigurationList = 6E4680E51E7826E900B8961D /* Build configuration list for PBXProject "StrongweakDance" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6E4680E11E7826E900B8961D;
+			productRefGroup = 6E4680EB1E7826E900B8961D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6E4680E91E7826E900B8961D /* StrongweakDance */,
+				6E4681021E7826E900B8961D /* StrongweakDanceTests */,
+				6E46810D1E7826E900B8961D /* StrongweakDanceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6E4680E81E7826E900B8961D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E4680FD1E7826E900B8961D /* LaunchScreen.storyboard in Resources */,
+				6E4680FA1E7826E900B8961D /* Assets.xcassets in Resources */,
+				6E4680F81E7826E900B8961D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E4681011E7826E900B8961D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E46810C1E7826E900B8961D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E4680E61E7826E900B8961D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E4680F51E7826E900B8961D /* ViewController.m in Sources */,
+				6E4680F21E7826E900B8961D /* AppDelegate.m in Sources */,
+				6E4680EF1E7826E900B8961D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E4680FF1E7826E900B8961D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E4681081E7826E900B8961D /* StrongweakDanceTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E46810A1E7826E900B8961D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E4681131E7826E900B8961D /* StrongweakDanceUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6E4681051E7826E900B8961D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E4680E91E7826E900B8961D /* StrongweakDance */;
+			targetProxy = 6E4681041E7826E900B8961D /* PBXContainerItemProxy */;
+		};
+		6E4681101E7826E900B8961D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E4680E91E7826E900B8961D /* StrongweakDance */;
+			targetProxy = 6E46810F1E7826E900B8961D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6E4680F61E7826E900B8961D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E4680F71E7826E900B8961D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6E4680FB1E7826E900B8961D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E4680FC1E7826E900B8961D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6E4681151E7826E900B8961D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6E4681161E7826E900B8961D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6E4681181E7826E900B8961D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StrongweakDance/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.willing.StrongweakDance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6E4681191E7826E900B8961D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StrongweakDance/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.willing.StrongweakDance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6E46811B1E7826E900B8961D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = StrongweakDanceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.willing.StrongweakDanceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StrongweakDance.app/StrongweakDance";
+			};
+			name = Debug;
+		};
+		6E46811C1E7826E900B8961D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = StrongweakDanceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.willing.StrongweakDanceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StrongweakDance.app/StrongweakDance";
+			};
+			name = Release;
+		};
+		6E46811E1E7826E900B8961D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = StrongweakDanceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.willing.StrongweakDanceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = StrongweakDance;
+			};
+			name = Debug;
+		};
+		6E46811F1E7826E900B8961D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = StrongweakDanceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.willing.StrongweakDanceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = StrongweakDance;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6E4680E51E7826E900B8961D /* Build configuration list for PBXProject "StrongweakDance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E4681151E7826E900B8961D /* Debug */,
+				6E4681161E7826E900B8961D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E4681171E7826E900B8961D /* Build configuration list for PBXNativeTarget "StrongweakDance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E4681181E7826E900B8961D /* Debug */,
+				6E4681191E7826E900B8961D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6E46811A1E7826E900B8961D /* Build configuration list for PBXNativeTarget "StrongweakDanceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E46811B1E7826E900B8961D /* Debug */,
+				6E46811C1E7826E900B8961D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6E46811D1E7826E900B8961D /* Build configuration list for PBXNativeTarget "StrongweakDanceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E46811E1E7826E900B8961D /* Debug */,
+				6E46811F1E7826E900B8961D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6E4680E21E7826E900B8961D /* Project object */;
+}
