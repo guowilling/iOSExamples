@@ -101,14 +101,8 @@
 		682D07F71E12490F000E1F7D /* SortingAlgorithm */ = {
 			isa = PBXGroup;
 			children = (
-				682D07FB1E12490F000E1F7D /* AppDelegate.h */,
-				682D07FC1E12490F000E1F7D /* AppDelegate.m */,
 				682D07FE1E12490F000E1F7D /* ViewController.h */,
 				682D07FF1E12490F000E1F7D /* ViewController.m */,
-				682D08011E12490F000E1F7D /* Main.storyboard */,
-				682D08041E12490F000E1F7D /* Assets.xcassets */,
-				682D08061E12490F000E1F7D /* LaunchScreen.storyboard */,
-				682D08091E124910000E1F7D /* Info.plist */,
 				682D07F81E12490F000E1F7D /* Supporting Files */,
 			);
 			path = SortingAlgorithm;
@@ -118,6 +112,12 @@
 			isa = PBXGroup;
 			children = (
 				682D07F91E12490F000E1F7D /* main.m */,
+				682D07FB1E12490F000E1F7D /* AppDelegate.h */,
+				682D07FC1E12490F000E1F7D /* AppDelegate.m */,
+				682D08011E12490F000E1F7D /* Main.storyboard */,
+				682D08041E12490F000E1F7D /* Assets.xcassets */,
+				682D08061E12490F000E1F7D /* LaunchScreen.storyboard */,
+				682D08091E124910000E1F7D /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -514,6 +514,7 @@
 				682D08241E124910000E1F7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		682D08251E124910000E1F7D /* Build configuration list for PBXNativeTarget "SortingAlgorithmTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +523,7 @@
 				682D08271E124910000E1F7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		682D08281E124910000E1F7D /* Build configuration list for PBXNativeTarget "SortingAlgorithmUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +532,7 @@
 				682D082A1E124910000E1F7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

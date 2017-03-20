@@ -14,18 +14,15 @@
 
 @implementation ViewController
 
-#pragma mark - bubbleSort
+#pragma mark - bubbleSort O(n^2)
 
-void bubbleSort() // O(n^2)
+void bubbleSort()
 {
     int array[] = {5, 95, 15, 85, 25, 75, 35, 65, 45, 55};
     int arrayLength = sizeof(array) / sizeof(int);
-    for (int i = 0; i < arrayLength - 1; i++)
-    {
-        for (int j = arrayLength - 1; j > i; j--)
-        {
-            if (array[j] < array[j - 1])
-            {
+    for (int i = 0; i < arrayLength - 1; i++) {
+        for (int j = arrayLength - 1; j > i; j--) {
+            if (array[j] < array[j - 1]) {
                 int temp = array[j];
                 array[j] = array[j - 1];
                 array[j - 1] = temp;
@@ -33,74 +30,61 @@ void bubbleSort() // O(n^2)
         }
     }
     
-    for(int i = 0; i < arrayLength; i++)
-    {
+    for (int i = 0; i < arrayLength; i++) {
         printf("%d ", array[i]);
     }
 }
 
-#pragma mark - selectSort
+#pragma mark - selectSort O(n^2)
 
-void selectSort() // O(n^2)
+void selectSort()
 {
     int array[] = {5, 95, 15, 85, 25, 75, 35, 65, 45, 55};
     int arrayLength = sizeof(array) / sizeof(int);
     int minIndex;
-    for (int i = 0; i < arrayLength - 1; i++)
-    {
+    for (int i = 0; i < arrayLength - 1; i++) {
         minIndex = i;
-        for (int j = i + 1; j < arrayLength; j++)
-        {
-            if (array[j] < array[minIndex])
-            {
+        for (int j = i + 1; j < arrayLength; j++) {
+            if (array[j] < array[minIndex]) {
                 minIndex = j;
             }
         }
-        
-        if (minIndex != i)
-        {
+        if (minIndex != i) {
             int temp = array[i];
             array[i] = array[minIndex];
             array[minIndex] = temp;
         }
     }
     
-    printf("\n");
-    for(int i = 0; i < arrayLength; i++)
-    {
+    for (int i = 0; i < arrayLength; i++) {
         printf("%d ", array[i]);
     }
 }
 
-#pragma mark - insertSort
+#pragma mark - insertSort O(n^2)
 
-void insertSort() // O(n^2)
+void insertSort()
 {
     int array[] = {5, 95, 15, 85, 25, 75, 35, 65, 45, 55};
     int arrayLength = sizeof(array) / sizeof(int);
-    for (int i = 1; i < arrayLength; i++)
-    {
+    for (int i = 1; i < arrayLength; i++) {
         int readyToInset = array[i];
         int j = i;
-        while (j > 0 && readyToInset < array[j - 1])
-        {
+        while (j > 0 && readyToInset < array[j - 1]) {
             array[j] = array[j - 1];
             j--;
         }
-        
         array[j] = readyToInset;
     }
     
-    printf("\n");
-    for(int i = 0; i < arrayLength; i++)
-    {
+    for (int i = 0; i < arrayLength; i++) {
         printf("%d ", array[i]);
     }
 }
 
-#pragma mark - quickSort
+#pragma mark - quickSort O(nlgn)
 
-void quickSort(int array[], int left, int right) // O(nlgn)
+void quickSort(int array[], int left, int right)
 {
     if (left >= right) {
         return;
@@ -114,24 +98,16 @@ int quickSortPartition(int array[], int left, int right)
 {
     int pivotKey = left;
     int pivotValue = array[left];
-    
-    while (left < right)
-    {
-        while (left < right && array[right] >= pivotValue)
-        {
+    while (left < right) {
+        while (left < right && array[right] >= pivotValue) {
             right--;
         }
-        
-        while (left < right && array[left] <= pivotValue)
-        {
+        while (left < right && array[left] <= pivotValue) {
             left++;
         }
-        
         swap(array, left, right);
     }
-    
     swap(array, pivotKey, left);
-    
     return left;
 }
 
@@ -142,27 +118,28 @@ void swap(int array[], int i, int j)
     array[j] = temp;
 }
 
-#pragma mark -
+#pragma mark - ObjC
 
 - (void)viewDidLoad {
     
     [super viewDidLoad];
     
-    bubbleSort();
+//    bubbleSort();
     
-    selectSort();
+//    selectSort();
     
-    insertSort();
+//    insertSort();
     
-    {
-        int array[] = {5, 95, 15, 85, 25, 75, 35, 65, 45, 55};
-        int arrayLength = sizeof(array) / sizeof(int);
-        quickSort(array, 0, arrayLength - 1);
-        printf("\n");
-        for(int i = 0; i < arrayLength; i++)
-        {
-            printf("%d ", array[i]);
-        }
+    [self testQuickSort];
+}
+
+- (void)testQuickSort {
+    
+    int array[] = {5, 95, 15, 85, 25, 75, 35, 65, 45, 55};
+    int arrayLength = sizeof(array) / sizeof(int);
+    quickSort(array, 0, arrayLength - 1);
+    for (int i = 0; i < arrayLength; i++) {
+        printf("%d ", array[i]);
     }
 }
 
