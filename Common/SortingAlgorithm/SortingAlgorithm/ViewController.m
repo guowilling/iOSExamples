@@ -82,7 +82,7 @@ void insertSort()
     }
 }
 
-#pragma mark - quickSort O(nlgn)
+#pragma mark - quickSort O(nlogn)
 
 void quickSort(int array[], int left, int right)
 {
