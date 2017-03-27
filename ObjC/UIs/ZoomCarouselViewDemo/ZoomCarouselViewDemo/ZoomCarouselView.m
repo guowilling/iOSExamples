@@ -187,7 +187,7 @@
     
     NSInteger endIndex = startIndex;
     for (NSInteger i = startIndex; i < _cells.count; i++) {
-        if ((_pageSize.width * (i + 1) < endPoint.x && _pageSize.width * (i + 2) >= endPoint.x) || i+ 2 == [_cells count]) {
+        if ((_pageSize.width * (i + 1) < endPoint.x && _pageSize.width * (i + 2) >= endPoint.x) || i + 2 == [_cells count]) {
             endIndex = i + 1;
             break;
         }

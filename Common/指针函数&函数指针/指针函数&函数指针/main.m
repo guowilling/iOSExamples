@@ -8,9 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-int *sum(int a, int b); // 指针函数, 函数的返回值是指针.
+int *sum(int a, int b); // 指针函数: 函数的返回值是指针.
 
-int (*f)(int, int); // 函数指针, 指向返回值类型为 int, 接收两个 int 类型参数的函数.
+int *sum(int a, int b)
+{
+    int *p = malloc(sizeof(int));
+    *p = a + b;
+    return p;
+}
+
+int (*func)(int, int); // 函数指针: 指向返回值类型为 int, 需要两个 int 类型参数的函数.
 
 int max(int a, int b)
 {
@@ -30,22 +37,16 @@ int main(int argc, const char * argv[]) {
         printf("p address is %p\n", abSum);
         printf("p value is %d\n", *abSum);
         
-        f = max; // 使函数指针 f 指向 max 函数.
-        int max = f(1, 2);
+        
+        func = max; // 使函数指针 func 指向 max 函数.
+        int max = func(1, 2);
         // equals: int max = (*f)(1, 2);
         printf("max: %d\n", max);
         
-        f = min; // 使函数指针 f 指向 min 函数.
-        int min = f(1, 2);
-        // equals: int min = (*f)(1, 2);
+        func = min; // 使函数指针 func 指向 min 函数.
+        int min = func(1, 2);
+         //equals: int min = (*func)(1, 2);
         printf("min: %d\n", min);
     }
     return 0;
-}
-
-int *sum(int a, int b)
-{
-    int *p = malloc(sizeof(int));
-    *p = a + b;
-    return p;
 }

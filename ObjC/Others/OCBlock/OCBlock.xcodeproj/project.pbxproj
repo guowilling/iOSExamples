@@ -88,13 +88,9 @@
 				6EB875401E2BC34700DD1078 /* AppDelegate.m */,
 				6EB875421E2BC34700DD1078 /* ViewController.h */,
 				6EB875431E2BC34700DD1078 /* ViewController.m */,
-				6EB875451E2BC34700DD1078 /* Main.storyboard */,
-				6EB875481E2BC34700DD1078 /* Assets.xcassets */,
-				6EB8754A1E2BC34700DD1078 /* LaunchScreen.storyboard */,
-				6EB8754D1E2BC34700DD1078 /* Info.plist */,
-				6EB8753C1E2BC34700DD1078 /* Supporting Files */,
 				6EB875611E2BC35B00DD1078 /* Student.h */,
 				6EB875621E2BC35B00DD1078 /* Student.m */,
+				6EB8753C1E2BC34700DD1078 /* Supporting Files */,
 			);
 			path = OCBlock;
 			sourceTree = "<group>";
@@ -102,6 +98,10 @@
 		6EB8753C1E2BC34700DD1078 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6EB875451E2BC34700DD1078 /* Main.storyboard */,
+				6EB875481E2BC34700DD1078 /* Assets.xcassets */,
+				6EB8754A1E2BC34700DD1078 /* LaunchScreen.storyboard */,
+				6EB8754D1E2BC34700DD1078 /* Info.plist */,
 				6EB8753D1E2BC34700DD1078 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -416,6 +416,7 @@
 				6EB8755D1E2BC34700DD1078 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6EB8755E1E2BC34700DD1078 /* Build configuration list for PBXNativeTarget "OCBlockTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +425,7 @@
 				6EB875601E2BC34700DD1078 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

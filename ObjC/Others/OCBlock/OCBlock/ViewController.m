@@ -24,6 +24,28 @@
         Student *student = [[Student alloc] init];
         student.study(@"xx宝典").run().study(@"xx秘籍");
     }
+    
+//    __block int a = 0;
+//    NSLog(@"block 定义前: %p", &a); // a 在栈区
+//    void (^foo)(void) = ^{
+//        a = 1;
+//        NSLog(@"block 内部: %p", &a); // a 在堆区
+//    };
+//    NSLog(@"block 定义后: %p", &a); // a 在堆区
+//    foo();
+    
+//    NSMutableString *a = [NSMutableString stringWithString:@"Tom"];
+//    NSLog(@"\n block 定以前: ------------------------------------\n\
+//          a 指向的堆中地址: %p; a 在栈中的指针地址: %p", a, &a); // a 在栈区
+//    void (^foo)(void) = ^{
+//        a.string = @"Jerry";
+//        NSLog(@"\n block 内部: ------------------------------------\n\
+//              a 指向的堆中地址: %p; a 在栈中的指针地址: %p", a, &a); // a 在栈区
+//        a = [NSMutableString stringWithString:@"William"]; // Variable is not assignable (missing __block type specifier)
+//    };
+//    foo();
+//    NSLog(@"\n block 定以后: ------------------------------------\n\
+//          a 指向的堆中地址: %p; a 在栈中的指针地址: %p", a, &a); // a 在栈区
 }
 
 
