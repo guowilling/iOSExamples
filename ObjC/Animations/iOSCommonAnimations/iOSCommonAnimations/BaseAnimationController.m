@@ -19,7 +19,7 @@
     
     [super initView];
     
-    _demoView = [[UIView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-50, SCREEN_HEIGHT/2-100,100 ,100)];
+    _demoView = [[UIView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH / 2 - 50, SCREEN_HEIGHT / 2 - 100, 100 ,100)];
     _demoView.backgroundColor = [UIColor redColor];
     [self.view addSubview:_demoView];
 }
@@ -52,7 +52,7 @@
 
 // CABasicAnimation:
 // 如果 fillMode = kCAFillModeForwards 和 removedOnComletion = NO, 那么在动画执行完毕后, 图层会保持显示动画执行后的状态.
-// 但在实质上, 图层的属性值还是动画执行前的值, 并没有真正被改变.
+// 但实质上, 图层的属性值还是动画执行前的值, 并没有真正被改变.
 
 /**
  位移动画
@@ -67,7 +67,7 @@
     basicAnima.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
     [_demoView.layer addAnimation:basicAnima forKey:@"positionAnimation"];
 
-    // UIView block
+    // UIView Block
 //    _demoView.frame = CGRectMake(0, SCREEN_HEIGHT/2-50, 50, 50);
 //    [UIView animateWithDuration:1.0f animations:^{
 //        _demoView.frame = CGRectMake(SCREEN_WIDTH, SCREEN_HEIGHT/2-50, 50, 50);
@@ -76,7 +76,7 @@
 //    }];
     
     
-    // UIView [begin/commit]
+    // UIView begin and commit Animations
 //    _demoView.frame = CGRectMake(0, SCREEN_HEIGHT/2-50, 50, 50);
 //    [UIView beginAnimations:nil context:nil];
 //    [UIView setAnimationDuration:1.0f];
@@ -103,19 +103,20 @@
  */
 - (void)scaleAnimation {
     
-//    CABasicAnimation *basicAnima = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-//    basicAnima.toValue = [NSNumber numberWithFloat:2.0f];
-//    basicAnima.duration = 1.0f;
-//    [_demoView.layer addAnimation:basicAnima forKey:@"scaleAnimation"];
-//    
+    CABasicAnimation *basicAnima = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    basicAnima.toValue = [NSNumber numberWithFloat:2.0f];
+    basicAnima.duration = 1.0f;
+
 //    CABasicAnimation *basicAnima = [CABasicAnimation animationWithKeyPath:@"bounds"];
 //    basicAnima.toValue = [NSValue valueWithCGRect:CGRectMake(0, 0, 200, 200)];
 //    basicAnima.duration = 1.0f;
-//    [_demoView.layer addAnimation:basicAnima forKey:@"scaleAnimation"];
     
-    CABasicAnimation *basicAnima = [CABasicAnimation animationWithKeyPath:@"transform.scale.x"];
-    basicAnima.toValue = [NSNumber numberWithFloat:0.5f];
-    basicAnima.duration = 1.0f;
+//    CABasicAnimation *basicAnima = [CABasicAnimation animationWithKeyPath:@"transform.scale.x"];
+//    basicAnima.toValue = [NSNumber numberWithFloat:0.5f];
+//    basicAnima.duration = 1.0f;
+    
+    basicAnima.fillMode = kCAFillModeForwards;
+    basicAnima.removedOnCompletion = NO;
     [_demoView.layer addAnimation:basicAnima forKey:@"scaleAnimation"];
 }
 
@@ -125,10 +126,10 @@
 - (void)rotateAnimation {
     
     // 绕着 z 轴旋转 (@"transform.rotation.z" == @"transform.rotation")
-    CABasicAnimation *basicAnima = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-    basicAnima.toValue = [NSNumber numberWithFloat:M_PI];
-    basicAnima.duration = 1.0f;
-    [_demoView.layer addAnimation:basicAnima forKey:@"rotateAnimation"];
+//    CABasicAnimation *basicAnima = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+//    basicAnima.toValue = [NSNumber numberWithFloat:M_PI];
+//    basicAnima.duration = 1.0f;
+//    [_demoView.layer addAnimation:basicAnima forKey:@"rotateAnimation"];
     
     
 //    CABasicAnimation *basicAnima = [CABasicAnimation animationWithKeyPath:@"transform"];
@@ -138,10 +139,10 @@
 //    [_demoView.layer addAnimation:basicAnima forKey:@"rotateAnimation"];
     
     
-//    _demoView.transform = CGAffineTransformMakeRotation(0);
-//    [UIView animateWithDuration:1.0f animations:^{
-//        _demoView.transform = CGAffineTransformMakeRotation(M_PI);
-//    }];
+    _demoView.transform = CGAffineTransformMakeRotation(0);
+    [UIView animateWithDuration:1.0f animations:^{
+        _demoView.transform = CGAffineTransformMakeRotation(M_PI);
+    }];
 }
 
 /**

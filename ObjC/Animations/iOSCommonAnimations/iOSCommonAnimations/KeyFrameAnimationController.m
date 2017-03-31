@@ -45,38 +45,38 @@
 
 - (void)pathAnimation {
     
-    CAKeyframeAnimation *anima = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT/2-100, 200, 200)];
-    anima.path = path.CGPath;
-    anima.duration = 2.0f;
-    [_demoView.layer addAnimation:anima forKey:@"pathAnimation"];
+    CAKeyframeAnimation *keyframeAnima = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    UIBezierPath *bezierPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(SCREEN_WIDTH / 2 - 100, SCREEN_HEIGHT / 2 - 100, 200, 200)];
+    keyframeAnima.path = bezierPath.CGPath;
+    keyframeAnima.duration = 2.0f;
+    [_demoView.layer addAnimation:keyframeAnima forKey:@"pathAnimation"];
 }
 
 - (void)keyFrameAnimation1 {
     
-    CAKeyframeAnimation *anima = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    CAKeyframeAnimation *keyframeAnima = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     NSValue *value0 = [NSValue valueWithCGPoint:CGPointMake(0, SCREEN_HEIGHT/2-50)];
     NSValue *value1 = [NSValue valueWithCGPoint:CGPointMake(SCREEN_WIDTH/3, SCREEN_HEIGHT/2-50)];
     NSValue *value2 = [NSValue valueWithCGPoint:CGPointMake(SCREEN_WIDTH/3, SCREEN_HEIGHT/2+50)];
     NSValue *value3 = [NSValue valueWithCGPoint:CGPointMake(SCREEN_WIDTH*2/3, SCREEN_HEIGHT/2+50)];
     NSValue *value4 = [NSValue valueWithCGPoint:CGPointMake(SCREEN_WIDTH*2/3, SCREEN_HEIGHT/2-50)];
     NSValue *value5 = [NSValue valueWithCGPoint:CGPointMake(SCREEN_WIDTH, SCREEN_HEIGHT/2-50)];
-    anima.values = [NSArray arrayWithObjects:value0,value1,value2,value3,value4,value5, nil];
-    anima.duration = 2.0f;
-    anima.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-    anima.delegate = self;
-    [_demoView.layer addAnimation:anima forKey:@"keyFrameAnimation"];
+    keyframeAnima.values = [NSArray arrayWithObjects:value0,value1,value2,value3,value4,value5, nil];
+    keyframeAnima.duration = 2.0f;
+    keyframeAnima.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    keyframeAnima.delegate = self;
+    [_demoView.layer addAnimation:keyframeAnima forKey:@"keyFrameAnimation"];
 }
 
 - (void)keyFrameAnimation2 {
     
-    CAKeyframeAnimation *anima = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation"];
+    CAKeyframeAnimation *keyframeAnima = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation"];
     NSValue *value1 = [NSNumber numberWithFloat:-M_PI/180*5];
     NSValue *value2 = [NSNumber numberWithFloat:M_PI/180*5];
     NSValue *value3 = [NSNumber numberWithFloat:-M_PI/180*5];
-    anima.values = @[value1,value2,value3];
-    anima.repeatCount = MAXFLOAT;
-    [_demoView.layer addAnimation:anima forKey:@"shakeAnimation"];
+    keyframeAnima.values = @[value1,value2,value3];
+    keyframeAnima.repeatCount = MAXFLOAT;
+    [_demoView.layer addAnimation:keyframeAnima forKey:@"shakeAnimation"];
 }
 
 - (void)animationDidStart:(CAAnimation *)anim {

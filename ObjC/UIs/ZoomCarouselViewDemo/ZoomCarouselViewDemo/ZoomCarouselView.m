@@ -271,12 +271,12 @@
         if (delta < _pageSize.width) {
             cell.coverView.alpha = (delta / _pageSize.width) * _otherPageAlpha;
             CGFloat inset = (_pageSize.width * (1 - _otherPageScale)) * (delta / _pageSize.width) / 2.0;
-            cell.layer.transform = CATransform3DMakeScale((_pageSize.width-inset * 2) / _pageSize.width, (_pageSize.height-inset * 2) / _pageSize.height, 1.0);
+            cell.layer.transform = CATransform3DMakeScale((_pageSize.width-inset * 2) / _pageSize.width, (_pageSize.height - inset * 2) / _pageSize.height, 1.0);
             cell.frame = UIEdgeInsetsInsetRect(originCellFrame, UIEdgeInsetsMake(inset, inset, inset, inset));
         } else {
             cell.coverView.alpha = _otherPageAlpha;
             CGFloat inset = _pageSize.width * (1 - _otherPageScale) / 2.0 ;
-            cell.layer.transform = CATransform3DMakeScale((_pageSize.width-inset*2)/_pageSize.width, (_pageSize.height-inset*2)/_pageSize.height, 1.0);
+            cell.layer.transform = CATransform3DMakeScale((_pageSize.width-inset * 2) / _pageSize.width, (_pageSize.height - inset * 2) / _pageSize.height, 1.0);
             cell.frame = UIEdgeInsetsInsetRect(originCellFrame, UIEdgeInsetsMake(inset, inset, inset, inset));
         }
     }

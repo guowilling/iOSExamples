@@ -104,8 +104,6 @@
 		688A507F1E2DC4120058C84E /* DynamicViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				688A50831E2DC4120058C84E /* AppDelegate.h */,
-				688A50841E2DC4120058C84E /* AppDelegate.m */,
 				688A50861E2DC4120058C84E /* ViewController.h */,
 				688A50871E2DC4120058C84E /* ViewController.m */,
 				688A50B31E2DC4300058C84E /* DynamicView.h */,
@@ -119,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				688A50811E2DC4120058C84E /* main.m */,
+				688A50831E2DC4120058C84E /* AppDelegate.h */,
+				688A50841E2DC4120058C84E /* AppDelegate.m */,
 				688A50891E2DC4120058C84E /* Main.storyboard */,
 				688A508C1E2DC4120058C84E /* Assets.xcassets */,
 				688A508E1E2DC4120058C84E /* LaunchScreen.storyboard */,
@@ -520,6 +520,7 @@
 				688A50AC1E2DC4120058C84E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		688A50AD1E2DC4120058C84E /* Build configuration list for PBXNativeTarget "DynamicViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +529,7 @@
 				688A50AF1E2DC4120058C84E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		688A50B01E2DC4120058C84E /* Build configuration list for PBXNativeTarget "DynamicViewDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +538,7 @@
 				688A50B21E2DC4120058C84E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -127,10 +127,10 @@
 				687FD4981E48471C005AE5D1 /* BaseAnimationController.m */,
 				687FD4951E48471C005AE5D1 /* AffineTransformController.h */,
 				687FD4961E48471C005AE5D1 /* AffineTransformController.m */,
-				687FD49B1E48471C005AE5D1 /* GroupAnimationController.h */,
-				687FD49C1E48471C005AE5D1 /* GroupAnimationController.m */,
 				687FD49D1E48471C005AE5D1 /* KeyFrameAnimationController.h */,
 				687FD49E1E48471C005AE5D1 /* KeyFrameAnimationController.m */,
+				687FD49B1E48471C005AE5D1 /* GroupAnimationController.h */,
+				687FD49C1E48471C005AE5D1 /* GroupAnimationController.m */,
 				687FD49F1E48471C005AE5D1 /* TransitionAnimationController.h */,
 				687FD4A01E48471C005AE5D1 /* TransitionAnimationController.m */,
 				687FD4621E4846AE005AE5D1 /* Supporting Files */,
@@ -550,6 +550,7 @@
 				687FD48E1E4846AE005AE5D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		687FD48F1E4846AE005AE5D1 /* Build configuration list for PBXNativeTarget "iOSCommonAnimationsTests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +559,7 @@
 				687FD4911E4846AE005AE5D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		687FD4921E4846AE005AE5D1 /* Build configuration list for PBXNativeTarget "iOSCommonAnimationsUITests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +568,7 @@
 				687FD4941E4846AE005AE5D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

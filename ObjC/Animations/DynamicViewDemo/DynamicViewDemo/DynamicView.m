@@ -75,17 +75,18 @@
         return;
     }
     
-    CGPoint offset = [panGesture translationInView:self];
-    
-    if (self.center.y + offset.y > 335.0) {
+    CGPoint panGestureTranslation = [panGesture translationInView:self];
+    CGFloat offsetY = self.center.y + panGestureTranslation.y;
+    NSLog(@"offsetY: %.2f", offsetY);
+    if (offsetY > self.frame.size.height * 0.5) {
         return;
     }
     
     if (panGesture.state == UIGestureRecognizerStateChanged) {
-        [self setCenter:CGPointMake(self.center.x, self.center.y + offset.y)];
+        self.center = CGPointMake(self.center.x, offsetY);
         [panGesture setTranslation:CGPointMake(0, 0) inView:self];
     } else if (panGesture.state == UIGestureRecognizerStateEnded) {
-        if ( self.center.y + offset.y>=0) {
+        if (offsetY >= 150) {
             [self daynamicBehavior];
         } else {
             [UIView animateWithDuration:0.35 animations:^{

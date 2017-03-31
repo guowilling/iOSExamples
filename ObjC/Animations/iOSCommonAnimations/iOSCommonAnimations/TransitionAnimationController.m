@@ -3,8 +3,9 @@
 
 @interface TransitionAnimationController ()
 
-@property (nonatomic, strong) UIView *demoView;
+@property (nonatomic, strong) UIView  *demoView;
 @property (nonatomic, strong) UILabel *demoLabel;
+
 @property (nonatomic, assign) NSInteger index;
 
 @end
@@ -22,7 +23,8 @@
     
     _demoView = [[UIView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT/2-200, 200, 300)];
     [self.view addSubview:_demoView];
-    _demoLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetWidth(_demoView.frame)/2-10, CGRectGetHeight(_demoView.frame)/2-20, 20, 40)];
+    
+    _demoLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetWidth(_demoView.frame)/2-20, CGRectGetHeight(_demoView.frame)/2-20, 40, 40)];
     _demoLabel.textAlignment = NSTextAlignmentCenter;
     _demoLabel.font = [UIFont systemFontOfSize:40];
     [_demoView addSubview:_demoLabel];
@@ -32,7 +34,7 @@
 
 - (NSArray *)operateTitleArray {
     
-    return [NSArray arrayWithObjects:@"fade", @"moveIn", @"push", @"reveal", @"cube", @"suck", @"oglFlip", @"ripple", @"Curl", @"UnCurl", @"caOpen", @"caClose", nil];
+    return @[@"fade", @"moveIn", @"push", @"reveal", @"cube", @"suck", @"oglFlip", @"ripple", @"Curl", @"UnCurl", @"caOpen", @"caClose"];
 }
 
 - (void)clickBtn:(UIButton *)btn {
@@ -235,10 +237,10 @@
         _index = 3;
     }
     
-    NSArray *colors = [NSArray arrayWithObjects:[UIColor redColor], [UIColor greenColor], [UIColor orangeColor], [UIColor purpleColor], nil];
-    NSArray *titles = [NSArray arrayWithObjects:@"1", @"2", @"3", @"4", nil];
-    _demoView.backgroundColor = [colors objectAtIndex:_index];
-    _demoLabel.text = [titles objectAtIndex:_index];
+    NSArray *colors = @[[UIColor redColor], [UIColor greenColor], [UIColor orangeColor], [UIColor purpleColor]];
+    NSArray *titles = @[@"1", @"2", @"3", @"4"];
+    _demoView.backgroundColor = colors[_index];
+    _demoLabel.text = titles[_index];
     if (isUp) {
         _index++;
     } else {
