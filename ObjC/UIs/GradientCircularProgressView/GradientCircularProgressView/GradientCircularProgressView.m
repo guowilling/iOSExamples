@@ -41,16 +41,16 @@
         _progressLabel.textAlignment = NSTextAlignmentCenter;
         [self addSubview:_progressLabel];
         
-        _imageView = [[UIImageView alloc] init];
-        _imageView.frame = self.bounds;
-        _imageView.contentMode = UIViewContentModeScaleAspectFit;
-        _imageView.image = [UIImage imageNamed:@"redpacket_circle_progress"];
-        CABasicAnimation *transformRoate = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-        transformRoate.byValue = [NSNumber numberWithDouble:(2 * M_PI)];
-        transformRoate.duration = 2;
-        transformRoate.repeatCount = MAXFLOAT;
-        [_imageView.layer addAnimation:transformRoate forKey:nil];
-        [self addSubview:_imageView];
+//        _imageView = [[UIImageView alloc] init];
+//        _imageView.frame = self.bounds;
+//        _imageView.contentMode = UIViewContentModeScaleAspectFit;
+//        _imageView.image = [UIImage imageNamed:@"redpacket_circle_progress"];
+//        CABasicAnimation *transformRoate = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+//        transformRoate.byValue = [NSNumber numberWithDouble:(2 * M_PI)];
+//        transformRoate.duration = 2;
+//        transformRoate.repeatCount = MAXFLOAT;
+//        [_imageView.layer addAnimation:transformRoate forKey:nil];
+//        [self addSubview:_imageView];
     }
     return self;
 }
