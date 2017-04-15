@@ -20,6 +20,9 @@
 		68E05A631D7A775400F214D5 /* SRNewFeaturesDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E05A621D7A775400F214D5 /* SRNewFeaturesDemoTests.m */; };
 		68E05A6E1D7A775400F214D5 /* SRNewFeaturesDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E05A6D1D7A775400F214D5 /* SRNewFeaturesDemoUITests.m */; };
 		68E05A7E1D7AA47500F214D5 /* SRNewFeaturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E05A7D1D7AA47500F214D5 /* SRNewFeaturesViewController.m */; };
+		6E90961A1E9E876400A6ED41 /* KeepGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9096181E9E876400A6ED41 /* KeepGuideViewController.m */; };
+		6E90961D1E9E878200A6ED41 /* KeepGuideVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6E90961C1E9E878200A6ED41 /* KeepGuideVideo.mp4 */; };
+		6E9096211E9E8CBF00A6ED41 /* KeepGuideViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E9096201E9E8CBF00A6ED41 /* KeepGuideViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,10 @@
 		68E05A6F1D7A775400F214D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68E05A7C1D7AA47500F214D5 /* SRNewFeaturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRNewFeaturesViewController.h; sourceTree = "<group>"; };
 		68E05A7D1D7AA47500F214D5 /* SRNewFeaturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRNewFeaturesViewController.m; sourceTree = "<group>"; };
+		6E9096171E9E876400A6ED41 /* KeepGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeepGuideViewController.h; sourceTree = "<group>"; };
+		6E9096181E9E876400A6ED41 /* KeepGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeepGuideViewController.m; sourceTree = "<group>"; };
+		6E90961C1E9E878200A6ED41 /* KeepGuideVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = KeepGuideVideo.mp4; sourceTree = "<group>"; };
+		6E9096201E9E8CBF00A6ED41 /* KeepGuideViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KeepGuideViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +132,7 @@
 		68E05A471D7A775400F214D5 /* SRNewFeaturesDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6E90962D1E9E8EEF00A6ED41 /* Keep */,
 				68E05A4B1D7A775400F214D5 /* AppDelegate.h */,
 				68E05A4C1D7A775400F214D5 /* AppDelegate.m */,
 				68E05A4E1D7A775400F214D5 /* ViewController.h */,
@@ -137,6 +145,7 @@
 		68E05A481D7A775400F214D5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6E90961C1E9E878200A6ED41 /* KeepGuideVideo.mp4 */,
 				68B6B9461DABD01B00C30A0B /* NewFeatures */,
 				68E05A491D7A775400F214D5 /* main.m */,
 				68E05A511D7A775400F214D5 /* Main.storyboard */,
@@ -172,6 +181,16 @@
 				68E05A7D1D7AA47500F214D5 /* SRNewFeaturesViewController.m */,
 			);
 			path = SRNewFeatures;
+			sourceTree = "<group>";
+		};
+		6E90962D1E9E8EEF00A6ED41 /* Keep */ = {
+			isa = PBXGroup;
+			children = (
+				6E9096171E9E876400A6ED41 /* KeepGuideViewController.h */,
+				6E9096181E9E876400A6ED41 /* KeepGuideViewController.m */,
+				6E9096201E9E8CBF00A6ED41 /* KeepGuideViewController.storyboard */,
+			);
+			name = Keep;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +303,8 @@
 				68B6B94E1DABD01B00C30A0B /* newfeature4.jpg in Resources */,
 				68E05A551D7A775400F214D5 /* Assets.xcassets in Resources */,
 				68B6B94C1DABD01B00C30A0B /* newfeature2.jpg in Resources */,
+				6E9096211E9E8CBF00A6ED41 /* KeepGuideViewController.storyboard in Resources */,
+				6E90961D1E9E878200A6ED41 /* KeepGuideVideo.mp4 in Resources */,
 				68E05A531D7A775400F214D5 /* Main.storyboard in Resources */,
 				68B6B94D1DABD01B00C30A0B /* newfeature3.jpg in Resources */,
 			);
@@ -313,6 +334,7 @@
 				68E05A501D7A775400F214D5 /* ViewController.m in Sources */,
 				68E05A7E1D7AA47500F214D5 /* SRNewFeaturesViewController.m in Sources */,
 				68E05A4D1D7A775400F214D5 /* AppDelegate.m in Sources */,
+				6E90961A1E9E876400A6ED41 /* KeepGuideViewController.m in Sources */,
 				68E05A4A1D7A775400F214D5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

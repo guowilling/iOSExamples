@@ -61,7 +61,7 @@ void run(id self, SEL _cmd)
     [super doesNotRecognizeSelector:aSelector];
 }
 
-// "v@:", 每个方法默认隐藏两个参数, self和_cmd, self代表方法调用着, _cmd代表这个方法的SEL.
-// v代表返回值是void, @代表self, :代表_cmd
+// "v@:", 每个方法默认隐藏两个参数, self 和 _cmd, self 代表方法调用着, _cmd 代表这个方法的 SEL.
+// 'v' 代表返回值是 void, '@' 代表 self, ':' 代表 _cmd
 
 @end
