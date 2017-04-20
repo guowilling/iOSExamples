@@ -168,15 +168,15 @@
 		098D12401BDF93DA003B1803 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				098D12661BDF949E003B1803 /* Resources */,
+				098D12FC1BDFA9F6003B1803 /* Category */,
+				098D12CD1BDF96F8003B1803 /* Libs */,
 				68FA3CBB1E9E2BCF00BA45AE /* AppDelegate.h */,
 				68FA3CBC1E9E2BCF00BA45AE /* AppDelegate.m */,
 				68FA3CBD1E9E2BCF00BA45AE /* main.m */,
-				098D12FC1BDFA9F6003B1803 /* Category */,
-				098D12CD1BDF96F8003B1803 /* Libs */,
 				098D124A1BDF93DA003B1803 /* Main.storyboard */,
 				098D124F1BDF93DA003B1803 /* LaunchScreen.xib */,
 				098D12881BDF94AB003B1803 /* Images.xcassets */,
-				098D12661BDF949E003B1803 /* Resources */,
 				098D12411BDF93DA003B1803 /* Info.plist */,
 			);
 			name = "Supporting Files";

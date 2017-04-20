@@ -2,13 +2,14 @@
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 
 @interface ViewController () <AVCaptureFileOutputRecordingDelegate>
 
 @property (strong, nonatomic) AVCaptureSession *captureSession;
-@property (strong, nonatomic) AVCaptureDeviceInput *captureDeviceInput;
+@property (strong, nonatomic) AVCaptureDeviceInput *videoCaptureDeviceInput;
 @property (strong, nonatomic) AVCaptureMovieFileOutput *captureMovieFileOutput;
 @property (strong, nonatomic) AVCaptureVideoPreviewLayer *captureVideoPreviewLayer;
 
@@ -33,17 +34,17 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
     
     _enableRotation = YES;
     
-    _captureSession = [[AVCaptureSession alloc]init];
+    _captureSession = [[AVCaptureSession alloc] init];
     if ([_captureSession canSetSessionPreset:AVCaptureSessionPreset1280x720]) {
         _captureSession.sessionPreset = AVCaptureSessionPreset1280x720;
     }
     
-    AVCaptureDevice *captureDevice = [self getCameraDeviceWithPosition:AVCaptureDevicePositionBack];
-    if (!captureDevice) {
+    AVCaptureDevice *cameraCaptureDevice = [self getCameraDeviceWithPosition:AVCaptureDevicePositionBack];
+    if (!cameraCaptureDevice) {
         return;
     }
     NSError *error;
-    _captureDeviceInput = [[AVCaptureDeviceInput alloc] initWithDevice:captureDevice error:&error];
+    _videoCaptureDeviceInput = [[AVCaptureDeviceInput alloc] initWithDevice:cameraCaptureDevice error:&error];
     if (error) {
         NSLog(@"视频输入设备 error: %@", error.localizedDescription);
         return;
@@ -56,8 +57,8 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
         return;
     }
     
-    if ([_captureSession canAddInput:_captureDeviceInput]) {
-        [_captureSession addInput:_captureDeviceInput];
+    if ([_captureSession canAddInput:_videoCaptureDeviceInput]) {
+        [_captureSession addInput:_videoCaptureDeviceInput];
         [_captureSession addInput:audioCaptureDeviceInput];
         AVCaptureConnection *captureConnection = [_captureMovieFileOutput connectionWithMediaType:AVMediaTypeVideo];
         if (captureConnection.isVideoStabilizationSupported) {
@@ -77,7 +78,7 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
     _captureVideoPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
     [layer insertSublayer:_captureVideoPreviewLayer below:self.focusCursor.layer];
     
-    [self addNotificationToCaptureDevice:captureDevice];
+    [self addNotificationToCaptureDevice:cameraCaptureDevice];
     
     [self addGenstureRecognizer];
 }
@@ -105,7 +106,7 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     
     AVCaptureConnection *captureConnection = [self.captureVideoPreviewLayer connection];
-    captureConnection.videoOrientation = (AVCaptureVideoOrientation)toInterfaceOrientation; // 屏幕旋转时调整视频预览图层的方向.
+    captureConnection.videoOrientation = (AVCaptureVideoOrientation)toInterfaceOrientation; // 屏幕旋转时调整视频预览图层的方向
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
@@ -114,20 +115,21 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 }
 
 - (IBAction)startRecording {
-    
-    AVCaptureConnection *captureConnection = [self.captureMovieFileOutput connectionWithMediaType:AVMediaTypeVideo];
-    if (![self.captureMovieFileOutput isRecording]) {
-        self.enableRotation = NO;
-        if ([[UIDevice currentDevice] isMultitaskingSupported]) { // 如果支持多任务则开启多任务
-            self.backgroundTaskIdentifier = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:nil];
-        }
-        captureConnection.videoOrientation = [self.captureVideoPreviewLayer connection].videoOrientation; // 视频方向和预览图层方向保持一致
-        NSString *fielPath = [NSTemporaryDirectory() stringByAppendingString:@"myMovie.mov"];
-        NSLog(@"fielPath: %@", fielPath);
-        NSURL *fileURL = [NSURL fileURLWithPath:fielPath];
-        NSLog(@"fileURL: %@", fileURL);
-        [self.captureMovieFileOutput startRecordingToOutputFileURL:fileURL recordingDelegate:self];
+
+    if ([self.captureMovieFileOutput isRecording]) {
+        return;
     }
+    AVCaptureConnection *captureConnection = [self.captureMovieFileOutput connectionWithMediaType:AVMediaTypeVideo];
+    self.enableRotation = NO;
+    if ([[UIDevice currentDevice] isMultitaskingSupported]) { // 如果支持多任务则开启多任务
+        self.backgroundTaskIdentifier = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:nil];
+    }
+    captureConnection.videoOrientation = [self.captureVideoPreviewLayer connection].videoOrientation; // 视频方向和预览图层方向保持一致
+    NSString *fielPath = [NSTemporaryDirectory() stringByAppendingString:@"tmpMovie.mov"];
+    NSLog(@"fielPath: %@", fielPath);
+    NSURL *fileURL = [NSURL fileURLWithPath:fielPath];
+    NSLog(@"fileURL: %@", fileURL);
+    [self.captureMovieFileOutput startRecordingToOutputFileURL:fileURL recordingDelegate:self];
 }
 
 - (IBAction)endRcording {
@@ -137,12 +139,12 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 
 - (IBAction)toggleButtonClick:(UIButton *)sender {
     
-    AVCaptureDevice *currentDevice = [self.captureDeviceInput device];
+    AVCaptureDevice *currentDevice = [self.videoCaptureDeviceInput device];
     AVCaptureDevicePosition currentPosition = [currentDevice position];
     [self removeNotificationFromCaptureDevice:currentDevice];
     
     AVCaptureDevice *toChangeDevice;
-    AVCaptureDevicePosition toChangePosition=AVCaptureDevicePositionFront;
+    AVCaptureDevicePosition toChangePosition = AVCaptureDevicePositionFront;
     if (currentPosition == AVCaptureDevicePositionUnspecified||currentPosition==AVCaptureDevicePositionFront) {
         toChangePosition = AVCaptureDevicePositionBack;
     }
@@ -151,10 +153,10 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
     AVCaptureDeviceInput *toChangeDeviceInput = [[AVCaptureDeviceInput alloc]initWithDevice:toChangeDevice error:nil];
     
     [self.captureSession beginConfiguration];
-    [self.captureSession removeInput:self.captureDeviceInput];
+    [self.captureSession removeInput:self.videoCaptureDeviceInput];
     if ([self.captureSession canAddInput:toChangeDeviceInput]) {
         [self.captureSession addInput:toChangeDeviceInput];
-        self.captureDeviceInput = toChangeDeviceInput;
+        self.videoCaptureDeviceInput = toChangeDeviceInput;
     }
     [self.captureSession commitConfiguration];
 }
@@ -188,6 +190,8 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
             [[UIApplication sharedApplication] endBackgroundTask:lastBackgroundTaskIdentifier];
         }
     }];
+    
+    [self presentMoviePlayerViewControllerAnimated:[[MPMoviePlayerViewController alloc] initWithContentURL:outputFileURL]];
 }
 
 - (void)addNotificationToCaptureDevice:(AVCaptureDevice *)captureDevice {
@@ -230,7 +234,7 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 
 - (void)changeDeviceProperties:(ChangePropertyHandler)handler {
     
-    AVCaptureDevice *captureDevice = [self.captureDeviceInput device];
+    AVCaptureDevice *captureDevice = [self.videoCaptureDeviceInput device];
     NSError *error;
     if ([captureDevice lockForConfiguration:&error]) {
         handler(captureDevice);

@@ -5,7 +5,7 @@
 
 typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 
-@interface ViewController ()
+@interface ViewController () <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView      *viewContainer;
 @property (weak, nonatomic) IBOutlet UIButton    *flashAutoButton;
@@ -17,6 +17,9 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 @property (strong, nonatomic) AVCaptureDeviceInput       *captureDeviceInput;
 @property (strong, nonatomic) AVCaptureStillImageOutput  *captureStillImageOutput;
 @property (strong, nonatomic) AVCaptureVideoPreviewLayer *captureVideoPreviewLayer;
+
+@property(nonatomic,assign)CGFloat beginGestureScale;
+@property(nonatomic,assign)CGFloat endGestureScale;
 
 @end
 
@@ -30,6 +33,9 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    _beginGestureScale = 1.0;
+    _endGestureScale = 1.0;
     
     _captureSession = [[AVCaptureSession alloc] init];
     if ([_captureSession canSetSessionPreset:AVCaptureSessionPreset1280x720]) { // 分辨率
@@ -98,6 +104,10 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
     
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapScreen:)];
     [self.viewContainer addGestureRecognizer:tapGesture];
+    
+    UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchScreen:)];
+    pinchGesture.delegate = self;
+    [self.viewContainer addGestureRecognizer:pinchGesture];
 }
 
 - (void)tapScreen:(UITapGestureRecognizer *)tapGesture {
@@ -109,20 +119,82 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
     [self focusWithMode:AVCaptureFocusModeAutoFocus exposureMode:AVCaptureExposureModeAutoExpose atPoint:cameraPoint];
 }
 
+- (void)pinchScreen:(UIPinchGestureRecognizer *)panGesture {
+    
+    BOOL allTouchesAreOnThePreviewLayer = YES;
+    
+    NSUInteger touches = [panGesture numberOfTouches];
+    for (NSUInteger touchIndex = 0; touchIndex < touches; touchIndex++) {
+        CGPoint point = [panGesture locationOfTouch:touchIndex inView:self.viewContainer];
+        CGPoint cameraPoint = [self.captureVideoPreviewLayer captureDevicePointOfInterestForPoint:point];
+        if (![self.captureVideoPreviewLayer containsPoint:cameraPoint] ) {
+            allTouchesAreOnThePreviewLayer = NO;
+            break;
+        }
+    }
+    
+    if (!allTouchesAreOnThePreviewLayer) {
+        return;
+    }
+    self.endGestureScale = self.beginGestureScale * panGesture.scale;
+    if (self.endGestureScale < 1.0){
+        self.endGestureScale = 1.0;
+    }
+    CGFloat maxScaleAndCropFactor = [self.captureStillImageOutput connectionWithMediaType:AVMediaTypeVideo].videoMaxScaleAndCropFactor;
+    if (self.endGestureScale > maxScaleAndCropFactor) {
+        self.endGestureScale = maxScaleAndCropFactor;
+    }
+    [CATransaction begin];
+    [CATransaction setAnimationDuration:.025];
+    [self.captureVideoPreviewLayer setAffineTransform:CGAffineTransformMakeScale(self.endGestureScale, self.endGestureScale)];
+    [CATransaction commit];
+}
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    
+    if ([gestureRecognizer isKindOfClass:[UIPinchGestureRecognizer class]]) {
+        self.beginGestureScale = self.endGestureScale;
+    }
+    return YES;
+}
+
+- (AVCaptureVideoOrientation)captureVideoOrientationOfDeviceOrientation:(UIDeviceOrientation)deviceOrientation {
+    
+    AVCaptureVideoOrientation captureVideoOrientation = (AVCaptureVideoOrientation)deviceOrientation;
+    if (deviceOrientation == UIDeviceOrientationLandscapeLeft) {
+        captureVideoOrientation = AVCaptureVideoOrientationLandscapeRight;
+    } else if (deviceOrientation == UIDeviceOrientationLandscapeRight) {
+        captureVideoOrientation = AVCaptureVideoOrientationLandscapeLeft;
+    }
+    return captureVideoOrientation;
+}
+
 #pragma mark - Actions
 
 - (IBAction)takeButtonClick:(UIButton *)sender {
     
     AVCaptureConnection *captureConnection = [self.captureStillImageOutput connectionWithMediaType:AVMediaTypeVideo];
+    AVCaptureVideoOrientation captureVideoOrientation = [self captureVideoOrientationOfDeviceOrientation:[UIDevice currentDevice].orientation];
+    [captureConnection setVideoOrientation:captureVideoOrientation];
+    [captureConnection setVideoScaleAndCropFactor:self.endGestureScale];
     [self.captureStillImageOutput captureStillImageAsynchronouslyFromConnection:captureConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
         if (imageDataSampleBuffer) {
             NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
             UIImage *image = [UIImage imageWithData:imageData];
-            UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-            //ALAssetsLibrary *assetsLibrary = [[ALAssetsLibrary alloc]init];
-            //[assetsLibrary writeImageToSavedPhotosAlbum:[image CGImage] orientation:(ALAssetOrientation)[image imageOrientation] completionBlock:nil];
+            [self saveImageToPhotosAlbum:image];
         }
     }];
+}
+
+- (void)saveImageToPhotosAlbum:(UIImage *)image {
+    
+    UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+//    ALAuthorizationStatus authorizationStatus = [ALAssetsLibrary authorizationStatus];
+//    if (authorizationStatus == ALAuthorizationStatusRestricted || authorizationStatus == ALAuthorizationStatusDenied){
+//        return;
+//    }
+//    ALAssetsLibrary *assetsLibrary = [[ALAssetsLibrary alloc] init];
+//    [assetsLibrary writeImageToSavedPhotosAlbum:image.CGImage orientation:(ALAssetOrientation)[image imageOrientation] completionBlock:nil];
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
