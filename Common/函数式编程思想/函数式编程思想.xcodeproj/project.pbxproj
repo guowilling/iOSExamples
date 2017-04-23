@@ -16,7 +16,6 @@
 		683D843E1E4D6D880032E356 /* _______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 683D843D1E4D6D880032E356 /* _______Tests.m */; };
 		683D84491E4D6D880032E356 /* _______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 683D84481E4D6D880032E356 /* _______UITests.m */; };
 		683D84581E4D6E570032E356 /* CalculateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 683D84571E4D6E570032E356 /* CalculateManager.m */; };
-		6E4680E01E78236A00B8961D /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4680DF1E78236A00B8961D /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +54,6 @@
 		683D844A1E4D6D880032E356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		683D84561E4D6E570032E356 /* CalculateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateManager.h; sourceTree = "<group>"; };
 		683D84571E4D6E570032E356 /* CalculateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateManager.m; sourceTree = "<group>"; };
-		6E4680DE1E78236A00B8961D /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
-		6E4680DF1E78236A00B8961D /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +104,6 @@
 		683D84221E4D6D880032E356 /* 函数式编程思想 */ = {
 			isa = PBXGroup;
 			children = (
-				6E4680DE1E78236A00B8961D /* Person.h */,
-				6E4680DF1E78236A00B8961D /* Person.m */,
 				683D84291E4D6D880032E356 /* ViewController.h */,
 				683D842A1E4D6D880032E356 /* ViewController.m */,
 				683D84561E4D6E570032E356 /* CalculateManager.h */,
@@ -286,7 +281,6 @@
 			files = (
 				683D842B1E4D6D880032E356 /* ViewController.m in Sources */,
 				683D84281E4D6D880032E356 /* AppDelegate.m in Sources */,
-				6E4680E01E78236A00B8961D /* Person.m in Sources */,
 				683D84581E4D6E570032E356 /* CalculateManager.m in Sources */,
 				683D84251E4D6D880032E356 /* main.m in Sources */,
 			);
