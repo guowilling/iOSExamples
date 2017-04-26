@@ -118,7 +118,7 @@ void swap(int array[], int i, int j)
     array[j] = temp;
 }
 
-#pragma mark - ObjC
+#pragma mark -
 
 - (void)viewDidLoad {
     

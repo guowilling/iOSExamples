@@ -1,0 +1,330 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6ED907761EB0E087009684AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED9076A1EB0E087009684AD /* AppDelegate.m */; };
+		6ED907771EB0E087009684AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ED9076B1EB0E087009684AD /* Assets.xcassets */; };
+		6ED907781EB0E087009684AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ED9076C1EB0E087009684AD /* LaunchScreen.storyboard */; };
+		6ED907791EB0E087009684AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ED9076E1EB0E087009684AD /* Main.storyboard */; };
+		6ED9077A1EB0E087009684AD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6ED907701EB0E087009684AD /* Info.plist */; };
+		6ED9077B1EB0E087009684AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED907711EB0E087009684AD /* main.m */; };
+		6ED9077C1EB0E087009684AD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED907731EB0E087009684AD /* ViewController.m */; };
+		6ED9077D1EB0E087009684AD /* WaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED907751EB0E087009684AD /* WaveView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		68385B601E52F71D006FFBE1 /* MutiWavesView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MutiWavesView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ED907691EB0E087009684AD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6ED9076A1EB0E087009684AD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6ED9076B1EB0E087009684AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6ED9076D1EB0E087009684AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6ED9076F1EB0E087009684AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6ED907701EB0E087009684AD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6ED907711EB0E087009684AD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6ED907721EB0E087009684AD /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6ED907731EB0E087009684AD /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6ED907741EB0E087009684AD /* WaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveView.h; sourceTree = "<group>"; };
+		6ED907751EB0E087009684AD /* WaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		68385B5D1E52F71D006FFBE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		68385B571E52F71D006FFBE1 = {
+			isa = PBXGroup;
+			children = (
+				6ED907681EB0E087009684AD /* MutiWavesView */,
+				68385B611E52F71D006FFBE1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		68385B611E52F71D006FFBE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68385B601E52F71D006FFBE1 /* MutiWavesView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6ED907681EB0E087009684AD /* MutiWavesView */ = {
+			isa = PBXGroup;
+			children = (
+				6ED907741EB0E087009684AD /* WaveView.h */,
+				6ED907751EB0E087009684AD /* WaveView.m */,
+				6ED907721EB0E087009684AD /* ViewController.h */,
+				6ED907731EB0E087009684AD /* ViewController.m */,
+				6ED9077E1EB0E0B1009684AD /* Others */,
+			);
+			path = MutiWavesView;
+			sourceTree = "<group>";
+		};
+		6ED9077E1EB0E0B1009684AD /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				6ED907691EB0E087009684AD /* AppDelegate.h */,
+				6ED9076A1EB0E087009684AD /* AppDelegate.m */,
+				6ED9076B1EB0E087009684AD /* Assets.xcassets */,
+				6ED9076C1EB0E087009684AD /* LaunchScreen.storyboard */,
+				6ED9076E1EB0E087009684AD /* Main.storyboard */,
+				6ED907701EB0E087009684AD /* Info.plist */,
+				6ED907711EB0E087009684AD /* main.m */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		68385B5F1E52F71D006FFBE1 /* MutiWavesView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68385B8D1E52F71D006FFBE1 /* Build configuration list for PBXNativeTarget "MutiWavesView" */;
+			buildPhases = (
+				68385B5C1E52F71D006FFBE1 /* Sources */,
+				68385B5D1E52F71D006FFBE1 /* Frameworks */,
+				68385B5E1E52F71D006FFBE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MutiWavesView;
+			productName = WavesView;
+			productReference = 68385B601E52F71D006FFBE1 /* MutiWavesView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		68385B581E52F71D006FFBE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = SR;
+				TargetAttributes = {
+					68385B5F1E52F71D006FFBE1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Y4FK8UXDXW;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 68385B5B1E52F71D006FFBE1 /* Build configuration list for PBXProject "MutiWavesView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 68385B571E52F71D006FFBE1;
+			productRefGroup = 68385B611E52F71D006FFBE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				68385B5F1E52F71D006FFBE1 /* MutiWavesView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		68385B5E1E52F71D006FFBE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6ED9077A1EB0E087009684AD /* Info.plist in Resources */,
+				6ED907791EB0E087009684AD /* Main.storyboard in Resources */,
+				6ED907771EB0E087009684AD /* Assets.xcassets in Resources */,
+				6ED907781EB0E087009684AD /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		68385B5C1E52F71D006FFBE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6ED9077C1EB0E087009684AD /* ViewController.m in Sources */,
+				6ED9077B1EB0E087009684AD /* main.m in Sources */,
+				6ED907761EB0E087009684AD /* AppDelegate.m in Sources */,
+				6ED9077D1EB0E087009684AD /* WaveView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6ED9076C1EB0E087009684AD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6ED9076D1EB0E087009684AD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6ED9076E1EB0E087009684AD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6ED9076F1EB0E087009684AD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		68385B8B1E52F71D006FFBE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		68385B8C1E52F71D006FFBE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		68385B8E1E52F71D006FFBE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				INFOPLIST_FILE = MutiWavesView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.willing.MutiWavesView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
+				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
+			};
+			name = Debug;
+		};
+		68385B8F1E52F71D006FFBE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				INFOPLIST_FILE = MutiWavesView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.willing.MutiWavesView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
+				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		68385B5B1E52F71D006FFBE1 /* Build configuration list for PBXProject "MutiWavesView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68385B8B1E52F71D006FFBE1 /* Debug */,
+				68385B8C1E52F71D006FFBE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68385B8D1E52F71D006FFBE1 /* Build configuration list for PBXNativeTarget "MutiWavesView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68385B8E1E52F71D006FFBE1 /* Debug */,
+				68385B8F1E52F71D006FFBE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 68385B581E52F71D006FFBE1 /* Project object */;
+}

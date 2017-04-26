@@ -25,7 +25,7 @@ int sequenceSearch(int array[], int arrayLength, int key)
     return index;
 }
 
-#pragma mark - sequenceSearch O(n)
+#pragma mark - binarySearch O(n)
 
 int binarySearch(int array[], int arrayLength, int key)
 {
@@ -42,31 +42,6 @@ int binarySearch(int array[], int arrayLength, int key)
         }
     }
     return -1;
-}
-
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-    
-    {
-        // sequenceSearch
-        int array[] = {5, 95, 15, 85, 25, 75, 35, 65, 45, 55};
-        int arrayLength = sizeof(array) / sizeof(int);
-        printf("sequenceSearch: %d", sequenceSearch(array, arrayLength, 55));
-    }
-    
-    printf("\n");
-    
-    {
-        // binarySearch
-        int array[] = {5, 95, 15, 85, 25, 75, 35, 65, 45, 55};
-        int arrayLength = sizeof(array) / sizeof(int);
-        quickSort(array, 0, arrayLength - 1);
-        for (int i = 0; i < arrayLength; i++) {
-            printf("%d ", array[i]);
-        }
-        printf("binarySearch: %d", binarySearch(array, arrayLength, 55));
-    }
 }
 
 #pragma mark - quickSort O(nlogn)
@@ -103,6 +78,33 @@ void swap(int array[], int i, int j)
     int temp = array[i];
     array[i] = array[j];
     array[j] = temp;
+}
+
+#pragma mark - 
+
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    
+    {
+        // sequenceSearch
+        int array[] = {5, 95, 15, 85, 25, 75, 35, 65, 45, 55};
+        int arrayLength = sizeof(array) / sizeof(int);
+        printf("sequenceSearch: %d", sequenceSearch(array, arrayLength, 55));
+    }
+    
+    printf("\n");
+    
+    {
+        // binarySearch
+        int array[] = {5, 95, 15, 85, 25, 75, 35, 65, 45, 55};
+        int arrayLength = sizeof(array) / sizeof(int);
+        quickSort(array, 0, arrayLength - 1);
+        for (int i = 0; i < arrayLength; i++) {
+            printf("%d ", array[i]);
+        }
+        printf("binarySearch: %d", binarySearch(array, arrayLength, 55));
+    }
 }
 
 @end

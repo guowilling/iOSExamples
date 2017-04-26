@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  WavesView
+//  MutiWavesView
 //
 //  Created by 郭伟林 on 17/2/14.
 //  Copyright © 2017年 SR. All rights reserved.
