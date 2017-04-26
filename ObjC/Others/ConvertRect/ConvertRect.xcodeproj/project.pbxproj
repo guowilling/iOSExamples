@@ -81,14 +81,8 @@
 		6EE01E621E21505500ABF6AE /* ConvertRect */ = {
 			isa = PBXGroup;
 			children = (
-				6EE01E661E21505500ABF6AE /* AppDelegate.h */,
-				6EE01E671E21505500ABF6AE /* AppDelegate.m */,
 				6EE01E691E21505500ABF6AE /* ViewController.h */,
 				6EE01E6A1E21505500ABF6AE /* ViewController.m */,
-				6EE01E6C1E21505500ABF6AE /* Main.storyboard */,
-				6EE01E6F1E21505500ABF6AE /* Assets.xcassets */,
-				6EE01E711E21505500ABF6AE /* LaunchScreen.storyboard */,
-				6EE01E741E21505500ABF6AE /* Info.plist */,
 				6EE01E631E21505500ABF6AE /* Supporting Files */,
 			);
 			path = ConvertRect;
@@ -98,6 +92,12 @@
 			isa = PBXGroup;
 			children = (
 				6EE01E641E21505500ABF6AE /* main.m */,
+				6EE01E661E21505500ABF6AE /* AppDelegate.h */,
+				6EE01E671E21505500ABF6AE /* AppDelegate.m */,
+				6EE01E6C1E21505500ABF6AE /* Main.storyboard */,
+				6EE01E6F1E21505500ABF6AE /* Assets.xcassets */,
+				6EE01E711E21505500ABF6AE /* LaunchScreen.storyboard */,
+				6EE01E741E21505500ABF6AE /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -410,6 +410,7 @@
 				6EE01E841E21505500ABF6AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6EE01E851E21505500ABF6AE /* Build configuration list for PBXNativeTarget "ConvertRectTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +419,7 @@
 				6EE01E871E21505500ABF6AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

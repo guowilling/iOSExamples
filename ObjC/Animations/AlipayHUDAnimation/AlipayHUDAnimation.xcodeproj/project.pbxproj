@@ -45,6 +45,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6846B9371EB0AD5C00A124FC /* PayHUD */ = {
+			isa = PBXGroup;
+			children = (
+				6E1057561EA29ED20069ACC8 /* PayLoadingHUD.h */,
+				6E1057571EA29ED20069ACC8 /* PayLoadingHUD.m */,
+				6E1057581EA29ED20069ACC8 /* PaySuccessHUD.h */,
+				6E1057591EA29ED20069ACC8 /* PaySuccessHUD.m */,
+			);
+			name = PayHUD;
+			sourceTree = "<group>";
+		};
 		6E1057331EA29EA00069ACC8 = {
 			isa = PBXGroup;
 			children = (
@@ -64,10 +75,7 @@
 		6E10573E1EA29EA00069ACC8 /* AlipayHUDAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				6E1057561EA29ED20069ACC8 /* PayLoadingHUD.h */,
-				6E1057571EA29ED20069ACC8 /* PayLoadingHUD.m */,
-				6E1057581EA29ED20069ACC8 /* PaySuccessHUD.h */,
-				6E1057591EA29ED20069ACC8 /* PaySuccessHUD.m */,
+				6846B9371EB0AD5C00A124FC /* PayHUD */,
 				6E1057451EA29EA00069ACC8 /* ViewController.h */,
 				6E1057461EA29EA00069ACC8 /* ViewController.m */,
 				6E10573F1EA29EA00069ACC8 /* Supporting Files */,
