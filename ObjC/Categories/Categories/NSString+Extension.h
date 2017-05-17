@@ -11,32 +11,18 @@
 
 @interface NSString (Extension)
 
-/**
- 检验字符串是否有效
- */
 - (BOOL)isAvailable;
 + (BOOL)isAvailable:(NSString *)aString;
 
 /**
- *  Accroding the font get the string's best fit size
- *
- *  @param font The string font
- *
- *  @return The string's size
+ Accroding the font to get best fit size of the string.
  */
 - (CGSize)sizeWithFont:(UIFont *)font;
 
 /**
- *  Accroding the font and the width get the string's best fit size
- *
- *  @param font The string font
- *  @param maxW The string max width
- *
- *  @return The string's size
+ Accroding the font and max width to get best fit size of the string.
  */
-- (CGSize)sizeWithFont:(UIFont *)font maxWidth:(CGFloat)maxW;
-
-#pragma mark - Encryption algorithm
+- (CGSize)sizeWithFont:(UIFont *)font maxWidth:(CGFloat)width;
 
 - (NSString *)MD5Hash;
 
