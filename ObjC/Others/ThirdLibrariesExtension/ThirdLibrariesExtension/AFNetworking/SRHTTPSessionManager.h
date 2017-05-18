@@ -1,9 +1,3 @@
-//
-//  SRNetworkingManager.h
-//
-//  Created by 郭伟林 on 16/7/11.
-//  Copyright © 2016年 SR. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 
@@ -22,35 +16,43 @@ typedef NS_ENUM(NSInteger, SRNetworkReachabilityStatus) {
 
 - (void)startMonitorReachabilityStatus;
 
-- (void)GET:(NSString *)URLString parameters:(NSDictionary *)parameters
-    success:(void (^)(id))success
-    failure:(void (^)(NSError *))failure;
+- (void)GET:(NSString *)URLString
+ parameters:(NSDictionary *)parameters
+    success:(void (^)(id responseObject))success
+    failure:(void (^)(NSError *error))failure;
 
-- (void)POST:(NSString *)URLString parameters:(NSDictionary *)parameters
-     success:(void (^)(id))success
-     failure:(void (^)(NSError *))failure;
+- (void)POST:(NSString *)URLString
+  parameters:(NSDictionary *)parameters
+     success:(void (^)(id responseObject))success
+     failure:(void (^)(NSError *error))failure;
 
-/** Download File */
-- (void)downloadFile:(NSString *)URLString parameter:(NSDictionary *)patameter savedPath:(NSString *)savedPath
+/// Download file
+- (void)downloadFile:(NSString *)URLString
+           parameter:(NSDictionary *)patameter
+           savedPath:(NSString *)savedPath
             progress:(void (^)(id downloadProgress, double progressValue))progress
-            complete:(void (^)(NSData *data, NSError *error))complete;
+          completion:(void (^)(NSString *filePath, NSError *error))completion;
 
-/** Upload File with POST */
-- (void)uploadFile:(NSString *)URLString parameter:(NSDictionary *)parameter data:(NSData *)fileData
+/// Upload file with POST
+- (void)uploadFile:(NSString *)URLString
+         parameter:(NSDictionary *)parameter
+              data:(NSData *)fileData
          fieldName:(NSString *)fieldName
           fileName:(NSString *)fileName
           mimeType:(NSString *)mimeType
-           success:(void (^)(id))success
-           failure:(void (^)(NSError *))failure;
+           success:(void (^)(id responseObject))success
+           failure:(void (^)(NSError *error))failure;
 
-/** Upload Task from Data */
-- (void)uploadData:(NSString *)URLString fromData:(NSData *)fromData
+/// Upload task from data
+- (void)uploadFile:(NSString *)URLString
+          fromData:(NSData *)bodyData
           progress:(void(^)(NSProgress *uploadProgress))progress
-        completion:(void(^)(id object,NSError *error))completion;
+        completion:(void(^)(id object, NSError *error))completion;
 
-/** Upload Task from URL */
-- (void)uploadData:(NSString *)URLString fromFile:(NSURL *)fromFileURL
+/// Upload task from URL
+- (void)uploadFile:(NSString *)URLString
+          fromFile:(NSURL *)fileURL
           progress:(void(^)(NSProgress *uploadProgress))progress
-        completion:(void(^)(id object,NSError *error))completion;
+        completion:(void(^)(id object, NSError *error))completion;
 
 @end

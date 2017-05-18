@@ -10,8 +10,6 @@
 
 @interface UIImage (Clip)
 
-- (UIImage *)imageAddCornerWithRadius:(CGFloat)radius;
-
 - (UIImage *)cornerRadiusImageWithSize:(CGSize)size fillColor:(UIColor *)fillColor;
 
 - (void)cornerRadiusImageWithSize:(CGSize)size fillColor:(UIColor *)fillColor completion:(void (^)(UIImage *image))completion;

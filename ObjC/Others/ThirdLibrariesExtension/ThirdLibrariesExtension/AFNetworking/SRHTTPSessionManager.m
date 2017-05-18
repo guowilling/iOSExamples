@@ -1,9 +1,3 @@
-//
-//  SRNetworkingManager.m
-//
-//  Created by 郭伟林 on 16/7/11.
-//  Copyright © 2016年 SR. All rights reserved.
-//
 
 #import "SRHTTPSessionManager.h"
 #import "AFNetworking.h"
@@ -17,8 +11,6 @@ static SRHTTPSessionManager *instance;
 @end
 
 @implementation SRHTTPSessionManager
-
-#pragma mark - Singleton
 
 + (instancetype)sharedManager {
     
@@ -36,12 +28,11 @@ static SRHTTPSessionManager *instance;
     if (self = [super init]) {
         _sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:nil];
         _sessionManager.requestSerializer.timeoutInterval = 15.0;
-        _sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/plain", @"text/css", nil];
+        _sessionManager.responseSerializer.acceptableContentTypes = \
+        [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/plain", @"text/css", nil];
     }
     return self;
 }
-
-#pragma mark - Network Reachability Status
 
 - (void)startMonitorReachabilityStatus {
     
@@ -69,37 +60,22 @@ static SRHTTPSessionManager *instance;
     [networkReachabilityManager startMonitoring];
 }
 
-#pragma mark - GET Request
-
 - (void)GET:(NSString *)URLString
  parameters:(NSDictionary *)parameters
     success:(void (^)(id))success
     failure:(void (^)(NSError *))failure
 {
-    NSAssert(URLString != nil, @"URLString不能为空");
-    [self.sessionManager GET:URLString
-                  parameters:parameters
-                    progress:^(NSProgress * _Nonnull downloadProgress) { }
-                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                         if (success) {
-                             success(responseObject);
-                         }
-                         return;
-                         NSDictionary *result = [NSJSONSerialization JSONObjectWithData:responseObject
-                                                                                options:NSJSONReadingMutableLeaves | NSJSONReadingAllowFragments
-                                                                                  error:nil];
-                         if (success) {
-                             success(result);
-                         }
-                     }
-                     failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                         if (failure) {
-                             failure(error);
-                         }
-                     }];
+    NSAssert(URLString != nil, @"URLString 不能为空");
+    [self.sessionManager GET:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
 }
-
-#pragma mark - POST Request
 
 - (void)POST:(NSString *)URLString
   parameters:(NSDictionary *)parameters
@@ -107,28 +83,22 @@ static SRHTTPSessionManager *instance;
      failure:(void (^)(NSError *))failure
 {
     NSAssert(URLString != nil, @"URLString不能为空");
-    [self.sessionManager POST:URLString
-                   parameters:parameters
-                     progress:^(NSProgress * _Nonnull uploadProgress) { }
-                      success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                          if (success) {
-                              success(responseObject);
-                          }
-                      }
-                      failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                          if (failure) {
-                              failure(error);
-                          }
-                      }];
+    [self.sessionManager POST:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
 }
-
-#pragma mark - Download File
 
 - (void)downloadFile:(NSString *)URLString
            parameter:(NSDictionary *)patameter
            savedPath:(NSString *)savedPath
             progress:(void (^)(id downloadProgress, double progressValue))progress
-            complete:(void (^)(NSData *data, NSError *error))complete
+          completion:(void (^)(NSString *filePath, NSError *error))completion
 {
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:URLString]];
@@ -146,22 +116,16 @@ static SRHTTPSessionManager *instance;
             return [NSURL fileURLWithPath:path];
         }
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-        if (error) {
-            if (complete) {
-                complete(nil, error);
-            }
+        if (error && completion) {
+            completion(nil, error);
             return;
         }
-        NSLog(@"filePath: %@", filePath);
-        NSData *data = [NSData dataWithContentsOfURL:filePath];
-        if (complete) {
-            complete(data, nil);
+        if (completion) {
+            completion(filePath.absoluteString, nil);
         }
     }];
     [downloadTask resume];
 }
-
-#pragma mark - Upload File
 
 - (void)uploadFile:(NSString *)URLString
          parameter:(NSDictionary *)parameter
@@ -169,35 +133,30 @@ static SRHTTPSessionManager *instance;
          fieldName:(NSString *)fieldName
           fileName:(NSString *)fileName
           mimeType:(NSString *)mimeType
-           success:(void (^)(id))success
-           failure:(void (^)(NSError *))failure
+           success:(void (^)(id responseObject))success
+           failure:(void (^)(NSError *error))failure
 {
-    [self.sessionManager POST:URLString
-                   parameters:parameter
-    constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [self.sessionManager POST:URLString parameters:parameter constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         [formData appendPartWithFileData:fileData name:fieldName fileName:fileName mimeType:mimeType];
-    }
-                     progress:^(NSProgress * _Nonnull uploadProgress) { }
-                      success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                          NSDictionary *result = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves | NSJSONReadingAllowFragments error:nil];
-                          if (success) {
-                              success(result);
-                          }
-                      }
-                      failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                          if (failure) {
-                              failure(error);
-                          }
-                      }];
+    } progress:^(NSProgress * _Nonnull uploadProgress) { } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *result = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves | NSJSONReadingAllowFragments error:nil];
+        if (success) {
+            success(result);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
 }
 
-- (void)uploadData:(NSString *)URLString
-          fromData:(NSData *)fromData
+- (void)uploadFile:(NSString *)URLString
+          fromData:(NSData *)bodyData
           progress:(void(^)(NSProgress *uploadProgress))progress
         completion:(void(^)(id object, NSError *error))completion
 {
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:URLString]];
-    [self.sessionManager uploadTaskWithRequest:request fromData:fromData progress:^(NSProgress * _Nonnull uploadProgress) {
+    [self.sessionManager uploadTaskWithRequest:request fromData:bodyData progress:^(NSProgress * _Nonnull uploadProgress) {
         if (progress) {
             progress(uploadProgress);
         }
@@ -208,13 +167,13 @@ static SRHTTPSessionManager *instance;
     }];
 }
 
-- (void)uploadData:(NSString *)URLString
-          fromFile:(NSURL *)fromFileURL
+- (void)uploadFile:(NSString *)URLString
+          fromFile:(NSURL *)fileURL
           progress:(void(^)(NSProgress *uploadProgress))progress
         completion:(void(^)(id object, NSError *error))completion
 {
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:URLString]];
-    [self.sessionManager uploadTaskWithRequest:request fromFile:fromFileURL progress:^(NSProgress * _Nonnull uploadProgress) {
+    [self.sessionManager uploadTaskWithRequest:request fromFile:fileURL progress:^(NSProgress * _Nonnull uploadProgress) {
         if (uploadProgress) {
             progress(uploadProgress);
         }

@@ -1,9 +1,3 @@
-//
-//  MBProgressHUD+SR.m
-//
-//  Created by 郭伟林 on 16/6/16.
-//  Copyright © 2016年 again. All rights reserved.
-//
 
 #import "MBProgressHUD+SR.h"
 
@@ -48,7 +42,9 @@
     if (view == nil) {
         view = [UIApplication sharedApplication].keyWindow;
     }
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    //MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
+    hud.graceTime = 0.2;
     hud.label.text = message;
     hud.label.font = [UIFont systemFontOfSize:17];
     hud.minSize = CGSizeMake(120, 120);
@@ -59,6 +55,8 @@
     //hud.dimBackground = YES;
     //hud.backgroundColor = [UIColor colorWithWhite:0.f alpha:.2f];
     hud.removeFromSuperViewOnHide = YES;
+    [hud showAnimated:YES];
+    [view addSubview:hud];
     return hud;
 }
 

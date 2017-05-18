@@ -10,33 +10,6 @@
 
 @implementation UIImage (Clip)
 
-- (UIImage *)imageAddCornerWithRadius:(CGFloat)radius {
-    
-    NSTimeInterval start = CACurrentMediaTime();
-    
-    UIGraphicsBeginImageContextWithOptions(self.size, NO, [UIScreen mainScreen].scale);
-    
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    
-    CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
-    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(radius, radius)];
-    
-    CGContextAddPath(ctx, path.CGPath);
-    CGContextClip(ctx);
-    
-    [self drawInRect:rect];
-    
-    CGContextDrawPath(ctx, kCGPathFillStroke);
-    
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    UIGraphicsEndImageContext();
-    
-    NSLog(@"%f", CACurrentMediaTime() - start);
-    
-    return newImage;
-}
-
 /// 平均耗时 0.05
 - (UIImage *)cornerRadiusImageWithSize:(CGSize)size fillColor:(UIColor *)fillColor {
     
