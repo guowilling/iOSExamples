@@ -13,34 +13,15 @@
 		682E52BF1E56D03C00BC32E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 682E52BD1E56D03C00BC32E5 /* Main.storyboard */; };
 		682E52C11E56D03C00BC32E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 682E52C01E56D03C00BC32E5 /* Assets.xcassets */; };
 		682E52C41E56D03C00BC32E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 682E52C21E56D03C00BC32E5 /* LaunchScreen.storyboard */; };
-		682E52CF1E56D03C00BC32E5 /* ZoomCarouselViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 682E52CE1E56D03C00BC32E5 /* ZoomCarouselViewDemoTests.m */; };
-		682E52DA1E56D03C00BC32E5 /* ZoomCarouselViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 682E52D91E56D03C00BC32E5 /* ZoomCarouselViewDemoUITests.m */; };
 		682E52EC1E56D06500BC32E5 /* ZoomCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 682E52E91E56D06500BC32E5 /* ZoomCarouselView.m */; };
 		682E52ED1E56D06500BC32E5 /* ZoomCarouselViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 682E52EB1E56D06500BC32E5 /* ZoomCarouselViewCell.m */; };
-		682E52F51E56D09500BC32E5 /* coldplay00.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 682E52EF1E56D09500BC32E5 /* coldplay00.jpg */; };
-		682E52F61E56D09500BC32E5 /* coldplay01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 682E52F01E56D09500BC32E5 /* coldplay01.jpg */; };
-		682E52F71E56D09500BC32E5 /* coldplay02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 682E52F11E56D09500BC32E5 /* coldplay02.jpg */; };
-		682E52F81E56D09500BC32E5 /* coldplay03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 682E52F21E56D09500BC32E5 /* coldplay03.jpg */; };
-		682E52F91E56D09500BC32E5 /* coldplay04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 682E52F31E56D09500BC32E5 /* coldplay04.jpg */; };
-		682E52FA1E56D09500BC32E5 /* coldplay05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 682E52F41E56D09500BC32E5 /* coldplay05.jpg */; };
+		68604B841ED3068D00628547 /* coldplay00.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68604B7E1ED3068D00628547 /* coldplay00.jpg */; };
+		68604B851ED3068D00628547 /* coldplay01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68604B7F1ED3068D00628547 /* coldplay01.jpg */; };
+		68604B861ED3068D00628547 /* coldplay02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68604B801ED3068D00628547 /* coldplay02.jpg */; };
+		68604B871ED3068D00628547 /* coldplay03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68604B811ED3068D00628547 /* coldplay03.jpg */; };
+		68604B881ED3068D00628547 /* coldplay04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68604B821ED3068D00628547 /* coldplay04.jpg */; };
+		68604B891ED3068D00628547 /* coldplay05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68604B831ED3068D00628547 /* coldplay05.jpg */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		682E52CB1E56D03C00BC32E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 682E52A91E56D03C00BC32E5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 682E52B01E56D03C00BC32E5;
-			remoteInfo = ZoomCarouselViewDemo;
-		};
-		682E52D61E56D03C00BC32E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 682E52A91E56D03C00BC32E5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 682E52B01E56D03C00BC32E5;
-			remoteInfo = ZoomCarouselViewDemo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		682E52B11E56D03C00BC32E5 /* ZoomCarouselViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZoomCarouselViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,40 +34,20 @@
 		682E52C01E56D03C00BC32E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		682E52C31E56D03C00BC32E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		682E52C51E56D03C00BC32E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		682E52CA1E56D03C00BC32E5 /* ZoomCarouselViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZoomCarouselViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		682E52CE1E56D03C00BC32E5 /* ZoomCarouselViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZoomCarouselViewDemoTests.m; sourceTree = "<group>"; };
-		682E52D01E56D03C00BC32E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		682E52D51E56D03C00BC32E5 /* ZoomCarouselViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZoomCarouselViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		682E52D91E56D03C00BC32E5 /* ZoomCarouselViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZoomCarouselViewDemoUITests.m; sourceTree = "<group>"; };
-		682E52DB1E56D03C00BC32E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		682E52E81E56D06500BC32E5 /* ZoomCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomCarouselView.h; sourceTree = "<group>"; };
 		682E52E91E56D06500BC32E5 /* ZoomCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomCarouselView.m; sourceTree = "<group>"; };
 		682E52EA1E56D06500BC32E5 /* ZoomCarouselViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomCarouselViewCell.h; sourceTree = "<group>"; };
 		682E52EB1E56D06500BC32E5 /* ZoomCarouselViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomCarouselViewCell.m; sourceTree = "<group>"; };
-		682E52EF1E56D09500BC32E5 /* coldplay00.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coldplay00.jpg; sourceTree = "<group>"; };
-		682E52F01E56D09500BC32E5 /* coldplay01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coldplay01.jpg; sourceTree = "<group>"; };
-		682E52F11E56D09500BC32E5 /* coldplay02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coldplay02.jpg; sourceTree = "<group>"; };
-		682E52F21E56D09500BC32E5 /* coldplay03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coldplay03.jpg; sourceTree = "<group>"; };
-		682E52F31E56D09500BC32E5 /* coldplay04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coldplay04.jpg; sourceTree = "<group>"; };
-		682E52F41E56D09500BC32E5 /* coldplay05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coldplay05.jpg; sourceTree = "<group>"; };
+		68604B7E1ED3068D00628547 /* coldplay00.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coldplay00.jpg; sourceTree = "<group>"; };
+		68604B7F1ED3068D00628547 /* coldplay01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coldplay01.jpg; sourceTree = "<group>"; };
+		68604B801ED3068D00628547 /* coldplay02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coldplay02.jpg; sourceTree = "<group>"; };
+		68604B811ED3068D00628547 /* coldplay03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coldplay03.jpg; sourceTree = "<group>"; };
+		68604B821ED3068D00628547 /* coldplay04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coldplay04.jpg; sourceTree = "<group>"; };
+		68604B831ED3068D00628547 /* coldplay05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coldplay05.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		682E52AE1E56D03C00BC32E5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		682E52C71E56D03C00BC32E5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		682E52D21E56D03C00BC32E5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -100,8 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				682E52B31E56D03C00BC32E5 /* ZoomCarouselViewDemo */,
-				682E52CD1E56D03C00BC32E5 /* ZoomCarouselViewDemoTests */,
-				682E52D81E56D03C00BC32E5 /* ZoomCarouselViewDemoUITests */,
 				682E52B21E56D03C00BC32E5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -110,8 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				682E52B11E56D03C00BC32E5 /* ZoomCarouselViewDemo.app */,
-				682E52CA1E56D03C00BC32E5 /* ZoomCarouselViewDemoTests.xctest */,
-				682E52D51E56D03C00BC32E5 /* ZoomCarouselViewDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,7 +87,7 @@
 		682E52B41E56D03C00BC32E5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				682E52EE1E56D09500BC32E5 /* COLDPLAY */,
+				68604B7D1ED3068D00628547 /* Coldplay */,
 				682E52B51E56D03C00BC32E5 /* main.m */,
 				682E52B71E56D03C00BC32E5 /* AppDelegate.h */,
 				682E52B81E56D03C00BC32E5 /* AppDelegate.m */,
@@ -140,24 +97,6 @@
 				682E52C51E56D03C00BC32E5 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		682E52CD1E56D03C00BC32E5 /* ZoomCarouselViewDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				682E52CE1E56D03C00BC32E5 /* ZoomCarouselViewDemoTests.m */,
-				682E52D01E56D03C00BC32E5 /* Info.plist */,
-			);
-			path = ZoomCarouselViewDemoTests;
-			sourceTree = "<group>";
-		};
-		682E52D81E56D03C00BC32E5 /* ZoomCarouselViewDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				682E52D91E56D03C00BC32E5 /* ZoomCarouselViewDemoUITests.m */,
-				682E52DB1E56D03C00BC32E5 /* Info.plist */,
-			);
-			path = ZoomCarouselViewDemoUITests;
 			sourceTree = "<group>";
 		};
 		682E52E71E56D05100BC32E5 /* ZoomCarouselView */ = {
@@ -171,17 +110,17 @@
 			name = ZoomCarouselView;
 			sourceTree = "<group>";
 		};
-		682E52EE1E56D09500BC32E5 /* COLDPLAY */ = {
+		68604B7D1ED3068D00628547 /* Coldplay */ = {
 			isa = PBXGroup;
 			children = (
-				682E52EF1E56D09500BC32E5 /* coldplay00.jpg */,
-				682E52F01E56D09500BC32E5 /* coldplay01.jpg */,
-				682E52F11E56D09500BC32E5 /* coldplay02.jpg */,
-				682E52F21E56D09500BC32E5 /* coldplay03.jpg */,
-				682E52F31E56D09500BC32E5 /* coldplay04.jpg */,
-				682E52F41E56D09500BC32E5 /* coldplay05.jpg */,
+				68604B7E1ED3068D00628547 /* coldplay00.jpg */,
+				68604B7F1ED3068D00628547 /* coldplay01.jpg */,
+				68604B801ED3068D00628547 /* coldplay02.jpg */,
+				68604B811ED3068D00628547 /* coldplay03.jpg */,
+				68604B821ED3068D00628547 /* coldplay04.jpg */,
+				68604B831ED3068D00628547 /* coldplay05.jpg */,
 			);
-			path = COLDPLAY;
+			path = Coldplay;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,42 +143,6 @@
 			productReference = 682E52B11E56D03C00BC32E5 /* ZoomCarouselViewDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		682E52C91E56D03C00BC32E5 /* ZoomCarouselViewDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 682E52E11E56D03C00BC32E5 /* Build configuration list for PBXNativeTarget "ZoomCarouselViewDemoTests" */;
-			buildPhases = (
-				682E52C61E56D03C00BC32E5 /* Sources */,
-				682E52C71E56D03C00BC32E5 /* Frameworks */,
-				682E52C81E56D03C00BC32E5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				682E52CC1E56D03C00BC32E5 /* PBXTargetDependency */,
-			);
-			name = ZoomCarouselViewDemoTests;
-			productName = ZoomCarouselViewDemoTests;
-			productReference = 682E52CA1E56D03C00BC32E5 /* ZoomCarouselViewDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		682E52D41E56D03C00BC32E5 /* ZoomCarouselViewDemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 682E52E41E56D03C00BC32E5 /* Build configuration list for PBXNativeTarget "ZoomCarouselViewDemoUITests" */;
-			buildPhases = (
-				682E52D11E56D03C00BC32E5 /* Sources */,
-				682E52D21E56D03C00BC32E5 /* Frameworks */,
-				682E52D31E56D03C00BC32E5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				682E52D71E56D03C00BC32E5 /* PBXTargetDependency */,
-			);
-			name = ZoomCarouselViewDemoUITests;
-			productName = ZoomCarouselViewDemoUITests;
-			productReference = 682E52D51E56D03C00BC32E5 /* ZoomCarouselViewDemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -253,16 +156,6 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = Y4FK8UXDXW;
 						ProvisioningStyle = Manual;
-					};
-					682E52C91E56D03C00BC32E5 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 682E52B01E56D03C00BC32E5;
-					};
-					682E52D41E56D03C00BC32E5 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 682E52B01E56D03C00BC32E5;
 					};
 				};
 			};
@@ -280,8 +173,6 @@
 			projectRoot = "";
 			targets = (
 				682E52B01E56D03C00BC32E5 /* ZoomCarouselViewDemo */,
-				682E52C91E56D03C00BC32E5 /* ZoomCarouselViewDemoTests */,
-				682E52D41E56D03C00BC32E5 /* ZoomCarouselViewDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -291,29 +182,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				682E52F61E56D09500BC32E5 /* coldplay01.jpg in Resources */,
-				682E52F91E56D09500BC32E5 /* coldplay04.jpg in Resources */,
 				682E52C41E56D03C00BC32E5 /* LaunchScreen.storyboard in Resources */,
-				682E52F51E56D09500BC32E5 /* coldplay00.jpg in Resources */,
-				682E52F81E56D09500BC32E5 /* coldplay03.jpg in Resources */,
+				68604B891ED3068D00628547 /* coldplay05.jpg in Resources */,
+				68604B841ED3068D00628547 /* coldplay00.jpg in Resources */,
 				682E52C11E56D03C00BC32E5 /* Assets.xcassets in Resources */,
 				682E52BF1E56D03C00BC32E5 /* Main.storyboard in Resources */,
-				682E52F71E56D09500BC32E5 /* coldplay02.jpg in Resources */,
-				682E52FA1E56D09500BC32E5 /* coldplay05.jpg in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		682E52C81E56D03C00BC32E5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		682E52D31E56D03C00BC32E5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				68604B851ED3068D00628547 /* coldplay01.jpg in Resources */,
+				68604B871ED3068D00628547 /* coldplay03.jpg in Resources */,
+				68604B861ED3068D00628547 /* coldplay02.jpg in Resources */,
+				68604B881ED3068D00628547 /* coldplay04.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,36 +209,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		682E52C61E56D03C00BC32E5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				682E52CF1E56D03C00BC32E5 /* ZoomCarouselViewDemoTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		682E52D11E56D03C00BC32E5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				682E52DA1E56D03C00BC32E5 /* ZoomCarouselViewDemoUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		682E52CC1E56D03C00BC32E5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 682E52B01E56D03C00BC32E5 /* ZoomCarouselViewDemo */;
-			targetProxy = 682E52CB1E56D03C00BC32E5 /* PBXContainerItemProxy */;
-		};
-		682E52D71E56D03C00BC32E5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 682E52B01E56D03C00BC32E5 /* ZoomCarouselViewDemo */;
-			targetProxy = 682E52D61E56D03C00BC32E5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		682E52BD1E56D03C00BC32E5 /* Main.storyboard */ = {
@@ -499,52 +347,6 @@
 			};
 			name = Release;
 		};
-		682E52E21E56D03C00BC32E5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ZoomCarouselViewDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.ZoomCarouselViewDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZoomCarouselViewDemo.app/ZoomCarouselViewDemo";
-			};
-			name = Debug;
-		};
-		682E52E31E56D03C00BC32E5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ZoomCarouselViewDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.ZoomCarouselViewDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZoomCarouselViewDemo.app/ZoomCarouselViewDemo";
-			};
-			name = Release;
-		};
-		682E52E51E56D03C00BC32E5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = ZoomCarouselViewDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.ZoomCarouselViewDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ZoomCarouselViewDemo;
-			};
-			name = Debug;
-		};
-		682E52E61E56D03C00BC32E5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = ZoomCarouselViewDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.ZoomCarouselViewDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ZoomCarouselViewDemo;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -564,22 +366,7 @@
 				682E52E01E56D03C00BC32E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		682E52E11E56D03C00BC32E5 /* Build configuration list for PBXNativeTarget "ZoomCarouselViewDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				682E52E21E56D03C00BC32E5 /* Debug */,
-				682E52E31E56D03C00BC32E5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		682E52E41E56D03C00BC32E5 /* Build configuration list for PBXNativeTarget "ZoomCarouselViewDemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				682E52E51E56D03C00BC32E5 /* Debug */,
-				682E52E61E56D03C00BC32E5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
