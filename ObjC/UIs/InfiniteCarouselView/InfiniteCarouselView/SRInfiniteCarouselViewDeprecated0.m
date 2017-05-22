@@ -372,7 +372,7 @@ static NSString * const cacheDirectoryName = @"SRInfiniteCarouselView";
     [_scrollView setContentOffset:CGPointMake(self.width, 0) animated:NO];
 }
 
-#pragma mark - Other
+#pragma mark - Others
 
 + (void)initialize {
     

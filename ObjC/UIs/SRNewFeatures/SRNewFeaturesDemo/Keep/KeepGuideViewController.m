@@ -50,7 +50,6 @@
     NSError *error;
     [self.avaudioSession setCategory:AVAudioSessionCategoryAmbient error:&error];
     
-    
     NSString *videoPath = [[NSBundle mainBundle] pathForResource:@"KeepGuideVideo.mp4" ofType:nil];
     NSURL *videoURL = [NSURL fileURLWithPath:videoPath];
     _moviePlayer = [[MPMoviePlayerController alloc]initWithContentURL:videoURL];
@@ -143,8 +142,6 @@
     [self.scrollView setContentOffset:CGPointMake(x, 0) animated:YES];
 }
 
-
-
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     
     double page = self.scrollView.contentOffset.x / self.scrollView.bounds.size.width;
@@ -162,7 +159,7 @@
     [self.timer invalidate];
 }
 
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     
     [self setupTimer];
 }

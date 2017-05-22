@@ -23,12 +23,12 @@
 @property (nonatomic, assign) BOOL hideSkipButton;
 
 /**
- Current page indicator tint color, default is [UIColor whiteColor].
+ The current page indicator tint color, default is [UIColor whiteColor].
  */
 @property (nonatomic, strong) UIColor *currentPageIndicatorTintColor;
 
 /**
- Other page indicator tint color, default is [UIColor lightGrayColor].
+ The other page indicator tint color, default is [UIColor lightGrayColor].
  */
 @property (nonatomic, strong) UIColor *pageIndicatorTintColor;
 
@@ -42,7 +42,7 @@
 + (BOOL)sr_shouldShowNewFeature;
 
 /**
- Create new features view controller with images.
+ Creates and returns new features view controller with images.
 
  @param imageNames The image's name array.
  @param rootVC     The key window's true root view controller.
@@ -51,9 +51,6 @@
  */
 + (instancetype)sr_newFeatureWithImageNames:(NSArray *)imageNames rootViewController:(UIViewController *)rootVC;
 
-/**
- The same as class method sr_newFeatureWithImageNames:rootViewController:
- */
 - (instancetype)initWithImageNames:(NSArray *)imageNames rootViewController:(UIViewController *)rootVC;
 
 @end

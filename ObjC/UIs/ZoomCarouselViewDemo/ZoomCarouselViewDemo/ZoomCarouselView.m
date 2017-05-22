@@ -79,11 +79,11 @@
      由于 UIScrollView 滚动之后会调用自己的 layoutSubviews 以及父视图的 layoutSubviews,
      为了避免滚动 scrollview 引起 layoutSubviews 的调用, 所以给 scrollView 加一层父视图.
      *****************************/
-    UIView *superViewOfScrollView = [[UIView alloc] initWithFrame:self.bounds];
-    [superViewOfScrollView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
-    [superViewOfScrollView setBackgroundColor:[UIColor clearColor]];
-    [superViewOfScrollView addSubview:_scrollView];
-    [self addSubview:superViewOfScrollView];
+    UIView *container = [[UIView alloc] initWithFrame:self.bounds];
+    [container setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+    [container setBackgroundColor:[UIColor clearColor]];
+    [container addSubview:_scrollView];
+    [self addSubview:container];
 }
 
 #pragma mark - Timer
@@ -271,12 +271,16 @@
         if (delta < _pageSize.width) {
             cell.coverView.alpha = (delta / _pageSize.width) * _otherPageAlpha;
             CGFloat inset = (_pageSize.width * (1 - _otherPageScale)) * (delta / _pageSize.width) / 2.0;
-            cell.layer.transform = CATransform3DMakeScale((_pageSize.width-inset * 2) / _pageSize.width, (_pageSize.height - inset * 2) / _pageSize.height, 1.0);
+            cell.layer.transform = CATransform3DMakeScale((_pageSize.width-inset * 2) / _pageSize.width,
+                                                          (_pageSize.height - inset * 2) / _pageSize.height,
+                                                          1.0);
             cell.frame = UIEdgeInsetsInsetRect(originCellFrame, UIEdgeInsetsMake(inset, inset, inset, inset));
         } else {
             cell.coverView.alpha = _otherPageAlpha;
             CGFloat inset = _pageSize.width * (1 - _otherPageScale) / 2.0 ;
-            cell.layer.transform = CATransform3DMakeScale((_pageSize.width-inset * 2) / _pageSize.width, (_pageSize.height - inset * 2) / _pageSize.height, 1.0);
+            cell.layer.transform = CATransform3DMakeScale((_pageSize.width-inset * 2) / _pageSize.width,
+                                                          (_pageSize.height - inset * 2) / _pageSize.height,
+                                                          1.0);
             cell.frame = UIEdgeInsetsInsetRect(originCellFrame, UIEdgeInsetsMake(inset, inset, inset, inset));
         }
     }

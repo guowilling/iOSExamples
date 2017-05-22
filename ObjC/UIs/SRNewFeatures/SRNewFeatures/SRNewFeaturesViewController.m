@@ -24,10 +24,8 @@
 
 + (BOOL)sr_shouldShowNewFeature {
     
-    // the app version in the sandbox
-    NSString *lastVersion = [[NSUserDefaults standardUserDefaults] stringForKey:@"CFBundleShortVersionString"];
-    // the current app version
-    NSString *currentVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"];
+    NSString *lastVersion = [[NSUserDefaults standardUserDefaults] stringForKey:@"CFBundleShortVersionString"];  // the app version in the sandbox
+    NSString *currentVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]; // the current app version
     if ([currentVersion isEqualToString:lastVersion]) {
         return NO;
     } else {
@@ -117,7 +115,7 @@
 - (void)tapAciton {
     
     [UIView transitionWithView:[UIApplication sharedApplication].keyWindow
-                      duration:0.75f
+                      duration:0.75
                        options:UIViewAnimationOptionTransitionFlipFromLeft
                     animations:^{
                         [UIApplication sharedApplication].keyWindow.rootViewController = self.rootVC;

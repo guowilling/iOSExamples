@@ -4,7 +4,8 @@
 //
 //  Created by 郭伟林 on 17/2/17.
 //  Copyright © 2017年 SR. All rights reserved.
-//  ZoomCarouselView Confused?
+//  ZoomCarouselView Confused now...
+//
 
 #import <UIKit/UIKit.h>
 

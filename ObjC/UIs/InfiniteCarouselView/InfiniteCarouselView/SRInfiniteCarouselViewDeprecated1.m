@@ -18,8 +18,8 @@
 @property (nonatomic, copy) NSArray  *imageURLs;
 @property (nonatomic, copy) NSString *placeholderImageName;
 
-@property (nonatomic, assign) NSTimeInterval  timeInterval;
 @property (nonatomic, strong) NSTimer        *timer;
+@property (nonatomic, assign) NSTimeInterval  timeInterval;
 
 @property (nonatomic, assign) NSInteger imageCount;
 

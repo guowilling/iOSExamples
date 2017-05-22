@@ -21,8 +21,8 @@
 @property (nonatomic, weak) UIImageView *currentImageView;
 @property (nonatomic, weak) UIImageView *rightImageView;
 
-@property (nonatomic, assign) NSTimeInterval  timeInterval;
 @property (nonatomic, strong) NSTimer        *timer;
+@property (nonatomic, assign) NSTimeInterval  timeInterval;
 
 @property (nonatomic, assign) NSInteger imageCount;
 
