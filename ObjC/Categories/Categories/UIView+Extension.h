@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^UIViewTapHandler)(UIView *view);
-
 static NSString *viewTapHandlerKey;
+
+typedef void(^UIViewTapHandler)(UIView *view);
 
 @interface UIView (Extension)
 

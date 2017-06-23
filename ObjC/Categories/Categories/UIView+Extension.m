@@ -168,22 +168,6 @@
     }
 }
 
-- (void)tapAction:(UIViewTapHandler)handler {
-    
-    self.userInteractionEnabled = YES;
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapViewAction)];
-    [self addGestureRecognizer:tap];
-    objc_setAssociatedObject(self, &viewTapHandlerKey, handler, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
-- (void)tapViewAction {
-    
-    UIViewTapHandler tapHandler = objc_getAssociatedObject(self, &viewTapHandlerKey);
-    if (tapHandler) {
-        tapHandler(self);
-    }
-}
-
 - (void)addRoundedCorners:(UIRectCorner)corners withRadii:(CGSize)radii {
     
     [self addRoundedCorners:corners withRadii:radii viewRect:CGRectZero];
@@ -198,6 +182,24 @@
     CAShapeLayer *shape = [[CAShapeLayer alloc] init];
     [shape setPath:rounded.CGPath];
     self.layer.mask = shape;
+}
+
+#pragma mark - GestureRecognizer
+
+- (void)tapAction:(UIViewTapHandler)handler {
+    
+    self.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapViewAction)];
+    [self addGestureRecognizer:tap];
+    objc_setAssociatedObject(self, &viewTapHandlerKey, handler, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (void)tapViewAction {
+    
+    UIViewTapHandler tapHandler = objc_getAssociatedObject(self, &viewTapHandlerKey);
+    if (tapHandler) {
+        tapHandler(self);
+    }
 }
 
 @end
