@@ -145,6 +145,7 @@
 		688CD20B1EBB227300611325 /* UIView+ShineEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ShineEffect.m"; sourceTree = "<group>"; };
 		688CD20C1EBB227300611325 /* UIWindow+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Extension.h"; sourceTree = "<group>"; };
 		688CD20D1EBB227300611325 /* UIWindow+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Extension.m"; sourceTree = "<group>"; };
+		6E5D271A1EF5781C0016C06B /* MacroDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDefine.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +291,7 @@
 				688CD20B1EBB227300611325 /* UIView+ShineEffect.m */,
 				688CD20C1EBB227300611325 /* UIWindow+Extension.h */,
 				688CD20D1EBB227300611325 /* UIWindow+Extension.m */,
+				6E5D271A1EF5781C0016C06B /* MacroDefine.h */,
 			);
 			name = Categories;
 			path = ../../Categories;

@@ -30,7 +30,7 @@ typedef NS_ENUM(NSInteger, ShimmeringType) {
 @property (assign, nonatomic) CGFloat        shimmeringWidth;      // 闪烁宽度, 默认 20
 @property (assign, nonatomic) CGFloat        shimmeringRadius;     // 闪烁半径, 默认 20
 @property (assign, nonatomic) NSTimeInterval shimmeringDuration;   // 闪烁时间, 默认两秒
-@property (strong, nonatomic) UIColor       *shimmeringColor;     // 闪烁颜色, 默认白色
+@property (strong, nonatomic) UIColor       *shimmeringColor;      // 闪烁颜色, 默认白色
 
 - (void)startShimmering;
 - (void)stopShimmering;
