@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="M0s-QC-zke" customClass="HeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="257"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Willing Guo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npe-LH-xN6">
+                    <rect key="frame" x="136.5" y="54" width="102.5" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="bDO-Xo-RqM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My name is Willing Guo, I am a programmer and I coding with passion and patience." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIz-5U-pO5">
+                    <rect key="frame" x="20" y="90" width="335" height="33.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://github.com/guowilling" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSh-kX-53n">
+                    <rect key="frame" x="93.5" y="133.5" width="189.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="写了100字, 获得100个喜欢" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxT-Qc-ssA">
+                    <rect key="frame" x="103" y="160.5" width="169.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKX-dx-28b">
+                    <rect key="frame" x="142" y="189.5" width="92" height="30"/>
+                    <state key="normal" title="编辑个人资料">
+                        <color key="titleColor" red="0.0017218175523743932" green="0.60638497958933635" blue="0.0026715567047455092" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="gSh-kX-53n" firstAttribute="top" secondItem="WIz-5U-pO5" secondAttribute="bottom" constant="10" id="0PH-cV-l4z"/>
+                <constraint firstItem="WIz-5U-pO5" firstAttribute="leading" secondItem="M0s-QC-zke" secondAttribute="leading" constant="20" id="2JM-ua-MYA"/>
+                <constraint firstItem="gSh-kX-53n" firstAttribute="centerX" secondItem="npe-LH-xN6" secondAttribute="centerX" id="8eY-bv-m53"/>
+                <constraint firstAttribute="trailing" secondItem="WIz-5U-pO5" secondAttribute="trailing" constant="20" id="H6S-cH-wKB"/>
+                <constraint firstItem="gxT-Qc-ssA" firstAttribute="centerX" secondItem="npe-LH-xN6" secondAttribute="centerX" id="Mge-gz-k5n"/>
+                <constraint firstItem="npe-LH-xN6" firstAttribute="top" secondItem="M0s-QC-zke" secondAttribute="top" constant="54" id="PgW-jd-CLw"/>
+                <constraint firstItem="WIz-5U-pO5" firstAttribute="centerX" secondItem="npe-LH-xN6" secondAttribute="centerX" id="W1a-de-vDw"/>
+                <constraint firstItem="WIz-5U-pO5" firstAttribute="top" secondItem="npe-LH-xN6" secondAttribute="bottom" constant="15" id="Zio-VJ-WZa"/>
+                <constraint firstItem="gKX-dx-28b" firstAttribute="centerX" secondItem="npe-LH-xN6" secondAttribute="centerX" id="feL-70-gzu"/>
+                <constraint firstItem="npe-LH-xN6" firstAttribute="centerX" secondItem="M0s-QC-zke" secondAttribute="centerX" id="naV-3D-CKC"/>
+                <constraint firstItem="gKX-dx-28b" firstAttribute="top" secondItem="gxT-Qc-ssA" secondAttribute="bottom" constant="12" id="pty-ff-h8f"/>
+                <constraint firstItem="gxT-Qc-ssA" firstAttribute="top" secondItem="gSh-kX-53n" secondAttribute="bottom" constant="10" id="uVw-30-HJ2"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="217" y="-737"/>
+        </view>
+    </objects>
+</document>
