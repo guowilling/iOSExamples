@@ -73,6 +73,15 @@
         CGRect newRect = [self.red convertRect:self.red.bounds toView:nil];
         NSLog(@"%@", NSStringFromCGRect(newRect));
     }
+    
+//    - (CGRect)convertRect:(CGRect)rect toView:(nullable UIView *)view;
+//    - (CGRect)convertRect:(CGRect)rect fromView:(nullable UIView *)view;
+//    CGRect targetFrame = [A convertRect:B.frame toView:C];
+//    CGRect targetFrame = [C convertRect:B.frame fromView:A];
+//    
+//    CGRect targetFrame =  [A convertRect:B.frame toView:window];
+//    CGRect targetFrame =  [A convertRect:B.frame toView:nil];
+//    CGRect targetFrame = [window convertRect:B.frame fromView:A];
 }
 
 @end
