@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeDetailViewController">
+            <connections>
+                <outlet property="coverImageView" destination="wyD-A5-SDm" id="UCA-fx-Kee"/>
+                <outlet property="detailImageTopConstraint" destination="334-is-RTH" id="oWv-Fs-AWq"/>
+                <outlet property="detailImageView" destination="aus-9N-SHN" id="WO3-TX-e0a"/>
+                <outlet property="dismissBtn" destination="6Uh-Q7-IpU" id="leC-Yf-XzN"/>
+                <outlet property="view" destination="AUc-ld-i4Z" id="MAn-2r-AxO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="AUc-ld-i4Z">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wyD-A5-SDm">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="wyD-A5-SDm" secondAttribute="height" multiplier="3:2" id="IYo-ix-rj0"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AirbnbDetail" translatesAutoresizingMaskIntoConstraints="NO" id="aus-9N-SHN">
+                    <rect key="frame" x="0.0" y="250" width="375" height="417"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="aus-9N-SHN" secondAttribute="height" multiplier="125:139" id="kYq-L7-8Ew"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Uh-Q7-IpU">
+                    <rect key="frame" x="20" y="35" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="90A-w0-o4E"/>
+                        <constraint firstAttribute="width" constant="24" id="nph-t2-egF"/>
+                    </constraints>
+                    <state key="normal" image="dismiss"/>
+                    <connections>
+                        <action selector="dismissBtnAction:" destination="-1" eventType="touchUpInside" id="LpJ-mS-ZA4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="aus-9N-SHN" firstAttribute="top" secondItem="wyD-A5-SDm" secondAttribute="bottom" id="334-is-RTH"/>
+                <constraint firstItem="wyD-A5-SDm" firstAttribute="top" secondItem="AUc-ld-i4Z" secondAttribute="top" id="9rq-gf-bEc"/>
+                <constraint firstItem="6Uh-Q7-IpU" firstAttribute="leading" secondItem="AUc-ld-i4Z" secondAttribute="leading" constant="20" id="CIq-9Q-11O"/>
+                <constraint firstItem="wyD-A5-SDm" firstAttribute="leading" secondItem="AUc-ld-i4Z" secondAttribute="leading" id="Xnf-m2-ykC"/>
+                <constraint firstAttribute="trailing" secondItem="aus-9N-SHN" secondAttribute="trailing" id="hzt-Ry-gB9"/>
+                <constraint firstItem="aus-9N-SHN" firstAttribute="leading" secondItem="AUc-ld-i4Z" secondAttribute="leading" id="kgs-SF-WRE"/>
+                <constraint firstItem="6Uh-Q7-IpU" firstAttribute="top" secondItem="AUc-ld-i4Z" secondAttribute="top" constant="35" id="rqc-fI-ObI"/>
+                <constraint firstAttribute="trailing" secondItem="wyD-A5-SDm" secondAttribute="trailing" id="tQQ-KQ-wmD"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="AirbnbDetail" width="749" height="833"/>
+        <image name="dismiss" width="48" height="48"/>
+    </resources>
+</document>

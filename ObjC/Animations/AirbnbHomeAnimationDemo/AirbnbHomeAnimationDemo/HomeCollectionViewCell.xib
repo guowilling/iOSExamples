@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3i6-al-Ljf" customClass="HomeCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="289" height="246"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="289" height="246"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AirbnbPrice" translatesAutoresizingMaskIntoConstraints="NO" id="Gt3-kj-aDP">
+                        <rect key="frame" x="5" y="179.5" width="284" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Gt3-kj-aDP" secondAttribute="height" multiplier="284:43" id="KyF-9r-kJk"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fjr-1H-cfg">
+                        <rect key="frame" x="0.0" y="0.0" width="269" height="179.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Fjr-1H-cfg" secondAttribute="height" multiplier="3:2" id="kzo-cX-W0D"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Gt3-kj-aDP" firstAttribute="top" secondItem="Fjr-1H-cfg" secondAttribute="bottom" id="2d8-PZ-ToF"/>
+                <constraint firstAttribute="trailing" secondItem="Gt3-kj-aDP" secondAttribute="trailing" id="TOT-lt-elT"/>
+                <constraint firstItem="Fjr-1H-cfg" firstAttribute="leading" secondItem="3i6-al-Ljf" secondAttribute="leading" id="aya-Zq-3g3"/>
+                <constraint firstAttribute="trailing" secondItem="Fjr-1H-cfg" secondAttribute="trailing" constant="20" id="ena-Vb-dhW"/>
+                <constraint firstItem="Fjr-1H-cfg" firstAttribute="width" secondItem="Fjr-1H-cfg" secondAttribute="height" multiplier="3:2" id="hnV-J9-ywP"/>
+                <constraint firstItem="Fjr-1H-cfg" firstAttribute="top" secondItem="3i6-al-Ljf" secondAttribute="top" id="l0m-SB-bzN"/>
+                <constraint firstItem="Gt3-kj-aDP" firstAttribute="leading" secondItem="3i6-al-Ljf" secondAttribute="leading" constant="5" id="phY-Ff-PPx"/>
+            </constraints>
+            <size key="customSize" width="289" height="246"/>
+            <connections>
+                <outlet property="coverImageView" destination="Fjr-1H-cfg" id="LmM-Q1-sGN"/>
+            </connections>
+            <point key="canvasLocation" x="117" y="-136"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="AirbnbPrice" width="697" height="94"/>
+    </resources>
+</document>
