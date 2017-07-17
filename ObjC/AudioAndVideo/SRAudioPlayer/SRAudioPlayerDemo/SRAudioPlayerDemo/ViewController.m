@@ -20,6 +20,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(displayLinkAction)];
+    [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+}
+
+- (void)displayLinkAction {
+    
+    NSLog(@"currentTimeFormat: %@, cachingProgress: %.2f", [SRAudioPlayer shareInstance].currentTimeFormat, [SRAudioPlayer shareInstance].cachingProgress);
 }
 
 - (IBAction)play {

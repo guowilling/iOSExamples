@@ -45,6 +45,7 @@
             NSLog(@"%@", error);
             return;
         }
+        //placemarks.firstObject
         for (CLPlacemark *placemark in placemarks) {
             NSLog(@"%@", placemark.name);
             NSLog(@"%@", placemark.addressDictionary);
@@ -56,6 +57,36 @@
             }
             self.reverseDetailAddressLabel.text = strM;
         }
+        
+        /**
+         CLPlacemark 属性含义:
+         name                   地名
+         
+         thoroughfare           街道
+         
+         subThoroughfare        街道相关信息, 门牌等
+         
+         locality               城市
+         
+         subLocality            城市相关信息, 标志性建筑等
+         
+         administrativeArea     直辖市
+         
+         subAdministrativeArea  其他行政区域信息, 自治区等
+         
+         postalCode             邮编
+         
+         ISOcountryCode         国家编码
+         
+         country                国家
+         
+         inlandWater            水源, 湖泊
+         
+         ocean                  海洋
+         
+         areasOfInterest        关联的或利益相关的地标
+         */
+        
     }];
 }
 
