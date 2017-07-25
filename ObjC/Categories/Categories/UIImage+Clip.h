@@ -10,13 +10,8 @@
 
 @interface UIImage (Clip)
 
-- (UIImage *)cornerRadiusImageWithSize:(CGSize)size fillColor:(UIColor *)fillColor;
-
-- (void)cornerRadiusImageWithSize:(CGSize)size fillColor:(UIColor *)fillColor completion:(void (^)(UIImage *image))completion;
-
-+ (instancetype)circleImageWithImage:(UIImage *)originalImage borderWidth:(NSInteger)borderWidth borderColor:(UIColor *)borderColor;
-
 - (instancetype)subImageInRect:(CGRect)rect;
+
 - (instancetype)croppedImageAtFrame:(CGRect)frame;
 
 @end

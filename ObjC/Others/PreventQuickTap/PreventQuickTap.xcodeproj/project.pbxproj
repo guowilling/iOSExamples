@@ -108,9 +108,9 @@
 				681F82EB1E2F115800B13369 /* AppDelegate.m */,
 				681F82ED1E2F115800B13369 /* ViewController.h */,
 				681F82EE1E2F115800B13369 /* ViewController.m */,
-				681F82E71E2F115800B13369 /* Supporting Files */,
 				681F831A1E2F14E500B13369 /* UIButton+Swizzling.h */,
 				681F831B1E2F14E500B13369 /* UIButton+Swizzling.m */,
+				681F82E71E2F115800B13369 /* Supporting Files */,
 			);
 			path = PreventQuickTap;
 			sourceTree = "<group>";
@@ -520,6 +520,7 @@
 				681F83131E2F115800B13369 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		681F83141E2F115800B13369 /* Build configuration list for PBXNativeTarget "PreventQuickTapTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +529,7 @@
 				681F83161E2F115800B13369 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		681F83171E2F115800B13369 /* Build configuration list for PBXNativeTarget "PreventQuickTapUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +538,7 @@
 				681F83191E2F115800B13369 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

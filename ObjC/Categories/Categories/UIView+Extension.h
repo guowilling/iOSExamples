@@ -46,4 +46,16 @@ typedef void(^UIViewTapHandler)(UIView *view);
 - (void)addRoundedCorners:(UIRectCorner)corners withRadii:(CGSize)radii viewRect:(CGRect)rect;
 - (void)addRoundedCorners:(UIRectCorner)corners withRadii:(CGSize)radii;
 
+
+/**
+ 绘制虚线条
+
+ @param startPoint 起点
+ @param endPoint   终点
+ @param lineColor  线条颜色
+ @param lineHeight 线条高度
+ @param view       绘制的目标视图
+ */
+-(void)drawImaginaryLineWithStartPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint lineColor:(UIColor *)lineColor lineHeight:(CGFloat)lineHeight onView:(UIView*)view;
+
 @end

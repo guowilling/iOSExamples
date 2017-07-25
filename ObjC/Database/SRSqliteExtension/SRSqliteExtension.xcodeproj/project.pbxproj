@@ -144,8 +144,8 @@
 		682ABEFC1EFD0EB4006E520C /* SRSqliteExtensionTests */ = {
 			isa = PBXGroup;
 			children = (
-				682ABEFD1EFD0EB4006E520C /* SRSqliteExtensionTests.m */,
 				682ABEFF1EFD0EB4006E520C /* Info.plist */,
+				682ABEFD1EFD0EB4006E520C /* SRSqliteExtensionTests.m */,
 				682ABF051EFD0ED1006E520C /* SRSqliteToolTestCase.m */,
 				682ABF071EFD0EEA006E520C /* SRSqliteTableToolTestCase.m */,
 				682ABF091EFD0EFB006E520C /* SRSqliteModelToolTestCase.m */,

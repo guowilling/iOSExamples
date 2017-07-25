@@ -202,4 +202,24 @@
     }
 }
 
+-(void)drawImaginaryLineWithStartPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint lineColor:(UIColor *)lineColor lineHeight:(CGFloat)lineHeight onView:(UIView*)view {
+    
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    [shapeLayer setFillColor:[[UIColor blackColor] CGColor]];
+    [shapeLayer setStrokeColor:lineColor.CGColor];
+    [shapeLayer setLineWidth:lineHeight];
+    [shapeLayer setLineJoin:kCALineJoinRound];
+    // 5.0 每条虚线的长度
+    // 2.0 两条虚线之间的间距
+    [shapeLayer setLineDashPattern:@[@(5.0), @(2.0)]];
+    
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGPathMoveToPoint(path, NULL,startPoint.x, startPoint.y);
+    CGPathAddLineToPoint(path, NULL, endPoint.x, endPoint.y);
+    [shapeLayer setPath:path];
+    CGPathRelease(path);
+    
+    [view.layer addSublayer:shapeLayer];
+}
+
 @end

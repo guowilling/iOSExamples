@@ -1,9 +1,9 @@
 //
 //  main.m
-//  CornerRadiusImage
+//  ImageCornerRadiusDemo
 //
-//  Created by Willing Guo on 2017/3/14.
-//  Copyright © 2017年 Willing Guo. All rights reserved.
+//  Created by 郭伟林 on 2017/7/25.
+//  Copyright © 2017年 SR. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
