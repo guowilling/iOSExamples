@@ -81,19 +81,20 @@
 
 + (NSDictionary *)ocTypeToSqliteTypeDic {
     
-    return @{@"d": @"real", // double
-             @"f": @"real", // float
-             @"i": @"integer", // int
-             @"q": @"integer", // long
-             @"Q": @"integer", // long long
-             @"B": @"integer", // bool
+    return @{@"d": @"real",     // double
+             @"f": @"real",     // float
+             @"i": @"integer",  // int
+             @"q": @"integer",  // long
+             @"Q": @"integer",  // long long
+             @"B": @"integer",  // bool
              
-             @"NSDictionary": @"text",
-             @"NSMutableDictionary": @"text",
+             @"NSString": @"text",
+             
              @"NSArray": @"text",
              @"NSMutableArray": @"text",
              
-             @"NSString": @"text",
+             @"NSDictionary": @"text",
+             @"NSMutableDictionary": @"text",
              
              @"NSData": @"blob"};
 }

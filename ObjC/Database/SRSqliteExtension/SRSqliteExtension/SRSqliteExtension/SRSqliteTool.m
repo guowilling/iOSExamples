@@ -82,7 +82,7 @@ sqlite3 *ppDb = nil;
     
     NSString *begin = @"begin transaction";
     sqlite3_exec(ppDb, begin.UTF8String, nil, nil, nil);
-
+    
     for (NSString *sql in sqls) {
         BOOL result = sqlite3_exec(ppDb, sql.UTF8String, nil, nil, nil) == SQLITE_OK;
         if (result == NO) {
