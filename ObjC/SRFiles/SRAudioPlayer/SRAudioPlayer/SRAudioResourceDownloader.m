@@ -50,7 +50,6 @@
     self.loadedSize = 0;
 }
 
-
 #pragma mark - NSURLSessionDataDelegate {
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSHTTPURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler {
