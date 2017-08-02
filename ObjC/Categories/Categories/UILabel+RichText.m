@@ -130,7 +130,7 @@
 - (CGSize)getRectWithMaxWidth:(CGFloat)maxWidth {
     
     // 如果设置了 paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail
-    // 这种方式高度计算不准确
+    // 以下方式计算高度结果不准确
 //    CGRect rect = [self.attributedText boundingRectWithSize:CGSizeMake(maxWidth, MAXFLOAT)
 //                                                    options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
 //                                                    context:nil];

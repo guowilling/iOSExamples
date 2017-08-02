@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="spz-OS-oVP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SRBarrageView-->
+        <scene sceneID="4k0-cg-vH5">
+            <objects>
+                <viewController id="8Cg-Wb-buV" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0a6-Qo-A2I"/>
+                        <viewControllerLayoutGuide type="bottom" id="iGr-iy-8tU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="APk-dM-VMU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zt9-MQ-dTo">
+                                <rect key="frame" x="141.5" y="424" width="92" height="30"/>
+                                <state key="normal" title="Pause Rolling"/>
+                                <connections>
+                                    <action selector="pauseRollingAction:" destination="8Cg-Wb-buV" eventType="touchUpInside" id="ta4-rS-6pJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cr7-L8-Osc">
+                                <rect key="frame" x="134.5" y="474" width="105" height="30"/>
+                                <state key="normal" title="Resume Rolling"/>
+                                <connections>
+                                    <action selector="resumeRolling:" destination="8Cg-Wb-buV" eventType="touchUpInside" id="DqN-LU-I3t"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zt9-MQ-dTo" firstAttribute="top" secondItem="0a6-Qo-A2I" secondAttribute="bottom" constant="360" id="G6S-Ed-eCe"/>
+                            <constraint firstItem="zt9-MQ-dTo" firstAttribute="centerX" secondItem="APk-dM-VMU" secondAttribute="centerX" id="aMH-et-DuZ"/>
+                            <constraint firstItem="cr7-L8-Osc" firstAttribute="centerX" secondItem="zt9-MQ-dTo" secondAttribute="centerX" id="la1-sz-QBL"/>
+                            <constraint firstItem="cr7-L8-Osc" firstAttribute="top" secondItem="zt9-MQ-dTo" secondAttribute="bottom" constant="20" id="y3l-ye-CnR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="SRBarrageView" id="bng-j3-LqH">
+                        <barButtonItem key="rightBarButtonItem" title="Reload" id="A5B-4l-Idt">
+                            <connections>
+                                <action selector="reloadAction:" destination="8Cg-Wb-buV" id="K9j-kX-VeJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wzt-gu-q9P" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="-561"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5qw-yD-CFe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="spz-OS-oVP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7xh-Vh-P6p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8Cg-Wb-buV" kind="relationship" relationship="rootViewController" id="6tq-yh-AIA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gSF-uC-4Cc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="-560.86956521739137"/>
+        </scene>
+    </scenes>
+</document>

@@ -106,8 +106,9 @@
 //    [self.centerWheel.layer addAnimation:anima forKey:nil];
 }
 
-//- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-//    self.userInteractionEnabled = YES;
-//}
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    
+    self.userInteractionEnabled = YES;
+}
 
 @end

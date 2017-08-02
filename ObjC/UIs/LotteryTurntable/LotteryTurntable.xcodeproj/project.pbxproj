@@ -14,20 +14,9 @@
 		0988B2041BB1D2FD00F49800 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0988B2021BB1D2FD00F49800 /* Main.storyboard */; };
 		0988B2061BB1D2FD00F49800 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0988B2051BB1D2FD00F49800 /* Images.xcassets */; };
 		0988B2091BB1D2FD00F49800 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0988B2071BB1D2FD00F49800 /* LaunchScreen.xib */; };
-		0988B2151BB1D2FD00F49800 /* LotteryTurntableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0988B2141BB1D2FD00F49800 /* LotteryTurntableTests.m */; };
 		0988B2201BB1DE3200F49800 /* WheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0988B21F1BB1DE3200F49800 /* WheelView.m */; };
 		0988B2221BB1DE4600F49800 /* WheelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0988B2211BB1DE4600F49800 /* WheelView.xib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0988B20F1BB1D2FD00F49800 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0988B1ED1BB1D2FD00F49800 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0988B1F41BB1D2FD00F49800;
-			remoteInfo = "转盘";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		09334E9F1BB1E0E7001B6137 /* WheelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WheelButton.h; sourceTree = "<group>"; };
@@ -42,7 +31,6 @@
 		0988B2031BB1D2FD00F49800 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0988B2051BB1D2FD00F49800 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0988B2081BB1D2FD00F49800 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		0988B20E1BB1D2FD00F49800 /* LotteryTurntableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LotteryTurntableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0988B2131BB1D2FD00F49800 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0988B2141BB1D2FD00F49800 /* LotteryTurntableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LotteryTurntableTests.m; sourceTree = "<group>"; };
 		0988B21E1BB1DE3200F49800 /* WheelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WheelView.h; sourceTree = "<group>"; };
@@ -52,13 +40,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		0988B1F21BB1D2FD00F49800 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0988B20B1BB1D2FD00F49800 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -81,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				0988B1F51BB1D2FD00F49800 /* LotteryTurntable.app */,
-				0988B20E1BB1D2FD00F49800 /* LotteryTurntableTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,24 +132,6 @@
 			productReference = 0988B1F51BB1D2FD00F49800 /* LotteryTurntable.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0988B20D1BB1D2FD00F49800 /* LotteryTurntableTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0988B21B1BB1D2FD00F49800 /* Build configuration list for PBXNativeTarget "LotteryTurntableTests" */;
-			buildPhases = (
-				0988B20A1BB1D2FD00F49800 /* Sources */,
-				0988B20B1BB1D2FD00F49800 /* Frameworks */,
-				0988B20C1BB1D2FD00F49800 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0988B2101BB1D2FD00F49800 /* PBXTargetDependency */,
-			);
-			name = LotteryTurntableTests;
-			productName = "转盘Tests";
-			productReference = 0988B20E1BB1D2FD00F49800 /* LotteryTurntableTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -183,10 +145,6 @@
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = Y4FK8UXDXW;
 						ProvisioningStyle = Manual;
-					};
-					0988B20D1BB1D2FD00F49800 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 0988B1F41BB1D2FD00F49800;
 					};
 				};
 			};
@@ -204,7 +162,6 @@
 			projectRoot = "";
 			targets = (
 				0988B1F41BB1D2FD00F49800 /* LotteryTurntable */,
-				0988B20D1BB1D2FD00F49800 /* LotteryTurntableTests */,
 			);
 		};
 /* End PBXProject section */
@@ -218,13 +175,6 @@
 				0988B2091BB1D2FD00F49800 /* LaunchScreen.xib in Resources */,
 				0988B2221BB1DE4600F49800 /* WheelView.xib in Resources */,
 				0988B2061BB1D2FD00F49800 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0988B20C1BB1D2FD00F49800 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,23 +193,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0988B20A1BB1D2FD00F49800 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0988B2151BB1D2FD00F49800 /* LotteryTurntableTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0988B2101BB1D2FD00F49800 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0988B1F41BB1D2FD00F49800 /* LotteryTurntable */;
-			targetProxy = 0988B20F1BB1D2FD00F49800 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0988B2021BB1D2FD00F49800 /* Main.storyboard */ = {
@@ -389,40 +323,6 @@
 			};
 			name = Release;
 		};
-		0988B21C1BB1D2FD00F49800 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = LotteryTurntableTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LotteryTurntable.app/LotteryTurntable";
-			};
-			name = Debug;
-		};
-		0988B21D1BB1D2FD00F49800 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = LotteryTurntableTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LotteryTurntable.app/LotteryTurntable";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -440,15 +340,6 @@
 			buildConfigurations = (
 				0988B2191BB1D2FD00F49800 /* Debug */,
 				0988B21A1BB1D2FD00F49800 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0988B21B1BB1D2FD00F49800 /* Build configuration list for PBXNativeTarget "LotteryTurntableTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0988B21C1BB1D2FD00F49800 /* Debug */,
-				0988B21D1BB1D2FD00F49800 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
