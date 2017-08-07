@@ -7,10 +7,10 @@
 
 @interface SRSqliteTool : NSObject
 
-+ (BOOL)deal:(NSString *)sql uid:(NSString *)uid;
++ (BOOL)executeSQL:(NSString *)sql uid:(NSString *)uid;
 
-+ (BOOL)dealSqls:(NSArray<NSString *> *)sqls uid:(NSString *)uid;
++ (BOOL)executeSQLs:(NSArray<NSString *> *)sqls uid:(NSString *)uid;
 
-+ (NSMutableArray<NSMutableDictionary *> *)querySql:(NSString *)sql uid:(NSString *)uid;
++ (NSMutableArray<NSMutableDictionary *> *)querySQL:(NSString *)sql uid:(NSString *)uid;
 
 @end

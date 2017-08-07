@@ -10,12 +10,10 @@
 
 @interface AdjustNumberButton : UIView
 
-/**
- 边框颜色, 默认浅灰色.
- */
+/** 边框颜色, 默认浅灰色 */
 @property (nonatomic, strong) UIColor *tintColor;
 
-@property (nonatomic, readonly) NSString *currentNumber;
+@property (nonatomic, copy, readonly) NSString *currentNumber;
 
 @property (nonatomic, copy) void (^currentNumberDidChangeBlock)(NSString *currentNumber);
 

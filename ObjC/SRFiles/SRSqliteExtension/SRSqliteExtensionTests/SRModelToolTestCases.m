@@ -10,11 +10,11 @@
 #import "SRModelTool.h"
 #import "Student.h"
 
-@interface SRModelToolTestCase : XCTestCase
+@interface SRModelToolTestCases : XCTestCase
 
 @end
 
-@implementation SRModelToolTestCase
+@implementation SRModelToolTestCases
 
 - (void)setUp {
     [super setUp];

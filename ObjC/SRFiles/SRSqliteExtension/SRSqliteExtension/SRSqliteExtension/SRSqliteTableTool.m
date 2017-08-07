@@ -13,7 +13,7 @@
     
     NSString *tableName = [SRModelTool tableName:cls];
     NSString *queryCreateSqlStr = [NSString stringWithFormat:@"select sql from sqlite_master where type = 'table' and name = '%@'", tableName];
-    NSMutableArray *result = [SRSqliteTool querySql:queryCreateSqlStr uid:uid];
+    NSMutableArray *result = [SRSqliteTool querySQL:queryCreateSqlStr uid:uid];
     return result.count > 0;
 }
 
@@ -21,7 +21,7 @@
     
     NSString *tableName = [SRModelTool tableName:cls];
     NSString *queryCreateSqlStr = [NSString stringWithFormat:@"select sql from sqlite_master where type = 'table' and name = '%@'", tableName];
-    NSMutableDictionary *result = [SRSqliteTool querySql:queryCreateSqlStr uid:uid].firstObject;
+    NSMutableDictionary *result = [SRSqliteTool querySQL:queryCreateSqlStr uid:uid].firstObject;
     NSString *createTableSQLString = result[@"sql"];
     if (createTableSQLString.length == 0) {
         return nil;

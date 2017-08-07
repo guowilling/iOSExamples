@@ -30,39 +30,38 @@
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
 
-- (void)testCreate {
+- (void)testCreateTable {
     
-    NSString *createSQLString = @"create table if not exists t_stu(id integer primary key autoincrement, name text not null, age integer, score real)";
-    BOOL result = [SRSqliteTool deal:createSQLString uid:nil];
+    NSString *createTable = @"create table if not exists t_stu(id integer primary key autoincrement, name text not null, age integer, score real)";
+    BOOL result = [SRSqliteTool executeSQL:createTable uid:nil];
     XCTAssertEqual(result, YES);
 }
 
 - (void)testQuery {
     
-    NSString *deleteSQLString = @"delete from t_stu";
-    BOOL deleteResult = [SRSqliteTool deal:deleteSQLString uid:nil];
+    NSString *deleteData = @"delete from t_stu";
+    BOOL deleteResult = [SRSqliteTool executeSQL:deleteData uid:nil];
     XCTAssertTrue(deleteResult);
     
-    NSString *insert1 = @"insert into t_stu(id, name, age, score) values (1, 'sz', 18, 0)";
-    BOOL insert1Result = [SRSqliteTool deal:insert1 uid:nil];
-    XCTAssertTrue(insert1Result);
+    NSString *insertStu1 = @"insert into t_stu(id, name, age, score) values (1, 'aa', 15, 99)";
+    BOOL insertResult1 = [SRSqliteTool executeSQL:insertStu1 uid:nil];
+    XCTAssertTrue(insertResult1);
     
-    NSString *insert2 = @"insert into t_stu(id, name, age, score) values (2, 'zs', 81, 1)";
-    BOOL insert2Result = [SRSqliteTool deal:insert2 uid:nil];
-    XCTAssertTrue(insert2Result);
+    NSString *insertStu2 = @"insert into t_stu(id, name, age, score) values (2, 'bb', 25, 99)";
+    BOOL insertResult2 = [SRSqliteTool executeSQL:insertStu2 uid:nil];
+    XCTAssertTrue(insertResult2);
     
-    NSString *querySQLString = @"select * from t_stu";
-    NSMutableArray *result = [SRSqliteTool querySql:querySQLString uid:nil];
-    
-    NSArray *verification = @[@{@"age": @18,
-                                @"id": @1,
-                                @"name": @"sz",
-                                @"score": @0},
-                              @{@"age": @81,
-                                @"id": @2,
-                                @"name": @"zs",
-                                @"score": @1}];
-    XCTAssertTrue([result isEqualToArray:verification]);
+    NSString *queryStu = @"select * from t_stu";
+    NSArray *queryResult = [SRSqliteTool querySQL:queryStu uid:nil];
+    NSArray *verification = @[@{@"id": @1,
+                                @"name": @"aa",
+                                @"age": @15,
+                                @"score": @99},
+                              @{@"id": @2,
+                                @"name": @"bb",
+                                @"age": @25,
+                                @"score": @99}];
+    XCTAssertTrue([queryResult isEqualToArray:verification]);
 }
 
 - (void)testPerformanceExample {

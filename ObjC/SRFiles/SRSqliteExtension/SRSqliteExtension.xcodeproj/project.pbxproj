@@ -17,9 +17,9 @@
 		682ABEE81EFD0E86006E520C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 682ABEE71EFD0E86006E520C /* libsqlite3.0.tbd */; };
 		682ABEFE1EFD0EB4006E520C /* SRSqliteExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 682ABEFD1EFD0EB4006E520C /* SRSqliteExtensionTests.m */; };
 		682ABF061EFD0ED1006E520C /* SRSqliteToolTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 682ABF051EFD0ED1006E520C /* SRSqliteToolTestCase.m */; };
-		682ABF081EFD0EEA006E520C /* SRSqliteTableToolTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 682ABF071EFD0EEA006E520C /* SRSqliteTableToolTestCase.m */; };
-		682ABF0A1EFD0EFB006E520C /* SRSqliteModelToolTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 682ABF091EFD0EFB006E520C /* SRSqliteModelToolTestCase.m */; };
-		682ABF0C1EFD0F06006E520C /* SRModelToolTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 682ABF0B1EFD0F06006E520C /* SRModelToolTestCase.m */; };
+		682ABF081EFD0EEA006E520C /* SRSqliteTableToolTestCases.m in Sources */ = {isa = PBXBuildFile; fileRef = 682ABF071EFD0EEA006E520C /* SRSqliteTableToolTestCases.m */; };
+		682ABF0A1EFD0EFB006E520C /* SRSqliteModelToolTestCases.m in Sources */ = {isa = PBXBuildFile; fileRef = 682ABF091EFD0EFB006E520C /* SRSqliteModelToolTestCases.m */; };
+		682ABF0C1EFD0F06006E520C /* SRModelToolTestCases.m in Sources */ = {isa = PBXBuildFile; fileRef = 682ABF0B1EFD0F06006E520C /* SRModelToolTestCases.m */; };
 		682ABF171EFD121C006E520C /* SRModelTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 682ABF101EFD121C006E520C /* SRModelTool.m */; };
 		682ABF181EFD121C006E520C /* SRSqliteModelTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 682ABF121EFD121C006E520C /* SRSqliteModelTool.m */; };
 		682ABF191EFD121C006E520C /* SRSqliteTableTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 682ABF141EFD121C006E520C /* SRSqliteTableTool.m */; };
@@ -54,9 +54,9 @@
 		682ABEFD1EFD0EB4006E520C /* SRSqliteExtensionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRSqliteExtensionTests.m; sourceTree = "<group>"; };
 		682ABEFF1EFD0EB4006E520C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		682ABF051EFD0ED1006E520C /* SRSqliteToolTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSqliteToolTestCase.m; sourceTree = "<group>"; };
-		682ABF071EFD0EEA006E520C /* SRSqliteTableToolTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSqliteTableToolTestCase.m; sourceTree = "<group>"; };
-		682ABF091EFD0EFB006E520C /* SRSqliteModelToolTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSqliteModelToolTestCase.m; sourceTree = "<group>"; };
-		682ABF0B1EFD0F06006E520C /* SRModelToolTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRModelToolTestCase.m; sourceTree = "<group>"; };
+		682ABF071EFD0EEA006E520C /* SRSqliteTableToolTestCases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSqliteTableToolTestCases.m; sourceTree = "<group>"; };
+		682ABF091EFD0EFB006E520C /* SRSqliteModelToolTestCases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSqliteModelToolTestCases.m; sourceTree = "<group>"; };
+		682ABF0B1EFD0F06006E520C /* SRModelToolTestCases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRModelToolTestCases.m; sourceTree = "<group>"; };
 		682ABF0E1EFD121C006E520C /* SRModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRModelProtocol.h; sourceTree = "<group>"; };
 		682ABF0F1EFD121C006E520C /* SRModelTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRModelTool.h; sourceTree = "<group>"; };
 		682ABF101EFD121C006E520C /* SRModelTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRModelTool.m; sourceTree = "<group>"; };
@@ -110,9 +110,9 @@
 		682ABEBD1EFD0D92006E520C /* SRSqliteExtension */ = {
 			isa = PBXGroup;
 			children = (
-				682ABEBE1EFD0D92006E520C /* Supporting Files */,
 				682ABEE31EFD0E51006E520C /* Student.h */,
 				682ABEE41EFD0E51006E520C /* Student.m */,
+				682ABEBE1EFD0D92006E520C /* Supporting Files */,
 			);
 			path = SRSqliteExtension;
 			sourceTree = "<group>";
@@ -147,9 +147,9 @@
 				682ABEFF1EFD0EB4006E520C /* Info.plist */,
 				682ABEFD1EFD0EB4006E520C /* SRSqliteExtensionTests.m */,
 				682ABF051EFD0ED1006E520C /* SRSqliteToolTestCase.m */,
-				682ABF071EFD0EEA006E520C /* SRSqliteTableToolTestCase.m */,
-				682ABF091EFD0EFB006E520C /* SRSqliteModelToolTestCase.m */,
-				682ABF0B1EFD0F06006E520C /* SRModelToolTestCase.m */,
+				682ABF071EFD0EEA006E520C /* SRSqliteTableToolTestCases.m */,
+				682ABF091EFD0EFB006E520C /* SRSqliteModelToolTestCases.m */,
+				682ABF0B1EFD0F06006E520C /* SRModelToolTestCases.m */,
 			);
 			path = SRSqliteExtensionTests;
 			sourceTree = "<group>";
@@ -157,15 +157,15 @@
 		682ABF0D1EFD121C006E520C /* SRSqliteExtension */ = {
 			isa = PBXGroup;
 			children = (
-				682ABF0E1EFD121C006E520C /* SRModelProtocol.h */,
-				682ABF0F1EFD121C006E520C /* SRModelTool.h */,
-				682ABF101EFD121C006E520C /* SRModelTool.m */,
-				682ABF111EFD121C006E520C /* SRSqliteModelTool.h */,
-				682ABF121EFD121C006E520C /* SRSqliteModelTool.m */,
-				682ABF131EFD121C006E520C /* SRSqliteTableTool.h */,
-				682ABF141EFD121C006E520C /* SRSqliteTableTool.m */,
 				682ABF151EFD121C006E520C /* SRSqliteTool.h */,
 				682ABF161EFD121C006E520C /* SRSqliteTool.m */,
+				682ABF131EFD121C006E520C /* SRSqliteTableTool.h */,
+				682ABF141EFD121C006E520C /* SRSqliteTableTool.m */,
+				682ABF111EFD121C006E520C /* SRSqliteModelTool.h */,
+				682ABF121EFD121C006E520C /* SRSqliteModelTool.m */,
+				682ABF0F1EFD121C006E520C /* SRModelTool.h */,
+				682ABF101EFD121C006E520C /* SRModelTool.m */,
+				682ABF0E1EFD121C006E520C /* SRModelProtocol.h */,
 			);
 			name = SRSqliteExtension;
 			path = SRSqliteExtension/SRSqliteExtension;
@@ -290,11 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				682ABF0A1EFD0EFB006E520C /* SRSqliteModelToolTestCase.m in Sources */,
-				682ABF081EFD0EEA006E520C /* SRSqliteTableToolTestCase.m in Sources */,
+				682ABF0A1EFD0EFB006E520C /* SRSqliteModelToolTestCases.m in Sources */,
+				682ABF081EFD0EEA006E520C /* SRSqliteTableToolTestCases.m in Sources */,
 				682ABF061EFD0ED1006E520C /* SRSqliteToolTestCase.m in Sources */,
 				682ABEFE1EFD0EB4006E520C /* SRSqliteExtensionTests.m in Sources */,
-				682ABF0C1EFD0F06006E520C /* SRModelToolTestCase.m in Sources */,
+				682ABF0C1EFD0F06006E520C /* SRModelToolTestCases.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

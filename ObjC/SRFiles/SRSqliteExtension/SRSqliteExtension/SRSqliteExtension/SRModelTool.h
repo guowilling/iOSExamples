@@ -13,7 +13,7 @@
 
 + (NSDictionary *)classIvarsNameOCTypeDic:(Class)cls;
 
-+ (NSDictionary *)classIvarNameSqliteTypeDic:(Class)cls;
++ (NSDictionary *)classIvarsNameSqliteTypeDic:(Class)cls;
 
 + (NSString *)fieldsNameAndTypeString:(Class)cls;
 

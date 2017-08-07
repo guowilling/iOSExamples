@@ -19,7 +19,7 @@
     }
     NSString *primaryKey = [cls primaryKey];
     NSString *createTableSql = [NSString stringWithFormat:@"create table if not exists %@(%@, primary key(%@))", tableName, [SRModelTool fieldsNameAndTypeString:cls], primaryKey];
-    return [SRSqliteTool deal:createTableSql uid:uid];
+    return [SRSqliteTool executeSQL:createTableSql uid:uid];
 }
 
 + (BOOL)isTableRequiredUpdate:(Class)cls uid:(NSString *)uid {
@@ -75,7 +75,7 @@
     NSString *renameTableName = [NSString stringWithFormat:@"alter table %@ rename to %@;", tmpTableName, tableName];
     [execSqls addObject:renameTableName];
     
-    return [SRSqliteTool dealSqls:execSqls uid:uid];
+    return [SRSqliteTool executeSQLs:execSqls uid:uid];
 }
 
 + (BOOL)saveOrUpdateModel:(id)model uid:(NSString *)uid {
@@ -100,7 +100,7 @@
     id primaryValue = [model valueForKeyPath:primaryKey];
     NSString *tableName = [SRModelTool tableName:cls];
     NSString *checkSql = [NSString stringWithFormat:@"select * from %@ where %@ = '%@'", tableName, primaryKey, primaryValue];
-    NSArray *result = [SRSqliteTool querySql:checkSql uid:uid];
+    NSArray *result = [SRSqliteTool querySQL:checkSql uid:uid];
     
     NSArray *columnNames = [SRModelTool classIvarsNameOCTypeDic:cls].allKeys;
     NSMutableArray *values = [NSMutableArray array];
@@ -129,7 +129,7 @@
         execSql = [NSString stringWithFormat:@"insert into %@(%@) values('%@')", tableName, [columnNames componentsJoinedByString:@","], [values componentsJoinedByString:@"','"]];
     }
     
-    return [SRSqliteTool deal:execSql uid:uid];
+    return [SRSqliteTool executeSQL:execSql uid:uid];
 }
 
 + (BOOL)deleteModel:(id)model uid:(NSString *)uid {
@@ -142,7 +142,7 @@
     NSString *primaryKey = [cls primaryKey];
     id primaryValue = [model valueForKeyPath:primaryKey];
     NSString *deleteSql = [NSString stringWithFormat:@"delete from %@ where %@ = '%@'", tableName, primaryKey, primaryValue];
-    return [SRSqliteTool deal:deleteSql uid:uid];
+    return [SRSqliteTool executeSQL:deleteSql uid:uid];
 }
 
 + (BOOL)deleteModel:(Class)cls whereStr:(NSString *)whereStr uid:(NSString *)uid {
@@ -152,21 +152,21 @@
     if (whereStr.length > 0) {
         deleteSql = [deleteSql stringByAppendingFormat:@" where %@", whereStr];
     }
-    return [SRSqliteTool deal:deleteSql uid:uid];
+    return [SRSqliteTool executeSQL:deleteSql uid:uid];
 }
 
 + (BOOL)deleteModel:(Class)cls columnName:(NSString *)name relation:(ColumnNameToValueRelationType)relation value:(id)value uid:(NSString *)uid {
     
     NSString *tableName = [SRModelTool tableName:cls];
     NSString *deleteSql = [NSString stringWithFormat:@"delete from %@ where %@ %@ '%@'", tableName, name, self.ColumnNameToValueRelationTypeDic[@(relation)], value];
-    return [SRSqliteTool deal:deleteSql uid:uid];
+    return [SRSqliteTool executeSQL:deleteSql uid:uid];
 }
 
 + (NSArray *)queryAllModels:(Class)cls uid:(NSString *)uid {
     
     NSString *tableName = [SRModelTool tableName:cls];
     NSString *sql = [NSString stringWithFormat:@"select * from %@", tableName];
-    NSArray<NSDictionary *> *results = [SRSqliteTool querySql:sql uid:uid];
+    NSArray<NSDictionary *> *results = [SRSqliteTool querySQL:sql uid:uid];
     return [self parseResults:results withClass:cls];;
 }
 
@@ -174,13 +174,13 @@
     
     NSString *tableName = [SRModelTool tableName:cls];
     NSString *sql = [NSString stringWithFormat:@"select * from %@ where %@ %@ '%@' ", tableName, name, self.ColumnNameToValueRelationTypeDic[@(relation)], value];
-    NSArray <NSDictionary *>*results = [SRSqliteTool querySql:sql uid:uid];
+    NSArray <NSDictionary *>*results = [SRSqliteTool querySQL:sql uid:uid];
     return [self parseResults:results withClass:cls];
 }
 
 + (NSArray *)queryModels:(Class)cls sql:(NSString *)sql uid:(NSString *)uid {
     
-    NSArray <NSDictionary *>*results = [SRSqliteTool querySql:sql uid:uid];
+    NSArray <NSDictionary *>*results = [SRSqliteTool querySQL:sql uid:uid];
     return [self parseResults:results withClass:cls];
 }
 

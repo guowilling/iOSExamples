@@ -10,11 +10,11 @@
 #import "SRSqliteModelTool.h"
 #import "Student.h"
 
-@interface SRSqliteModelToolTestCase : XCTestCase
+@interface SRSqliteModelToolTestCases : XCTestCase
 
 @end
 
-@implementation SRSqliteModelToolTestCase
+@implementation SRSqliteModelToolTestCases
 
 - (void)setUp {
     [super setUp];

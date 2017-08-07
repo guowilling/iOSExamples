@@ -48,7 +48,7 @@
     return nameTypeDic;
 }
 
-+ (NSDictionary *)classIvarNameSqliteTypeDic:(Class)cls {
++ (NSDictionary *)classIvarsNameSqliteTypeDic:(Class)cls {
     
     NSMutableDictionary *nameOCTypeDic = [self classIvarsNameOCTypeDic:cls].mutableCopy;
     NSDictionary *typeDic = [self ocTypeToSqliteTypeDic];
@@ -60,7 +60,7 @@
 
 + (NSString *)fieldsNameAndTypeString:(Class)cls {
     
-    NSDictionary *nameTypeDic = [self classIvarNameSqliteTypeDic:cls];
+    NSDictionary *nameTypeDic = [self classIvarsNameSqliteTypeDic:cls];
     NSMutableArray *result = [NSMutableArray array];
     [nameTypeDic enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *obj, BOOL * _Nonnull stop) {
         [result addObject:[NSString stringWithFormat:@"%@ %@", key, obj]];

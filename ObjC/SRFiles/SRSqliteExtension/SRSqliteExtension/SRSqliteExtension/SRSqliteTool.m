@@ -14,7 +14,7 @@
 
 sqlite3 *ppDb = nil;
 
-+ (BOOL)deal:(NSString *)sql uid:(NSString *)uid {
++ (BOOL)executeSQL:(NSString *)sql uid:(NSString *)uid {
     
     if (![self openDB:uid]) {
         NSLog(@"open DB error!");
@@ -25,9 +25,38 @@ sqlite3 *ppDb = nil;
     return result;
 }
 
-+ (NSMutableArray <NSMutableDictionary *>*)querySql:(NSString *)sql uid:(NSString *)uid {
++ (BOOL)executeSQLs:(NSArray <NSString *>*)sqls uid:(NSString *)uid {
     
-    [self openDB:uid];
+    if (![self openDB:uid]) {
+        NSLog(@"open DB error!");
+        return NO;
+    }
+    
+    NSString *begin = @"begin transaction";
+    sqlite3_exec(ppDb, begin.UTF8String, nil, nil, nil);
+    
+    for (NSString *sql in sqls) {
+        BOOL result = sqlite3_exec(ppDb, sql.UTF8String, nil, nil, nil) == SQLITE_OK;
+        if (!result) {
+            NSString *rollBack = @"rollback transaction";
+            sqlite3_exec(ppDb, rollBack.UTF8String, nil, nil, nil);
+            [self closeDB];
+            return NO;
+        }
+    }
+    
+    NSString *commit = @"commit transaction";
+    sqlite3_exec(ppDb, commit.UTF8String, nil, nil, nil);
+    [self closeDB];
+    return YES;
+}
+
++ (NSMutableArray<NSMutableDictionary *>*)querySQL:(NSString *)sql uid:(NSString *)uid {
+    
+    if (![self openDB:uid]) {
+        NSLog(@"open DB error!");
+        return nil;
+    }
 
     sqlite3_stmt *ppStmt = nil;
     if (sqlite3_prepare_v2(ppDb, sql.UTF8String, -1, &ppStmt, nil) != SQLITE_OK) {
@@ -39,7 +68,6 @@ sqlite3 *ppDb = nil;
     while (sqlite3_step(ppStmt) == SQLITE_ROW) {
         int columnCount = sqlite3_column_count(ppStmt);
         NSMutableDictionary *rowDic = [NSMutableDictionary dictionary];
-        [rowDicArray addObject:rowDic];
         for (int i = 0; i < columnCount; i++) {
             const char *columnNameC = sqlite3_column_name(ppStmt, i);
             NSString *columnName = [NSString stringWithUTF8String:columnNameC];
@@ -64,40 +92,12 @@ sqlite3 *ppDb = nil;
             }
             [rowDic setValue:value forKey:columnName];
         }
+        [rowDicArray addObject:rowDic];
     }
     
     sqlite3_finalize(ppStmt);
-    
     [self closeDB];
-    
     return rowDicArray;
-}
-
-+ (BOOL)dealSqls:(NSArray <NSString *>*)sqls uid:(NSString *)uid {
-    
-    if (![self openDB:uid]) {
-        NSLog(@"open DB error!");
-        return NO;
-    }
-    
-    NSString *begin = @"begin transaction";
-    sqlite3_exec(ppDb, begin.UTF8String, nil, nil, nil);
-    
-    for (NSString *sql in sqls) {
-        BOOL result = sqlite3_exec(ppDb, sql.UTF8String, nil, nil, nil) == SQLITE_OK;
-        if (result == NO) {
-            NSString *rollBack = @"rollback transaction";
-            sqlite3_exec(ppDb, rollBack.UTF8String, nil, nil, nil);
-            [self closeDB];
-            return NO;
-        }
-    }
-    
-    NSString *commit = @"commit transaction";
-    sqlite3_exec(ppDb, commit.UTF8String, nil, nil, nil);
-    [self closeDB];
-    
-    return YES;
 }
 
 #pragma mark - Private Methods
@@ -119,17 +119,17 @@ sqlite3 *ppDb = nil;
 
 + (void)beginTransaction:(NSString *)uid {
     
-    [self deal:@"begin transaction" uid:uid];
+    [self executeSQL:@"begin transaction" uid:uid];
 }
 
 + (void)commitTransaction:(NSString *)uid {
     
-    [self deal:@"commit transaction" uid:uid];
+    [self executeSQL:@"commit transaction" uid:uid];
 }
 
 + (void)rollBackTransaction:(NSString *)uid {
     
-    [self deal:@"rollback transaction" uid:uid];
+    [self executeSQL:@"rollback transaction" uid:uid];
 }
 
 @end

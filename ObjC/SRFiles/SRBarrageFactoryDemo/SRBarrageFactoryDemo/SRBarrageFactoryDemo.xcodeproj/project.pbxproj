@@ -108,11 +108,11 @@
 		68A967661F31C9B3009436FE /* SRBarrageFactory */ = {
 			isa = PBXGroup;
 			children = (
-				68A967671F31C9B3009436FE /* CALayer+SRBarrage.h */,
-				68A967681F31C9B3009436FE /* CALayer+SRBarrage.m */,
-				68A967691F31C9B3009436FE /* SRBarrageModelProtocol.h */,
 				68A9676A1F31C9B3009436FE /* SRBarrageView.h */,
 				68A9676B1F31C9B3009436FE /* SRBarrageView.m */,
+				68A967691F31C9B3009436FE /* SRBarrageModelProtocol.h */,
+				68A967671F31C9B3009436FE /* CALayer+SRBarrage.h */,
+				68A967681F31C9B3009436FE /* CALayer+SRBarrage.m */,
 			);
 			name = SRBarrageFactory;
 			path = ../../SRBarrageFactory;
