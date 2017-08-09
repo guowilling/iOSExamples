@@ -10,7 +10,8 @@ import UIKit
 
 protocol SRChannelsContentDelegate : class {
     
-    func channelsContent(_ channelsContent: SRChannelsContent, scrollToIndex toIndex: Int, progress: CGFloat)
+//    func channelsContent(_ channelsContent: SRChannelsContent, scrollToIndex toIndex: Int, progress: CGFloat)
+    func channelsContent(_ channelsContent: SRChannelsContent, scrollFromIndex fromIndex: Int, toIndex:Int, progress: CGFloat)
     func channelsContent(_ channelsContent: SRChannelsContent, didEndScrollAtIndex atIndex : Int)
     
 }
@@ -100,39 +101,59 @@ extension SRChannelsContent: UICollectionViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.x == startOffsetX || disableScroll {
-            return
+        let floorIndex = Int(floorf(Float(scrollView.contentOffset.x / scrollView.frame.size.width)))
+        if floorIndex < 0 || floorIndex > childVCs.count - 1 {
+            return;
         }
-        var toIndex: Int = 0
-        var progress: CGFloat = 0
-        
+        var progress = scrollView.contentOffset.x / scrollView.frame.size.width - CGFloat(floorIndex)
+        var fromIndex = 0
+        var toIndex = 0
         if scrollView.contentOffset.x > startOffsetX {
-            toIndex = Int(startOffsetX / scrollView.bounds.width) + 1
-            if toIndex >= childVCs.count {
-                toIndex = childVCs.count - 1
+            fromIndex = floorIndex;
+            toIndex = min(childVCs.count - 1, fromIndex + 1);
+            if (fromIndex == toIndex && toIndex == childVCs.count - 1) {
+                fromIndex = childVCs.count - 2;
+                progress = 1.0;
             }
-            progress = (scrollView.contentOffset.x - startOffsetX) / scrollView.bounds.width
         } else {
-            toIndex = Int(startOffsetX / scrollView.bounds.width) - 1
-            if toIndex < 0 {
-                toIndex = 0
-            }
-            progress = (startOffsetX - scrollView.contentOffset.x) / scrollView.bounds.width
+            toIndex = floorIndex;
+            fromIndex = min(childVCs.count - 1, toIndex + 1);
+            progress = 1.0 - progress;
         }
-        delegate?.channelsContent(self, scrollToIndex: toIndex, progress: progress)
+        delegate?.channelsContent(self, scrollFromIndex: fromIndex, toIndex: toIndex, progress: progress)
+        
+//        if scrollView.contentOffset.x == startOffsetX || disableScroll {
+//            return
+//        }
+//        var toIndex: Int = 0
+//        var progress: CGFloat = 0
+//        if scrollView.contentOffset.x > startOffsetX {
+//            toIndex = Int(startOffsetX / scrollView.bounds.width) + 1
+//            if toIndex >= childVCs.count {
+//                toIndex = childVCs.count - 1
+//            }
+//            progress = (scrollView.contentOffset.x - startOffsetX) / scrollView.bounds.width
+//        } else {
+//            toIndex = Int(startOffsetX / scrollView.bounds.width) - 1
+//            if toIndex < 0 {
+//                toIndex = 0
+//            }
+//            progress = (startOffsetX - scrollView.contentOffset.x) / scrollView.bounds.width
+//        }
+//        delegate?.channelsContent(self, scrollToIndex: toIndex, progress: progress)
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if !decelerate {
             collectionViewEndScroll()
         } else {
-            scrollView.isScrollEnabled = false
+//            scrollView.isScrollEnabled = false
         }
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         collectionViewEndScroll()
-        scrollView.isScrollEnabled = true
+//        scrollView.isScrollEnabled = true
     }
     
     private func collectionViewEndScroll() {

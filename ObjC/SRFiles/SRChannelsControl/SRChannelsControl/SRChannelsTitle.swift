@@ -218,8 +218,8 @@ extension SRChannelsTitle {
 
 extension SRChannelsTitle: SRChannelsContentDelegate {
     
-    func channelsContent(_ channelsContent: SRChannelsContent, scrollToIndex toIndex: Int, progress: CGFloat) {
-        let lastLabel = titleLabels[currentIndex]
+    func channelsContent(_ channelsContent: SRChannelsContent, scrollFromIndex fromIndex: Int, toIndex: Int, progress: CGFloat) {
+        let lastLabel = titleLabels[fromIndex]
         let toLabel = titleLabels[toIndex]
         
         let normalRGB = getGRBValue(style.titleNormalColor)
@@ -256,6 +256,46 @@ extension SRChannelsTitle: SRChannelsContentDelegate {
             slider.center.x = lastLabel.center.x + deltaX * progress
         }
     }
+
+    
+//    func channelsContent(_ channelsContent: SRChannelsContent, scrollToIndex toIndex: Int, progress: CGFloat) {
+//        let lastLabel = titleLabels[currentIndex]
+//        let toLabel = titleLabels[toIndex]
+//        
+//        let normalRGB = getGRBValue(style.titleNormalColor)
+//        let selectedRGB = getGRBValue(style.titleSelectdColor)
+//        let deltaRGB = (selectedRGB.0 - normalRGB.0,
+//                        selectedRGB.1 - normalRGB.1,
+//                        selectedRGB.2 - normalRGB.2)
+//        lastLabel.textColor = UIColor(r: selectedRGB.0 - deltaRGB.0 * progress,
+//                                      g: selectedRGB.1 - deltaRGB.1 * progress,
+//                                      b: selectedRGB.2 - deltaRGB.2 * progress)
+//        toLabel.textColor = UIColor(r: normalRGB.0 + deltaRGB.0 * progress,
+//                                    g: normalRGB.1 + deltaRGB.1 * progress,
+//                                    b: normalRGB.2 + deltaRGB.2 * progress)
+//        
+//        if style.isBottomLineDisplayed {
+//            let deltaX = toLabel.frame.origin.x - lastLabel.frame.origin.x
+//            let deltaW = toLabel.frame.width - lastLabel.frame.width
+//            bottomLine.frame.origin.x = lastLabel.frame.origin.x + deltaX * progress
+//            bottomLine.frame.size.width = lastLabel.frame.width + deltaW * progress
+//        }
+//
+//        if style.isTitleScaling {
+//            let deltaScale = style.scaleRange - 1.0
+//            lastLabel.transform = CGAffineTransform(scaleX: style.scaleRange - deltaScale * progress, y: style.scaleRange - deltaScale * progress)
+//            toLabel.transform = CGAffineTransform(scaleX: 1.0 + deltaScale * progress, y: 1.0 + deltaScale * progress)
+//        }
+//        
+//        if style.isSliderDisplayed {
+//            let lastW = style.isScrollEnabled ? (lastLabel.frame.width + style.titleMargin) : (lastLabel.frame.width - 2 * style.sliderInset)
+//            let toW = style.isScrollEnabled ? (toLabel.frame.width + style.titleMargin) : (toLabel.frame.width - 2 * style.sliderInset)
+//            let deltaW = toW - lastW
+//            let deltaX = toLabel.center.x - lastLabel.center.x
+//            slider.frame.size.width = lastW + deltaW * progress
+//            slider.center.x = lastLabel.center.x + deltaX * progress
+//        }
+//    }
     
     func channelsContent(_ channelsContent: SRChannelsContent, didEndScrollAtIndex atIndex: Int) {
         let lastLabel = titleLabels[currentIndex]
