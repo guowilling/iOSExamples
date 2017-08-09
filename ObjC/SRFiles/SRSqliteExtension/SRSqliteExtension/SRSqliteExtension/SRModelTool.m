@@ -29,7 +29,7 @@
     if ([cls respondsToSelector:@selector(ignoreIvarsNames)]) {
         ignoreNames = [cls ignoreIvarsNames];
     }
-
+    
     for (int i = 0; i < outCount; i++) {
         Ivar ivar = varList[i];
         NSString *ivarName = [NSString stringWithUTF8String: ivar_getName(ivar)];

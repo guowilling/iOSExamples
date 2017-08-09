@@ -48,9 +48,8 @@
     }
     NSString *path = [self tmpFilePath:URL];
     NSDictionary *fileInfoDic = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil];
-    return  [fileInfoDic[NSFileSize] longLongValue];
+    return [fileInfoDic[NSFileSize] longLongValue];
 }
-
 
 + (BOOL)tmpFileExists:(NSURL *)URL {
     
@@ -82,7 +81,6 @@
     if (isEx && !isDirectory) {
         [[NSFileManager defaultManager] removeItemAtPath:tmpPath error:nil];
     }
-    
 }
 
 @end
