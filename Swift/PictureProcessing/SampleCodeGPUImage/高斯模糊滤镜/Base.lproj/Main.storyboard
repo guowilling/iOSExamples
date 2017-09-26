@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HuJ-p9-EtD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="u2v-Ml-FHy">
+            <objects>
+                <viewController id="HuJ-p9-EtD" customClass="ViewController" customModule="高斯模糊滤镜" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PvT-eb-Cl5"/>
+                        <viewControllerLayoutGuide type="bottom" id="HLX-Rz-TF3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ntq-HZ-4Rk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coldplay_10.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qvO-g9-clg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qvO-g9-clg" firstAttribute="leading" secondItem="Ntq-HZ-4Rk" secondAttribute="leading" id="Kmg-bK-Lwc"/>
+                            <constraint firstItem="qvO-g9-clg" firstAttribute="top" secondItem="Ntq-HZ-4Rk" secondAttribute="top" id="T3f-uD-bP1"/>
+                            <constraint firstAttribute="trailing" secondItem="qvO-g9-clg" secondAttribute="trailing" id="YUx-T2-T8s"/>
+                            <constraint firstItem="HLX-Rz-TF3" firstAttribute="top" secondItem="qvO-g9-clg" secondAttribute="bottom" id="Z1t-Xl-v2Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="qvO-g9-clg" id="2QQ-Lc-3rh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8k-OP-0q8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="-479"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="coldplay_10.jpg" width="864" height="540"/>
+    </resources>
+</document>

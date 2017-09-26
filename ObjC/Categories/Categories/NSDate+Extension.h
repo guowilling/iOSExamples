@@ -10,14 +10,16 @@
 
 @interface NSDate (Extension)
 
++ (NSDate *)currentDateUTC;
+
 - (BOOL)isToday;
-
 - (BOOL)isYesterday;
-
 - (BOOL)isThisYear;
 
 + (NSString *)createdDateWithTimeInterval:(NSTimeInterval)timeInterval;
 
-+ (NSString *)weekdayFromDate:(NSDate *)date;
++ (NSString *)weekdayOfDate:(NSDate *)date;
+
++ (NSInteger)daysIntervalFromCurrentTime:(NSString *)destTimeString;
 
 @end

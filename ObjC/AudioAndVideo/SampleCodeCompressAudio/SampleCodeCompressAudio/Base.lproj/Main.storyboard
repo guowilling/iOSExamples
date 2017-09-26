@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ey6-Ii-KOB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="7qm-IB-iOT">
+            <objects>
+                <viewController id="Ey6-Ii-KOB" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nwN-uc-Ia4"/>
+                        <viewControllerLayoutGuide type="bottom" id="hPJ-1Y-UXM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KJx-rW-fXr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhN-mb-X5p">
+                                <rect key="frame" x="156" y="218.5" width="62" height="30"/>
+                                <state key="normal" title="开始录音"/>
+                                <connections>
+                                    <action selector="record" destination="Ey6-Ii-KOB" eventType="touchUpInside" id="wrd-up-8eG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drM-JO-nto">
+                                <rect key="frame" x="156" y="268.5" width="62" height="30"/>
+                                <state key="normal" title="结束录音"/>
+                                <connections>
+                                    <action selector="stop" destination="Ey6-Ii-KOB" eventType="touchUpInside" id="jSB-sp-OvV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cL3-VQ-unf">
+                                <rect key="frame" x="156" y="418.5" width="62" height="30"/>
+                                <state key="normal" title="播放录音"/>
+                                <connections>
+                                    <action selector="play" destination="Ey6-Ii-KOB" eventType="touchUpInside" id="JzX-ia-bHw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gR3-Jk-Hrn">
+                                <rect key="frame" x="156.5" y="368.5" width="62" height="30"/>
+                                <state key="normal" title="压缩录音"/>
+                                <connections>
+                                    <action selector="compress" destination="Ey6-Ii-KOB" eventType="touchUpInside" id="T3g-yJ-8e9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gR3-Jk-Hrn" firstAttribute="centerY" secondItem="KJx-rW-fXr" secondAttribute="centerY" constant="50" id="1r1-74-bij"/>
+                            <constraint firstItem="cL3-VQ-unf" firstAttribute="centerY" secondItem="KJx-rW-fXr" secondAttribute="centerY" constant="100" id="BjG-5D-nc6"/>
+                            <constraint firstItem="drM-JO-nto" firstAttribute="centerY" secondItem="KJx-rW-fXr" secondAttribute="centerY" constant="-50" id="ETs-N7-3C9"/>
+                            <constraint firstItem="cL3-VQ-unf" firstAttribute="centerX" secondItem="KJx-rW-fXr" secondAttribute="centerX" id="IwP-1d-ZGm"/>
+                            <constraint firstItem="DhN-mb-X5p" firstAttribute="centerX" secondItem="KJx-rW-fXr" secondAttribute="centerX" id="K8b-ip-mZO"/>
+                            <constraint firstItem="DhN-mb-X5p" firstAttribute="centerY" secondItem="KJx-rW-fXr" secondAttribute="centerY" constant="-100" id="PJO-pa-vis"/>
+                            <constraint firstItem="drM-JO-nto" firstAttribute="centerX" secondItem="KJx-rW-fXr" secondAttribute="centerX" id="qZF-xg-eIb"/>
+                            <constraint firstItem="gR3-Jk-Hrn" firstAttribute="centerX" secondItem="KJx-rW-fXr" secondAttribute="centerX" id="zd1-lG-6sA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BTG-bb-1Pg" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34" y="130"/>
+        </scene>
+    </scenes>
+</document>

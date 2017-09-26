@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KM8-Bg-p7q">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="fTx-5B-DcC">
+            <objects>
+                <viewController id="KM8-Bg-p7q" customClass="ViewController" customModule="GPUImage美颜相机" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9h9-i9-4Bm"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fc4-OL-kan"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r8V-UF-8Tp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pV-wZ-Gqm">
+                                <rect key="frame" x="172" y="603" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="拍照"/>
+                                <connections>
+                                    <action selector="takePhoto" destination="KM8-Bg-p7q" eventType="touchUpInside" id="Xfs-gP-cZv"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="krR-2H-WGS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fc4-OL-kan" firstAttribute="top" secondItem="krR-2H-WGS" secondAttribute="bottom" id="3LU-Sw-0oj"/>
+                            <constraint firstItem="krR-2H-WGS" firstAttribute="top" secondItem="r8V-UF-8Tp" secondAttribute="top" id="715-uL-V2C"/>
+                            <constraint firstAttribute="trailing" secondItem="krR-2H-WGS" secondAttribute="trailing" id="HeU-md-QN7"/>
+                            <constraint firstItem="krR-2H-WGS" firstAttribute="leading" secondItem="r8V-UF-8Tp" secondAttribute="leading" id="bRg-Va-SKn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="krR-2H-WGS" id="ASD-Lm-Ppr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dhl-dx-Zt9" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15" y="-450"/>
+        </scene>
+    </scenes>
+</document>

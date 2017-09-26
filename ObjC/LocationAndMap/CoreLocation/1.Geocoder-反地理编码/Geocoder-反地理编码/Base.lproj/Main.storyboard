@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="I3w-fm-b5V">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="I3w-fm-b5V">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,57 +21,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="104.06667" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LwU-xk-HXH">
-                                <rect key="frame" x="86" y="72" width="100" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="GBz-cd-J1H"/>
-                                    <constraint firstAttribute="height" constant="30" id="kDO-6I-2ty"/>
-                                </constraints>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="104.070397" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LwU-xk-HXH">
+                                <rect key="frame" x="84" y="304" width="275" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="30.66667" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oqR-e2-7wt">
-                                <rect key="frame" x="256" y="72" width="100" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="30.540485" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oqR-e2-7wt">
+                                <rect key="frame" x="84" y="342" width="275" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="经度:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhi-W3-7gM">
-                                <rect key="frame" x="26" y="72" width="60" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="GQL-6c-kFo"/>
-                                    <constraint firstAttribute="height" constant="30" id="uHw-ii-uWC"/>
-                                </constraints>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="经度:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhi-W3-7gM">
+                                <rect key="frame" x="16" y="307" width="60" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="纬度:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30d-FJ-CbY">
-                                <rect key="frame" x="196" y="72" width="60" height="30"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="纬度:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30d-FJ-CbY">
+                                <rect key="frame" x="18" y="342" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUZ-g7-2im">
-                                <rect key="frame" x="26" y="117" width="60" height="30"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="地址：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUZ-g7-2im">
+                                <rect key="frame" x="17" y="380" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="277" translatesAutoresizingMaskIntoConstraints="NO" id="q7j-dX-mHv">
-                                <rect key="frame" x="26" y="163" width="330" height="100"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="277" translatesAutoresizingMaskIntoConstraints="NO" id="q7j-dX-mHv">
+                                <rect key="frame" x="84" y="380" width="275" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="BBq-2V-Ylv"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTG-GP-rs2">
-                                <rect key="frame" x="26" y="30" width="77" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="qaT-03-BUb"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTG-GP-rs2">
+                                <rect key="frame" x="16" y="256" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="反地理编码">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -83,29 +75,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="q7j-dX-mHv" firstAttribute="top" secondItem="LUZ-g7-2im" secondAttribute="bottom" constant="16" id="0BX-6T-YRn"/>
-                            <constraint firstItem="hhi-W3-7gM" firstAttribute="height" secondItem="LUZ-g7-2im" secondAttribute="height" id="0bA-d6-adb"/>
-                            <constraint firstItem="LwU-xk-HXH" firstAttribute="centerY" secondItem="oqR-e2-7wt" secondAttribute="centerY" id="2Z1-Zd-2BD"/>
-                            <constraint firstItem="hhi-W3-7gM" firstAttribute="centerY" secondItem="LwU-xk-HXH" secondAttribute="centerY" id="9Ji-4c-Hgp"/>
-                            <constraint firstItem="zTG-GP-rs2" firstAttribute="top" secondItem="Egc-hf-Hm2" secondAttribute="bottom" constant="10" id="Dou-6w-GDn"/>
-                            <constraint firstItem="hhi-W3-7gM" firstAttribute="top" secondItem="zTG-GP-rs2" secondAttribute="bottom" constant="12" id="Lw5-pR-nzT"/>
-                            <constraint firstItem="oqR-e2-7wt" firstAttribute="trailing" secondItem="q7j-dX-mHv" secondAttribute="trailing" id="NiX-Ng-bxw"/>
-                            <constraint firstItem="hhi-W3-7gM" firstAttribute="leading" secondItem="zTG-GP-rs2" secondAttribute="leading" id="P6S-4u-nBv"/>
-                            <constraint firstItem="LUZ-g7-2im" firstAttribute="top" secondItem="hhi-W3-7gM" secondAttribute="bottom" constant="15" id="Ppf-9T-iJQ"/>
-                            <constraint firstItem="oqR-e2-7wt" firstAttribute="leading" secondItem="30d-FJ-CbY" secondAttribute="trailing" id="QfH-q8-zk8"/>
-                            <constraint firstItem="LwU-xk-HXH" firstAttribute="leading" secondItem="hhi-W3-7gM" secondAttribute="trailing" id="QwS-hi-EU4"/>
-                            <constraint firstItem="hhi-W3-7gM" firstAttribute="leading" secondItem="LUZ-g7-2im" secondAttribute="leading" id="avX-dY-869"/>
-                            <constraint firstItem="LUZ-g7-2im" firstAttribute="leading" secondItem="q7j-dX-mHv" secondAttribute="leading" id="c8O-nY-xD5"/>
-                            <constraint firstItem="hhi-W3-7gM" firstAttribute="width" secondItem="30d-FJ-CbY" secondAttribute="width" id="eaB-h8-gIk"/>
-                            <constraint firstItem="LwU-xk-HXH" firstAttribute="width" secondItem="oqR-e2-7wt" secondAttribute="width" id="gQD-Rb-ONk"/>
-                            <constraint firstItem="30d-FJ-CbY" firstAttribute="leading" secondItem="LwU-xk-HXH" secondAttribute="trailing" constant="10" id="hZS-II-L9p"/>
-                            <constraint firstItem="hhi-W3-7gM" firstAttribute="height" secondItem="30d-FJ-CbY" secondAttribute="height" id="ju8-hr-DQX"/>
-                            <constraint firstItem="zTG-GP-rs2" firstAttribute="leading" secondItem="5mX-pV-V2F" secondAttribute="leadingMargin" constant="10" id="kRh-yi-RAu"/>
-                            <constraint firstItem="hhi-W3-7gM" firstAttribute="trailing" secondItem="LUZ-g7-2im" secondAttribute="trailing" id="sR1-Rx-cux"/>
-                            <constraint firstItem="hhi-W3-7gM" firstAttribute="centerY" secondItem="30d-FJ-CbY" secondAttribute="centerY" id="ufU-Sw-YkO"/>
-                            <constraint firstItem="LwU-xk-HXH" firstAttribute="height" secondItem="oqR-e2-7wt" secondAttribute="height" id="wsC-xX-jCZ"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="latitudeField" destination="oqR-e2-7wt" id="s4w-1s-eBY"/>
@@ -115,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ayc-KE-p44" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-202" y="143"/>
+            <point key="canvasLocation" x="-746.39999999999998" y="102.09895052473765"/>
         </scene>
     </scenes>
 </document>

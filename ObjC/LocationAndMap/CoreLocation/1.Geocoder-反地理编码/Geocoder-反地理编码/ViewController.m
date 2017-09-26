@@ -48,46 +48,67 @@
         //placemarks.firstObject
         for (CLPlacemark *placemark in placemarks) {
             NSLog(@"%@", placemark.name);
-            NSLog(@"%@", placemark.addressDictionary);
-            NSLog(@"%@", placemark.location);
+            NSLog(@"%@", placemark.thoroughfare);
+            NSLog(@"%@", placemark.subThoroughfare);
+            NSLog(@"%@", placemark.locality);
+            NSLog(@"%@", placemark.subLocality);
+            NSLog(@"%@", placemark.administrativeArea);
+            NSLog(@"%@", placemark.subAdministrativeArea);
+            NSLog(@"%@", placemark.postalCode);
+            NSLog(@"%@", placemark.ISOcountryCode);
+            NSLog(@"%@", placemark.country);
+            NSLog(@"%@", placemark.inlandWater);
+            NSLog(@"%@", placemark.ocean);
+            NSLog(@"%@", placemark.areasOfInterest);
+            
+            NSLog(@"addressDictionary: %@", placemark.addressDictionary);
             NSArray *address = placemark.addressDictionary[@"FormattedAddressLines"];
             NSMutableString *strM = [NSMutableString string];
             for (NSString *str in address) {
                 [strM appendString:str];
             }
             self.reverseDetailAddressLabel.text = strM;
+            
+            NSLog(@"%@", placemark.addressDictionary[@"City"]);
+            NSLog(@"%@", placemark.addressDictionary[@"Country"]);
+            NSLog(@"%@", placemark.addressDictionary[@"CountryCode"]);
+            NSLog(@"%@", placemark.addressDictionary[@"FormattedAddressLines"]);
+            NSLog(@"%@", placemark.addressDictionary[@"Name"]);
+            NSLog(@"%@", placemark.addressDictionary[@"State"]);
+            NSLog(@"%@", placemark.addressDictionary[@"Street"]);
+            NSLog(@"%@", placemark.addressDictionary[@"SubLocality"]);
+            NSLog(@"%@", placemark.addressDictionary[@"SubThoroughfare"]);
+            NSLog(@"%@", placemark.addressDictionary[@"Thoroughfare"]);
         }
-        
-        /**
-         CLPlacemark 属性含义:
-         name                   地名
-         
-         thoroughfare           街道
-         
-         subThoroughfare        街道相关信息, 门牌等
-         
-         locality               城市
-         
-         subLocality            城市相关信息, 标志性建筑等
-         
-         administrativeArea     直辖市
-         
-         subAdministrativeArea  其他行政区域信息, 自治区等
-         
-         postalCode             邮编
-         
-         ISOcountryCode         国家编码
-         
-         country                国家
-         
-         inlandWater            水源, 湖泊
-         
-         ocean                  海洋
-         
-         areasOfInterest        关联的或利益相关的地标
-         */
-        
     }];
+    /**
+     CLPlacemark 属性含义:
+     name                   地名
+     
+     thoroughfare           街道
+     
+     subThoroughfare        街道相关信息, 门牌等
+     
+     locality               城市
+     
+     subLocality            城市相关信息, 标志性建筑等
+     
+     administrativeArea     直辖市
+     
+     subAdministrativeArea  其他行政区域信息, 自治区等
+     
+     postalCode             邮编
+     
+     ISOcountryCode         国家编码
+     
+     country                国家
+     
+     inlandWater            水源, 湖泊
+     
+     ocean                  海洋
+     
+     areasOfInterest        关联的或利益相关的地标
+     */
 }
 
 @end

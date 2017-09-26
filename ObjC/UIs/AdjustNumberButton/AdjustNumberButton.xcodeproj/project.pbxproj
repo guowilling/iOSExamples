@@ -285,6 +285,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y4FK8UXDXW;
 				INFOPLIST_FILE = AdjustNumberButton/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.AdjustNumberButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,6 +300,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y4FK8UXDXW;
 				INFOPLIST_FILE = AdjustNumberButton/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.AdjustNumberButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -326,6 +328,7 @@
 				686B51FE1F25CD0A001FF09B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

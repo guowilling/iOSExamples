@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		680941401F3EE8B400D7FF83 /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6809413D1F3EE8B400D7FF83 /* NSArray+Extension.m */; };
+		680941411F3EE8B400D7FF83 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6809413F1F3EE8B400D7FF83 /* NSDictionary+Extension.m */; };
 		681AA9631C97DD5B00B360F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 681AA9621C97DD5B00B360F3 /* main.m */; };
 		681AA9661C97DD5B00B360F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 681AA9651C97DD5B00B360F3 /* AppDelegate.m */; };
 		681AA9691C97DD5B00B360F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 681AA9681C97DD5B00B360F3 /* ViewController.m */; };
@@ -16,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6809413C1F3EE8B400D7FF83 /* NSArray+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extension.h"; sourceTree = "<group>"; };
+		6809413D1F3EE8B400D7FF83 /* NSArray+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extension.m"; sourceTree = "<group>"; };
+		6809413E1F3EE8B400D7FF83 /* NSDictionary+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extension.h"; sourceTree = "<group>"; };
+		6809413F1F3EE8B400D7FF83 /* NSDictionary+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extension.m"; sourceTree = "<group>"; };
 		681AA95E1C97DD5B00B360F3 /* Geocoder-反地理编码.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Geocoder-反地理编码.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		681AA9621C97DD5B00B360F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		681AA9641C97DD5B00B360F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,6 +64,10 @@
 		681AA9601C97DD5B00B360F3 /* Geocoder-反地理编码 */ = {
 			isa = PBXGroup;
 			children = (
+				6809413C1F3EE8B400D7FF83 /* NSArray+Extension.h */,
+				6809413D1F3EE8B400D7FF83 /* NSArray+Extension.m */,
+				6809413E1F3EE8B400D7FF83 /* NSDictionary+Extension.h */,
+				6809413F1F3EE8B400D7FF83 /* NSDictionary+Extension.m */,
 				681AA9671C97DD5B00B360F3 /* ViewController.h */,
 				681AA9681C97DD5B00B360F3 /* ViewController.m */,
 				681AA96A1C97DD5B00B360F3 /* Main.storyboard */,
@@ -151,8 +161,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				680941411F3EE8B400D7FF83 /* NSDictionary+Extension.m in Sources */,
 				681AA9691C97DD5B00B360F3 /* ViewController.m in Sources */,
 				681AA9661C97DD5B00B360F3 /* AppDelegate.m in Sources */,
+				680941401F3EE8B400D7FF83 /* NSArray+Extension.m in Sources */,
 				681AA9631C97DD5B00B360F3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

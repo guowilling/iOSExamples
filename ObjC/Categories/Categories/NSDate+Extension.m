@@ -10,47 +10,42 @@
 
 @implementation NSDate (Extension)
 
++ (NSDate *)currentDateUTC {
+    NSInteger timeIntervalForCurrentDate = [[NSDate date] timeIntervalSince1970];
+    NSInteger secondsFromGMT = [[NSTimeZone systemTimeZone] secondsFromGMTForDate:[NSDate date]];
+    NSInteger timeIntervalForCurrentDateTrue = timeIntervalForCurrentDate - secondsFromGMT;
+    return [NSDate dateWithTimeIntervalSince1970:timeIntervalForCurrentDateTrue];
+}
+
 - (BOOL)isToday {
-    
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"yyyy-MM-dd";
-    NSString *dateString = [formatter stringFromDate:self];
+    NSString *selfDateString = [formatter stringFromDate:self];
     NSString *currentDateString = [formatter stringFromDate:[NSDate date]];
-    return [dateString isEqualToString:currentDateString];
+    return [selfDateString isEqualToString:currentDateString];
 }
 
 - (BOOL)isYesterday {
-    
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"yyyy-MM-dd";
-    
-    // 2014-04-30 10:05:28 --> 2014-04-30 00:00:00
-    NSString *dateString = [formatter stringFromDate:self];
-    
-    // 2014-05-01 09:22:10 --> 2014-05-01 00:00:00
+    NSString *selfDateString = [formatter stringFromDate:self];
     NSString *currentDateString = [formatter stringFromDate:[NSDate date]];
-    
-    NSDate *date = [formatter dateFromString:dateString];
+    NSDate *selfDate = [formatter dateFromString:selfDateString];
     NSDate *currentDate = [formatter dateFromString:currentDateString];
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSCalendarUnit unit = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
-    NSDateComponents *components = [calendar components:unit fromDate:date toDate:currentDate options:0];
+    NSDateComponents *components = [calendar components:unit fromDate:selfDate toDate:currentDate options:0];
     return (components.year == 0) && (components.month == 0) && (components.day == 1);
 }
 
 - (BOOL)isThisYear {
-    
-    //NSDateComponents *components = [calendar components:NSCalendarUnitYear fromDate:self];
-    //NSDateComponents *currentComponents = [calendar components:NSCalendarUnitYear fromDate:[NSDate date]];
-    //return components == currentComponents.year;
-    
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components = [calendar components:NSCalendarUnitYear fromDate:self toDate:[NSDate date] options:0];
+    NSCalendarUnit unit = NSCalendarUnitYear;
+    NSDateComponents *components = [calendar components:unit fromDate:self toDate:[NSDate date] options:0];
     return components.year == 0;
 }
 
 + (NSString *)createdDateWithTimeInterval:(NSTimeInterval)timeInterval {
-    
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     //formatter.timeZone = [NSTimeZone localTimeZone];
     //formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
@@ -81,13 +76,27 @@
     }
 }
 
-+ (NSString *)weekdayFromDate:(NSDate *)date {
-    
++ (NSString *)weekdayOfDate:(NSDate *)date {
     NSArray *weekdays = @[[NSNull null], @"星期日", @"星期一", @"星期二", @"星期三", @"星期四", @"星期五", @"星期六"];
     NSCalendar *calendar = [NSCalendar currentCalendar];
     [calendar setTimeZone:[[NSTimeZone alloc] initWithName:@"Asia/Beijing"]];
     NSDateComponents *dateComponents = [calendar components:NSCalendarUnitWeekday fromDate:date];
     return [weekdays objectAtIndex:dateComponents.weekday];
+}
+
++ (NSInteger)daysIntervalFromCurrentTime:(NSString *)destTimeString {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    //dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss.0";
+    NSDate *destTimeDate = [dateFormatter dateFromString:destTimeString];
+    
+    NSDate *currentDate = [NSDate date];
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendarUnit unit = NSCalendarUnitDay | NSCalendarUnitMonth;
+    NSDateComponents *components = [calendar components:unit fromDate:currentDate toDate:destTimeDate options:0];
+    NSLog(@"daysIntervalFromCurrentTime components: %@", components);
+    return components.day;
 }
 
 @end

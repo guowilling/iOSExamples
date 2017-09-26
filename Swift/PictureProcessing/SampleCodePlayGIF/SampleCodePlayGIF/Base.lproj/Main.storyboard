@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="frY-aQ-02T">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tyz-cm-Kob">
+            <objects>
+                <viewController id="frY-aQ-02T" customClass="ViewController" customModule="_2_播放Gif" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="79X-zS-aa0"/>
+                        <viewControllerLayoutGuide type="bottom" id="iqU-Xi-DdN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8OV-HV-ObQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JJt-7i-38p">
+                                <rect key="frame" x="0.0" y="233.5" width="374" height="199"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JJt-7i-38p" secondAttribute="height" multiplier="15:8" id="RPT-3u-OSb"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JJt-7i-38p" firstAttribute="centerY" secondItem="8OV-HV-ObQ" secondAttribute="centerY" id="32e-yT-8PN"/>
+                            <constraint firstItem="JJt-7i-38p" firstAttribute="leading" secondItem="8OV-HV-ObQ" secondAttribute="leading" id="UwU-Qq-QYI"/>
+                            <constraint firstItem="JJt-7i-38p" firstAttribute="centerX" secondItem="8OV-HV-ObQ" secondAttribute="centerX" id="aXB-RU-if1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="JJt-7i-38p" id="HRA-ep-MU9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DF7-Iv-2Hk" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
