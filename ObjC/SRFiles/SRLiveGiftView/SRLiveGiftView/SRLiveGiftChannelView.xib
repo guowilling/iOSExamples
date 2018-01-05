@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SRLiveGiftChannelView" customModule="SRLiveGiftViewDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7D7-6Z-OAR" userLabel="bgView">
+                    <rect key="frame" x="0.0" y="0.0" width="157.5" height="44"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FC3-vl-IHq" userLabel="iconImageView">
+                    <rect key="frame" x="113" y="0.0" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="tkS-nJ-Gf7"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjJ-lk-Dqs" userLabel="senderNameLabel">
+                    <rect key="frame" x="49" y="5" width="59.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="describe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lc7-ux-rNG" userLabel="giftDescribeLabel">
+                    <rect key="frame" x="49" y="21" width="59.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B8Y-e3-nS9" userLabel="giftImageView">
+                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="3s5-aC-ha0"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAb-Px-Awi" userLabel="giftDigitalLabel" customClass="SRLiveGiftDigitalLabel" customModule="SRLiveGiftViewDemo" customModuleProvider="target">
+                    <rect key="frame" x="162.5" y="0.0" width="19" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="B8Y-e3-nS9" secondAttribute="bottom" id="1CE-2x-1aY"/>
+                <constraint firstAttribute="bottom" secondItem="Lc7-ux-rNG" secondAttribute="bottom" constant="5" id="55p-oR-iUc"/>
+                <constraint firstItem="WAb-Px-Awi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9Uc-pZ-vRY"/>
+                <constraint firstItem="FC3-vl-IHq" firstAttribute="leading" secondItem="Lc7-ux-rNG" secondAttribute="trailing" constant="5" id="L9M-RM-dkx"/>
+                <constraint firstItem="bjJ-lk-Dqs" firstAttribute="leading" secondItem="B8Y-e3-nS9" secondAttribute="trailing" constant="5" id="Q6c-hs-gLI"/>
+                <constraint firstItem="Lc7-ux-rNG" firstAttribute="leading" secondItem="B8Y-e3-nS9" secondAttribute="trailing" constant="5" id="TsN-UL-iDw"/>
+                <constraint firstItem="FC3-vl-IHq" firstAttribute="leading" secondItem="bjJ-lk-Dqs" secondAttribute="trailing" constant="5" id="XZN-Sg-CyA"/>
+                <constraint firstItem="WAb-Px-Awi" firstAttribute="leading" secondItem="FC3-vl-IHq" secondAttribute="trailing" constant="5" id="aWe-hK-5Vu"/>
+                <constraint firstItem="bjJ-lk-Dqs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="f7n-6i-yZw"/>
+                <constraint firstAttribute="bottom" secondItem="FC3-vl-IHq" secondAttribute="bottom" id="fCn-gc-wuo"/>
+                <constraint firstItem="B8Y-e3-nS9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ixd-r9-APX"/>
+                <constraint firstAttribute="bottom" secondItem="7D7-6Z-OAR" secondAttribute="bottom" id="meb-e9-XTH"/>
+                <constraint firstItem="FC3-vl-IHq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nhi-L6-dM5"/>
+                <constraint firstItem="B8Y-e3-nS9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="s7I-I2-gpg"/>
+                <constraint firstItem="WAb-Px-Awi" firstAttribute="leading" secondItem="7D7-6Z-OAR" secondAttribute="trailing" constant="5" id="tie-p9-j0u"/>
+                <constraint firstItem="7D7-6Z-OAR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vkE-HM-YCA"/>
+                <constraint firstItem="7D7-6Z-OAR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wI8-0X-s7t"/>
+                <constraint firstAttribute="bottom" secondItem="WAb-Px-Awi" secondAttribute="bottom" id="wb7-pT-ckt"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bgView" destination="7D7-6Z-OAR" id="Y7q-lH-MKH"/>
+                <outlet property="giftDescribeLabel" destination="Lc7-ux-rNG" id="pyV-H9-RMM"/>
+                <outlet property="giftDigitalLabel" destination="WAb-Px-Awi" id="pid-nm-Khy"/>
+                <outlet property="giftImageView" destination="FC3-vl-IHq" id="bB9-eb-srO"/>
+                <outlet property="iconImageView" destination="B8Y-e3-nS9" id="IQV-RT-5ld"/>
+                <outlet property="senderNameLabel" destination="bjJ-lk-Dqs" id="mCv-nl-N8O"/>
+            </connections>
+            <point key="canvasLocation" x="-1117" y="-126"/>
+        </view>
+    </objects>
+</document>

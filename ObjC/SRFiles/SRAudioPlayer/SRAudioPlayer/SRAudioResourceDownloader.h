@@ -23,7 +23,6 @@
 @property (nonatomic, assign) long long offset;
 @property (nonatomic, strong) NSString *mimeType;
 
-
 - (void)downLoadWithURL:(NSURL *)URL offset:(long long)offset;
 
 @end

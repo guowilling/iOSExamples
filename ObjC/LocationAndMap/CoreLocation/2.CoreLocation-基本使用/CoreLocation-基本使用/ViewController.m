@@ -31,7 +31,6 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
 
     // 1.iOS7 会自动向用户请求定位授权, iOS8需要手动向用户申请定位授权.
     // 2.iOS8 不仅要主动请求授权还需要在 info.plist 中配置属性: NSLocationWhenInUseDescription 或者 NSLocationAlwaysUsageDescription.

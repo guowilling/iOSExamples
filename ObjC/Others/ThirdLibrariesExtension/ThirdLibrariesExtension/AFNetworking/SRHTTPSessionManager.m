@@ -13,7 +13,6 @@ static SRHTTPSessionManager *instance;
 @implementation SRHTTPSessionManager
 
 + (instancetype)sharedManager {
-    
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         @synchronized(self) {
@@ -24,7 +23,6 @@ static SRHTTPSessionManager *instance;
 }
 
 - (instancetype)init {
-    
     if (self = [super init]) {
         _sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:nil];
         _sessionManager.requestSerializer.timeoutInterval = 15.0;
@@ -35,7 +33,6 @@ static SRHTTPSessionManager *instance;
 }
 
 - (void)startMonitorReachabilityStatus {
-    
     AFNetworkReachabilityManager *networkReachabilityManager = [AFNetworkReachabilityManager sharedManager];
     [networkReachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         switch (status) {
@@ -66,15 +63,18 @@ static SRHTTPSessionManager *instance;
     failure:(void (^)(NSError *))failure
 {
     NSAssert(URLString != nil, @"URLString 不能为空");
-    [self.sessionManager GET:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        if (success) {
-            success(responseObject);
-        }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        if (failure) {
-            failure(error);
-        }
-    }];
+    [self.sessionManager GET:URLString
+                  parameters:parameters
+                    progress:nil
+                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                         if (success) {
+                             success(responseObject);
+                         }
+                     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                         if (failure) {
+                             failure(error);
+                         }
+                     }];
 }
 
 - (void)POST:(NSString *)URLString
@@ -83,15 +83,18 @@ static SRHTTPSessionManager *instance;
      failure:(void (^)(NSError *))failure
 {
     NSAssert(URLString != nil, @"URLString不能为空");
-    [self.sessionManager POST:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        if (success) {
-            success(responseObject);
-        }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        if (failure) {
-            failure(error);
-        }
-    }];
+    [self.sessionManager POST:URLString
+                   parameters:parameters
+                     progress:nil
+                      success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                          if (success) {
+                              success(responseObject);
+                          }
+                      } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                          if (failure) {
+                              failure(error);
+                          }
+                      }];
 }
 
 - (void)downloadFile:(NSString *)URLString

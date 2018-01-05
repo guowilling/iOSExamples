@@ -28,6 +28,7 @@
     [self.view addSubview:imageView0];
     
     UIImageView *imageView1 = [UIImageView sr_advanceRoundingRectImageView];
+    imageView1.contentMode = UIViewContentModeScaleAspectFill;
     imageView1.frame = CGRectMake(imageView0.frame.origin.x, CGRectGetMaxY(imageView0.frame) + 30, 120, 120);
     [self.view addSubview:imageView1];
     
@@ -47,7 +48,6 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
     [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
@@ -58,11 +58,5 @@
         imageView.image = roundedImage;
     }];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end

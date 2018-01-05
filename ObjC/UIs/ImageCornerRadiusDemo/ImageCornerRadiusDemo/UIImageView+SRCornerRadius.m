@@ -29,76 +29,62 @@ static NSString const *processedImageKey = @"processedImage";
 #pragma mark - Runtime AssociatedObject
 
 - (BOOL)sr_isRounding {
-    
     return [objc_getAssociatedObject(self, _cmd) boolValue];
 }
 
 - (void)setSr_isRounding:(BOOL)sr_isRounding {
-    
     objc_setAssociatedObject(self, @selector(sr_isRounding), @(sr_isRounding), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (BOOL)sr_hadAddObserver {
-    
     return [objc_getAssociatedObject(self, _cmd) boolValue];
 }
 
 - (void)setSr_hadAddObserver:(BOOL)sr_hadAddObserver {
-    
     objc_setAssociatedObject(self, @selector(sr_hadAddObserver), @(sr_hadAddObserver), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (CGFloat)sr_radius {
-    
     return [objc_getAssociatedObject(self, _cmd) floatValue];
 }
 
 - (void)setSr_radius:(CGFloat)sr_radius {
-    
     objc_setAssociatedObject(self, @selector(sr_radius), @(sr_radius), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIRectCorner)sr_corners {
-    
     return [objc_getAssociatedObject(self, _cmd) unsignedLongValue];
 }
 
 - (void)setSr_corners:(UIRectCorner)sr_corners {
-    
     objc_setAssociatedObject(self, @selector(sr_corners), @(sr_corners), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (CGFloat)sr_borderWidth {
-    
     return [objc_getAssociatedObject(self, _cmd) floatValue];
 }
 
 - (void)setSr_borderWidth:(CGFloat)sr_borderWidth {
-    
     objc_setAssociatedObject(self, @selector(sr_borderWidth), @(sr_borderWidth), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIColor *)sr_borderColor {
-    
     return objc_getAssociatedObject(self, _cmd);
 }
 
 - (void)setSr_borderColor:(UIColor *)sr_borderColor {
-    
     objc_setAssociatedObject(self, @selector(sr_borderColor), sr_borderColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 #pragma mark - Runtime Swizzle
 
 + (void)swizzleOriginalMethod:(SEL)originalSEL destMethod:(SEL)destSEL {
-    
     Method originalMethod = class_getInstanceMethod(self, originalSEL);
     Method destMethod = class_getInstanceMethod(self, destSEL);
     method_exchangeImplementations(originalMethod, destMethod);
 }
 
 + (void)swizzleDealloc {
-    
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         [self swizzleOriginalMethod:NSSelectorFromString(@"dealloc") destMethod:@selector(sr_dealloc)];
@@ -106,7 +92,6 @@ static NSString const *processedImageKey = @"processedImage";
 }
 
 - (void)sr_dealloc {
-    
     if (self.sr_hadAddObserver) {
         [self removeObserver:self forKeyPath:@"image"];
     }
@@ -114,7 +99,6 @@ static NSString const *processedImageKey = @"processedImage";
 }
 
 + (void)swizzleLayoutSubviews {
-    
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         [self swizzleOriginalMethod:@selector(layoutSubviews) destMethod:@selector(sr_layoutSubviews)];
@@ -122,7 +106,6 @@ static NSString const *processedImageKey = @"processedImage";
 }
 
 - (void)sr_layoutSubviews {
-    
     [self sr_layoutSubviews];
     
     if (self.sr_isRounding) {
@@ -137,21 +120,18 @@ static NSString const *processedImageKey = @"processedImage";
 #pragma mark - Init Methods
 
 + (instancetype)sr_advanceImageViewWithCornerRadius:(CGFloat)radius corners:(UIRectCorner)corners {
-    
     UIImageView *imageView = [[self alloc] init];
     [imageView sr_advanceCornerRadius:radius corners:corners];
     return imageView;
 }
 
 + (instancetype)sr_advanceRoundingRectImageView {
-    
     UIImageView *imageView = [[self alloc] init];
     [imageView sr_advanceRoundingRect];
     return imageView;
 }
 
 - (void)sr_advanceCornerRadius:(CGFloat)radius corners:(UIRectCorner)corners {
-    
     self.sr_radius = radius;
     self.sr_corners = corners;
     self.sr_isRounding = NO;
@@ -164,7 +144,6 @@ static NSString const *processedImageKey = @"processedImage";
 }
 
 - (void)sr_advanceRoundingRect {
-    
     self.sr_isRounding = YES;
     if (!self.sr_hadAddObserver) {
         [[self class] swizzleDealloc];
@@ -175,7 +154,6 @@ static NSString const *processedImageKey = @"processedImage";
 }
 
 - (void)sr_attachBorderWithWidth:(CGFloat)width color:(UIColor *)color {
-    
     self.sr_borderWidth = width;
     self.sr_borderColor = color;
 }
@@ -186,7 +164,6 @@ static NSString const *processedImageKey = @"processedImage";
  Clip the cornerRadius with image, UIImageView must be setFrame before, no off-screen-rendered.
  */
 - (void)sr_cornerRadiusWithImage:(UIImage *)image cornerRadius:(CGFloat)cornerRadius rectCornerType:(UIRectCorner)rectCornerType {
-    
     CGSize size = self.bounds.size;
     CGFloat scale = [UIScreen mainScreen].scale;
     UIGraphicsBeginImageContextWithOptions(size, NO, scale);
@@ -211,7 +188,6 @@ static NSString const *processedImageKey = @"processedImage";
  Clip the cornerRadius with image, draw the backgroundColor you want, UIImageView must be setFrame before, no off-screen-rendered, no Color Blended layers.
  */
 - (void)sr_cornerRadiusWithImage:(UIImage *)image cornerRadius:(CGFloat)cornerRadius rectCornerType:(UIRectCorner)rectCornerType backgroundColor:(UIColor *)backgroundColor {
-    
     CGSize size = self.bounds.size;
     CGFloat scale = [UIScreen mainScreen].scale;
     UIGraphicsBeginImageContextWithOptions(size, YES, scale);
@@ -236,7 +212,6 @@ static NSString const *processedImageKey = @"processedImage";
 }
 
 - (void)drawBorder:(UIBezierPath *)path {
-    
     if (self.sr_borderWidth && self.sr_borderColor) {
         [path setLineWidth:2 * self.sr_borderWidth];
         [self.sr_borderColor setStroke];
@@ -247,7 +222,6 @@ static NSString const *processedImageKey = @"processedImage";
 #pragma mark - KVO
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    
     if ([keyPath isEqualToString:@"image"]) {
         UIImage *newImage = change[NSKeyValueChangeNewKey];
         if ([newImage isMemberOfClass:[NSNull class]]) {

@@ -26,10 +26,6 @@
 		681AA82E1C97B61900B360F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		681AA8311C97B61900B360F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		681AA8331C97B61900B360F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		681AA83C1C97B61900B360F3 /* CoreLocation_____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CoreLocation_____Tests.m"; sourceTree = "<group>"; };
-		681AA83E1C97B61900B360F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		681AA8471C97B61900B360F3 /* CoreLocation_____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CoreLocation_____UITests.m"; sourceTree = "<group>"; };
-		681AA8491C97B61900B360F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,8 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				681AA8211C97B61900B360F3 /* CoreLocation-基本使用 */,
-				681AA83B1C97B61900B360F3 /* CoreLocation-基本使用Tests */,
-				681AA8461C97B61900B360F3 /* CoreLocation-基本使用UITests */,
 				681AA8201C97B61900B360F3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,24 +77,6 @@
 				681AA8331C97B61900B360F3 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		681AA83B1C97B61900B360F3 /* CoreLocation-基本使用Tests */ = {
-			isa = PBXGroup;
-			children = (
-				681AA83C1C97B61900B360F3 /* CoreLocation_____Tests.m */,
-				681AA83E1C97B61900B360F3 /* Info.plist */,
-			);
-			path = "CoreLocation-基本使用Tests";
-			sourceTree = "<group>";
-		};
-		681AA8461C97B61900B360F3 /* CoreLocation-基本使用UITests */ = {
-			isa = PBXGroup;
-			children = (
-				681AA8471C97B61900B360F3 /* CoreLocation_____UITests.m */,
-				681AA8491C97B61900B360F3 /* Info.plist */,
-			);
-			path = "CoreLocation-基本使用UITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

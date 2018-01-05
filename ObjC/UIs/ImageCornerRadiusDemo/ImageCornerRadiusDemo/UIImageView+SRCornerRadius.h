@@ -16,6 +16,7 @@
 + (instancetype)sr_advanceRoundingRectImageView;
 
 - (void)sr_advanceCornerRadius:(CGFloat)radius corners:(UIRectCorner)corners;
+
 - (void)sr_advanceRoundingRect;
 
 - (void)sr_attachBorderWithWidth:(CGFloat)width color:(UIColor *)color;

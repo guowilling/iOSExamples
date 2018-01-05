@@ -18,9 +18,19 @@
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) CLGeocoder *geocoder;
 
+@property (nonatomic, strong) NSMutableArray *annotations;
+
 @end
 
 @implementation ViewController
+
+
+- (NSMutableArray *)annotations {
+    if (!_annotations) {
+        _annotations = [NSMutableArray array];
+    }
+    return _annotations;
+}
 
 - (CLLocationManager *)locationManager {
     
@@ -56,21 +66,24 @@
 
     SRAnnotation *annotation1 = [[SRAnnotation alloc] init];
     annotation1.title = @"成都";
-    annotation1.subtitle = @"软件园B区";
+//    annotation1.subtitle = @"软件园B区";
     CGFloat latitude = 32 + arc4random_uniform(11) * 0.1;
     CGFloat longitude = 105 + arc4random_uniform(11) * 0.1;
     annotation1.coordinate = CLLocationCoordinate2DMake(latitude , longitude);
     annotation1.icon = @"category_4";
     [self.mapView addAnnotation:annotation1];
+    [self.annotations addObject:annotation1];
+    
     
     SRAnnotation *annotation2 = [[SRAnnotation alloc] init];
     annotation2.title = @"成都";
-    annotation2.subtitle = @"软件园C区";
+//    annotation2.subtitle = @"软件园C区";
     CGFloat latitude2 = 32 + arc4random_uniform(11) * 0.1;
     CGFloat longitude2 = 105 + arc4random_uniform(11) * 0.1;
     annotation2.coordinate = CLLocationCoordinate2DMake(latitude2 , longitude2);
     annotation2.icon = @"category_5";
     [self.mapView addAnnotation:annotation2];
+    [self.annotations addObject:annotation2];
 }
 
 - (void)addPinAnnotationView {
@@ -121,6 +134,13 @@
     SRAnnotationView *annotationView = [SRAnnotationView annotationViewWithMap:mapView];
     annotationView.annotation = annotation;
     return annotationView;
+}
+
+- (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray<MKAnnotationView *> *)views {
+    
+    for (SRAnnotation *annotation in self.annotations) {
+        [self.mapView selectAnnotation:annotation animated:YES];
+    }
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {

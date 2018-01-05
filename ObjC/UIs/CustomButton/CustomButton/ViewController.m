@@ -49,7 +49,6 @@
 - (SRCustomButton *)custombuttonWithStyle:(ButtonLayoutStyle)style {
     
     SRCustomButton *button = [SRCustomButton buttonWithType:UIButtonTypeCustom];
-    
     button.layer.borderWidth = 1;
     button.layer.borderColor = [UIColor blackColor].CGColor;
     button.layoutStyle = style;

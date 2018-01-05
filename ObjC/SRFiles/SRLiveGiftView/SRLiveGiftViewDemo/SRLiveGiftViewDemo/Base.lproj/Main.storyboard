@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SRLiveGiftViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOX-QN-Md0">
+                                <rect key="frame" x="16" y="537" width="114.5" height="30"/>
+                                <state key="normal" title="Gift1">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showGift1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ns3-3n-jTy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQh-gw-6DC">
+                                <rect key="frame" x="130.5" y="537" width="114" height="30"/>
+                                <state key="normal" title="Gift2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showGift2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gq2-uY-DqV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZM-3W-Dvu">
+                                <rect key="frame" x="244.5" y="537" width="114.5" height="30"/>
+                                <state key="normal" title="Gift3">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showGift3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bfy-Zm-7Hg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SQh-gw-6DC" firstAttribute="leading" secondItem="sOX-QN-Md0" secondAttribute="trailing" id="2GA-VQ-Aym"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sOX-QN-Md0" secondAttribute="bottom" constant="100" id="9vN-4h-iav"/>
+                            <constraint firstItem="sOX-QN-Md0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Eeq-pn-8Vo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XZM-3W-Dvu" secondAttribute="trailing" id="HiF-zc-MXo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SQh-gw-6DC" secondAttribute="bottom" constant="100" id="Vv1-7j-M4w"/>
+                            <constraint firstItem="XZM-3W-Dvu" firstAttribute="leading" secondItem="SQh-gw-6DC" secondAttribute="trailing" id="c5S-gX-9NH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XZM-3W-Dvu" secondAttribute="bottom" constant="100" id="gyt-Mu-WED"/>
+                            <constraint firstItem="XZM-3W-Dvu" firstAttribute="width" secondItem="SQh-gw-6DC" secondAttribute="width" id="he7-f0-llX"/>
+                            <constraint firstItem="SQh-gw-6DC" firstAttribute="width" secondItem="sOX-QN-Md0" secondAttribute="width" id="wAH-qD-Ezq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-241" y="84"/>
+        </scene>
+    </scenes>
+</document>

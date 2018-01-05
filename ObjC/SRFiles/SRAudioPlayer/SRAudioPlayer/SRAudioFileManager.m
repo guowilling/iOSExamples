@@ -10,7 +10,8 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 
 #define kCachePath NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject
-#define kTmpPath NSTemporaryDirectory()
+
+#define kTmpPath   NSTemporaryDirectory()
 
 @implementation SRAudioFileManager
 
@@ -18,7 +19,6 @@
     
     return [kCachePath stringByAppendingPathComponent:URL.lastPathComponent];
 }
-
 
 + (long long)cacheFileSize:(NSURL *)URL {
     

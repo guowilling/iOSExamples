@@ -22,7 +22,7 @@
 
 - (IBAction)loadBaiduWebsite {
     
-    CommonWebViewController *commonWebVC = [[CommonWebViewController alloc]init];
+    CommonWebViewController *commonWebVC = [[CommonWebViewController alloc] init];
     commonWebVC.URLString = @"https://www.baidu.com";
     commonWebVC.canPullDownToRefresh = YES;
     [self.navigationController pushViewController:commonWebVC animated:YES];

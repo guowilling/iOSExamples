@@ -12,7 +12,6 @@
 
 /// 平均耗时 0.05
 + (instancetype)roundedImageWithOriginalImage:(UIImage *)originalImage destSize:(CGSize)destSize fillColor:(UIColor *)fillColor {
-    
     NSTimeInterval start = CACurrentMediaTime();
     UIGraphicsBeginImageContextWithOptions(destSize, YES, 0);
     CGRect rect = CGRectMake(0, 0, destSize.width, destSize.height);
@@ -30,7 +29,6 @@
 
 /// 平均耗时 0.05
 + (void)roundingImageWithOriginalImage:(UIImage *)originalImage destSize:(CGSize)destSize fillColor:(UIColor *)fillColor completion:(void (^)(UIImage *roundedImage))completion {
-    
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         NSTimeInterval start = CACurrentMediaTime();
         UIGraphicsBeginImageContextWithOptions(destSize, YES, 0);
@@ -53,7 +51,6 @@
 
 /// 平均耗时 0.55s!!! 注意: 不要使用此种方式剪切圆形图片, 会造成卡顿, 反而不如直接使用 layer.cornerRadius layer.masksToBounds, 原因目前不知道...
 + (instancetype)roundedImageWithOriginalImage:(UIImage *)originalImage borderWidth:(NSInteger)borderWidth borderColor:(UIColor *)borderColor {
-    
     NSTimeInterval start = CACurrentMediaTime();
     
     CGSize size = CGSizeMake(originalImage.size.width + borderWidth, originalImage.size.height + borderWidth);

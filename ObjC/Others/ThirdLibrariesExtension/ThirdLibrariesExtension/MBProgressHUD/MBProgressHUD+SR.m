@@ -8,13 +8,11 @@
 #pragma mark - Only Test
 
 + (MBProgressHUD *)sr_showMessage:(NSString *)message {
-    
     return [self sr_showMessage:message onView:nil];
 }
 
 + (MBProgressHUD *)sr_showMessage:(NSString *)message onView:(UIView *)view {
-    
-    if (view == nil) {
+    if (!view) {
         view = [UIApplication sharedApplication].keyWindow;
     }
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
@@ -33,13 +31,11 @@
 #pragma mark - UIActivityIndicatorView and Text
 
 + (MBProgressHUD *)sr_showIndeterminateWithMessage:(NSString *)message {
-    
     return [self sr_showIndeterminateWithMessage:message onView:nil];
 }
 
 + (MBProgressHUD *)sr_showIndeterminateWithMessage:(NSString *)message onView:(UIView *)view {
-    
-    if (view == nil) {
+    if (!view) {
         view = [UIApplication sharedApplication].keyWindow;
     }
     //MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
@@ -63,57 +59,47 @@
 #pragma mark - Success Icon and Text
 
 + (MBProgressHUD *)sr_showSuccessWithMessage:(NSString *)message {
-    
     return [self sr_showSuccessWithMessage:message onView:nil];
 }
 
 + (MBProgressHUD *)sr_showSuccessWithMessage:(NSString *)message onView:(UIView *)view {
-    
     return [self sr_showIconName:@"success.png" message:message onView:view];
 }
 
 + (MBProgressHUD *)sr_showSuccessWithMessage:(NSString *)message onView:(UIView *)view completionBlock:(MBProgressHUDCompletionBlock)completionBlock {
-    
     return [self sr_showIconName:@"success.png" message:message onView:view completionBlock:completionBlock];
 }
 
 #pragma mark - Error Icon and Text
 
 + (MBProgressHUD *)sr_showErrorWithMessage:(NSString *)message {
-    
     return [self sr_showErrorWithMessage:message onView:nil];
 }
 
 + (MBProgressHUD *)sr_showErrorWithMessage:(NSString *)message onView:(UIView *)view {
-    
     return [self sr_showIconName:@"error.png" message:message onView:view];
 }
 
 + (MBProgressHUD *)sr_showErrorWithMessage:(NSString *)message onView:(UIView *)view completionBlock:(MBProgressHUDCompletionBlock)completionBlock {
-    
     return [self sr_showIconName:@"error.png" message:message onView:view completionBlock:completionBlock];
 }
 
 #pragma mark - Info Icon and Text
 
 + (MBProgressHUD *)sr_showInfoWithMessage:(NSString *)message {
-    
     return [self sr_showInfoWithMessage:message onView:nil];
 }
 
 + (MBProgressHUD *)sr_showInfoWithMessage:(NSString *)message onView:(UIView *)view {
-    
     return [self sr_showIconName:@"info.png" message:message onView:view];
 }
 
 + (MBProgressHUD *)sr_showInfoWithMessage:(NSString *)message onView:(UIView *)view completionBlock:(MBProgressHUDCompletionBlock)completionBlock {
-    
     return [self sr_showIconName:@"info.png" message:message onView:view completionBlock:completionBlock];
 }
 
 + (MBProgressHUD *)sr_showIconName:(NSString *)iconName message:(NSString *)message onView:(UIView *)view {
-    
-    if (view == nil) {
+    if (!view) {
         view = [[UIApplication sharedApplication].windows lastObject];
     }
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
@@ -144,7 +130,6 @@
 #pragma mark - Icon and Text
 
 + (MBProgressHUD *)sr_showIconName:(NSString *)iconName message:(NSString *)message onView:(UIView *)view completionBlock:(MBProgressHUDCompletionBlock)completionBlock {
-    
     MBProgressHUD *hud = [self sr_showIconName:iconName message:message onView:view];
     hud.completionBlock = completionBlock;
     return hud;
@@ -153,21 +138,18 @@
 #pragma mark - Hide HUD
 
 + (void)sr_hideHUD {
-    
     [self sr_hideHUDForView:nil];
 }
 
 + (void)sr_hideHUDForView:(UIView *)view {
-    
-    if (view == nil) {
+    if (!view) {
         view = [UIApplication sharedApplication].keyWindow;
     }
     [self hideHUDForView:view animated:YES];
 }
 
 + (void)sr_hideHUDForView:(UIView *)view afterDelay:(NSTimeInterval)delay {
-    
-    if (view == nil) {
+    if (!view) {
         view = [UIApplication sharedApplication].keyWindow;
     }
     MBProgressHUD *hud = [self HUDForView:view];
