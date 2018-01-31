@@ -12,7 +12,6 @@
 @implementation UIView (Extension)
 
 - (UIViewController *)viewControllerResponder {
-    
     id responder = [self nextResponder];
     while (responder) {
         if ([responder isKindOfClass:[UIViewController class]]) {
@@ -24,13 +23,11 @@
 }
 
 - (void)setBorderColor:(UIColor *)color width:(CGFloat)width {
-    
     [self.layer setBorderWidth:width];
     [self.layer setBorderColor:color.CGColor];
 }
 
 - (void)setShadowColor:(UIColor *)color opacity:(CGFloat)opacity offset:(CGSize)offset blurRadius:(CGFloat)blurRadius {
-    
     [self.layer setShadowColor:color.CGColor];
     [self.layer setShadowOpacity:opacity];
     [self.layer setShadowOffset:offset];
@@ -40,7 +37,6 @@
 #pragma mark - Corner Radius
 
 - (void)setCornerOnTop:(CGFloat)radius {
-    
     UIBezierPath *maskPath;
     maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds
                                      byRoundingCorners:(UIRectCornerTopLeft | UIRectCornerTopRight)
@@ -52,7 +48,6 @@
 }
 
 - (void)setCornerOnBottom:(CGFloat)radius {
-    
     UIBezierPath *maskPath;
     maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds
                                      byRoundingCorners:(UIRectCornerBottomLeft | UIRectCornerBottomRight)
@@ -64,7 +59,6 @@
 }
 
 - (void)setCornerOnLeft:(CGFloat)radius {
-    
     UIBezierPath *maskPath;
     maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds
                                      byRoundingCorners:(UIRectCornerTopLeft | UIRectCornerBottomLeft)
@@ -76,7 +70,6 @@
 }
 
 - (void)setCornerOnRight:(CGFloat)radius {
-    
     UIBezierPath *maskPath;
     maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds
                                      byRoundingCorners:(UIRectCornerTopRight | UIRectCornerBottomRight)
@@ -88,7 +81,6 @@
 }
 
 - (void)setCornerOnTopLeft:(CGFloat)radius {
-    
     UIBezierPath *maskPath;
     maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds
                                      byRoundingCorners:UIRectCornerTopLeft
@@ -100,7 +92,6 @@
 }
 
 - (void)setCornerOnTopRight:(CGFloat)radius {
-    
     UIBezierPath *maskPath;
     maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds
                                      byRoundingCorners:UIRectCornerTopRight
@@ -112,7 +103,6 @@
 }
 
 - (void)setCornerOnBottomLeft:(CGFloat)radius {
-    
     UIBezierPath *maskPath;
     maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds
                                      byRoundingCorners:UIRectCornerBottomLeft
@@ -124,7 +114,6 @@
 }
 
 - (void)setCornerOnBottomRight:(CGFloat)radius {
-    
     UIBezierPath *maskPath;
     maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds
                                      byRoundingCorners:UIRectCornerBottomRight
@@ -136,7 +125,6 @@
 }
 
 - (void)setAllCorner:(CGFloat)radius {
-    
     UIBezierPath *maskPath;
     maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds
                                           cornerRadius:radius];
@@ -147,13 +135,11 @@
 }
 
 - (void)setCornerRadius:(CGFloat)radius {
-    
     [self.layer setCornerRadius:radius];
     [self.layer setMasksToBounds:YES];
 }
 
 - (UIImage *)snapshotView {
-    
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, YES, 0);
     [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];
     UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
@@ -162,19 +148,16 @@
 }
 
 - (void)removeAllSubviews {
-    
     for (UIView *view in self.subviews) {
         [view removeFromSuperview];
     }
 }
 
 - (void)addRoundedCorners:(UIRectCorner)corners withRadii:(CGSize)radii {
-    
     [self addRoundedCorners:corners withRadii:radii viewRect:CGRectZero];
 }
 
 - (void)addRoundedCorners:(UIRectCorner)corners withRadii:(CGSize)radii viewRect:(CGRect)rect {
-    
     if (CGRectEqualToRect(rect, CGRectZero)) {
         rect = self.bounds;
     }
@@ -187,7 +170,6 @@
 #pragma mark - GestureRecognizer
 
 - (void)tapAction:(UIViewTapHandler)handler {
-    
     self.userInteractionEnabled = YES;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapViewAction)];
     [self addGestureRecognizer:tap];
@@ -195,15 +177,18 @@
 }
 
 - (void)tapViewAction {
-    
     UIViewTapHandler tapHandler = objc_getAssociatedObject(self, &viewTapHandlerKey);
     if (tapHandler) {
         tapHandler(self);
     }
 }
 
--(void)drawImaginaryLineWithStartPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint lineColor:(UIColor *)lineColor lineHeight:(CGFloat)lineHeight onView:(UIView*)view {
-    
+-(void)drawImaginaryLineWithStartPoint:(CGPoint)startPoint
+                              endPoint:(CGPoint)endPoint
+                             lineColor:(UIColor *)lineColor
+                            lineHeight:(CGFloat)lineHeight
+                                onView:(UIView*)view
+{
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     [shapeLayer setFillColor:[[UIColor blackColor] CGColor]];
     [shapeLayer setStrokeColor:lineColor.CGColor];

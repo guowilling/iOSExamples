@@ -28,11 +28,12 @@ static SRHTTPSessionManager *instance;
         _sessionManager.requestSerializer.timeoutInterval = 15.0;
         _sessionManager.responseSerializer.acceptableContentTypes = \
         [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/plain", @"text/css", nil];
+        [self startMonitorNetworkReachabilityStatus];
     }
     return self;
 }
 
-- (void)startMonitorReachabilityStatus {
+- (void)startMonitorNetworkReachabilityStatus {
     AFNetworkReachabilityManager *networkReachabilityManager = [AFNetworkReachabilityManager sharedManager];
     [networkReachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         switch (status) {
@@ -55,6 +56,13 @@ static SRHTTPSessionManager *instance;
         }
     }];
     [networkReachabilityManager startMonitoring];
+}
+
+- (BOOL)isCurrentNetworkReachable {
+    if (self.networkReachabilityStatus == SRNetworkReachabilityStatusNotReachable) {
+        return NO;
+    }
+    return YES;
 }
 
 - (void)GET:(NSString *)URLString
@@ -185,6 +193,10 @@ static SRHTTPSessionManager *instance;
             completion(responseObject,error);
         }
     }];
+}
+
+- (void)cancleTasks {
+    [self.sessionManager.tasks makeObjectsPerformSelector:@selector(cancel)];
 }
 
 @end

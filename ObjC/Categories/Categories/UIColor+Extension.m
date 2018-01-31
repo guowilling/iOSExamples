@@ -11,7 +11,6 @@
 @implementation UIColor (Extension)
 
 + (UIColor *)colorWithHexString:(NSString *)hexString {
-    
     NSString *cString = [[hexString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     
     if ([cString length] < 6) return [UIColor blackColor];
@@ -52,7 +51,6 @@
 }
 
 + (instancetype)colorWithHex:(u_int32_t)hex {
-    
     int red = (hex & 0xFF0000) >> 16;
     int green = (hex & 0x00FF00) >> 8;
     int blue = hex & 0x0000FF;

@@ -28,7 +28,6 @@
 }
 
 - (CGFloat)heightWithConstrainedWidth:(CGFloat)width {
-    
     if (!self || ![self isKindOfClass:[NSAttributedString class]]) {
         return 0;
     }
@@ -36,7 +35,6 @@
 }
 
 - (CGFloat)boundingHeightForWidth:(CGFloat)width {
-
     if (self == nil || ![self isKindOfClass:[NSAttributedString class]]) {
         return 0;
     }

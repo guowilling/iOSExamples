@@ -25,24 +25,20 @@
 static char dispatchSourceFlag;
 
 - (dispatch_source_t)dispatchSource {
-    
     return objc_getAssociatedObject(self, &dispatchSourceFlag);
 }
 
 - (void)setDispatchSource:(dispatch_source_t)dispatchSource {
-    
     objc_setAssociatedObject(self, &dispatchSourceFlag, dispatchSource, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 static char glowViewShowFlag;
 
 - (NSNumber *)shineLayerShow {
-    
     return objc_getAssociatedObject(self, &glowViewShowFlag);
 }
 
 - (void)setShineLayerShow:(NSNumber *)shineLayerShow {
-    
     objc_setAssociatedObject(self, &glowViewShowFlag, shineLayerShow, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -51,43 +47,36 @@ static char glowViewShowFlag;
 static char shineIntervalFlag;
 
 - (void)setShineInterval:(NSNumber *)shineInterval {
-    
     objc_setAssociatedObject(self, &shineIntervalFlag, shineInterval, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSNumber *)shineInterval {
-    
     return objc_getAssociatedObject(self, &shineIntervalFlag);
 }
 
 static char shineLayerOpacityFlag;
 
 - (void)setShineLayerOpacity:(NSNumber *)shineLayerOpacity {
-    
     objc_setAssociatedObject(self, &shineLayerOpacityFlag, shineLayerOpacity, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSNumber *)shineLayerOpacity {
-    
     return objc_getAssociatedObject(self, &shineLayerOpacityFlag);
 }
 
 static char shineDurationFlag;
 
 - (void)setShineDuration:(NSNumber *)glowDuration {
-    
     objc_setAssociatedObject(self, &shineDurationFlag, glowDuration, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSNumber *)shineDuration {
-    
     return objc_getAssociatedObject(self, &shineDurationFlag);
 }
 
 #pragma mark - Public Methods
 
 - (void)createShineLayerWithColor:(UIColor *)color radius:(CGFloat)radius {
-    
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, [UIScreen mainScreen].scale);
     [self.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIBezierPath *path = [UIBezierPath bezierPathWithRect:(CGRect){CGPointZero, CGSizeMake(self.bounds.size.width, self.bounds.size.height)}];
@@ -107,7 +96,6 @@ static char shineDurationFlag;
 }
 
 - (void)shineLayerInfiniteLoop {
-    
     [self.layer.sublayers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         CALayer *layer = obj;
         if ([layer.name isEqualToString:SHINELAYER_FLAG]) {
@@ -166,7 +154,6 @@ static char shineDurationFlag;
 }
 
 - (void)shineLayerHiddenToShow {
-    
     [self.layer.sublayers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         CALayer *layer = obj;
         if ([layer.name isEqualToString:SHINELAYER_FLAG]) {
@@ -192,7 +179,6 @@ static char shineDurationFlag;
 }
 
 - (void)shineLayerShowToHidden {
-    
     [self.layer.sublayers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         CALayer *layer = obj;
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];

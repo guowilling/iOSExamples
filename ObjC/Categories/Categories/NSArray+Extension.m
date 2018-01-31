@@ -11,7 +11,6 @@
 @implementation NSArray (Extension)
 
 + (BOOL)isAvailable:(NSArray *)aArray {
-    
     if (aArray && ![aArray isKindOfClass:NSNull.class] && aArray.count > 0) {
         return YES;
     }
@@ -19,7 +18,6 @@
 }
 
 + (instancetype)removeDuplicateElements:(NSArray *)sourceArray {
-    
     NSMutableArray *newArray = [NSMutableArray new];
     for (int i = 0; i < sourceArray.count; i++) {
         if (![newArray containsObject:sourceArray[i]]) {
@@ -31,7 +29,6 @@
 
 /** 中文字符输出 */
 - (NSString *)descriptionWithLocale:(id)locale {
-    
     NSMutableString *description = [NSMutableString string];
     [description appendString:@"[\n"]; // 开头的 '['
     [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {

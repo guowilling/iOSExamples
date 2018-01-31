@@ -86,16 +86,12 @@
 
 + (NSInteger)daysIntervalFromCurrentTime:(NSString *)destTimeString {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    //dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-    dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss.0";
+    dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
     NSDate *destTimeDate = [dateFormatter dateFromString:destTimeString];
-    
     NSDate *currentDate = [NSDate date];
-    
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSCalendarUnit unit = NSCalendarUnitDay | NSCalendarUnitMonth;
     NSDateComponents *components = [calendar components:unit fromDate:currentDate toDate:destTimeDate options:0];
-    NSLog(@"daysIntervalFromCurrentTime components: %@", components);
     return components.day;
 }
 

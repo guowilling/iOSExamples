@@ -11,7 +11,6 @@
 @implementation UIImage (Clip)
 
 - (instancetype)subImageInRect:(CGRect)rect {
-    
     CGImageRef subImageRef = CGImageCreateWithImageInRect(self.CGImage, rect);
     CGRect subBounds = CGRectMake(0, 0, CGImageGetWidth(subImageRef), CGImageGetHeight(subImageRef));
     UIGraphicsBeginImageContext(subBounds.size);
@@ -24,7 +23,6 @@
 }
 
 - (instancetype)croppedImageAtFrame:(CGRect)frame {
-    
     frame = CGRectMake(frame.origin.x * self.scale, frame.origin.y * self.scale, frame.size.width * self.scale, frame.size.height * self.scale);
     CGImageRef sourceImageRef = self.CGImage;
     CGImageRef croppedImageRef    = CGImageCreateWithImageInRect(sourceImageRef, frame);

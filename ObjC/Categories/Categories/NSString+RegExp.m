@@ -11,7 +11,6 @@
 @implementation NSString (RegExp)
 
 + (BOOL)checkUserIdCard:(NSString *)card {
-    
     NSString *pattern = @"(^[0-9]{15}$)|([0-9]{17}([0-9]|X)$)";
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",pattern];
     BOOL isMatch = [pred evaluateWithObject:card];
@@ -19,7 +18,6 @@
 }
 
 + (BOOL)checkPassword:(NSString *)password {
-    
     NSString *pattern = @"^(?![0-9]+$)(?![a-zA-Z]+$)[a-zA-Z0-9]{6,18}";
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pattern];
     BOOL isMatch = [pred evaluateWithObject:password];
@@ -27,7 +25,6 @@
 }
 
 + (BOOL)checkURL:(NSString *)URL {
-    
     NSString *pattern = @"^[0-9A-Za-z]{1,50}";
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pattern];
     BOOL isMatch = [pred evaluateWithObject:URL];
@@ -35,7 +32,6 @@
 }
 
 + (BOOL)checkEmail:(NSString *)email {
-    
     NSString *pattern = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pattern];
     BOOL isMatch = [pred evaluateWithObject:email];
@@ -43,7 +39,6 @@
 }
 
 + (BOOL)checkTencentQQ:(NSString *)qq {
-    
     NSString *pattern = @"^[0-9]{4,12}$";
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pattern];
     BOOL isMatch = [pred evaluateWithObject:qq];
@@ -51,25 +46,21 @@
 }
 
 + (BOOL)checkNickname:(NSString *)nickname {
-    
     NSString *smsRegex = @"[0-9\u4e00-\u9fa5a-zA-Z]{3,20}";
     NSPredicate *smsPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", smsRegex];
     return [smsPredicate evaluateWithObject:nickname];
 }
 
 + (BOOL)checkSMS:(NSString *)sms {
-    
     NSString *smsRegex = @"^[0-9]{6}$";
     NSPredicate *smsPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", smsRegex];
     return [smsPredicate evaluateWithObject:sms];
 }
 
 + (BOOL)checkTelNumber:(NSString *)telNumber {
-    
     if (telNumber.length != 11) {
         return NO;
     }
-    
     /**
      * 手机号码: 13[0-9], 14[5,7], 15[0, 1, 2, 3, 5, 6, 7, 8, 9], 17[0, 1, 6, 7, 8], 18[0-9]
      * 移动号段: 134,135,136,137,138,139,147,150,151,152,157,158,159,170,178,182,183,184,187,188

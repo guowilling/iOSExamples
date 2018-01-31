@@ -11,21 +11,16 @@
 @implementation CALayer (Extension)
 
 + (UIImage *)imageWithLayer:(CALayer *)targetLayer {
-    
     CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
-    
     UIGraphicsBeginImageContextWithOptions(targetLayer.frame.size, NO, [UIScreen mainScreen].scale);
     [targetLayer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
     NSLog(@"imageWithLayer cost time: %.2f", CFAbsoluteTimeGetCurrent() - start);
-    
     return image;
 }
 
 + (CAGradientLayer *)backgroundGradientLayerWithFrame:(CGRect)frame {
-    
     CGPoint startPoint = CGPointMake(0.0, 0.0);
     CGPoint endPoint = CGPointMake(1.0, 0.0);
     NSMutableArray *colors = [NSMutableArray array];
@@ -35,7 +30,6 @@
 }
 
 + (CAGradientLayer *)backgroundGradientLayerWithFrame:(CGRect)frame StartPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint colors:(NSArray *)colors {
-    
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
     gradientLayer.frame = frame;
     gradientLayer.startPoint = startPoint;

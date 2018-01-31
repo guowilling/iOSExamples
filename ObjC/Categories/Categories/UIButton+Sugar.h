@@ -11,11 +11,15 @@
 @interface UIButton (Sugar)
 
 + (UIButton *)buttonWithFrame:(CGRect)frame title:(NSString *)title target:(id)target selector:(SEL)selector;
-
 + (UIButton *)buttonWithFrame:(CGRect)frame title:(NSString *)title target:(id)target selector:(SEL)selector image:(NSString*)image;
-
 + (UIButton *)buttonWithFrame:(CGRect)frame title:(NSString *)title target:(id)target selector:(SEL)selector image:(NSString*)image imagePressed:(NSString *)imagePressed;
 
-+ (UIButton *)buttonWithFrame:(CGRect)frame title:(NSString *)title target:(id)target selector:(SEL)selector image:(NSString*)image imagePressed:(NSString *)imagePressed imageSelected:(NSString *)imageSelected;
++ (UIButton *)buttonWithFrame:(CGRect)frame
+                        title:(NSString *)title
+                       target:(id)target
+                     selector:(SEL)selector
+                        image:(NSString*)image
+                 imagePressed:(NSString *)imagePressed
+                imageSelected:(NSString *)imageSelected;
 
 @end

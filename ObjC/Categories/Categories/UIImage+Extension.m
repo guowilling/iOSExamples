@@ -13,7 +13,6 @@
 @implementation UIImage (Extension)
 
 + (UIImage *)imageFromColor:(UIColor *)color {
-    
     CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -25,7 +24,6 @@
 }
 
 + (instancetype)imageFromLayer:(CALayer *)layer {
-    
     UIGraphicsBeginImageContextWithOptions(layer.frame.size, NO, 0);
     [layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
@@ -34,7 +32,6 @@
 }
 
 + (instancetype)videoFirstImageWithVideoPath:(NSString *)videoPath {
-    
     if (!videoPath || videoPath.length == 0) {
         return nil;
     }
@@ -55,9 +52,7 @@
 }
 
 - (NSData *)imageCompressedToMost32KData {
-    
     static CGFloat kMaxImageDataLength = 32 * 1024.0;
-    
     CGFloat quality = 1.0;
     NSData *data = UIImageJPEGRepresentation(self, 1.0);
     NSUInteger dataLength = data.length;
@@ -68,9 +63,7 @@
 }
 
 + (NSData *)wxShareThumbnail:(UIImage *)thumbImage {
-    
     static CGFloat kMaxImageDataLength = 32 * 1024.0;
-    
     NSData *thumbData = UIImageJPEGRepresentation(thumbImage, 0.9);
     BOOL flag = thumbData.length > kMaxImageDataLength;
     while (flag) {
@@ -82,7 +75,6 @@
 }
 
 - (UIColor *)averageColor {
-    
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     unsigned char rgba[4];
     CGContextRef context = CGBitmapContextCreate(rgba, 1, 1, 8, 4, colorSpace, kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);

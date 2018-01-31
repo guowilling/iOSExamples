@@ -12,7 +12,6 @@
 
 /** 中文字符输出 */
 - (NSString *)descriptionWithLocale:(id)locale {
-    
     NSMutableString *description = [NSMutableString string];
     [description appendString:@"{\n"]; // 开头的 '{'
     [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) { // 遍历所有的键值对

@@ -11,7 +11,6 @@
 @implementation UIImage (Resize)
 
 - (instancetype)scaleWithFixedWidth:(CGFloat)width {
-    
     float newHeight = self.size.height * (width / self.size.width);
     CGSize size     = CGSizeMake(width, newHeight);
     UIGraphicsBeginImageContextWithOptions(size, NO, 0);
@@ -29,7 +28,6 @@
 }
 
 - (instancetype)scaleWithFixedHeight:(CGFloat)height {
-    
     float newWidth = self.size.width * (height / self.size.height);
     CGSize size    = CGSizeMake(newWidth, height);
     UIGraphicsBeginImageContextWithOptions(size, NO, 0);
@@ -47,7 +45,6 @@
 }
 
 + (instancetype)resizeImage:(UIImage *)originalImage toSize:(CGSize)dstSize {
-    
     UIImage *newImage = nil;
     
     CGSize  imageSize      = originalImage.size;
@@ -96,7 +93,6 @@
 
 
 + (instancetype)resizeImage:(UIImage *)originalImage toW:(CGFloat)dstW {
-    
     UIImage *newImage = nil;
     
     CGSize  imageSize      = originalImage.size;
@@ -145,7 +141,6 @@
 }
 
 - (UIImage*)resizeImageToSize:(CGSize)dstSize {
-    
     CGImageRef imgRef = self.CGImage;
     // the below values are regardless of orientation : for UIImages from Camera, width>height (landscape)
     CGSize  srcSize = CGSizeMake(CGImageGetWidth(imgRef), CGImageGetHeight(imgRef)); // not equivalent to self.size (which is dependant on the imageOrientation)!

@@ -11,7 +11,6 @@
 @implementation UIDevice (Extension)
 
 + (float)systemVersion {
-    
     static float version;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -21,7 +20,6 @@
 }
 
 - (BOOL)isPad {
-    
     static dispatch_once_t one;
     static BOOL pad;
     dispatch_once(&one, ^{
@@ -32,7 +30,6 @@
 
 #ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 - (BOOL)canMakePhoneCalls {
-    
     __block BOOL can;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

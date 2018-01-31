@@ -14,7 +14,9 @@ typedef NS_ENUM(NSInteger, SRNetworkReachabilityStatus) {
 
 + (instancetype)sharedManager;
 
-- (void)startMonitorReachabilityStatus;
+- (void)startMonitorNetworkReachabilityStatus;
+
+- (BOOL)isCurrentNetworkReachable;
 
 - (void)GET:(NSString *)URLString
  parameters:(NSDictionary *)parameters
@@ -54,5 +56,7 @@ typedef NS_ENUM(NSInteger, SRNetworkReachabilityStatus) {
           fromFile:(NSURL *)fileURL
           progress:(void(^)(NSProgress *uploadProgress))progress
         completion:(void(^)(id object, NSError *error))completion;
+
+- (void)cancleTasks;
 
 @end

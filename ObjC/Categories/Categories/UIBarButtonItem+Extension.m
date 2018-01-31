@@ -12,7 +12,6 @@
 @implementation UIBarButtonItem (Extension)
 
 + (UIBarButtonItem *)itemWithTarget:(id)target action:(SEL)action norImage:(NSString *)image highImage:(NSString *)highImage {
-    
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setBackgroundImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
     if (highImage) {

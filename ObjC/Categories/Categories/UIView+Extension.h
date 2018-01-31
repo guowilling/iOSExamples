@@ -56,6 +56,10 @@ typedef void(^UIViewTapHandler)(UIView *view);
  @param lineHeight 线条高度
  @param view       绘制的目标视图
  */
--(void)drawImaginaryLineWithStartPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint lineColor:(UIColor *)lineColor lineHeight:(CGFloat)lineHeight onView:(UIView*)view;
+-(void)drawImaginaryLineWithStartPoint:(CGPoint)startPoint
+                              endPoint:(CGPoint)endPoint
+                             lineColor:(UIColor *)lineColor
+                            lineHeight:(CGFloat)lineHeight
+                                onView:(UIView*)view;
 
 @end

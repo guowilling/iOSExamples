@@ -18,8 +18,8 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 @property (strong, nonatomic) AVCaptureStillImageOutput  *captureStillImageOutput;
 @property (strong, nonatomic) AVCaptureVideoPreviewLayer *captureVideoPreviewLayer;
 
-@property(nonatomic,assign)CGFloat beginGestureScale;
-@property(nonatomic,assign)CGFloat endGestureScale;
+@property (nonatomic, assign) CGFloat beginGestureScale;
+@property (nonatomic, assign) CGFloat endGestureScale;
 
 @end
 

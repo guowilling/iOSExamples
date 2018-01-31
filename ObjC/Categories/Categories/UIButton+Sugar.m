@@ -11,22 +11,25 @@
 @implementation UIButton (Sugar)
 
 + (UIButton *)buttonWithFrame:(CGRect)frame title:(NSString *)title target:(id)target selector:(SEL)selector {
-    
     return [self buttonWithFrame:frame title:title target:target selector:selector image:nil];
 }
 
 + (UIButton *)buttonWithFrame:(CGRect)frame title:(NSString *)title target:(id)target selector:(SEL)selector image:(NSString*)image {
-    
     return [self buttonWithFrame:frame title:title target:target selector:selector image:image imagePressed:nil];
 }
 
 + (UIButton *)buttonWithFrame:(CGRect)frame title:(NSString *)title target:(id)target selector:(SEL)selector image:(NSString*)image imagePressed:(NSString *)imagePressed {
-    
     return [self buttonWithFrame:frame title:title target:target selector:selector image:image imagePressed:imagePressed imageSelected:nil];
 }
 
-+ (UIButton *)buttonWithFrame:(CGRect)frame title:(NSString *)title target:(id)target selector:(SEL)selector image:(NSString*)image imagePressed:(NSString *)imagePressed imageSelected:(NSString *)imageSelected {
-    
++ (UIButton *)buttonWithFrame:(CGRect)frame
+                        title:(NSString *)title
+                       target:(id)target
+                     selector:(SEL)selector
+                        image:(NSString*)image
+                 imagePressed:(NSString *)imagePressed
+                imageSelected:(NSString *)imageSelected
+{
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setFrame:frame];
     [button setTitle:title forState:UIControlStateNormal];

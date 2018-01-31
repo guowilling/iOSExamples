@@ -12,7 +12,6 @@
 @implementation NSString (Extension)
 
 - (BOOL)isAvailable {
-    
     if (self && ![self isKindOfClass:NSNull.class] && self.length > 0) {
         return YES;
     }
@@ -20,7 +19,6 @@
 }
 
 + (BOOL)isAvailable:(NSString *)aString {
-    
     if (aString && ![aString isKindOfClass:NSNull.class] && aString.length > 0) {
         return YES;
     }
@@ -28,12 +26,10 @@
 }
 
 - (CGSize)sizeWithFont:(UIFont *)font {
-    
     return [self sizeWithFont:font maxWidth:MAXFLOAT];
 }
 
 - (CGSize)sizeWithFont:(UIFont *)font maxWidth:(CGFloat)width {
-    
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     attrs[NSFontAttributeName] = font;
     CGSize maxSize = CGSizeMake(width, MAXFLOAT);
@@ -41,7 +37,6 @@
 }
 
 - (NSString *)MD5Hash {
-    
     CC_MD5_CTX md5;
     CC_MD5_Init (&md5);
     CC_MD5_Update (&md5, [self UTF8String], (CC_LONG)[self length]);
@@ -53,7 +48,6 @@
 }
 
 - (NSString *)urlEncodedString {
-    
     NSMutableString *output = [NSMutableString string];
     const unsigned char *source = (const unsigned char *)[self UTF8String];
     size_t sourceLen = strlen((const char *)source);
@@ -74,7 +68,6 @@
 }
 
 - (NSString *)urlDecodedString {
-    
     return [self stringByRemovingPercentEncoding];
     //return [self stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }

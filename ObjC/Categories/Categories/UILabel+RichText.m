@@ -15,79 +15,64 @@
 #pragma mark - Associate Object
 
 - (CGFloat)characterColumnSpace {
-    
     return [objc_getAssociatedObject(self, _cmd) floatValue];
 }
 
 - (void)setCharacterColumnSpace:(CGFloat)characterColumnSpace {
-    
     objc_setAssociatedObject(self, @selector(characterColumnSpace), @(characterColumnSpace), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (CGFloat)characterLineSpace {
-    
     return [objc_getAssociatedObject(self, _cmd) floatValue];
 }
 
 - (void)setCharacterLineSpace:(CGFloat)characterLineSpace {
-    
     objc_setAssociatedObject(self, @selector(characterLineSpace), @(characterLineSpace), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSString *)keywords {
-    
     return objc_getAssociatedObject(self, _cmd);
 }
 
 - (void)setKeywords:(NSString *)keywords {
-    
     objc_setAssociatedObject(self, @selector(keywords), keywords, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIFont *)keywordsFont {
-    
     return objc_getAssociatedObject(self, _cmd);
 }
 
 - (void)setKeywordsFont:(UIFont *)keywordsFont {
-    
     objc_setAssociatedObject(self, @selector(keywordsFont), keywordsFont, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIColor *)keywordsColor {
-    
     return objc_getAssociatedObject(self, _cmd);
 }
 
 - (void)setKeywordsColor:(UIColor *)keywordsColor {
-    
     objc_setAssociatedObject(self, @selector(keywordsColor), keywordsColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSString *)underlineString {
-    
     return objc_getAssociatedObject(self, _cmd);
 }
 
 - (void)setUnderlineString:(NSString *)underlineString {
-    
     objc_setAssociatedObject(self, @selector(underlineString), underlineString, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIColor *)underlineColor {
-    
     return objc_getAssociatedObject(self, _cmd);
 }
 
 - (void)setUnderlineColor:(UIColor *)underlineColor {
-    
     objc_setAssociatedObject(self, @selector(underlineColor), underlineColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 #pragma mark - Public Methods
 
 - (void)applyRichEffect {
-    
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
     [attributedString addAttribute:NSFontAttributeName value:self.font range:NSMakeRange(0, self.text.length)];
     
@@ -128,7 +113,6 @@
 }
 
 - (CGSize)getRectWithMaxWidth:(CGFloat)maxWidth {
-    
     // 如果设置了 paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail
     // 以下方式计算高度结果不准确
 //    CGRect rect = [self.attributedText boundingRectWithSize:CGSizeMake(maxWidth, MAXFLOAT)

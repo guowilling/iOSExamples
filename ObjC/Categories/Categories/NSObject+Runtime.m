@@ -12,13 +12,11 @@
 @implementation NSObject (Runtime)
 
 + (NSString *)fetchClassName:(Class)class {
-    
     const char *className = class_getName(class);
     return [NSString stringWithUTF8String:className];
 }
 
 + (NSArray *)fetchIvarList:(Class)class {
-    
     unsigned int count = 0;
     Ivar *ivarList = class_copyIvarList(class, &count);
     NSMutableArray *mutableList = [NSMutableArray arrayWithCapacity:count];
@@ -35,7 +33,6 @@
 }
 
 + (NSArray *)fetchPropertyList:(Class)class {
-    
     unsigned int count = 0;
     objc_property_t *propertyList = class_copyPropertyList(class, &count);
     NSMutableArray *mutableList = [NSMutableArray arrayWithCapacity:count];
@@ -48,7 +45,6 @@
 }
 
 + (NSArray *)fetchMethodList:(Class)class {
-    
     unsigned int count = 0;
     Method *methodList = class_copyMethodList(class, &count);
     NSMutableArray *mutableList = [NSMutableArray arrayWithCapacity:count];
@@ -62,7 +58,6 @@
 }
 
 + (NSArray *)fetchProtocolList:(Class)class {
-    
     unsigned int count = 0;
     __unsafe_unretained Protocol **protocolList = class_copyProtocolList(class, &count);
     NSMutableArray *mutableList = [NSMutableArray arrayWithCapacity:count];
@@ -75,7 +70,6 @@
 }
 
 + (void)addMethodToClass:(Class)class methodName:(SEL)methodName methodImp:(SEL)methodImp {
-    
     Method method = class_getInstanceMethod(class, methodImp);
     IMP methodIMP = method_getImplementation(method);
     const char *types = method_getTypeEncoding(method);
