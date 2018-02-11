@@ -21,14 +21,14 @@
 
 - (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewRowAction *action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"删除" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+    UITableViewRowAction *action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
         NSLog(@"删除");
     }];
     UITableViewRowAction *action2 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"添加" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
         NSLog(@"添加");
         [self tableView:tableView didEndEditingRowAtIndexPath:indexPath];
     }];
-    action2.backgroundColor = [UIColor blueColor];
+//    action2.backgroundColor = [UIColor blueColor];
     
     return @[action1, action2];
 }
