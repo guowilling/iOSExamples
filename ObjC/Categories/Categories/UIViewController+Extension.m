@@ -1,17 +1,16 @@
 //
-//  UIViewController+FindNavigationController.m
-//  LoadAdvertisementDemo
+//  UIViewController+Extension.m
+//  CategoriesDemo
 //
-//  Created by 郭伟林 on 2017/7/6.
-//  Copyright © 2017年 SR. All rights reserved.
+//  Created by 郭伟林 on 2018/3/1.
+//  Copyright © 2018年 SR. All rights reserved.
 //
 
-#import "UIViewController+FindNavigationController.h"
+#import "UIViewController+Extension.h"
 
-@implementation UIViewController (FindNavigationController)
+@implementation UIViewController (Extension)
 
 - (UINavigationController *)findNavigationController {
-    
     UINavigationController *navC = nil;
     if ([self isKindOfClass:[UINavigationController class]]) {
         navC = (id)self;
