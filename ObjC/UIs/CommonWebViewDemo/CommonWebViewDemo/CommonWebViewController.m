@@ -30,79 +30,85 @@ static CGFloat const Navigation_Bar_HEIGHT = 64;
 @implementation CommonWebViewController
 
 - (void)dealloc {
-    
     [_wk_webView removeObserver:self forKeyPath:@"estimatedProgress"];
-    
     [_wk_webView stopLoading];
     [_ui_webView stopLoading];
 }
 
 - (WKWebView*)wk_webView {
-    
     if (!_wk_webView) {
         WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
         config.preferences = [[WKPreferences alloc] init];
         config.userContentController = [[WKUserContentController alloc] init];
-        _wk_webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, Navigation_Bar_HEIGHT, self.view.bounds.size.width, self.view.bounds.size.height - Navigation_Bar_HEIGHT) configuration:config];
+        _wk_webView = [[WKWebView alloc] initWithFrame:CGRectMake(0,
+                                                                  Navigation_Bar_HEIGHT,
+                                                                  self.view.bounds.size.width,
+                                                                  self.view.bounds.size.height - Navigation_Bar_HEIGHT)
+                                         configuration:config];
         _wk_webView.navigationDelegate = self;
         _wk_webView.UIDelegate = self;
-        _wk_webView.allowsBackForwardNavigationGestures = YES; // A Boolean value indicating whether horizontal swipe gestures will trigger back-forward list navigations.
+        _wk_webView.allowsBackForwardNavigationGestures = YES;
+        [_wk_webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:NULL];
         if (_canPullDownToRefresh && [[UIDevice currentDevice] systemVersion].floatValue >= 10.0) {
             _wk_webView.scrollView.refreshControl = self.refreshControl;
         }
-        [_wk_webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:NULL];
     }
     return _wk_webView;
 }
 
 - (UIWebView*)ui_webView {
-    
     if (!_ui_webView) {
-        _ui_webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, Navigation_Bar_HEIGHT, self.view.bounds.size.width, self.view.bounds.size.height - Navigation_Bar_HEIGHT)];
+        _ui_webView = [[UIWebView alloc] initWithFrame:CGRectMake(0,
+                                                                  Navigation_Bar_HEIGHT,
+                                                                  self.view.bounds.size.width,
+                                                                  self.view.bounds.size.height - Navigation_Bar_HEIGHT)];
         _ui_webView.delegate = self;
-        if (_canPullDownToRefresh && [[UIDevice currentDevice] systemVersion].floatValue >= 10.0) {
-            _wk_webView.scrollView.refreshControl = self.refreshControl;
-        }
     }
     return _ui_webView;
 }
 
 - (UIProgressView*)loadingProgressView {
-    
     if (!_loadingProgressView) {
-        _loadingProgressView = [[UIProgressView alloc]initWithFrame:CGRectMake(0, Navigation_Bar_HEIGHT, self.view.bounds.size.width, 2)];
+        _loadingProgressView = [[UIProgressView alloc]initWithFrame:CGRectMake(0,
+                                                                               Navigation_Bar_HEIGHT,
+                                                                               self.view.bounds.size.width,
+                                                                               2)];
         _loadingProgressView.progressTintColor = [UIColor blueColor];
     }
     return _loadingProgressView;
 }
 
 - (UIRefreshControl*)refreshControl {
-    
     if (!_refreshControl) {
         _refreshControl = [[UIRefreshControl alloc] init];
-        [_refreshControl addTarget:self action:@selector(reloadWebView) forControlEvents:UIControlEventValueChanged];
+        [_refreshControl addTarget:self
+                            action:@selector(reloadWebView)
+                  forControlEvents:UIControlEventValueChanged];
     }
     return _refreshControl;
 }
 
 - (UIBarButtonItem*)backItem {
-    
     if (!_backItem) {
-        _backItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(back:)];
+        _backItem = [[UIBarButtonItem alloc] initWithTitle:@"Back"
+                                                     style:UIBarButtonItemStylePlain
+                                                    target:self
+                                                    action:@selector(back:)];
     }
     return _backItem;
 }
 
 - (UIBarButtonItem*)closeItem {
-    
     if (!_closeItem) {
-        _closeItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStylePlain target:self action:@selector(close:)];
+        _closeItem = [[UIBarButtonItem alloc] initWithTitle:@"Close"
+                                                      style:UIBarButtonItemStylePlain
+                                                     target:self
+                                                     action:@selector(close:)];
     }
     return _closeItem;
 }
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
@@ -112,20 +118,19 @@ static CGFloat const Navigation_Bar_HEIGHT = 64;
     if ([[UIDevice currentDevice] systemVersion].floatValue >= 8.0) {
         [self.view addSubview:self.wk_webView];
         [self.view addSubview:self.loadingProgressView];
-        [_wk_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.URLString]]];
+        [self.wk_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.URLString]]];
     } else {
         [self.view addSubview:self.ui_webView];
-        [_ui_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.URLString]]];
+        [self.ui_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.URLString]]];
     }
     
     [self setupNavigationItem];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    
     [super viewWillAppear:animated];
     
-    // 自定义导航按钮后支持侧滑手势处理方式
+    // after custom navigation button support slip gesture handling
     if (self.navigationController.viewControllers.count > 1) {
         self.delegate = self.navigationController.interactivePopGestureRecognizer.delegate;
         self.navigationController.interactivePopGestureRecognizer.delegate = self;
@@ -133,14 +138,12 @@ static CGFloat const Navigation_Bar_HEIGHT = 64;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    
     [super viewWillDisappear:animated];
     
     self.navigationController.interactivePopGestureRecognizer.delegate = self.delegate;
 }
 
 - (void)setupNavigationItem {
-    
     if ([_ui_webView canGoBack] || [_wk_webView canGoBack]) {
         self.navigationItem.leftBarButtonItems = @[self.backItem, self.closeItem];
     } else {
@@ -149,11 +152,10 @@ static CGFloat const Navigation_Bar_HEIGHT = 64;
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    
     if ([keyPath isEqualToString:@"estimatedProgress"]) {
         _loadingProgressView.progress = [change[@"new"] floatValue];
         if (_loadingProgressView.progress == 1.0) {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 _loadingProgressView.hidden = YES;
             });
         }
@@ -161,13 +163,11 @@ static CGFloat const Navigation_Bar_HEIGHT = 64;
 }
 
 - (void)reloadWebView {
-    
     [_ui_webView reload];
     [_wk_webView reload];
 }
 
 - (void)back:(UIBarButtonItem*)item {
-    
     if ([_ui_webView canGoBack] || [_wk_webView canGoBack]) {
         [_ui_webView goBack];
         [_wk_webView goBack];
@@ -177,26 +177,22 @@ static CGFloat const Navigation_Bar_HEIGHT = 64;
 }
 
 - (void)close:(UIBarButtonItem*)item {
-    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - UIGestureRecognizerDelegate
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
-    
     return self.navigationController.viewControllers.count > 1;
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-    
     return self.navigationController.viewControllers.count > 1;
 }
 
 #pragma mark - UIWebViewDelegate
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    
     webView.hidden = NO;
     if ([request.URL.scheme isEqual:@"about"]) {
         webView.hidden = YES;
@@ -206,7 +202,6 @@ static CGFloat const Navigation_Bar_HEIGHT = 64;
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    
     self.navigationItem.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     
     [self setupNavigationItem];
@@ -215,14 +210,12 @@ static CGFloat const Navigation_Bar_HEIGHT = 64;
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    
     webView.hidden = YES;
 }
 
 #pragma mark - WKNavigationDelegate
 
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(null_unspecified WKNavigation *)navigation {
-    
     _loadingProgressView.hidden = NO;
     
     webView.hidden = NO;
@@ -232,7 +225,6 @@ static CGFloat const Navigation_Bar_HEIGHT = 64;
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation {
-    
     [webView evaluateJavaScript:@"document.title" completionHandler:^(id _Nullable title, NSError * _Nullable error) {
         self.navigationItem.title = title;
     }];
@@ -243,12 +235,10 @@ static CGFloat const Navigation_Bar_HEIGHT = 64;
 }
 
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error {
-    
     webView.hidden = YES;
 }
 
 - (void)webView:(WKWebView *)webView didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition disposition, NSURLCredential *credential))completionHandler {
-    
     if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) {
         if (challenge.previousFailureCount == 0) {
             NSURLCredential *credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
@@ -262,3 +252,4 @@ static CGFloat const Navigation_Bar_HEIGHT = 64;
 }
 
 @end
+
