@@ -1,15 +1,12 @@
 
 #import "MBProgressHUD+SR.h"
 
-static const CGFloat kMessageHUDLayerCornerRadius = 5;
-static const CGFloat kIconHUDLayerCornerRadius = 10;
-
 @implementation MBProgressHUD (SR)
 
 #pragma mark - Only Text
 
 + (MBProgressHUD *)sr_showMessage:(NSString *)message {
-    return [self sr_showMessage:message onView:nil];
+    return [self sr_showMessage:message onView:nil completionBlock:nil];
 }
 
 + (MBProgressHUD *)sr_showMessage:(NSString *)message onView:(UIView *)view {
@@ -17,16 +14,20 @@ static const CGFloat kIconHUDLayerCornerRadius = 10;
 }
 
 + (MBProgressHUD *)sr_showMessage:(NSString *)message onView:(UIView *)view completionBlock:(MBProgressHUDCompletionBlock)completionBlock {
-    view = view ?: [UIApplication sharedApplication].keyWindow;
+    if (!view) {
+        view = [UIApplication sharedApplication].keyWindow;
+    }
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.mode = MBProgressHUDModeText;
     hud.label.text = message;
     hud.label.font = [UIFont systemFontOfSize:15];
-    hud.label.adjustsFontSizeToFitWidth = YES;
+    hud.label.numberOfLines = 0;
     hud.margin = 12;
+    hud.removeFromSuperViewOnHide = YES;
     hud.contentColor = [UIColor whiteColor];
     hud.bezelView.backgroundColor = [UIColor blackColor];
-    hud.bezelView.layer.cornerRadius = kMessageHUDLayerCornerRadius;
+    hud.bezelView.layer.cornerRadius = 5;
+    //    hud.userInteractionEnabled = NO; // Must! or it will block user's action in some situation.
     hud.completionBlock = completionBlock;
     return hud;
 }
@@ -38,31 +39,45 @@ static const CGFloat kIconHUDLayerCornerRadius = 10;
 }
 
 + (MBProgressHUD *)sr_showIndeterminateWithMessage:(NSString *)message onView:(UIView *)view {
-    return [self sr_showIndeterminateWithMessage:message onView:view graceTime:0];
-}
-
-+ (MBProgressHUD *)sr_showIndeterminateWithMessage:(NSString *)message onView:(UIView *)view graceTime:(NSTimeInterval)graceTime {
-    return [self sr_showIndeterminateWithMessage:message onView:view graceTime:graceTime completionBlock:nil];
-}
-
-+ (MBProgressHUD *)sr_showIndeterminateWithMessage:(NSString *)message onView:(UIView *)view graceTime:(NSTimeInterval)graceTime completionBlock:(MBProgressHUDCompletionBlock)completionBlock {
-    view = view ?: [UIApplication sharedApplication].keyWindow;
-    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
-    hud.mode = MBProgressHUDModeIndeterminate;
-    hud.minSize = CGSizeMake(120, 120);
+    if (!view) {
+        view = [UIApplication sharedApplication].keyWindow;
+    }
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.label.text = message;
     hud.label.font = [UIFont systemFontOfSize:15];
-    hud.label.adjustsFontSizeToFitWidth = YES;
+    hud.minSize = CGSizeMake(120, 120);
     hud.margin = 15.0;
     hud.contentColor = [UIColor whiteColor];
     hud.bezelView.backgroundColor = [UIColor blackColor];
-    hud.bezelView.layer.cornerRadius = kIconHUDLayerCornerRadius;
+    hud.bezelView.layer.cornerRadius = 10;
+    hud.removeFromSuperViewOnHide = YES;
+    return hud;
+}
+
++ (MBProgressHUD *)sr_showIndeterminateWithMessage:(NSString *)message graceTime:(NSTimeInterval)graceTime {
+    return [self sr_showIndeterminateWithMessage:message graceTime:graceTime onView:nil];
+}
+
++ (MBProgressHUD *)sr_showIndeterminateWithMessage:(NSString *)message graceTime:(NSTimeInterval)graceTime onView:(UIView *)view {
+    if (!view) {
+        view = [UIApplication sharedApplication].keyWindow;
+    }
+    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
+    
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.label.text = message;
+    hud.label.font = [UIFont systemFontOfSize:15];
+    hud.minSize = CGSizeMake(120, 120);
+    hud.margin = 15.0;
+    hud.contentColor = [UIColor whiteColor];
+    hud.bezelView.backgroundColor = [UIColor blackColor];
+    hud.bezelView.layer.cornerRadius = 10;
+    hud.removeFromSuperViewOnHide = YES;
     if (graceTime <= 0 || graceTime >= 3) {
         hud.graceTime = 0.5;
     } else {
         hud.graceTime = graceTime;
     }
-    hud.completionBlock = completionBlock;
     [view addSubview:hud];
     [hud showAnimated:YES];
     return hud;
@@ -71,7 +86,7 @@ static const CGFloat kIconHUDLayerCornerRadius = 10;
 #pragma mark - Success Icon And Text
 
 + (MBProgressHUD *)sr_showSuccessWithMessage:(NSString *)message {
-    return [self sr_showSuccessWithMessage:message onView:nil];
+    return [self sr_showSuccessWithMessage:message onView:nil completionBlock:nil];
 }
 
 + (MBProgressHUD *)sr_showSuccessWithMessage:(NSString *)message onView:(UIView *)view {
@@ -85,7 +100,7 @@ static const CGFloat kIconHUDLayerCornerRadius = 10;
 #pragma mark - Error Icon And Text
 
 + (MBProgressHUD *)sr_showErrorWithMessage:(NSString *)message {
-    return [self sr_showErrorWithMessage:message onView:nil];
+    return [self sr_showErrorWithMessage:message onView:nil completionBlock:nil];
 }
 
 + (MBProgressHUD *)sr_showErrorWithMessage:(NSString *)message onView:(UIView *)view {
@@ -99,7 +114,7 @@ static const CGFloat kIconHUDLayerCornerRadius = 10;
 #pragma mark - Info Icon And Text
 
 + (MBProgressHUD *)sr_showInfoWithMessage:(NSString *)message {
-    return [self sr_showInfoWithMessage:message onView:nil];
+    return [self sr_showInfoWithMessage:message onView:nil completionBlock:nil];
 }
 
 + (MBProgressHUD *)sr_showInfoWithMessage:(NSString *)message onView:(UIView *)view {
@@ -110,22 +125,14 @@ static const CGFloat kIconHUDLayerCornerRadius = 10;
     return [self sr_showIconName:@"info.png" message:message onView:view completionBlock:completionBlock];
 }
 
-#pragma mark - Icon And Text
-
-+ (MBProgressHUD *)sr_showIconName:(NSString *)iconName {
-    return [self sr_showIconName:iconName message:nil];
-}
-
-+ (MBProgressHUD *)sr_showIconName:(NSString *)iconName message:(NSString *)message {
-    return [self sr_showIconName:iconName message:message onView:nil];
-}
-
 + (MBProgressHUD *)sr_showIconName:(NSString *)iconName message:(NSString *)message onView:(UIView *)view {
     return [self sr_showIconName:iconName message:message onView:view completionBlock:nil];
 }
 
 + (MBProgressHUD *)sr_showIconName:(NSString *)iconName message:(NSString *)message onView:(UIView *)view completionBlock:(MBProgressHUDCompletionBlock)completionBlock {
-    view = view ?: [UIApplication sharedApplication].keyWindow;
+    if (!view) {
+        view = [UIApplication sharedApplication].keyWindow;
+    }
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.mode = MBProgressHUDModeCustomView;
     UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"MBProgressHUD.bundle/%@", iconName]];
@@ -133,14 +140,18 @@ static const CGFloat kIconHUDLayerCornerRadius = 10;
         image = [UIImage imageNamed:iconName];
     }
     hud.customView = [[UIImageView alloc] initWithImage:image];
-    hud.minSize = CGSizeMake(120, 120);
     hud.label.text = message;
+    {
+        hud.label.adjustsFontSizeToFitWidth = YES;
+    }
     hud.label.font = [UIFont systemFontOfSize:15];
-    hud.label.adjustsFontSizeToFitWidth = YES;
+    hud.label.numberOfLines = 0;
+    hud.minSize = CGSizeMake(120, 120);
     hud.margin = 15.0;
+    hud.removeFromSuperViewOnHide = YES;
     hud.contentColor = [UIColor whiteColor];
     hud.bezelView.backgroundColor = [UIColor blackColor];
-    hud.bezelView.layer.cornerRadius = kIconHUDLayerCornerRadius;
+    hud.bezelView.layer.cornerRadius = 10;
     hud.completionBlock = completionBlock;
     [hud hideAnimated:YES afterDelay:1.5];
     return hud;
@@ -152,14 +163,22 @@ static const CGFloat kIconHUDLayerCornerRadius = 10;
     [self sr_hideHUDForView:nil];
 }
 
++ (void)sr_hideHUDAfterDelay:(NSTimeInterval)delay {
+    [self sr_hideHUDForView:nil afterDelay:delay];
+}
+
 + (void)sr_hideHUDForView:(UIView *)view {
-    [self sr_hideHUDForView:view afterDelay:0];
+    if (!view) {
+        view = [UIApplication sharedApplication].keyWindow;
+    }
+    [self hideHUDForView:view animated:YES];
 }
 
 + (void)sr_hideHUDForView:(UIView *)view afterDelay:(NSTimeInterval)delay {
-    view = view ?: [UIApplication sharedApplication].keyWindow;
+    if (!view) {
+        view = [UIApplication sharedApplication].keyWindow;
+    }
     MBProgressHUD *hud = [self HUDForView:view];
-    hud.removeFromSuperViewOnHide = YES;
     [hud hideAnimated:YES afterDelay:delay];
 }
 

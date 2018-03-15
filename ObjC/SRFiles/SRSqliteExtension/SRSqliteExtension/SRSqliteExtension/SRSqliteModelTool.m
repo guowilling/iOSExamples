@@ -158,7 +158,7 @@
 + (BOOL)deleteModel:(Class)cls columnName:(NSString *)name relation:(ColumnNameToValueRelationType)relation value:(id)value uid:(NSString *)uid {
     
     NSString *tableName = [SRModelTool tableName:cls];
-    NSString *deleteSql = [NSString stringWithFormat:@"delete from %@ where %@ %@ '%@'", tableName, name, self.ColumnNameToValueRelationTypeDic[@(relation)], value];
+    NSString *deleteSql = [NSString stringWithFormat:@"delete from %@ where %@ %@ '%@'", tableName, name, self.columnNameToValueRelationTypeDic[@(relation)], value];
     return [SRSqliteTool executeSQL:deleteSql uid:uid];
 }
 
@@ -173,7 +173,7 @@
 + (NSArray *)queryModels:(Class)cls columnName:(NSString *)name relation:(ColumnNameToValueRelationType)relation value:(id)value uid:(NSString *)uid {
     
     NSString *tableName = [SRModelTool tableName:cls];
-    NSString *sql = [NSString stringWithFormat:@"select * from %@ where %@ %@ '%@' ", tableName, name, self.ColumnNameToValueRelationTypeDic[@(relation)], value];
+    NSString *sql = [NSString stringWithFormat:@"select * from %@ where %@ %@ '%@' ", tableName, name, self.columnNameToValueRelationTypeDic[@(relation)], value];
     NSArray <NSDictionary *>*results = [SRSqliteTool querySQL:sql uid:uid];
     return [self parseResults:results withClass:cls];
 }
@@ -207,7 +207,7 @@
     return models;
 }
 
-+ (NSDictionary *)ColumnNameToValueRelationTypeDic {
++ (NSDictionary *)columnNameToValueRelationTypeDic {
     
     return @{@(ColumnNameToValueRelationTypeMore): @">",
              @(ColumnNameToValueRelationTypeLess): @"<",

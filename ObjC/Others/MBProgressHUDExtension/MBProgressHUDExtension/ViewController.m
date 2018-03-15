@@ -22,10 +22,8 @@
 //    [aHUD hideAnimated:YES afterDelay:2.0];
     
 //    [MBProgressHUD sr_showIndeterminateWithMessage:@"A Message..."];
-//    [MBProgressHUD sr_showIndeterminateWithMessage:@"A Message..." onView:nil graceTime:2.0];
-//    [MBProgressHUD sr_showIndeterminateWithMessage:@"A Message..." onView:nil graceTime:2.0 completionBlock:^{
-//        NSLog(@"sr_showIndeterminateWithMessage");
-//    }];
+//    [MBProgressHUD sr_showIndeterminateWithMessage:@"A Message..." graceTime:2.0];
+    
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        [MBProgressHUD sr_hideHUD];
 //    });

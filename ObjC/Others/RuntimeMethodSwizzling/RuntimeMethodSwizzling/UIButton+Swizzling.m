@@ -10,7 +10,7 @@
 #import "NSObject+Swizzling.h"
 #import <objc/runtime.h>
 
-static const void *AcceptEventTimeIntervalKey = &AcceptEventTimeIntervalKey;
+static const void *AcceptEventTimeIntervalKey = @"AcceptEventTimeIntervalKey";
 static const void *IgnoreEventKey = &IgnoreEventKey;
 
 @interface UIButton ()

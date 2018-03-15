@@ -37,7 +37,6 @@
     return _loadingRequests;
 }
 
-
 - (NSURL *)httpURL:(NSURL *)URL {
     
     NSURLComponents *compents = [NSURLComponents componentsWithString:URL.absoluteString];
