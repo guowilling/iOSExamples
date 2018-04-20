@@ -16,7 +16,6 @@ void run(id self, SEL _cmd)
  + (BOOL)resolveClassMethod:(SEL)sel
  */
 + (BOOL)resolveInstanceMethod:(SEL)sel {
-    
     if (sel == @selector(run)) {
         class_addMethod(self, sel, (IMP)run, "v@:");
         return YES;
@@ -29,7 +28,6 @@ void run(id self, SEL _cmd)
  - (id)forwardingTargetForSelector:(SEL)aSelector
  */
 - (id)forwardingTargetForSelector:(SEL)aSelector {
-    
     return [[Car alloc] init];
 }
 
@@ -39,7 +37,6 @@ void run(id self, SEL _cmd)
  - (void)forwardInvocation:(NSInvocation *)anInvocation
  */
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
-    
     NSString *selName = NSStringFromSelector(aSelector);
     if ([selName isEqualToString:@"run"]) {
         return [NSMethodSignature signatureWithObjCTypes:"v@:"];
@@ -48,7 +45,6 @@ void run(id self, SEL _cmd)
 }
 
 - (void)forwardInvocation:(NSInvocation *)anInvocation {
-    
     SEL sel = [anInvocation selector];
     Car *car = [[Car alloc] init];
     if ([car respondsToSelector:sel]) {
@@ -57,7 +53,6 @@ void run(id self, SEL _cmd)
 }
 
 - (void)doesNotRecognizeSelector:(SEL)aSelector { // Crash
-    
     [super doesNotRecognizeSelector:aSelector];
 }
 

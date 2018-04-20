@@ -33,7 +33,7 @@
         
 //        NSLog(@"%@", weakSelf.view);
 //        [NSThread sleepForTimeInterval:5];
-//        NSLog(@"%@", weakSelf.view); // This will print (null)
+//        NSLog(@"%@", weakSelf.view); // here will print (null)
     };
     dispatch_async(dispatch_get_global_queue(0, 0), self.callBack);
 }
