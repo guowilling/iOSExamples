@@ -1,10 +1,7 @@
 
 #import "SRHTTPSessionManager.h"
-#import "AFNetworking.h"
-#import "SvUDIDTools.h"
 #import "SRCacheManager.h"
-
-static SRHTTPSessionManager *instance;
+#import "AFNetworking.h"
 
 @interface SRHTTPSessionManager ()
 
@@ -15,6 +12,7 @@ static SRHTTPSessionManager *instance;
 @implementation SRHTTPSessionManager
 
 + (instancetype)sharedManager {
+    static SRHTTPSessionManager *instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         @synchronized(self) {
@@ -31,20 +29,9 @@ static SRHTTPSessionManager *instance;
         _sessionManager.requestSerializer.timeoutInterval = 15.0;
         _sessionManager.responseSerializer.acceptableContentTypes = \
         [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/plain", @"text/css", nil];
-        [_sessionManager.requestSerializer setValue:[SvUDIDTools UDID] forHTTPHeaderField:@"imei"];
-        [_sessionManager.requestSerializer setValue:[self userAgent] forHTTPHeaderField:@"User-Agent"];
-        
         [self startMonitorNetworkReachabilityStatus];
     }
     return self;
-}
-
-- (NSString *)userAgent {
-    NSString *appVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
-    NSString *deviceName = [UIDevice currentDevice].model;
-    NSString *osVersion = [UIDevice currentDevice].systemVersion;
-    NSString *language = [[[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"]  objectAtIndex:0];;
-    return [NSString stringWithFormat:@"EasyAuction %@ (%@; iOS %@; %@)", appVersion, deviceName, osVersion, language];
 }
 
 - (void)startMonitorNetworkReachabilityStatus {
@@ -77,6 +64,22 @@ static SRHTTPSessionManager *instance;
         return YES;
     }
     return NO;
+}
+
+- (void)GET:(NSString *)URLString
+ parameters:(NSDictionary *)parameters
+    success:(void (^)(id responseObject))success
+    failure:(void (^)(NSError *error))failure
+{
+    [self GET:URLString parameters:parameters cache:nil success:success failure:failure];
+}
+
+- (void)POST:(NSString *)URLString
+  parameters:(NSDictionary *)parameters
+     success:(void (^)(id responseObject))success
+     failure:(void (^)(NSError *error))failure
+{
+    [self POST:URLString parameters:parameters cache:nil success:success failure:failure];
 }
 
 - (void)GET:(NSString *)URLString
@@ -269,12 +272,6 @@ static SRHTTPSessionManager *instance;
 
 - (void)cancleTasks {
     [self.sessionManager.tasks makeObjectsPerformSelector:@selector(cancel)];
-}
-
-- (NSString *)cacheKeyOfURLString:(NSString *)URLString parameters:(NSDictionary *)parameters {
-    NSData *parametersData = [NSJSONSerialization dataWithJSONObject:parameters options:0 error:nil];
-    NSString *parametersString = [[NSString alloc] initWithData:parametersData encoding:NSUTF8StringEncoding];
-    return [NSString stringWithFormat:@"%@%@", URLString, parametersString];
 }
 
 @end

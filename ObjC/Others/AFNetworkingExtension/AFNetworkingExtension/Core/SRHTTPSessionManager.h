@@ -22,6 +22,16 @@ typedef NS_ENUM(NSInteger, SRNetworkReachabilityStatus) {
 
 - (void)GET:(NSString *)URLString
  parameters:(NSDictionary *)parameters
+    success:(void (^)(id responseObject))success
+    failure:(void (^)(NSError *error))failure;
+
+- (void)POST:(NSString *)URLString
+  parameters:(NSDictionary *)parameters
+     success:(void (^)(id responseObject))success
+     failure:(void (^)(NSError *error))failure;
+
+- (void)GET:(NSString *)URLString
+ parameters:(NSDictionary *)parameters
       cache:(void (^)(id cacheObject))cache
     success:(void (^)(id responseObject))success
     failure:(void (^)(NSError *error))failure;

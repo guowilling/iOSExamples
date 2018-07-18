@@ -31,9 +31,9 @@ SRSingletonImplement(SRAudioRecorder)
         // 设置录音参数
         NSMutableDictionary *recordSettings = [NSMutableDictionary dictionary];
         
-        [recordSettings setValue :[NSNumber numberWithInt:kAudioFormatMPEG4AAC] forKey:AVFormatIDKey]; // 编码格式
-        [recordSettings setValue :[NSNumber numberWithFloat:11025.0] forKey: AVSampleRateKey]; // 采样率
-        [recordSettings setValue :[NSNumber numberWithInt:2] forKey: AVNumberOfChannelsKey]; // 通道数
+        [recordSettings setValue:[NSNumber numberWithInt:kAudioFormatMPEG4AAC] forKey:AVFormatIDKey]; // 编码格式
+        [recordSettings setValue:[NSNumber numberWithFloat:11025.0] forKey: AVSampleRateKey]; // 采样率
+        [recordSettings setValue:[NSNumber numberWithInt:2] forKey: AVNumberOfChannelsKey]; // 通道数
         [recordSettings setValue:[NSNumber numberWithInt:AVAudioQualityMin] forKey:AVEncoderAudioQualityKey]; // 采样质量
         
         _recorder = [[AVAudioRecorder alloc] initWithURL:[NSURL URLWithString:_audioFilePath]

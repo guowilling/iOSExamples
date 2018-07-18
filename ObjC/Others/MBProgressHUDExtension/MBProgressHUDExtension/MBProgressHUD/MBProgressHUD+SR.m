@@ -27,7 +27,7 @@
     hud.contentColor = [UIColor whiteColor];
     hud.bezelView.backgroundColor = [UIColor blackColor];
     hud.bezelView.layer.cornerRadius = 5;
-    //    hud.userInteractionEnabled = NO; // Must! or it will block user's action in some situation.
+    //hud.userInteractionEnabled = NO; // Must! or it will block user's action in some situation.
     hud.completionBlock = completionBlock;
     return hud;
 }
@@ -163,15 +163,15 @@
     [self sr_hideHUDForView:nil];
 }
 
-+ (void)sr_hideHUDAfterDelay:(NSTimeInterval)delay {
-    [self sr_hideHUDForView:nil afterDelay:delay];
-}
-
 + (void)sr_hideHUDForView:(UIView *)view {
     if (!view) {
         view = [UIApplication sharedApplication].keyWindow;
     }
     [self hideHUDForView:view animated:YES];
+}
+
++ (void)sr_hideHUDAfterDelay:(NSTimeInterval)delay {
+    [self sr_hideHUDForView:nil afterDelay:delay];
 }
 
 + (void)sr_hideHUDForView:(UIView *)view afterDelay:(NSTimeInterval)delay {

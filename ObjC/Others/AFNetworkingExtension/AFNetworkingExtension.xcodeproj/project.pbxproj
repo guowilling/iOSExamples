@@ -25,7 +25,6 @@
 		68EF1680203035560043DB1A /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EF1676203035550043DB1A /* AFURLSessionManager.m */; };
 		68EF1687203035620043DB1A /* SRHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EF1681203035610043DB1A /* SRHTTPSessionManager.m */; };
 		68EF1688203035620043DB1A /* SRCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EF1682203035610043DB1A /* SRCacheManager.m */; };
-		68EF1689203035620043DB1A /* SvUDIDTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EF1686203035610043DB1A /* SvUDIDTools.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,8 +63,6 @@
 		68EF1682203035610043DB1A /* SRCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRCacheManager.m; sourceTree = "<group>"; };
 		68EF1683203035610043DB1A /* SRCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRCacheManager.h; sourceTree = "<group>"; };
 		68EF1684203035610043DB1A /* SRHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRHTTPSessionManager.h; sourceTree = "<group>"; };
-		68EF1685203035610043DB1A /* SvUDIDTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SvUDIDTools.h; sourceTree = "<group>"; };
-		68EF1686203035610043DB1A /* SvUDIDTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SvUDIDTools.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				68EF168A203035640043DB1A /* Core */,
-				68EF168B2030356E0043DB1A /* SvUDIDTools */,
 				68EF1669203035550043DB1A /* AFNetworking */,
 				68EF1660203035550043DB1A /* YYCache */,
 				68EF164A203035380043DB1A /* AppDelegate.h */,
@@ -159,15 +155,6 @@
 				68EF1681203035610043DB1A /* SRHTTPSessionManager.m */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		68EF168B2030356E0043DB1A /* SvUDIDTools */ = {
-			isa = PBXGroup;
-			children = (
-				68EF1685203035610043DB1A /* SvUDIDTools.h */,
-				68EF1686203035610043DB1A /* SvUDIDTools.m */,
-			);
-			path = SvUDIDTools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,7 +236,6 @@
 				68EF1678203035560043DB1A /* YYDiskCache.m in Sources */,
 				68EF1687203035620043DB1A /* SRHTTPSessionManager.m in Sources */,
 				68EF1677203035560043DB1A /* YYCache.m in Sources */,
-				68EF1689203035620043DB1A /* SvUDIDTools.m in Sources */,
 				68EF167D203035560043DB1A /* AFSecurityPolicy.m in Sources */,
 				68EF167E203035560043DB1A /* AFURLRequestSerialization.m in Sources */,
 				68EF167A203035560043DB1A /* YYMemoryCache.m in Sources */,
@@ -391,13 +377,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = AFNetworkingExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.AFNetworkingExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f3a55d34-a082-41a1-892a-f34e32cf7f46";
+				PROVISIONING_PROFILE = "ffb223b7-b498-46e0-af66-aa9a0a5e2883";
 				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -408,13 +394,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = AFNetworkingExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.AFNetworkingExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f3a55d34-a082-41a1-892a-f34e32cf7f46";
+				PROVISIONING_PROFILE = "ffb223b7-b498-46e0-af66-aa9a0a5e2883";
 				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

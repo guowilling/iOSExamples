@@ -44,8 +44,8 @@
 #pragma mark - Hide HUD
 
 + (void)sr_hideHUD;
-+ (void)sr_hideHUDAfterDelay:(NSTimeInterval)delay;
 + (void)sr_hideHUDForView:(UIView *)view;
++ (void)sr_hideHUDAfterDelay:(NSTimeInterval)delay;
 + (void)sr_hideHUDForView:(UIView *)view afterDelay:(NSTimeInterval)delay;
 
 @end
