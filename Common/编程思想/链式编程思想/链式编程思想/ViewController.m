@@ -16,7 +16,6 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     NSInteger result = [NSObject sr_makeCalculate:^(CalculateManager *manager) {

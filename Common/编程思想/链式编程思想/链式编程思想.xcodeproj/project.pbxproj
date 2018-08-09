@@ -13,28 +13,9 @@
 		683D839E1E4D606B0032E356 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683D839C1E4D606B0032E356 /* Main.storyboard */; };
 		683D83A01E4D606C0032E356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 683D839F1E4D606C0032E356 /* Assets.xcassets */; };
 		683D83A31E4D606C0032E356 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683D83A11E4D606C0032E356 /* LaunchScreen.storyboard */; };
-		683D83AE1E4D606C0032E356 /* ______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 683D83AD1E4D606C0032E356 /* ______Tests.m */; };
-		683D83B91E4D606C0032E356 /* ______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 683D83B81E4D606C0032E356 /* ______UITests.m */; };
 		683D83D31E4D69F10032E356 /* CalculateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 683D83D01E4D69F10032E356 /* CalculateManager.m */; };
 		683D83D41E4D69F10032E356 /* NSObject+Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 683D83D21E4D69F10032E356 /* NSObject+Calculator.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		683D83AA1E4D606C0032E356 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 683D83881E4D606B0032E356 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 683D838F1E4D606B0032E356;
-			remoteInfo = "链式编程思想";
-		};
-		683D83B51E4D606C0032E356 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 683D83881E4D606B0032E356 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 683D838F1E4D606B0032E356;
-			remoteInfo = "链式编程思想";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		683D83901E4D606B0032E356 /* 链式编程思想.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "链式编程思想.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,12 +28,6 @@
 		683D839F1E4D606C0032E356 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		683D83A21E4D606C0032E356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		683D83A41E4D606C0032E356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		683D83A91E4D606C0032E356 /* 链式编程思想Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "链式编程思想Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		683D83AD1E4D606C0032E356 /* ______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______Tests.m"; sourceTree = "<group>"; };
-		683D83AF1E4D606C0032E356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		683D83B41E4D606C0032E356 /* 链式编程思想UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "链式编程思想UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		683D83B81E4D606C0032E356 /* ______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______UITests.m"; sourceTree = "<group>"; };
-		683D83BA1E4D606C0032E356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		683D83CF1E4D69F10032E356 /* CalculateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateManager.h; sourceTree = "<group>"; };
 		683D83D01E4D69F10032E356 /* CalculateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateManager.m; sourceTree = "<group>"; };
 		683D83D11E4D69F10032E356 /* NSObject+Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Calculator.h"; sourceTree = "<group>"; };
@@ -67,20 +42,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		683D83A61E4D606C0032E356 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		683D83B11E4D606C0032E356 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -88,8 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				683D83921E4D606B0032E356 /* 链式编程思想 */,
-				683D83AC1E4D606C0032E356 /* 链式编程思想Tests */,
-				683D83B71E4D606C0032E356 /* 链式编程思想UITests */,
 				683D83911E4D606B0032E356 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,8 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				683D83901E4D606B0032E356 /* 链式编程思想.app */,
-				683D83A91E4D606C0032E356 /* 链式编程思想Tests.xctest */,
-				683D83B41E4D606C0032E356 /* 链式编程思想UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,24 +89,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		683D83AC1E4D606C0032E356 /* 链式编程思想Tests */ = {
-			isa = PBXGroup;
-			children = (
-				683D83AD1E4D606C0032E356 /* ______Tests.m */,
-				683D83AF1E4D606C0032E356 /* Info.plist */,
-			);
-			path = "链式编程思想Tests";
-			sourceTree = "<group>";
-		};
-		683D83B71E4D606C0032E356 /* 链式编程思想UITests */ = {
-			isa = PBXGroup;
-			children = (
-				683D83B81E4D606C0032E356 /* ______UITests.m */,
-				683D83BA1E4D606C0032E356 /* Info.plist */,
-			);
-			path = "链式编程思想UITests";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,42 +109,6 @@
 			productReference = 683D83901E4D606B0032E356 /* 链式编程思想.app */;
 			productType = "com.apple.product-type.application";
 		};
-		683D83A81E4D606C0032E356 /* 链式编程思想Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 683D83C01E4D606C0032E356 /* Build configuration list for PBXNativeTarget "链式编程思想Tests" */;
-			buildPhases = (
-				683D83A51E4D606C0032E356 /* Sources */,
-				683D83A61E4D606C0032E356 /* Frameworks */,
-				683D83A71E4D606C0032E356 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				683D83AB1E4D606C0032E356 /* PBXTargetDependency */,
-			);
-			name = "链式编程思想Tests";
-			productName = "链式编程思想Tests";
-			productReference = 683D83A91E4D606C0032E356 /* 链式编程思想Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		683D83B31E4D606C0032E356 /* 链式编程思想UITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 683D83C31E4D606C0032E356 /* Build configuration list for PBXNativeTarget "链式编程思想UITests" */;
-			buildPhases = (
-				683D83B01E4D606C0032E356 /* Sources */,
-				683D83B11E4D606C0032E356 /* Frameworks */,
-				683D83B21E4D606C0032E356 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				683D83B61E4D606C0032E356 /* PBXTargetDependency */,
-			);
-			name = "链式编程思想UITests";
-			productName = "链式编程思想UITests";
-			productReference = 683D83B41E4D606C0032E356 /* 链式编程思想UITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -217,18 +120,8 @@
 				TargetAttributes = {
 					683D838F1E4D606B0032E356 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = Y4FK8UXDXW;
+						DevelopmentTeam = L8C6M6B8E9;
 						ProvisioningStyle = Manual;
-					};
-					683D83A81E4D606C0032E356 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 683D838F1E4D606B0032E356;
-					};
-					683D83B31E4D606C0032E356 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 683D838F1E4D606B0032E356;
 					};
 				};
 			};
@@ -246,8 +139,6 @@
 			projectRoot = "";
 			targets = (
 				683D838F1E4D606B0032E356 /* 链式编程思想 */,
-				683D83A81E4D606C0032E356 /* 链式编程思想Tests */,
-				683D83B31E4D606C0032E356 /* 链式编程思想UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -260,20 +151,6 @@
 				683D83A31E4D606C0032E356 /* LaunchScreen.storyboard in Resources */,
 				683D83A01E4D606C0032E356 /* Assets.xcassets in Resources */,
 				683D839E1E4D606B0032E356 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		683D83A71E4D606C0032E356 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		683D83B21E4D606C0032E356 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,36 +169,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		683D83A51E4D606C0032E356 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				683D83AE1E4D606C0032E356 /* ______Tests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		683D83B01E4D606C0032E356 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				683D83B91E4D606C0032E356 /* ______UITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		683D83AB1E4D606C0032E356 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 683D838F1E4D606B0032E356 /* 链式编程思想 */;
-			targetProxy = 683D83AA1E4D606C0032E356 /* PBXContainerItemProxy */;
-		};
-		683D83B61E4D606C0032E356 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 683D838F1E4D606B0032E356 /* 链式编程思想 */;
-			targetProxy = 683D83B51E4D606C0032E356 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		683D839C1E4D606B0032E356 /* Main.storyboard */ = {
@@ -435,14 +283,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = "链式编程思想/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.willing.------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Debug;
 		};
@@ -450,60 +298,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = "链式编程思想/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.willing.------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
-			};
-			name = Release;
-		};
-		683D83C11E4D606C0032E356 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "链式编程思想Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.willing.------Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/链式编程思想.app/链式编程思想";
-			};
-			name = Debug;
-		};
-		683D83C21E4D606C0032E356 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "链式编程思想Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.willing.------Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/链式编程思想.app/链式编程思想";
-			};
-			name = Release;
-		};
-		683D83C41E4D606C0032E356 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "链式编程思想UITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.willing.------UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "链式编程思想";
-			};
-			name = Debug;
-		};
-		683D83C51E4D606C0032E356 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "链式编程思想UITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.willing.------UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "链式编程思想";
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Release;
 		};
@@ -526,22 +328,7 @@
 				683D83BF1E4D606C0032E356 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		683D83C01E4D606C0032E356 /* Build configuration list for PBXNativeTarget "链式编程思想Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				683D83C11E4D606C0032E356 /* Debug */,
-				683D83C21E4D606C0032E356 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		683D83C31E4D606C0032E356 /* Build configuration list for PBXNativeTarget "链式编程思想UITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				683D83C41E4D606C0032E356 /* Debug */,
-				683D83C51E4D606C0032E356 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

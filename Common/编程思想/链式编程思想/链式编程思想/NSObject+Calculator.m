@@ -11,9 +11,10 @@
 @implementation NSObject (Calculator)
 
 + (NSInteger)sr_makeCalculate:(void(^)(CalculateManager *manager))block {
-    
     CalculateManager *manager = [CalculateManager new];
-    block(manager);
+    if (block) {
+        block(manager);
+    }
     return manager.result;
 }
 

@@ -13,27 +13,9 @@
 		683D842E1E4D6D880032E356 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683D842C1E4D6D880032E356 /* Main.storyboard */; };
 		683D84301E4D6D880032E356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 683D842F1E4D6D880032E356 /* Assets.xcassets */; };
 		683D84331E4D6D880032E356 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683D84311E4D6D880032E356 /* LaunchScreen.storyboard */; };
-		683D843E1E4D6D880032E356 /* _______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 683D843D1E4D6D880032E356 /* _______Tests.m */; };
-		683D84491E4D6D880032E356 /* _______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 683D84481E4D6D880032E356 /* _______UITests.m */; };
 		683D84581E4D6E570032E356 /* CalculateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 683D84571E4D6E570032E356 /* CalculateManager.m */; };
+		6E96D821211719F50029FB2B /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E96D820211719F50029FB2B /* Person.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		683D843A1E4D6D880032E356 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 683D84181E4D6D880032E356 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 683D841F1E4D6D880032E356;
-			remoteInfo = "函数式编程思想";
-		};
-		683D84451E4D6D880032E356 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 683D84181E4D6D880032E356 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 683D841F1E4D6D880032E356;
-			remoteInfo = "函数式编程思想";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		683D84201E4D6D880032E356 /* 函数式编程思想.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "函数式编程思想.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,32 +28,14 @@
 		683D842F1E4D6D880032E356 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		683D84321E4D6D880032E356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		683D84341E4D6D880032E356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		683D84391E4D6D880032E356 /* 函数式编程思想Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "函数式编程思想Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		683D843D1E4D6D880032E356 /* _______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_______Tests.m"; sourceTree = "<group>"; };
-		683D843F1E4D6D880032E356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		683D84441E4D6D880032E356 /* 函数式编程思想UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "函数式编程思想UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		683D84481E4D6D880032E356 /* _______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_______UITests.m"; sourceTree = "<group>"; };
-		683D844A1E4D6D880032E356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		683D84561E4D6E570032E356 /* CalculateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateManager.h; sourceTree = "<group>"; };
 		683D84571E4D6E570032E356 /* CalculateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateManager.m; sourceTree = "<group>"; };
+		6E96D81F211719F50029FB2B /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		6E96D820211719F50029FB2B /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		683D841D1E4D6D880032E356 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		683D84361E4D6D880032E356 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		683D84411E4D6D880032E356 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -85,8 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				683D84221E4D6D880032E356 /* 函数式编程思想 */,
-				683D843C1E4D6D880032E356 /* 函数式编程思想Tests */,
-				683D84471E4D6D880032E356 /* 函数式编程思想UITests */,
 				683D84211E4D6D880032E356 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,8 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				683D84201E4D6D880032E356 /* 函数式编程思想.app */,
-				683D84391E4D6D880032E356 /* 函数式编程思想Tests.xctest */,
-				683D84441E4D6D880032E356 /* 函数式编程思想UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,6 +68,8 @@
 				683D842A1E4D6D880032E356 /* ViewController.m */,
 				683D84561E4D6E570032E356 /* CalculateManager.h */,
 				683D84571E4D6E570032E356 /* CalculateManager.m */,
+				6E96D81F211719F50029FB2B /* Person.h */,
+				6E96D820211719F50029FB2B /* Person.m */,
 				683D84231E4D6D880032E356 /* Supporting Files */,
 			);
 			path = "函数式编程思想";
@@ -125,24 +87,6 @@
 				683D84341E4D6D880032E356 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		683D843C1E4D6D880032E356 /* 函数式编程思想Tests */ = {
-			isa = PBXGroup;
-			children = (
-				683D843D1E4D6D880032E356 /* _______Tests.m */,
-				683D843F1E4D6D880032E356 /* Info.plist */,
-			);
-			path = "函数式编程思想Tests";
-			sourceTree = "<group>";
-		};
-		683D84471E4D6D880032E356 /* 函数式编程思想UITests */ = {
-			isa = PBXGroup;
-			children = (
-				683D84481E4D6D880032E356 /* _______UITests.m */,
-				683D844A1E4D6D880032E356 /* Info.plist */,
-			);
-			path = "函数式编程思想UITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,42 +109,6 @@
 			productReference = 683D84201E4D6D880032E356 /* 函数式编程思想.app */;
 			productType = "com.apple.product-type.application";
 		};
-		683D84381E4D6D880032E356 /* 函数式编程思想Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 683D84501E4D6D880032E356 /* Build configuration list for PBXNativeTarget "函数式编程思想Tests" */;
-			buildPhases = (
-				683D84351E4D6D880032E356 /* Sources */,
-				683D84361E4D6D880032E356 /* Frameworks */,
-				683D84371E4D6D880032E356 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				683D843B1E4D6D880032E356 /* PBXTargetDependency */,
-			);
-			name = "函数式编程思想Tests";
-			productName = "函数式编程思想Tests";
-			productReference = 683D84391E4D6D880032E356 /* 函数式编程思想Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		683D84431E4D6D880032E356 /* 函数式编程思想UITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 683D84531E4D6D880032E356 /* Build configuration list for PBXNativeTarget "函数式编程思想UITests" */;
-			buildPhases = (
-				683D84401E4D6D880032E356 /* Sources */,
-				683D84411E4D6D880032E356 /* Frameworks */,
-				683D84421E4D6D880032E356 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				683D84461E4D6D880032E356 /* PBXTargetDependency */,
-			);
-			name = "函数式编程思想UITests";
-			productName = "函数式编程思想UITests";
-			productReference = 683D84441E4D6D880032E356 /* 函数式编程思想UITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -212,18 +120,8 @@
 				TargetAttributes = {
 					683D841F1E4D6D880032E356 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = Y4FK8UXDXW;
+						DevelopmentTeam = L8C6M6B8E9;
 						ProvisioningStyle = Manual;
-					};
-					683D84381E4D6D880032E356 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 683D841F1E4D6D880032E356;
-					};
-					683D84431E4D6D880032E356 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 683D841F1E4D6D880032E356;
 					};
 				};
 			};
@@ -241,8 +139,6 @@
 			projectRoot = "";
 			targets = (
 				683D841F1E4D6D880032E356 /* 函数式编程思想 */,
-				683D84381E4D6D880032E356 /* 函数式编程思想Tests */,
-				683D84431E4D6D880032E356 /* 函数式编程思想UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,20 +154,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		683D84371E4D6D880032E356 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		683D84421E4D6D880032E356 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -281,41 +163,13 @@
 			files = (
 				683D842B1E4D6D880032E356 /* ViewController.m in Sources */,
 				683D84281E4D6D880032E356 /* AppDelegate.m in Sources */,
+				6E96D821211719F50029FB2B /* Person.m in Sources */,
 				683D84581E4D6E570032E356 /* CalculateManager.m in Sources */,
 				683D84251E4D6D880032E356 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		683D84351E4D6D880032E356 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				683D843E1E4D6D880032E356 /* _______Tests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		683D84401E4D6D880032E356 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				683D84491E4D6D880032E356 /* _______UITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		683D843B1E4D6D880032E356 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 683D841F1E4D6D880032E356 /* 函数式编程思想 */;
-			targetProxy = 683D843A1E4D6D880032E356 /* PBXContainerItemProxy */;
-		};
-		683D84461E4D6D880032E356 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 683D841F1E4D6D880032E356 /* 函数式编程思想 */;
-			targetProxy = 683D84451E4D6D880032E356 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		683D842C1E4D6D880032E356 /* Main.storyboard */ = {
@@ -429,13 +283,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = "函数式编程思想/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.willing.-------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Debug;
 		};
@@ -450,52 +304,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
 				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
-			};
-			name = Release;
-		};
-		683D84511E4D6D880032E356 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "函数式编程思想Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.willing.-------Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/函数式编程思想.app/函数式编程思想";
-			};
-			name = Debug;
-		};
-		683D84521E4D6D880032E356 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "函数式编程思想Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.willing.-------Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/函数式编程思想.app/函数式编程思想";
-			};
-			name = Release;
-		};
-		683D84541E4D6D880032E356 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "函数式编程思想UITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.willing.-------UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "函数式编程思想";
-			};
-			name = Debug;
-		};
-		683D84551E4D6D880032E356 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "函数式编程思想UITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.willing.-------UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "函数式编程思想";
 			};
 			name = Release;
 		};
@@ -516,24 +324,6 @@
 			buildConfigurations = (
 				683D844E1E4D6D880032E356 /* Debug */,
 				683D844F1E4D6D880032E356 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		683D84501E4D6D880032E356 /* Build configuration list for PBXNativeTarget "函数式编程思想Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				683D84511E4D6D880032E356 /* Debug */,
-				683D84521E4D6D880032E356 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		683D84531E4D6D880032E356 /* Build configuration list for PBXNativeTarget "函数式编程思想UITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				683D84541E4D6D880032E356 /* Debug */,
-				683D84551E4D6D880032E356 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

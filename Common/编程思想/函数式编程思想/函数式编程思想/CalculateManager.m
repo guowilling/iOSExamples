@@ -11,7 +11,6 @@
 @implementation CalculateManager
 
 + (instancetype)sharedManager {
-    
     static CalculateManager *manager;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -21,14 +20,12 @@
 }
 
 - (instancetype)calculate:(NSInteger (^)(NSInteger result))calculateHandler {
-    
     _result = 0;
     _result = calculateHandler(_result);
     return self;
 }
 
 - (instancetype)isEqualTo:(BOOL (^)(NSInteger result))equleHandler {
-    
     _isEqual = equleHandler(_result);
     return self;
 }

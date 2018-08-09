@@ -16,7 +16,6 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
 
     BOOL isEqual = [[[CalculateManager sharedManager] calculate:^NSInteger(NSInteger result) {
@@ -28,26 +27,25 @@
     }] isEqualTo:^BOOL(NSInteger result) {
         return result == 7;
     }].isEqual;
-    NSLog(@"%zd", isEqual);
+    NSLog(@"%d", (int)isEqual);
 }
 
 //- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    
 //    Person *person = [Person new];
 //    
-//    [person eat1];
-//    [person run1];
+//    [person eat];
+//    [person run];
 //    
 //    NSLog(@"----------");
-//    [[person eat2] run2];
+//    [[person eat1] run1];
 //    
 //    NSLog(@"----------");
-//    person.eat3().run3();
-//    person.run3().eat3();
+//    person.eat2().run2();
+//    person.run2().eat2();
 //    
 //    NSLog(@"----------");
-//    person.eat4(@"some").run4(500);
-//    person.run4(1000).eat4(@"some");
+//    person.eat3(@"some").run3(1000);
+//    person.run3(1000).eat3(@"some");
 //}
 
 @end

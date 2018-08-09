@@ -11,7 +11,6 @@
 @implementation CalculateManager
 
 - (CalculateManager * (^)(int))addition {
-    
     return ^(int value) {
         _result += value;
         return self;
@@ -19,7 +18,6 @@
 }
 
 - (CalculateManager * (^)(int))subtraction {
-    
     return ^(int value) {
         _result -= value;
         return self;
@@ -27,7 +25,6 @@
 }
 
 - (CalculateManager * (^)(int))multiplication {
-    
     return ^(int value) {
         _result *= value;
         return self;
@@ -35,7 +32,6 @@
 }
 
 - (CalculateManager * (^)(int))division {
-    
     return ^(int value) {
         _result /= value;
         return self;

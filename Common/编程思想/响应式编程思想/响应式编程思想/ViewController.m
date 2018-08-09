@@ -18,7 +18,6 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     Person *p = [[Person alloc] init];
@@ -27,16 +26,14 @@
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
-    
     NSLog(@"%@", _person.number);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
     static int i = 0;
     i++;
-    _person.number = [NSString stringWithFormat:@"number: %d", i]; // Must setter.
-    //_person -> _number = [NSString stringWithFormat:@"%d",i]; // No KVO effcts.
+    _person.number = [NSString stringWithFormat:@"number: %d", i]; // Must setter
+    //_person -> _number = [NSString stringWithFormat:@"%d",i]; // No KVO effcts
 }
 
 @end
