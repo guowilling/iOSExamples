@@ -38,8 +38,8 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
     _endGestureScale = 1.0;
     
     _captureSession = [[AVCaptureSession alloc] init];
-    if ([_captureSession canSetSessionPreset:AVCaptureSessionPreset1280x720]) { // 分辨率
-        _captureSession.sessionPreset = AVCaptureSessionPreset1280x720;
+    if ([_captureSession canSetSessionPreset:AVCaptureSessionPreset640x480]) { // 分辨率
+        _captureSession.sessionPreset = AVCaptureSessionPreset640x480;
     }
     
     // 输入设备
@@ -84,6 +84,12 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
     [self setFlashModeButtonStatus];
     
     [self addNotificationToCaptureSession:_captureSession];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    _captureVideoPreviewLayer.frame = self.viewContainer.layer.bounds;
 }
 
 - (void)viewDidAppear:(BOOL)animated {

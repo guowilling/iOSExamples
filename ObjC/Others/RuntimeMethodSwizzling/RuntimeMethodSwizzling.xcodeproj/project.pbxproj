@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68518856212698490032A7AD /* NSObject+AssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 68518855212698490032A7AD /* NSObject+AssociatedObject.m */; };
 		688D62851F29C80000DCF26F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 688D62721F29C80000DCF26F /* AppDelegate.m */; };
 		688D62861F29C80000DCF26F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688D62731F29C80000DCF26F /* Assets.xcassets */; };
 		688D62871F29C80000DCF26F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688D62741F29C80000DCF26F /* LaunchScreen.storyboard */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68518854212698490032A7AD /* NSObject+AssociatedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+AssociatedObject.h"; sourceTree = "<group>"; };
+		68518855212698490032A7AD /* NSObject+AssociatedObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AssociatedObject.m"; sourceTree = "<group>"; };
 		688D62711F29C80000DCF26F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		688D62721F29C80000DCF26F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		688D62731F29C80000DCF26F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				688D62831F29C80000DCF26F /* ViewController.h */,
 				688D62841F29C80000DCF26F /* ViewController.m */,
 				688D62911F29C80800DCF26F /* Supporting Files */,
+				68518854212698490032A7AD /* NSObject+AssociatedObject.h */,
+				68518855212698490032A7AD /* NSObject+AssociatedObject.m */,
 			);
 			path = RuntimeMethodSwizzling;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68518856212698490032A7AD /* NSObject+AssociatedObject.m in Sources */,
 				688D62901F29C80000DCF26F /* ViewController.m in Sources */,
 				688D628E1F29C80000DCF26F /* UIImageView+Swizzling.m in Sources */,
 				688D628B1F29C80000DCF26F /* main.m in Sources */,

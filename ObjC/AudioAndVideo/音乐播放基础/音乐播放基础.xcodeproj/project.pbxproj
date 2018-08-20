@@ -7,21 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		686D8B5F21100498002B9A81 /* MP3s in Resources */ = {isa = PBXBuildFile; fileRef = 686D8B5E21100498002B9A81 /* MP3s */; };
 		689660E31C9F96A300BB40C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 689660E21C9F96A300BB40C3 /* main.m */; };
 		689660E61C9F96A300BB40C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 689660E51C9F96A300BB40C3 /* AppDelegate.m */; };
 		689660EE1C9F96A300BB40C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 689660ED1C9F96A300BB40C3 /* Assets.xcassets */; };
 		689660F11C9F96A300BB40C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 689660EF1C9F96A300BB40C3 /* LaunchScreen.storyboard */; };
-		6896611A1C9F97B700BB40C3 /* 傻子.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 689661151C9F97B700BB40C3 /* 傻子.mp3 */; };
-		6896611B1C9F97B700BB40C3 /* 心酸.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 689661161C9F97B700BB40C3 /* 心酸.mp3 */; };
-		6896611C1C9F97B700BB40C3 /* 拥有.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 689661171C9F97B700BB40C3 /* 拥有.mp3 */; };
-		6896611D1C9F97B700BB40C3 /* 突然想起你.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 689661181C9F97B700BB40C3 /* 突然想起你.mp3 */; };
-		6896611E1C9F97B700BB40C3 /* 越反越爱.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 689661191C9F97B700BB40C3 /* 越反越爱.mp3 */; };
 		689661231C9F97CF00BB40C3 /* AudioPlayerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 689661201C9F97CF00BB40C3 /* AudioPlayerTool.m */; };
 		689661241C9F97CF00BB40C3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689661221C9F97CF00BB40C3 /* ViewController.m */; };
 		689661261C9F99F300BB40C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 689661251C9F99F300BB40C3 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		686D8B5E21100498002B9A81 /* MP3s */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MP3s; sourceTree = "<group>"; };
 		689660DE1C9F96A300BB40C3 /* 音乐播放基础.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "音乐播放基础.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		689660E21C9F96A300BB40C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		689660E41C9F96A300BB40C3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,11 +26,6 @@
 		689660ED1C9F96A300BB40C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		689660F01C9F96A300BB40C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		689660F21C9F96A300BB40C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		689661151C9F97B700BB40C3 /* 傻子.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "傻子.mp3"; sourceTree = "<group>"; };
-		689661161C9F97B700BB40C3 /* 心酸.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "心酸.mp3"; sourceTree = "<group>"; };
-		689661171C9F97B700BB40C3 /* 拥有.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "拥有.mp3"; sourceTree = "<group>"; };
-		689661181C9F97B700BB40C3 /* 突然想起你.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "突然想起你.mp3"; sourceTree = "<group>"; };
-		689661191C9F97B700BB40C3 /* 越反越爱.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "越反越爱.mp3"; sourceTree = "<group>"; };
 		6896611F1C9F97CF00BB40C3 /* AudioPlayerTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayerTool.h; sourceTree = "<group>"; };
 		689661201C9F97CF00BB40C3 /* AudioPlayerTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerTool.m; sourceTree = "<group>"; };
 		689661211C9F97CF00BB40C3 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -84,7 +76,7 @@
 		689660E11C9F96A300BB40C3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				689661141C9F97B700BB40C3 /* MP3s */,
+				686D8B5E21100498002B9A81 /* MP3s */,
 				689660E21C9F96A300BB40C3 /* main.m */,
 				689660E41C9F96A300BB40C3 /* AppDelegate.h */,
 				689660E51C9F96A300BB40C3 /* AppDelegate.m */,
@@ -93,18 +85,6 @@
 				689660F21C9F96A300BB40C3 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		689661141C9F97B700BB40C3 /* MP3s */ = {
-			isa = PBXGroup;
-			children = (
-				689661151C9F97B700BB40C3 /* 傻子.mp3 */,
-				689661161C9F97B700BB40C3 /* 心酸.mp3 */,
-				689661171C9F97B700BB40C3 /* 拥有.mp3 */,
-				689661181C9F97B700BB40C3 /* 突然想起你.mp3 */,
-				689661191C9F97B700BB40C3 /* 越反越爱.mp3 */,
-			);
-			path = MP3s;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +118,7 @@
 				TargetAttributes = {
 					689660DD1C9F96A300BB40C3 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = Y4FK8UXDXW;
+						DevelopmentTeam = L8C6M6B8E9;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -166,14 +146,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6896611E1C9F97B700BB40C3 /* 越反越爱.mp3 in Resources */,
-				6896611B1C9F97B700BB40C3 /* 心酸.mp3 in Resources */,
+				686D8B5F21100498002B9A81 /* MP3s in Resources */,
 				689660F11C9F96A300BB40C3 /* LaunchScreen.storyboard in Resources */,
 				689660EE1C9F96A300BB40C3 /* Assets.xcassets in Resources */,
-				6896611C1C9F97B700BB40C3 /* 拥有.mp3 in Resources */,
 				689661261C9F99F300BB40C3 /* Main.storyboard in Resources */,
-				6896611A1C9F97B700BB40C3 /* 傻子.mp3 in Resources */,
-				6896611D1C9F97B700BB40C3 /* 突然想起你.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,13 +265,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = "音乐播放基础/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gwl.------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
+				PROVISIONING_PROFILE = "ffb223b7-b498-46e0-af66-aa9a0a5e2883";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Debug;
 		};
@@ -303,13 +279,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = "音乐播放基础/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gwl.------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
+				PROVISIONING_PROFILE = "ffb223b7-b498-46e0-af66-aa9a0a5e2883";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Release;
 		};

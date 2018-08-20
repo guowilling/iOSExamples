@@ -56,7 +56,7 @@
 }
 
 - (IBAction)play {
-    
+
     [[SRAudioPlayer shareInstance] playAudioWithPath:self.audioPath];
 }
 

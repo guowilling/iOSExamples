@@ -11,7 +11,6 @@
 @implementation SRCustomButton
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    
     if (self = [super initWithFrame:frame]) {
         _marginBetweenImageAndTitle = 10;
         _imageSize = CGSizeZero;
@@ -20,7 +19,6 @@
 }
 
 - (void)layoutSubviews {
-    
     [super layoutSubviews];
     
     [self.titleLabel sizeToFit];
@@ -32,30 +30,21 @@
     
     switch (self.layoutStyle) {
         case LayoutStyleLeftImageRightTitle:
-        {
             [self layoutHorizontalWithLeftView:self.imageView rightView:self.titleLabel];
-        }
             break;
         case LayoutStyleLeftTitleRightImage:
-        {
             [self layoutHorizontalWithLeftView:self.titleLabel rightView:self.imageView];
-        }
             break;
         case LayoutStyleUpImageDownTitle:
-        {
             [self layoutVerticalWithUpView:self.imageView downView:self.titleLabel];
-        }
             break;
         case LayoutStyleUpTitleDownImage:
-        {
             [self layoutVerticalWithUpView:self.titleLabel downView:self.imageView];
-        }
             break;
     }
 }
 
 - (void)layoutHorizontalWithLeftView:(UIView *)leftView rightView:(UIView *)rightView {
-    
     CGRect leftViewFrame = leftView.frame;
     CGRect rightViewFrame = rightView.frame;
     
@@ -71,7 +60,6 @@
 }
 
 - (void)layoutVerticalWithUpView:(UIView *)upView downView:(UIView *)downView {
-    
     CGRect upViewFrame = upView.frame;
     CGRect downViewFrame = downView.frame;
     
@@ -89,30 +77,22 @@
 #pragma mark - Public Methods
 
 - (void)setImage:(UIImage *)image forState:(UIControlState)state {
-    
     [super setImage:image forState:state];
-    
     [self setNeedsLayout];
 }
 
 - (void)setTitle:(NSString *)title forState:(UIControlState)state {
-    
     [super setTitle:title forState:state];
-    
     [self setNeedsLayout];
 }
 
 - (void)setMarginBetweenImageAndTitle:(CGFloat)marginBetweenImageAndTitle {
-    
     _marginBetweenImageAndTitle = marginBetweenImageAndTitle;
-    
     [self setNeedsLayout];
 }
 
 - (void)setImageSize:(CGSize)imageSize {
-    
     _imageSize = imageSize;
-
     [self setNeedsLayout];
 }
 

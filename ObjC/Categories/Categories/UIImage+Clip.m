@@ -22,11 +22,14 @@
     return subImage;
 }
 
-- (instancetype)croppedImageAtFrame:(CGRect)frame {
-    frame = CGRectMake(frame.origin.x * self.scale, frame.origin.y * self.scale, frame.size.width * self.scale, frame.size.height * self.scale);
-    CGImageRef sourceImageRef = self.CGImage;
-    CGImageRef croppedImageRef    = CGImageCreateWithImageInRect(sourceImageRef, frame);
-    UIImage *croppedImage         = [UIImage imageWithCGImage:croppedImageRef scale:self.scale orientation:self.imageOrientation];
+- (instancetype)cropImageAtFrame:(CGRect)frame {
+    frame = CGRectMake(frame.origin.x * self.scale,
+                       frame.origin.y * self.scale,
+                       frame.size.width * self.scale,
+                       frame.size.height * self.scale);
+    CGImageRef sourceImageRef  = self.CGImage;
+    CGImageRef croppedImageRef = CGImageCreateWithImageInRect(sourceImageRef, frame);
+    UIImage *croppedImage      = [UIImage imageWithCGImage:croppedImageRef scale:self.scale orientation:self.imageOrientation];
     CGImageRelease(croppedImageRef);
     return croppedImage;
 }

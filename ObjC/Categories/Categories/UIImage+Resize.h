@@ -10,8 +10,8 @@
 
 @interface UIImage (Resize)
 
-- (instancetype)scaleWithFixedWidth:(CGFloat)width;
-- (instancetype)scaleWithFixedHeight:(CGFloat)height;
+- (instancetype)resizeWithFixedWidth:(CGFloat)width;
+- (instancetype)resizeWithFixedHeight:(CGFloat)height;
 
 + (instancetype)resizeImage:(UIImage *)originalImage toSize:(CGSize)dstSize;
 + (instancetype)resizeImage:(UIImage *)originalImage toW:(CGFloat)dstW;

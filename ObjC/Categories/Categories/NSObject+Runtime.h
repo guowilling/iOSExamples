@@ -23,5 +23,5 @@
 + (NSArray *)fetchProtocolList:(Class)class;
 
 + (void)addMethodToClass:(Class)class methodName:(SEL)methodName methodImp:(SEL)methodImp;
-    
+
 @end

@@ -20,4 +20,8 @@
 
 - (UIColor *)averageColor;
 
++ (instancetype)imageNamed:(NSString *)name tintColor:(UIColor *)tintColor;
+
++ (instancetype)fixOrientation:(UIImage *)aImage;
+
 @end

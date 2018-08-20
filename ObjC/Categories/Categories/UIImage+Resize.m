@@ -10,7 +10,7 @@
 
 @implementation UIImage (Resize)
 
-- (instancetype)scaleWithFixedWidth:(CGFloat)width {
+- (instancetype)resizeWithFixedWidth:(CGFloat)width {
     float newHeight = self.size.height * (width / self.size.width);
     CGSize size     = CGSizeMake(width, newHeight);
     UIGraphicsBeginImageContextWithOptions(size, NO, 0);
@@ -27,7 +27,7 @@
     return imageOut;
 }
 
-- (instancetype)scaleWithFixedHeight:(CGFloat)height {
+- (instancetype)resizeWithFixedHeight:(CGFloat)height {
     float newWidth = self.size.width * (height / self.size.height);
     CGSize size    = CGSizeMake(newWidth, height);
     UIGraphicsBeginImageContextWithOptions(size, NO, 0);

@@ -8,7 +8,6 @@ static NSMutableDictionary *_players;
 @implementation AudioPlayerTool
 
 + (NSMutableDictionary *)soundIDs {
-    
     if (!_soundIDs) {
         _soundIDs = [NSMutableDictionary dictionary];
     }
@@ -16,7 +15,6 @@ static NSMutableDictionary *_players;
 }
 
 + (NSMutableDictionary *)players {
-    
     if (!_players) {
         _players = [NSMutableDictionary dictionary];
     }
@@ -24,7 +22,6 @@ static NSMutableDictionary *_players;
 }
 
 + (void)playAudioWithFilename:(NSString *)filename {
-    
     if (!filename) {
         return;
     }
@@ -41,7 +38,6 @@ static NSMutableDictionary *_players;
 }
 
 + (void)destroyAudioWithFilename:(NSString *)filename {
-    
     if (!filename) {
         return;
     }
@@ -52,35 +48,30 @@ static NSMutableDictionary *_players;
     }
 }
 
-+ (void)playMusicWithFilename:(NSString  *)filename {
-    
++ (AVAudioPlayer *)playMusicWithFilename:(NSString  *)filename {
     if (!filename) {
-        return;
+        return nil;
     }
     AVAudioPlayer *player = self.players[filename];
     if (!player) {
         NSLog(@"创建新的播放器");
         NSURL *url = [[NSBundle mainBundle] URLForResource:filename withExtension:nil];
         if (!url) {
-            return;
+            return nil;
         }
         player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
         if(![player prepareToPlay]) {
-            return;
+            return nil;
         }
-        
-        //player.enableRate = YES; // 快进
-        //player.rate = 2;
-        
-        self.players[filename] = player; // 保存该播放器
+        self.players[filename] = player;
     }
     if (!player.playing) {
         [player play];
     }
+    return player;
 }
 
-+ (void)pauseMusicWithFilename:(NSString  *)filename {
-    
++ (void)pauseMusicWithFilename:(NSString *)filename {
     if (!filename) {
         return;
     }
@@ -92,15 +83,14 @@ static NSMutableDictionary *_players;
     }
 }
 
-+ (void)stopMusicWithFilename:(NSString  *)filename {
-    
++ (void)stopMusicWithFilename:(NSString *)filename {
     if (!filename) {
         return;
     }
     AVAudioPlayer *player = self.players[filename];
     if (player) {
         [player stop];
-        [self.players removeObjectForKey:filename]; // 移除该播放器
+        [self.players removeObjectForKey:filename];
     }
 }
 

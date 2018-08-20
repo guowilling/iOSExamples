@@ -4,15 +4,15 @@
 
 @interface ViewController () <AVAudioRecorderDelegate>
 
-@property (nonatomic,strong) AVAudioRecorder *audioRecorder; // 音频录音机
-@property (nonatomic,strong) AVAudioPlayer *audioPlayer; // 音频播放器
-@property (nonatomic,strong) NSTimer *timer;
+@property (nonatomic, strong) AVAudioRecorder *audioRecorder; // 音频录音器
+@property (nonatomic, strong) AVAudioPlayer *audioPlayer;     // 音频播放器
+
+@property (nonatomic, strong) NSTimer *timer;
 
 @property (weak, nonatomic) IBOutlet UIButton *record; // 开始录音
 @property (weak, nonatomic) IBOutlet UIButton *pause;  // 暂停录音
 @property (weak, nonatomic) IBOutlet UIButton *resume; // 恢复录音
 @property (weak, nonatomic) IBOutlet UIButton *stop;   // 停止录音
-
 @property (weak, nonatomic) IBOutlet UIProgressView *audioPower; // 音频波动
 
 @end
@@ -20,24 +20,20 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     // 设置音频会话
-    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-    [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
-    [audioSession setActive:YES error:nil];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+    [[AVAudioSession sharedInstance] setActive:YES error:nil];
 }
 
-- (NSURL *)getSavePath {
-    
+- (NSURL *)savePathURL {
     NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"myRecord.caf"];
     NSLog(@"path: %@", path);
     return [NSURL fileURLWithPath:path];
 }
 
-- (NSDictionary *)getAudioSetting {
-    
+- (NSDictionary *)audioSetting {
     NSMutableDictionary *audioSetting = [NSMutableDictionary dictionary];
     [audioSetting setObject:@(kAudioFormatLinearPCM) forKey:AVFormatIDKey]; // 录音格式
     [audioSetting setObject:@(8000) forKey:AVSampleRateKey]; // 录音采样率
@@ -48,10 +44,9 @@
 }
 
 - (AVAudioRecorder *)audioRecorder {
-    
     if (!_audioRecorder) {
         NSError *error;
-        _audioRecorder = [[AVAudioRecorder alloc] initWithURL:[self getSavePath] settings:[self getAudioSetting] error:&error];
+        _audioRecorder = [[AVAudioRecorder alloc] initWithURL:[self savePathURL] settings:[self audioSetting] error:&error];
         _audioRecorder.delegate = self;
         _audioRecorder.meteringEnabled = YES;
         if (error) {
@@ -62,11 +57,10 @@
     return _audioRecorder;
 }
 
--(AVAudioPlayer *)audioPlayer {
-    
+- (AVAudioPlayer *)audioPlayer {
     if (!_audioPlayer) {
         NSError *error;
-        _audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:[self getSavePath] error:&error];
+        _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[self savePathURL] error:&error];
         _audioPlayer.numberOfLoops = 0;
         [_audioPlayer prepareToPlay];
         if (error) {
@@ -78,7 +72,6 @@
 }
 
 - (NSTimer *)timer {
-    
     if (!_timer) {
         _timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(audioPowerDidChange) userInfo:nil repeats:YES];
     }
@@ -86,7 +79,6 @@
 }
 
 - (void)audioPowerDidChange {
-    
     [self.audioRecorder updateMeters];
     float power = [self.audioRecorder averagePowerForChannel:0]; // 声波
     if (power <= -20) {
@@ -99,7 +91,6 @@
 }
 
 - (IBAction)recordClick:(UIButton *)sender {
-    
     if ([self.audioRecorder isRecording]) {
         return;
     }
@@ -109,7 +100,6 @@
 }
 
 - (IBAction)pauseClick:(UIButton *)sender {
-    
     if ([self.audioRecorder isRecording]) {
         [self.audioRecorder pause];
         self.timer.fireDate = [NSDate distantFuture];
@@ -117,12 +107,10 @@
 }
 
 - (IBAction)resumeClick:(UIButton *)sender {
-    
     [self recordClick:sender]; // 恢复录音只需要再次调用 record, AVAudioSession 会自动记录上次录音位置并追加录音.
 }
 
 - (IBAction)stopClick:(UIButton *)sender {
-    
     [self.audioRecorder stop];
     self.timer.fireDate = [NSDate distantFuture];
     self.audioPower.progress = 0.0;
@@ -131,7 +119,6 @@
 #pragma mark - AVAudioRecorderDelegate
 
 - (void)audioRecorderDidFinishRecording:(AVAudioRecorder *)recorder successfully:(BOOL)flag {
-    
     if (flag) {
         NSLog(@"录音成功");
         if (![self.audioPlayer isPlaying]) {

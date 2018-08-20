@@ -81,7 +81,6 @@ static NSMutableDictionary *_players;
     if (!filename) {
         return nil;
     }
-    
     AVAudioPlayer *player = [self players][filename];
     if (!player) {
         NSLog(@"创建新的播放器");
@@ -97,7 +96,6 @@ static NSMutableDictionary *_players;
         //player.enableRate = YES;
         //player.rate = 3;
     }
-    
     if (!player.isPlaying) {
         [player play];
     }

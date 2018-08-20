@@ -18,14 +18,14 @@
 
  @param filename 音效文件名
  */
-+ (void)playAudioWithFilename:(NSString  *)filename;
++ (void)playAudioWithFilename:(NSString *)filename;
 
 /**
  销毁音效
 
  @param filename 音效文件名
  */
-+ (void)disposeAudioWithFilename:(NSString  *)filename;
++ (void)disposeAudioWithFilename:(NSString *)filename;
 
 #pragma mark - Music
 
@@ -35,20 +35,20 @@
  @param filename 音乐文件名
  @return 音乐播放器
  */
-+ (AVAudioPlayer *)playMusicWithFilename:(NSString  *)filename;
++ (AVAudioPlayer *)playMusicWithFilename:(NSString *)filename;
 
 /**
  暂停音乐
 
  @param filename 音乐文件名
  */
-+ (void)pauseMusicWithFilename:(NSString  *)filename;
++ (void)pauseMusicWithFilename:(NSString *)filename;
 
 /**
  停止音乐
 
  @param filename 音乐文件名
  */
-+ (void)stopMusicWithFilename:(NSString  *)filename;
++ (void)stopMusicWithFilename:(NSString *)filename;
 
 @end

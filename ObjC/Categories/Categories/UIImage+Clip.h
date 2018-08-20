@@ -12,6 +12,6 @@
 
 - (instancetype)subImageInRect:(CGRect)rect;
 
-- (instancetype)croppedImageAtFrame:(CGRect)frame;
+- (instancetype)cropImageAtFrame:(CGRect)frame;
 
 @end
