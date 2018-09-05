@@ -11,6 +11,8 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *label;
+
 @end
 
 @implementation ViewController
@@ -27,6 +29,7 @@
     }else{
         NSLog(@"constant UUID: %@", UUID);
     }
+    self.label.text = UUID;
 }
 
 
