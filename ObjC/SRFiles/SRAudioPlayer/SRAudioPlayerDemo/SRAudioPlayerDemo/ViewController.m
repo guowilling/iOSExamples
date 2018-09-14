@@ -9,8 +9,6 @@
 #import "ViewController.h"
 #import "SRAudioPlayer.h"
 
-#define kNetworkURL [NSURL URLWithString:@"http://yxfile.idealsee.com/media01/04fc34c5e39f549731c01d98a94dcaf2_mp3-full.mp3"]
-
 @interface ViewController ()
 
 @end
@@ -19,26 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
     CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(displayLinkAction)];
     [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
 }
 
 - (void)displayLinkAction {
-    
     NSLog(@"currentTimeFormat: %@, cachingProgress: %.2f", [SRAudioPlayer shareInstance].currentTimeFormat, [SRAudioPlayer shareInstance].cachingProgress);
 }
 
 - (IBAction)play {
-    
-    [[SRAudioPlayer shareInstance] playWithURL:kNetworkURL];
+    NSURL *testURL = [NSURL URLWithString:@"http://yxfile.idealsee.com/media01/04fc34c5e39f549731c01d98a94dcaf2_mp3-full.mp3"];
+    [[SRAudioPlayer shareInstance] playWithURL:testURL];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end

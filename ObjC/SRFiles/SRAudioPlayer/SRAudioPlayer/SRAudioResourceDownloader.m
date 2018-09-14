@@ -73,8 +73,8 @@
     self.loadedSize += data.length;
     [self.outputStream write:data.bytes maxLength:data.length];
     
-    if ([self.delegate respondsToSelector:@selector(audioResourceDownloaderisDownLoading)]) {
-        [self.delegate audioResourceDownloaderisDownLoading];
+    if ([self.delegate respondsToSelector:@selector(audioResourceDownloaderIsDownLoading)]) {
+        [self.delegate audioResourceDownloaderIsDownLoading];
     }
 }
 

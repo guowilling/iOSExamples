@@ -81,7 +81,7 @@
     [self.loadingRequests removeObject:loadingRequest];
 }
 
-- (void)audioResourceDownloaderisDownLoading {
+- (void)audioResourceDownloaderIsDownLoading {
     
     [self handleAllLoadingRequest];
 }

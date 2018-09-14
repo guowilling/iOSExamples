@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GPg-gh-7mI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GPg-gh-7mI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +15,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GPg-gh-7mI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yu6-5Y-EJt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="118" y="123"/>
         </scene>
-        <!--View Controller-->
+        <!--SRAudioPlayer-->
         <scene sceneID="TOw-zv-95k">
             <objects>
                 <viewController id="Q1H-TD-dPV" customClass="ViewController" sceneMemberID="viewController">
@@ -56,7 +56,7 @@
                             <constraint firstItem="Hk4-Uw-806" firstAttribute="centerY" secondItem="1bu-f2-X9N" secondAttribute="centerY" id="rUZ-2e-HDo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="b49-FL-aTY"/>
+                    <navigationItem key="navigationItem" title="SRAudioPlayer" id="b49-FL-aTY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ANr-gY-ANk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

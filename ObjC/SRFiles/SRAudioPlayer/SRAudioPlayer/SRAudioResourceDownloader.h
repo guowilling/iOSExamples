@@ -10,7 +10,7 @@
 
 @protocol SRAudioResourceDownloaderDelegate <NSObject>
 
-- (void)audioResourceDownloaderisDownLoading;
+- (void)audioResourceDownloaderIsDownLoading;
 
 @end
 
