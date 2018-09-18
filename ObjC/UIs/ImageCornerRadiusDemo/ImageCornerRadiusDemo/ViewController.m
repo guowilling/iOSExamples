@@ -24,7 +24,7 @@
     
     UIImageView *imageView0 = [[UIImageView alloc] init];
     imageView0.image = image;
-    imageView0.frame = CGRectMake(self.view.frame.size.width * 0.5 - 120 * 0.5, 50, 120, 120);
+    imageView0.frame = CGRectMake(self.view.frame.size.width * 0.5 - 120 * 0.5, 100, 120, 120);
     [self.view addSubview:imageView0];
     
     UIImageView *imageView1 = [UIImageView sr_advanceRoundingRectImageView];

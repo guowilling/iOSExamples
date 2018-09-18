@@ -19,7 +19,6 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     [self setupDB];
@@ -28,7 +27,6 @@
 }
 
 - (void)setupDB {
-    
     NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
     NSString *filePath = [cachePath stringByAppendingPathComponent:@"shops.sqlite"];
     self.database = [FMDatabase databaseWithPath:filePath];
@@ -37,7 +35,6 @@
 }
 
 - (void)addShops {
-    
     for (int i = 0; i < 100; i++) {
         SRShop *shop = [[SRShop alloc] init];
         shop.name = [NSString stringWithFormat:@"商品%d", i];
@@ -46,6 +43,7 @@
         [self.database executeUpdateWithFormat:@"INSERT INTO t_shop(shop) VALUES (%@);", data];
     }
     
+    // 归档
 //    NSMutableArray *shops = [NSMutableArray array];
 //    for (int i = 0; i < 1000; i++) {
 //        HMShop *shop = [[HMShop alloc] init];
@@ -57,12 +55,10 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
     [self readShops];
 }
 
 - (void)readShops {
-    
     FMResultSet *set = [self.database executeQuery:@"SELECT * FROM t_shop LIMIT 10;"];
     while (set.next) {
         NSData *data = [set objectForColumnName:@"shop"];
@@ -70,6 +66,7 @@
         NSLog(@"%@", shop);
     }
     
+    // 解档
 //    NSMutableArray *shops = [NSKeyedUnarchiver unarchiveObjectWithFile:@"/Users/guoweilin/Desktop/shops.data"];
 //    NSLog(@"%@", [shops subarrayWithRange:NSMakeRange(20, 10)]);
 }

@@ -24,22 +24,18 @@
 @implementation SRCountDownLabel
 
 + (void)startCountDown {
-    
     [self startCountDownWithNumber:3];
 }
 
 + (void)startCountDownWithNumber:(NSInteger)number {
-    
     [self startCountDownWithNumber:number endTips:nil];
 }
 
 + (void)startCountDownWithNumber:(NSInteger)number endTips:(NSString *)tips {
-    
     [self startCountDownWithNumber:number endTips:tips endBlock:nil];
 }
 
 + (void)startCountDownWithNumber:(NSInteger)number endTips:(NSString *)tips endBlock:(void (^)())endBlock {
-    
     SRCountDownLabel *countDownLabel = [[self alloc] initWithNumber:number endTips:tips endBlock:endBlock];
     [[UIApplication sharedApplication].keyWindow addSubview:countDownLabel];
     [UIApplication sharedApplication].keyWindow.userInteractionEnabled = NO;
@@ -47,7 +43,6 @@
 }
 
 - (instancetype)initWithNumber:(NSInteger)number endTips:(NSString *)tips endBlock:(void (^)())endBlock {
-    
     if (self = [super init]) {
         _number = number;
         _endTips = tips;
@@ -65,7 +60,6 @@
 }
 
 - (void)countDown {
-    
     if (self.number > 0) {
         self.text = [NSString stringWithFormat:@"%zd", self.number];
         [UIView animateWithDuration:1 animations:^{

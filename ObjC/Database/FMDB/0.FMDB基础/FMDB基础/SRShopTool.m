@@ -21,15 +21,13 @@
 static FMDatabase *database;
 
 + (void)initialize {
-    
-    NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"shops.sqlite"];
-    database = [FMDatabase databaseWithPath:path];
+    NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"shops.sqlite"];
+    database = [FMDatabase databaseWithPath:filePath];
     [database open];
     [database executeUpdate:@"CREATE TABLE IF NOT EXISTS t_shop (id integer PRIMARY KEY, name text NOT NULL, price real);"];
 }
 
 + (void)addShop:(SRShop *)shop {
-    
     BOOL flag;
     //flag = [database executeUpdateWithFormat:@"INSERT INTO t_shop(name, price) VALUES (%@, %f);", shop.name, shop.price]; // FMDB 字符串不用加上 ''
     flag = [database executeUpdate:@"insert into t_shop(name,price) values (?,?);", shop.name, @(shop.price)]; // '?' 是数据库里面的占位符
@@ -39,7 +37,6 @@ static FMDatabase *database;
 }
 
 + (NSArray *)shops {
-    
     FMResultSet *set = [database executeQuery:@"SELECT * FROM t_shop;"];
     NSMutableArray *shops = [NSMutableArray array];
     while (set.next) {
@@ -52,7 +49,6 @@ static FMDatabase *database;
 }
 
 + (void)deleteShop:(float)price {
-    
     [database executeUpdate:@"DELETE FROM t_shop WHERE price < ?;", @(price)];
 }
 

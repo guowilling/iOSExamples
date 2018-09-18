@@ -26,26 +26,21 @@
 @implementation AdjustNumberButton
 
 - (void)dealloc {
-    
     [self stopTimer];
 }
 
 - (void)setTintColor:(UIColor *)tintColor {
-    
     _tintColor = tintColor;
-    
     _ltVLine.backgroundColor = tintColor;
     _rtVLine.backgroundColor = tintColor;
     self.layer.borderColor = [tintColor CGColor];
 }
 
 - (NSString *)currentNumber {
-    
     return _textField.text;
 }
 
 - (instancetype)init {
-    
     if (self = [super init]) {
         [self setupViews];
     }
@@ -53,7 +48,6 @@
 }
 
 - (void)setupViews {
-    
     _tintColor = [UIColor colorWithRed:150/255.0 green:150/255.0 blue:150/255.0 alpha:1.0];
     
     self.frame = CGRectMake(0, 0, 110, 30);
@@ -89,7 +83,6 @@
 }
 
 - (void)setupButton:(UIButton *)btn normalImage:(NSString *)norImage HighlightImage:(NSString *)highImage {
-    
     [btn setImage:[self imageFromBundle:norImage] forState:UIControlStateNormal];
     [btn setImage:[self imageFromBundle:highImage] forState:UIControlStateHighlighted];
     [btn addTarget:self action:@selector(btnTouchDown:) forControlEvents:UIControlEventTouchDown];
@@ -97,7 +90,6 @@
 }
 
 - (void)layoutSubviews {
-    
     [super layoutSubviews];
     
     CGFloat viewH = self.frame.size.height;
@@ -111,8 +103,7 @@
 
 #pragma mark - Assist Methods
 
-- (UIImage *)imageFromBundle:(NSString *)imageName{
-    
+- (UIImage *)imageFromBundle:(NSString *)imageName {
     NSString *bundlePath = [[NSBundle mainBundle].resourcePath stringByAppendingPathComponent:@"AdjustNumButton.bundle"];
     NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
     return [UIImage imageWithContentsOfFile:[bundle pathForResource:imageName ofType:@"png"]];
@@ -121,7 +112,6 @@
 #pragma mark - Button Actions
 
 - (void)btnTouchDown:(UIButton *)btn {
-    
     [_textField resignFirstResponder];
     
     if (btn == _increaseBtn) {
@@ -133,14 +123,12 @@
 }
 
 - (void)btnTouchUp:(UIButton *)btn {
-    
     [self stopTimer];
 }
 
 #pragma mark - Timer
 
 - (void)increase {
-    
     if (_textField.text.length == 0) {
         _textField.text = @"1";
     }
@@ -150,7 +138,6 @@
 }
 
 - (void)decrease {
-    
     if (_textField.text.length == 0) {
         _textField.text = @"1";
     }
@@ -164,7 +151,6 @@
 }
 
 - (void)stopTimer {
-    
     if (_timer.isValid) {
         [_timer invalidate];
         _timer = nil;

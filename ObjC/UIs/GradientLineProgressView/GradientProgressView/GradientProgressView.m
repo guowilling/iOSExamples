@@ -13,13 +13,11 @@
 @synthesize animating = _animating;
 
 + (Class)layerClass {
-    
     // Tells UIView to use CAGradientLayer as our backing layer
     return [CAGradientLayer class];
 }
 
 - (id)initWithFrame:(CGRect)frame {
-    
     if ((self = [super initWithFrame:frame])) {
         // Use a horizontal gradient
         CAGradientLayer *layer = (id)[self layer];
@@ -49,7 +47,6 @@
 }
 
 - (void)setProgress:(CGFloat)value {
-    
     if (_progress != value) {
         // progress values go from 0.0 to 1.0
         _progress = MIN(1.0, fabs(value));
@@ -58,7 +55,6 @@
 }
 
 - (void)layoutSubviews {
-    
     // Resize our mask layer based on the current progress
     CGRect maskRect = [_maskLayer frame];
     maskRect.size.width = CGRectGetWidth(self.bounds) * _progress;
@@ -66,7 +62,6 @@
 }
 
 - (NSArray *)shiftColors:(NSArray *)colors {
-    
     // Moves the last item in the array to the front
     // shifting all the other elements.
     NSMutableArray *mutable = [colors mutableCopy];
@@ -77,7 +72,6 @@
 }
 
 - (void)performAnimation {
-    
     // Update the colors on the model layer
     CAGradientLayer *layer = (id)[self layer];
     NSArray *fromColors = [layer colors];
@@ -100,14 +94,12 @@
 }
 
 - (void)animationDidStop:(CAAnimation *)animation finished:(BOOL)flag {
-    
     if (self.isAnimating) {
         [self performAnimation];
     }
 }
 
 - (void)startAnimating {
-    
     if (!self.isAnimating) {
         _animating = YES;
         [self performAnimation];
@@ -115,7 +107,6 @@
 }
 
 - (void)stopAnimating {
-    
     if (self.isAnimating) {
         _animating = NO;
     }

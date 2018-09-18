@@ -19,7 +19,6 @@
 @implementation DynamicView
 
 - (instancetype)initWithFrame:(CGRect)frame referenceView:(UIView *)view {
-    
     if (self = [super initWithFrame:frame]) {
         self.referenceView = view;
         self.userInteractionEnabled = YES;
@@ -31,7 +30,6 @@
 }
 
 - (UIDynamicAnimator *)dynamicAnimator {
-    
     if (!_dynamicAnimator) {
         _dynamicAnimator = [[UIDynamicAnimator alloc] initWithReferenceView:self.referenceView];
         _dynamicAnimator.delegate = self;
@@ -40,7 +38,6 @@
 }
 
 - (void)daynamicBehavior {
-    
     if (self.dynamicAnimator.behaviors) {
         [self.dynamicAnimator removeAllBehaviors];
     }
@@ -65,12 +62,10 @@
 }
 
 - (void)dynamicAnimatorDidPause:(UIDynamicAnimator *)animator {
-    
     NSLog(@"dynamicAnimatorDidPause");
 }
 
 - (void)panGesture:(UIPanGestureRecognizer *)panGesture {
-    
     if (self.dynamicAnimator.isRunning) { // 防止降落过程中拖动
         return;
     }

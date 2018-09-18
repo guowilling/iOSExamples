@@ -22,7 +22,6 @@
 @implementation SRCustomSwitch
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    
     if (self = [super initWithFrame:frame]) {
         [self setupWithFrame:frame];
     }
@@ -30,7 +29,6 @@
 }
 
 - (instancetype)initWithCoder:(NSCoder *)coder {
-    
     if (self = [super initWithCoder:coder]) {
         [self setupWithFrame:self.frame];
     }
@@ -38,7 +36,6 @@
 }
 
 - (void)setupWithFrame:(CGRect)frame {
-    
     CGFloat x = 0;
     CGFloat y = 0;
     CGFloat w = frame.size.width;
@@ -52,7 +49,7 @@
     [self addSubview:_dotView];
     
     self.onDotColor = self.offDotColor = [UIColor whiteColor];
-    self.onBarColor = [UIColor greenColor];
+    self.onBarColor = [UIColor blackColor];
     self.offBarColor = [UIColor whiteColor];
     self.tintColor = [UIColor lightGrayColor];
     
@@ -61,7 +58,6 @@
 }
 
 - (void)switchStatus:(BOOL)isOn animated:(BOOL)flag {
-    
     _on = isOn;
     CGFloat newX = isOn ? self.frame.size.width - self.dotView.frame.size.width : 0;
     [UIView animateWithDuration:flag ? 0.25 : 0 animations:^{
@@ -77,41 +73,35 @@
 }
 
 - (void)setSwitchColorWithStatus:(BOOL)on {
-    
     self.barView.backgroundColor = on ? _onBarColor : _offBarColor;
     self.dotView.backgroundColor = on ? _onDotColor : _offDotColor;
 }
 
 - (void)setOnDotColor:(UIColor *)onDotColor {
-    
     _onDotColor = onDotColor;
     
     [self setSwitchColorWithStatus:_on];
 }
 
 - (void)setOnBarColor:(UIColor *)onBarColor {
-    
     _onBarColor = onBarColor;
     
     [self setSwitchColorWithStatus:_on];
 }
 
 - (void)setOffDotColor:(UIColor *)offDotColor {
-    
     _offDotColor = offDotColor;
     
     [self setSwitchColorWithStatus:_on];
 }
 
 - (void)setOffBarColor:(UIColor *)offBarColor {
-    
     _offBarColor = offBarColor;
     
     [self setSwitchColorWithStatus:_on];
 }
 
 - (void)setTintColor:(UIColor *)tintColor {
-    
     _tintColor = tintColor;
     
     self.dotView.layer.borderColor = self.barView.layer.borderColor = tintColor.CGColor;
@@ -119,7 +109,6 @@
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
     [self switchStatus:!_on animated:YES];
 }
 

@@ -11,7 +11,6 @@
 @implementation WheelButton
 
 - (CGRect)imageRectForContentRect:(CGRect)contentRect {
-    
     CGFloat imageX = (contentRect.size.width - kImageWidth) * 0.5;
     CGFloat imageY = 30;
     return CGRectMake(imageX, imageY, kImageWidth, kImageHeight);

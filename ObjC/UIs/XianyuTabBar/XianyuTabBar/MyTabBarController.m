@@ -22,7 +22,6 @@
 @implementation MyTabBarController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     [self setupAllChildVC];
@@ -33,7 +32,6 @@
 }
 
 - (void)setupAllChildVC {
-    
     [self setUpOneChildVcWithVc:[[HomeViewController alloc] init]
                           Image:@"home_normal"
                   selectedImage:@"home_highlight"
@@ -56,7 +54,6 @@
 }
 
 - (void)setUpOneChildVcWithVc:(UIViewController *)VC Image:(NSString *)image selectedImage:(NSString *)selectedImage title:(NSString *)title {
-    
     MyNavigationController *navC = [[MyNavigationController alloc] initWithRootViewController:VC];
     VC.view.backgroundColor = [self randomColor];
     VC.tabBarItem.image = [[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -67,7 +64,6 @@
 }
 
 - (UIColor *)randomColor {
-    
     CGFloat r = arc4random_uniform(256);
     CGFloat g = arc4random_uniform(256);
     CGFloat b = arc4random_uniform(256);
@@ -77,7 +73,6 @@
 #pragma mark - MyTabBarDelegate
 
 - (void)tabBarDidClickPlusBtn:(MyTabBar *)tabBar {
-    
     PostViewController *VC = [[PostViewController alloc] init];
     VC.view.backgroundColor = [self randomColor];
     MyNavigationController *navC = [[MyNavigationController alloc] initWithRootViewController:VC];

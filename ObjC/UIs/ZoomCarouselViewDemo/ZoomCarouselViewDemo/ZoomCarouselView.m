@@ -31,7 +31,6 @@
 @implementation ZoomCarouselView
 
 - (id)initWithFrame:(CGRect)frame {
-    
     self = [super initWithFrame:frame];
     if (self) {
         [self setup];
@@ -40,7 +39,6 @@
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
-    
     self = [super initWithCoder:aDecoder];
     if (self) {
         [self setup];
@@ -49,7 +47,6 @@
 }
 
 - (void)setup {
-    
     self.clipsToBounds = YES;
     self.backgroundColor = [UIColor whiteColor];
     
@@ -89,7 +86,6 @@
 #pragma mark - Timer
 
 - (void)startTimer {
-    
     if (self.orginPageCount <= 1 || !self.isAutoPaging || !self.isCarousel) {
         return;
     }
@@ -101,7 +97,6 @@
 }
 
 - (void)stopTimer {
-    
     if (self.timer) {
         [self.timer invalidate];
         self.timer = nil;
@@ -109,7 +104,6 @@
 }
 
 - (void)nextPage {
-    
     self.timerPage++;
     
     [_scrollView setContentOffset:CGPointMake(self.timerPage * self.pageSize.width, 0) animated:YES];
@@ -118,7 +112,6 @@
 #pragma mark - Cells
 
 - (void)reloadData {
-    
     for (UIView *view in self.scrollView.subviews) {
         if ([view isKindOfClass:[ZoomCarouselViewCell class]]) {
             [view removeFromSuperview];
@@ -173,7 +166,6 @@
 }
 
 - (void)updateCellsWithContentOffset:(CGPoint)offset {
-    
     CGPoint startPoint = CGPointMake(offset.x - _scrollView.frame.origin.x, offset.y - _scrollView.frame.origin.y);
     CGPoint endPoint = CGPointMake(startPoint.x + self.bounds.size.width, startPoint.y + self.bounds.size.height);
     
@@ -227,7 +219,6 @@
 }
 
 - (void)removeCellAtIndex:(NSInteger)index {
-    
     id cell = _cells[index];
     if ([cell isKindOfClass:[NSNull class]]) {
         return;
@@ -243,12 +234,10 @@
 }
 
 - (void)queueReusableCell:(UIView *)cell {
-    
     [_reusableCells addObject:cell];
 }
 
 - (UIView *)dequeueReusableCell {
-    
     ZoomCarouselViewCell *cell = [_reusableCells lastObject];
     if (cell) {
         [_reusableCells removeLastObject];
@@ -258,7 +247,6 @@
 }
 
 - (void)updateVisibleCells {
-    
     if (_otherPageAlpha == 1.0 && _otherPageScale == 1.0) {
         return;
     }
@@ -289,7 +277,6 @@
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
     if (self.orginPageCount == 0) {
         return;
     }
@@ -327,12 +314,10 @@
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    
     [self stopTimer];
 }
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
-    
     if (self.orginPageCount > 1 && self.isAutoPaging && self.isCarousel) {
         [self startTimer];
         if (self.timerPage == floor(_scrollView.contentOffset.x / _pageSize.width)) {
@@ -346,7 +331,6 @@
 #pragma mark - Others
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-    
     if ([self pointInside:point withEvent:event]) {
         CGPoint newPoint = CGPointZero;
         newPoint.x = point.x - _scrollView.frame.origin.x + _scrollView.contentOffset.x;
@@ -360,14 +344,12 @@
 }
 
 - (void)singleCellTapAction:(UIGestureRecognizer *)gesture {
-    
     if ([self.delegate respondsToSelector:@selector(zoomCarouselView:didSelectPage:atIndex:)]) {
         [self.delegate zoomCarouselView:self didSelectPage:(ZoomCarouselViewCell *)gesture.view atIndex:gesture.view.tag];
     }
 }
 
 - (void)setPageControl:(UIPageControl *)pageControl {
-    
     _pageControl = pageControl;
     
     [self addSubview:pageControl];

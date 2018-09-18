@@ -20,7 +20,6 @@
 @implementation MyTabBar
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor whiteColor];
         self.shadowImage = [UIImage imageWithColor:[UIColor clearColor]];
@@ -36,7 +35,6 @@
 }
 
 - (void)layoutSubviews {
-    
     [super layoutSubviews];
     
     self.plusBtn.size = CGSizeMake(self.plusBtn.currentBackgroundImage.size.width,
@@ -70,7 +68,6 @@
 }
 
 - (void)plusBtnAction {
-    
     if ([self.delegate respondsToSelector:@selector(tabBarDidClickPlusBtn:)]) {
         [self.myDelegate tabBarDidClickPlusBtn:self];
     }
@@ -78,7 +75,6 @@
 
 // 为了让凸出的部分点击也有反应重写hitTest方法
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-    
     // 必须判断, 任何界面发生点击事件都是会调用这个方法的.
     if (self.isHidden == NO) { // 当前页面tabbar没有隐藏, 那么肯定是在导航控制器的根控制器页面.
         // 当前tabbar的触摸点转换到发布按钮的身上.

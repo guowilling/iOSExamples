@@ -29,7 +29,6 @@
 @implementation SRCustomSegmentedControl
 
 - (NSMutableArray *)allTitleButtons {
-    
     if (!_allTitleButtons) {
         _allTitleButtons = [NSMutableArray array];
     }

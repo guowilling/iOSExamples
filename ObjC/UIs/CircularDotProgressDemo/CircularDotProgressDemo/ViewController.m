@@ -20,7 +20,6 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     _progressView = [[CircularDotProgressView alloc] initWithFrame:CGRectMake(self.view.frame.size.width * 0.5 - 50, self.view.frame.size.height * 0.5 - 50,
@@ -35,7 +34,6 @@
 }
 
 - (void)startTimer {
-    
     if (self.updateTimer) {
         [self.updateTimer invalidate];
     }
@@ -45,7 +43,6 @@
 }
 
 - (void)updateProgress:(NSTimer *)timer {
-    
     if (self.progressView.progress >= 1) {
         self.progressView.progress = 0;
         [self startTimer];
@@ -55,7 +52,6 @@
 }
 
 - (void)tapAction {
-    
     self.progressView.progress = 0;
     [self startTimer];
 }

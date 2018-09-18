@@ -11,13 +11,11 @@
 @implementation SRShop
 
 - (void)encodeWithCoder:(NSCoder *)encoder {
-    
     [encoder encodeObject:self.name forKey:@"name"];
     [encoder encodeDouble:self.price forKey:@"price"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
-    
     if (self = [super init]) {
         self.name = [decoder decodeObjectForKey:@"name"];
         self.price = [decoder decodeDoubleForKey:@"price"];
@@ -26,7 +24,6 @@
 }
 
 - (NSString *)description {
-    
     return [NSString stringWithFormat:@"name: %@; price: %f", self.name, self.price];
 }
 

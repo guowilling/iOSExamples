@@ -13,7 +13,7 @@ static CGFloat const Navigation_Bar_HEIGHT = 64;
 
 @interface CommonWebViewController () <UIWebViewDelegate, WKNavigationDelegate, WKUIDelegate, UIGestureRecognizerDelegate>
 
-@property (nonatomic, strong) id <UIGestureRecognizerDelegate>delegate;
+@property (nonatomic, strong) id<UIGestureRecognizerDelegate> delegate;
 
 @property (nonatomic, strong) WKWebView *wk_webView;
 @property (nonatomic, strong) UIWebView *ui_webView;
@@ -252,4 +252,3 @@ static CGFloat const Navigation_Bar_HEIGHT = 64;
 }
 
 @end
-

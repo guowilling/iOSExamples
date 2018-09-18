@@ -13,26 +13,7 @@
 		688A500B1E2DB9BF0058C84E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688A50091E2DB9BF0058C84E /* Main.storyboard */; };
 		688A500D1E2DB9BF0058C84E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688A500C1E2DB9BF0058C84E /* Assets.xcassets */; };
 		688A50101E2DB9BF0058C84E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688A500E1E2DB9BF0058C84E /* LaunchScreen.storyboard */; };
-		688A501B1E2DB9BF0058C84E /* DoNotTouchWhiteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 688A501A1E2DB9BF0058C84E /* DoNotTouchWhiteTests.m */; };
-		688A50261E2DB9BF0058C84E /* DoNotTouchWhiteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 688A50251E2DB9BF0058C84E /* DoNotTouchWhiteUITests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		688A50171E2DB9BF0058C84E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 688A4FF51E2DB9BF0058C84E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 688A4FFC1E2DB9BF0058C84E;
-			remoteInfo = DoNotTouchWhite;
-		};
-		688A50221E2DB9BF0058C84E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 688A4FF51E2DB9BF0058C84E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 688A4FFC1E2DB9BF0058C84E;
-			remoteInfo = DoNotTouchWhite;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		688A4FFD1E2DB9BF0058C84E /* DoNotTouchWhite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoNotTouchWhite.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,30 +26,10 @@
 		688A500C1E2DB9BF0058C84E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		688A500F1E2DB9BF0058C84E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		688A50111E2DB9BF0058C84E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		688A50161E2DB9BF0058C84E /* DoNotTouchWhiteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoNotTouchWhiteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		688A501A1E2DB9BF0058C84E /* DoNotTouchWhiteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoNotTouchWhiteTests.m; sourceTree = "<group>"; };
-		688A501C1E2DB9BF0058C84E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		688A50211E2DB9BF0058C84E /* DoNotTouchWhiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoNotTouchWhiteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		688A50251E2DB9BF0058C84E /* DoNotTouchWhiteUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoNotTouchWhiteUITests.m; sourceTree = "<group>"; };
-		688A50271E2DB9BF0058C84E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		688A4FFA1E2DB9BF0058C84E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688A50131E2DB9BF0058C84E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688A501E1E2DB9BF0058C84E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -82,8 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				688A4FFF1E2DB9BF0058C84E /* DoNotTouchWhite */,
-				688A50191E2DB9BF0058C84E /* DoNotTouchWhiteTests */,
-				688A50241E2DB9BF0058C84E /* DoNotTouchWhiteUITests */,
 				688A4FFE1E2DB9BF0058C84E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,8 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				688A4FFD1E2DB9BF0058C84E /* DoNotTouchWhite.app */,
-				688A50161E2DB9BF0058C84E /* DoNotTouchWhiteTests.xctest */,
-				688A50211E2DB9BF0058C84E /* DoNotTouchWhiteUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,24 +79,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		688A50191E2DB9BF0058C84E /* DoNotTouchWhiteTests */ = {
-			isa = PBXGroup;
-			children = (
-				688A501A1E2DB9BF0058C84E /* DoNotTouchWhiteTests.m */,
-				688A501C1E2DB9BF0058C84E /* Info.plist */,
-			);
-			path = DoNotTouchWhiteTests;
-			sourceTree = "<group>";
-		};
-		688A50241E2DB9BF0058C84E /* DoNotTouchWhiteUITests */ = {
-			isa = PBXGroup;
-			children = (
-				688A50251E2DB9BF0058C84E /* DoNotTouchWhiteUITests.m */,
-				688A50271E2DB9BF0058C84E /* Info.plist */,
-			);
-			path = DoNotTouchWhiteUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,42 +99,6 @@
 			productReference = 688A4FFD1E2DB9BF0058C84E /* DoNotTouchWhite.app */;
 			productType = "com.apple.product-type.application";
 		};
-		688A50151E2DB9BF0058C84E /* DoNotTouchWhiteTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 688A502D1E2DB9BF0058C84E /* Build configuration list for PBXNativeTarget "DoNotTouchWhiteTests" */;
-			buildPhases = (
-				688A50121E2DB9BF0058C84E /* Sources */,
-				688A50131E2DB9BF0058C84E /* Frameworks */,
-				688A50141E2DB9BF0058C84E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				688A50181E2DB9BF0058C84E /* PBXTargetDependency */,
-			);
-			name = DoNotTouchWhiteTests;
-			productName = DoNotTouchWhiteTests;
-			productReference = 688A50161E2DB9BF0058C84E /* DoNotTouchWhiteTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		688A50201E2DB9BF0058C84E /* DoNotTouchWhiteUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 688A50301E2DB9BF0058C84E /* Build configuration list for PBXNativeTarget "DoNotTouchWhiteUITests" */;
-			buildPhases = (
-				688A501D1E2DB9BF0058C84E /* Sources */,
-				688A501E1E2DB9BF0058C84E /* Frameworks */,
-				688A501F1E2DB9BF0058C84E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				688A50231E2DB9BF0058C84E /* PBXTargetDependency */,
-			);
-			name = DoNotTouchWhiteUITests;
-			productName = DoNotTouchWhiteUITests;
-			productReference = 688A50211E2DB9BF0058C84E /* DoNotTouchWhiteUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -207,18 +110,8 @@
 				TargetAttributes = {
 					688A4FFC1E2DB9BF0058C84E = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = Y4FK8UXDXW;
+						DevelopmentTeam = L8C6M6B8E9;
 						ProvisioningStyle = Manual;
-					};
-					688A50151E2DB9BF0058C84E = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 688A4FFC1E2DB9BF0058C84E;
-					};
-					688A50201E2DB9BF0058C84E = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 688A4FFC1E2DB9BF0058C84E;
 					};
 				};
 			};
@@ -236,8 +129,6 @@
 			projectRoot = "";
 			targets = (
 				688A4FFC1E2DB9BF0058C84E /* DoNotTouchWhite */,
-				688A50151E2DB9BF0058C84E /* DoNotTouchWhiteTests */,
-				688A50201E2DB9BF0058C84E /* DoNotTouchWhiteUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -250,20 +141,6 @@
 				688A50101E2DB9BF0058C84E /* LaunchScreen.storyboard in Resources */,
 				688A500D1E2DB9BF0058C84E /* Assets.xcassets in Resources */,
 				688A500B1E2DB9BF0058C84E /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688A50141E2DB9BF0058C84E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688A501F1E2DB9BF0058C84E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,36 +157,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		688A50121E2DB9BF0058C84E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				688A501B1E2DB9BF0058C84E /* DoNotTouchWhiteTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688A501D1E2DB9BF0058C84E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				688A50261E2DB9BF0058C84E /* DoNotTouchWhiteUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		688A50181E2DB9BF0058C84E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 688A4FFC1E2DB9BF0058C84E /* DoNotTouchWhite */;
-			targetProxy = 688A50171E2DB9BF0058C84E /* PBXContainerItemProxy */;
-		};
-		688A50231E2DB9BF0058C84E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 688A4FFC1E2DB9BF0058C84E /* DoNotTouchWhite */;
-			targetProxy = 688A50221E2DB9BF0058C84E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		688A50091E2DB9BF0058C84E /* Main.storyboard */ = {
@@ -423,14 +271,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = DoNotTouchWhite/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.DoNotTouchWhite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Debug;
 		};
@@ -438,60 +286,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = DoNotTouchWhite/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.DoNotTouchWhite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
-			};
-			name = Release;
-		};
-		688A502E1E2DB9BF0058C84E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = DoNotTouchWhiteTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.DoNotTouchWhiteTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoNotTouchWhite.app/DoNotTouchWhite";
-			};
-			name = Debug;
-		};
-		688A502F1E2DB9BF0058C84E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = DoNotTouchWhiteTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.DoNotTouchWhiteTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoNotTouchWhite.app/DoNotTouchWhite";
-			};
-			name = Release;
-		};
-		688A50311E2DB9BF0058C84E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = DoNotTouchWhiteUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.DoNotTouchWhiteUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = DoNotTouchWhite;
-			};
-			name = Debug;
-		};
-		688A50321E2DB9BF0058C84E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = DoNotTouchWhiteUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.DoNotTouchWhiteUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = DoNotTouchWhite;
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Release;
 		};
@@ -514,22 +316,7 @@
 				688A502C1E2DB9BF0058C84E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		688A502D1E2DB9BF0058C84E /* Build configuration list for PBXNativeTarget "DoNotTouchWhiteTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				688A502E1E2DB9BF0058C84E /* Debug */,
-				688A502F1E2DB9BF0058C84E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		688A50301E2DB9BF0058C84E /* Build configuration list for PBXNativeTarget "DoNotTouchWhiteUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				688A50311E2DB9BF0058C84E /* Debug */,
-				688A50321E2DB9BF0058C84E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

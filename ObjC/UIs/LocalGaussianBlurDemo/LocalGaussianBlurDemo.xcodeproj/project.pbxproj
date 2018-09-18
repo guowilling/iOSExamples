@@ -113,7 +113,7 @@
 				TargetAttributes = {
 					6805A17A1EE8FC09001BD7B7 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = Y4FK8UXDXW;
+						DevelopmentTeam = L8C6M6B8E9;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -277,13 +277,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = LocalGaussianBlurDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.LocalGaussianBlurDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c7f62529-8141-47dc-aac1-04b72cb05bce";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Debug;
 		};
@@ -291,12 +292,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = LocalGaussianBlurDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.LocalGaussianBlurDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Release;
 		};
@@ -319,6 +322,7 @@
 				6805A1941EE8FC0A001BD7B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

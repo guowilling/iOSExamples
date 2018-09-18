@@ -16,7 +16,6 @@ static CGFloat dotMargin = 0.5;
 @implementation ElegantCircleProgress
 
 - (instancetype)initWithFrame:(CGRect)frame lineWidth:(float)lineWidth {
-    
     if ([super initWithFrame:frame]) {
         _lineWidth = lineWidth;
         [self setup];
@@ -25,7 +24,6 @@ static CGFloat dotMargin = 0.5;
 }
 
 - (void)setup {
-    
     CGFloat centerX = self.bounds.size.width * 0.5;
     CGFloat centerY = self.bounds.size.height * 0.5;
     CGFloat radius = (self.bounds.size.width - _lineWidth) * 0.5;
@@ -82,7 +80,6 @@ static CGFloat dotMargin = 0.5;
 }
 
 - (void)setProgress:(CGFloat)progress {
-    
     _progress = progress;
     
     _progressLayer.strokeEnd = progress;
@@ -93,7 +90,6 @@ static CGFloat dotMargin = 0.5;
 }
 
 - (void)updateEndPoint {
-    
     CGFloat angle = M_PI * 2 * _progress; // 弧度
     float radius = (self.bounds.size.width - _lineWidth) / 2.0;
     int index = (angle) / M_PI_2; // 用于区分在第几象限内

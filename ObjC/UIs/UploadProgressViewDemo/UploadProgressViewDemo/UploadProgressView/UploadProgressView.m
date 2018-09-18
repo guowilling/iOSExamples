@@ -21,7 +21,6 @@
 @implementation UploadProgressView
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
     }
@@ -29,7 +28,6 @@
 }
 
 - (void)setType:(ProgressType)type {
-    
     switch (type) {
         case ProgressTypeBall:
         {
@@ -68,7 +66,6 @@
 }
 
 - (void)setProgress:(CGFloat)progress {
-    
     _progress = progress;
     
     if (_ballProgressView) {

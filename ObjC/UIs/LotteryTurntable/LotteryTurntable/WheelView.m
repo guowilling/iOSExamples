@@ -22,12 +22,10 @@
 @implementation WheelView
 
 + (instancetype)wheel {
-    
     return [[[NSBundle mainBundle] loadNibNamed:@"WheelView" owner:nil options:nil] lastObject];
 }
 
 - (void)awakeFromNib {
-    
     [super awakeFromNib];
     
     self.centerWheel.userInteractionEnabled = YES;
@@ -61,14 +59,12 @@
 }
 
 - (void)selBtn:(UIButton *)btn {
-    
     self.selectedBtn.selected = NO;
     btn.selected = YES;
     self.selectedBtn = btn;
 }
 
 - (void)startRotating {
-    
     if (self.displayLink) {
         return;
     }
@@ -78,12 +74,10 @@
 }
 
 - (void)centerWheelRotation {
-    
     self.centerWheel.transform = CGAffineTransformRotate(self.centerWheel.transform, M_PI / 60);
 }
 
 - (void)stopRotating {
-    
     if (self.displayLink) {
         [self.displayLink invalidate];
         self.displayLink = nil;
@@ -91,7 +85,6 @@
 }
 
 - (IBAction)startBtnClick:(id)sender {
-    
     [UIView animateWithDuration:1.0 animations:^{
         self.centerWheel.transform = CGAffineTransformRotate(self.centerWheel.transform, M_PI);
     } completion:nil];
@@ -107,7 +100,6 @@
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-    
     self.userInteractionEnabled = YES;
 }
 

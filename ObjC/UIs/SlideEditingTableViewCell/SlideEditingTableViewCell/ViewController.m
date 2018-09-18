@@ -15,12 +15,10 @@
 @implementation ViewController
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
     return 5;
 }
 
 - (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     UITableViewRowAction *action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
         NSLog(@"删除");
     }];
@@ -34,14 +32,12 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
     cell.textLabel.text = [NSString stringWithFormat:@"row--%ld",indexPath.row];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     NSLog(@"commitEditingStyle");
 }
 

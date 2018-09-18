@@ -13,7 +13,6 @@
 @implementation ElegantCircleProgressView
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    
     if ([super initWithFrame:frame]) {
         [self setupUI];
     }
@@ -21,7 +20,6 @@
 }
 
 - (void)setupUI {
-    
     _percentLabel = [[UILabel alloc] initWithFrame:self.bounds];
     _percentLabel.textColor = [UIColor whiteColor];
     _percentLabel.textAlignment = NSTextAlignmentCenter;
@@ -34,7 +32,6 @@
 }
 
 - (void)setProgress:(CGFloat)progress {
-    
     _progress = progress;
     
     _elegantCircleProgress.progress = progress;

@@ -19,14 +19,12 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     [self setupTableView];
 }
 
 - (void)setupTableView {
-    
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     _tableView.dataSource = self;
     _tableView.delegate = self;
@@ -34,17 +32,14 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
     return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     static NSString *cellID = @"myCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell) {
@@ -59,7 +54,6 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     ProgressViewController *progressVC = [[ProgressViewController alloc] init];
@@ -72,7 +66,6 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    
     return 0.1;
 }
 

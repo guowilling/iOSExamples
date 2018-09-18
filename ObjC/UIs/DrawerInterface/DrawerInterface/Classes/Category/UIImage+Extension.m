@@ -4,7 +4,6 @@
 @implementation UIImage (Extension)
 
 + (UIImage *)imageWithColor:(UIColor *)color {
-    
     CGFloat imageW = 100;
     CGFloat imageH = 100;
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(imageW, imageH), NO, 0.0);

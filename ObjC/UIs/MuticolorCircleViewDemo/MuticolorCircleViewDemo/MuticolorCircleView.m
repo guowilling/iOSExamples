@@ -11,12 +11,10 @@
 @implementation MuticolorCircleView
 
 + (Class)layerClass {
-    
     return [CAGradientLayer class];
 }
 
 - (id)initWithFrame:(CGRect)frame {
-    
     self = [super initWithFrame:frame];
     if (self) {
         [self setupMulticolorGradientLayer];
@@ -26,7 +24,6 @@
 }
 
 - (void)setupMulticolorGradientLayer {
-    
     CAGradientLayer *gradientLayer = (id)[self layer];
     gradientLayer.startPoint = CGPointMake(0.0, 0.0);
     gradientLayer.endPoint = CGPointMake(1.0, 0.0);
@@ -38,7 +35,6 @@
 }
 
 - (CAShapeLayer *)produceCircleShapeLayer {
-    
     UIBezierPath *circlePath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds))
                                                               radius:self.bounds.size.width/2.0 - 40
                                                           startAngle:0
@@ -57,7 +53,6 @@
 #pragma mark - Animation
 
 - (void)startAnimation {
-    
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     animation.duration = 5;
     animation.repeatCount = MAXFLOAT;
@@ -67,7 +62,6 @@
 }
 
 - (void)endAnimation {
-    
     [self.layer removeAllAnimations];
 }
 

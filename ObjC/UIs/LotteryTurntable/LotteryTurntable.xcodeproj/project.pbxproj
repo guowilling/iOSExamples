@@ -31,8 +31,6 @@
 		0988B2031BB1D2FD00F49800 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0988B2051BB1D2FD00F49800 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0988B2081BB1D2FD00F49800 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		0988B2131BB1D2FD00F49800 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0988B2141BB1D2FD00F49800 /* LotteryTurntableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LotteryTurntableTests.m; sourceTree = "<group>"; };
 		0988B21E1BB1DE3200F49800 /* WheelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WheelView.h; sourceTree = "<group>"; };
 		0988B21F1BB1DE3200F49800 /* WheelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WheelView.m; sourceTree = "<group>"; };
 		0988B2211BB1DE4600F49800 /* WheelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WheelView.xib; sourceTree = "<group>"; };
@@ -53,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				0988B1F71BB1D2FD00F49800 /* LotteryTurntable */,
-				0988B2111BB1D2FD00F49800 /* LotteryTurntableTests */,
 				0988B1F61BB1D2FD00F49800 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,23 +92,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0988B2111BB1D2FD00F49800 /* LotteryTurntableTests */ = {
-			isa = PBXGroup;
-			children = (
-				0988B2141BB1D2FD00F49800 /* LotteryTurntableTests.m */,
-				0988B2121BB1D2FD00F49800 /* Supporting Files */,
-			);
-			path = LotteryTurntableTests;
-			sourceTree = "<group>";
-		};
-		0988B2121BB1D2FD00F49800 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				0988B2131BB1D2FD00F49800 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,7 +123,7 @@
 				TargetAttributes = {
 					0988B1F41BB1D2FD00F49800 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = Y4FK8UXDXW;
+						DevelopmentTeam = L8C6M6B8E9;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -299,13 +279,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = LotteryTurntable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.LotteryTurntable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Debug;
 		};
@@ -313,13 +294,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = LotteryTurntable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.LotteryTurntable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Release;
 		};

@@ -13,27 +13,8 @@
 		688A504A1E2DBBA50058C84E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688A50481E2DBBA50058C84E /* Main.storyboard */; };
 		688A504C1E2DBBA50058C84E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688A504B1E2DBBA50058C84E /* Assets.xcassets */; };
 		688A504F1E2DBBA50058C84E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688A504D1E2DBBA50058C84E /* LaunchScreen.storyboard */; };
-		688A505A1E2DBBA50058C84E /* PuzzlePhotoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 688A50591E2DBBA50058C84E /* PuzzlePhotoTests.m */; };
-		688A50651E2DBBA50058C84E /* PuzzlePhotoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 688A50641E2DBBA50058C84E /* PuzzlePhotoUITests.m */; };
 		688A50731E2DBBE60058C84E /* coldplay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 688A50721E2DBBE60058C84E /* coldplay.jpg */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		688A50561E2DBBA50058C84E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 688A50341E2DBBA50058C84E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 688A503B1E2DBBA50058C84E;
-			remoteInfo = PuzzlePhoto;
-		};
-		688A50611E2DBBA50058C84E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 688A50341E2DBBA50058C84E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 688A503B1E2DBBA50058C84E;
-			remoteInfo = PuzzlePhoto;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		688A503C1E2DBBA50058C84E /* PuzzlePhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuzzlePhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,31 +27,11 @@
 		688A504B1E2DBBA50058C84E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		688A504E1E2DBBA50058C84E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		688A50501E2DBBA50058C84E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		688A50551E2DBBA50058C84E /* PuzzlePhotoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuzzlePhotoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		688A50591E2DBBA50058C84E /* PuzzlePhotoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PuzzlePhotoTests.m; sourceTree = "<group>"; };
-		688A505B1E2DBBA50058C84E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		688A50601E2DBBA50058C84E /* PuzzlePhotoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuzzlePhotoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		688A50641E2DBBA50058C84E /* PuzzlePhotoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PuzzlePhotoUITests.m; sourceTree = "<group>"; };
-		688A50661E2DBBA50058C84E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		688A50721E2DBBE60058C84E /* coldplay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coldplay.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		688A50391E2DBBA50058C84E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688A50521E2DBBA50058C84E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688A505D1E2DBBA50058C84E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -84,8 +45,6 @@
 			isa = PBXGroup;
 			children = (
 				688A503E1E2DBBA50058C84E /* PuzzlePhoto */,
-				688A50581E2DBBA50058C84E /* PuzzlePhotoTests */,
-				688A50631E2DBBA50058C84E /* PuzzlePhotoUITests */,
 				688A503D1E2DBBA50058C84E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,8 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				688A503C1E2DBBA50058C84E /* PuzzlePhoto.app */,
-				688A50551E2DBBA50058C84E /* PuzzlePhotoTests.xctest */,
-				688A50601E2DBBA50058C84E /* PuzzlePhotoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,24 +82,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		688A50581E2DBBA50058C84E /* PuzzlePhotoTests */ = {
-			isa = PBXGroup;
-			children = (
-				688A50591E2DBBA50058C84E /* PuzzlePhotoTests.m */,
-				688A505B1E2DBBA50058C84E /* Info.plist */,
-			);
-			path = PuzzlePhotoTests;
-			sourceTree = "<group>";
-		};
-		688A50631E2DBBA50058C84E /* PuzzlePhotoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				688A50641E2DBBA50058C84E /* PuzzlePhotoUITests.m */,
-				688A50661E2DBBA50058C84E /* Info.plist */,
-			);
-			path = PuzzlePhotoUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,42 +102,6 @@
 			productReference = 688A503C1E2DBBA50058C84E /* PuzzlePhoto.app */;
 			productType = "com.apple.product-type.application";
 		};
-		688A50541E2DBBA50058C84E /* PuzzlePhotoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 688A506C1E2DBBA50058C84E /* Build configuration list for PBXNativeTarget "PuzzlePhotoTests" */;
-			buildPhases = (
-				688A50511E2DBBA50058C84E /* Sources */,
-				688A50521E2DBBA50058C84E /* Frameworks */,
-				688A50531E2DBBA50058C84E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				688A50571E2DBBA50058C84E /* PBXTargetDependency */,
-			);
-			name = PuzzlePhotoTests;
-			productName = PuzzlePhotoTests;
-			productReference = 688A50551E2DBBA50058C84E /* PuzzlePhotoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		688A505F1E2DBBA50058C84E /* PuzzlePhotoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 688A506F1E2DBBA50058C84E /* Build configuration list for PBXNativeTarget "PuzzlePhotoUITests" */;
-			buildPhases = (
-				688A505C1E2DBBA50058C84E /* Sources */,
-				688A505D1E2DBBA50058C84E /* Frameworks */,
-				688A505E1E2DBBA50058C84E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				688A50621E2DBBA50058C84E /* PBXTargetDependency */,
-			);
-			name = PuzzlePhotoUITests;
-			productName = PuzzlePhotoUITests;
-			productReference = 688A50601E2DBBA50058C84E /* PuzzlePhotoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -210,18 +113,8 @@
 				TargetAttributes = {
 					688A503B1E2DBBA50058C84E = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = Y4FK8UXDXW;
+						DevelopmentTeam = L8C6M6B8E9;
 						ProvisioningStyle = Manual;
-					};
-					688A50541E2DBBA50058C84E = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 688A503B1E2DBBA50058C84E;
-					};
-					688A505F1E2DBBA50058C84E = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 688A503B1E2DBBA50058C84E;
 					};
 				};
 			};
@@ -239,8 +132,6 @@
 			projectRoot = "";
 			targets = (
 				688A503B1E2DBBA50058C84E /* PuzzlePhoto */,
-				688A50541E2DBBA50058C84E /* PuzzlePhotoTests */,
-				688A505F1E2DBBA50058C84E /* PuzzlePhotoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -257,20 +148,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		688A50531E2DBBA50058C84E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688A505E1E2DBBA50058C84E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -284,36 +161,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		688A50511E2DBBA50058C84E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				688A505A1E2DBBA50058C84E /* PuzzlePhotoTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688A505C1E2DBBA50058C84E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				688A50651E2DBBA50058C84E /* PuzzlePhotoUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		688A50571E2DBBA50058C84E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 688A503B1E2DBBA50058C84E /* PuzzlePhoto */;
-			targetProxy = 688A50561E2DBBA50058C84E /* PBXContainerItemProxy */;
-		};
-		688A50621E2DBBA50058C84E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 688A503B1E2DBBA50058C84E /* PuzzlePhoto */;
-			targetProxy = 688A50611E2DBBA50058C84E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		688A50481E2DBBA50058C84E /* Main.storyboard */ = {
@@ -427,14 +275,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = PuzzlePhoto/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.PuzzlePhoto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Debug;
 		};
@@ -442,60 +290,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = PuzzlePhoto/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.PuzzlePhoto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
-			};
-			name = Release;
-		};
-		688A506D1E2DBBA50058C84E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = PuzzlePhotoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.PuzzlePhotoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PuzzlePhoto.app/PuzzlePhoto";
-			};
-			name = Debug;
-		};
-		688A506E1E2DBBA50058C84E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = PuzzlePhotoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.PuzzlePhotoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PuzzlePhoto.app/PuzzlePhoto";
-			};
-			name = Release;
-		};
-		688A50701E2DBBA50058C84E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = PuzzlePhotoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.PuzzlePhotoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = PuzzlePhoto;
-			};
-			name = Debug;
-		};
-		688A50711E2DBBA50058C84E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = PuzzlePhotoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.PuzzlePhotoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = PuzzlePhoto;
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Release;
 		};
@@ -518,22 +320,7 @@
 				688A506B1E2DBBA50058C84E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		688A506C1E2DBBA50058C84E /* Build configuration list for PBXNativeTarget "PuzzlePhotoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				688A506D1E2DBBA50058C84E /* Debug */,
-				688A506E1E2DBBA50058C84E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		688A506F1E2DBBA50058C84E /* Build configuration list for PBXNativeTarget "PuzzlePhotoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				688A50701E2DBBA50058C84E /* Debug */,
-				688A50711E2DBBA50058C84E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

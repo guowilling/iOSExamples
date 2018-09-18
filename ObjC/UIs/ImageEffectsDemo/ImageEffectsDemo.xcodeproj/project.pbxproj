@@ -13,28 +13,9 @@
 		688A50CD1E2DC94A0058C84E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688A50CB1E2DC94A0058C84E /* Main.storyboard */; };
 		688A50CF1E2DC94A0058C84E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688A50CE1E2DC94A0058C84E /* Assets.xcassets */; };
 		688A50D21E2DC94A0058C84E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688A50D01E2DC94A0058C84E /* LaunchScreen.storyboard */; };
-		688A50DD1E2DC94A0058C84E /* ImageEffectsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 688A50DC1E2DC94A0058C84E /* ImageEffectsDemoTests.m */; };
-		688A50E81E2DC94A0058C84E /* ImageEffectsDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 688A50E71E2DC94A0058C84E /* ImageEffectsDemoUITests.m */; };
 		688A50F81E2DC95B0058C84E /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 688A50F71E2DC95B0058C84E /* UIImage+ImageEffects.m */; };
 		688A50FC1E2DCA980058C84E /* naruto.png in Resources */ = {isa = PBXBuildFile; fileRef = 688A50FB1E2DCA980058C84E /* naruto.png */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		688A50D91E2DC94A0058C84E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 688A50B71E2DC94A0058C84E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 688A50BE1E2DC94A0058C84E;
-			remoteInfo = ImageEffectsDemo;
-		};
-		688A50E41E2DC94A0058C84E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 688A50B71E2DC94A0058C84E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 688A50BE1E2DC94A0058C84E;
-			remoteInfo = ImageEffectsDemo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		688A50BF1E2DC94A0058C84E /* ImageEffectsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageEffectsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,12 +28,6 @@
 		688A50CE1E2DC94A0058C84E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		688A50D11E2DC94A0058C84E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		688A50D31E2DC94A0058C84E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		688A50D81E2DC94A0058C84E /* ImageEffectsDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageEffectsDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		688A50DC1E2DC94A0058C84E /* ImageEffectsDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageEffectsDemoTests.m; sourceTree = "<group>"; };
-		688A50DE1E2DC94A0058C84E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		688A50E31E2DC94A0058C84E /* ImageEffectsDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageEffectsDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		688A50E71E2DC94A0058C84E /* ImageEffectsDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageEffectsDemoUITests.m; sourceTree = "<group>"; };
-		688A50E91E2DC94A0058C84E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		688A50F61E2DC95B0058C84E /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		688A50F71E2DC95B0058C84E /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		688A50FB1E2DCA980058C84E /* naruto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = naruto.png; sourceTree = "<group>"; };
@@ -66,20 +41,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		688A50D51E2DC94A0058C84E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688A50E01E2DC94A0058C84E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -87,8 +48,6 @@
 			isa = PBXGroup;
 			children = (
 				688A50C11E2DC94A0058C84E /* ImageEffectsDemo */,
-				688A50DB1E2DC94A0058C84E /* ImageEffectsDemoTests */,
-				688A50E61E2DC94A0058C84E /* ImageEffectsDemoUITests */,
 				688A50C01E2DC94A0058C84E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,8 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				688A50BF1E2DC94A0058C84E /* ImageEffectsDemo.app */,
-				688A50D81E2DC94A0058C84E /* ImageEffectsDemoTests.xctest */,
-				688A50E31E2DC94A0058C84E /* ImageEffectsDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,24 +84,6 @@
 				688A50C31E2DC94A0058C84E /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		688A50DB1E2DC94A0058C84E /* ImageEffectsDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				688A50DC1E2DC94A0058C84E /* ImageEffectsDemoTests.m */,
-				688A50DE1E2DC94A0058C84E /* Info.plist */,
-			);
-			path = ImageEffectsDemoTests;
-			sourceTree = "<group>";
-		};
-		688A50E61E2DC94A0058C84E /* ImageEffectsDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				688A50E71E2DC94A0058C84E /* ImageEffectsDemoUITests.m */,
-				688A50E91E2DC94A0058C84E /* Info.plist */,
-			);
-			path = ImageEffectsDemoUITests;
 			sourceTree = "<group>";
 		};
 		688A50F51E2DC95B0058C84E /* UIImage+ImageEffects */ = {
@@ -176,42 +115,6 @@
 			productReference = 688A50BF1E2DC94A0058C84E /* ImageEffectsDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		688A50D71E2DC94A0058C84E /* ImageEffectsDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 688A50EF1E2DC94A0058C84E /* Build configuration list for PBXNativeTarget "ImageEffectsDemoTests" */;
-			buildPhases = (
-				688A50D41E2DC94A0058C84E /* Sources */,
-				688A50D51E2DC94A0058C84E /* Frameworks */,
-				688A50D61E2DC94A0058C84E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				688A50DA1E2DC94A0058C84E /* PBXTargetDependency */,
-			);
-			name = ImageEffectsDemoTests;
-			productName = ImageEffectsDemoTests;
-			productReference = 688A50D81E2DC94A0058C84E /* ImageEffectsDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		688A50E21E2DC94A0058C84E /* ImageEffectsDemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 688A50F21E2DC94A0058C84E /* Build configuration list for PBXNativeTarget "ImageEffectsDemoUITests" */;
-			buildPhases = (
-				688A50DF1E2DC94A0058C84E /* Sources */,
-				688A50E01E2DC94A0058C84E /* Frameworks */,
-				688A50E11E2DC94A0058C84E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				688A50E51E2DC94A0058C84E /* PBXTargetDependency */,
-			);
-			name = ImageEffectsDemoUITests;
-			productName = ImageEffectsDemoUITests;
-			productReference = 688A50E31E2DC94A0058C84E /* ImageEffectsDemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -223,18 +126,8 @@
 				TargetAttributes = {
 					688A50BE1E2DC94A0058C84E = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = Y4FK8UXDXW;
+						DevelopmentTeam = L8C6M6B8E9;
 						ProvisioningStyle = Manual;
-					};
-					688A50D71E2DC94A0058C84E = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 688A50BE1E2DC94A0058C84E;
-					};
-					688A50E21E2DC94A0058C84E = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 688A50BE1E2DC94A0058C84E;
 					};
 				};
 			};
@@ -252,8 +145,6 @@
 			projectRoot = "";
 			targets = (
 				688A50BE1E2DC94A0058C84E /* ImageEffectsDemo */,
-				688A50D71E2DC94A0058C84E /* ImageEffectsDemoTests */,
-				688A50E21E2DC94A0058C84E /* ImageEffectsDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -267,20 +158,6 @@
 				688A50D21E2DC94A0058C84E /* LaunchScreen.storyboard in Resources */,
 				688A50CF1E2DC94A0058C84E /* Assets.xcassets in Resources */,
 				688A50CD1E2DC94A0058C84E /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688A50D61E2DC94A0058C84E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688A50E11E2DC94A0058C84E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,36 +175,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		688A50D41E2DC94A0058C84E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				688A50DD1E2DC94A0058C84E /* ImageEffectsDemoTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688A50DF1E2DC94A0058C84E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				688A50E81E2DC94A0058C84E /* ImageEffectsDemoUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		688A50DA1E2DC94A0058C84E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 688A50BE1E2DC94A0058C84E /* ImageEffectsDemo */;
-			targetProxy = 688A50D91E2DC94A0058C84E /* PBXContainerItemProxy */;
-		};
-		688A50E51E2DC94A0058C84E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 688A50BE1E2DC94A0058C84E /* ImageEffectsDemo */;
-			targetProxy = 688A50E41E2DC94A0058C84E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		688A50CB1E2DC94A0058C84E /* Main.storyboard */ = {
@@ -441,14 +289,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = ImageEffectsDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.ImageEffectsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Debug;
 		};
@@ -456,60 +304,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = ImageEffectsDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.ImageEffectsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
-			};
-			name = Release;
-		};
-		688A50F01E2DC94A0058C84E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ImageEffectsDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.ImageEffectsDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageEffectsDemo.app/ImageEffectsDemo";
-			};
-			name = Debug;
-		};
-		688A50F11E2DC94A0058C84E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ImageEffectsDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.ImageEffectsDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageEffectsDemo.app/ImageEffectsDemo";
-			};
-			name = Release;
-		};
-		688A50F31E2DC94A0058C84E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = ImageEffectsDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.ImageEffectsDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ImageEffectsDemo;
-			};
-			name = Debug;
-		};
-		688A50F41E2DC94A0058C84E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = ImageEffectsDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.ImageEffectsDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ImageEffectsDemo;
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Release;
 		};
@@ -530,24 +332,6 @@
 			buildConfigurations = (
 				688A50ED1E2DC94A0058C84E /* Debug */,
 				688A50EE1E2DC94A0058C84E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		688A50EF1E2DC94A0058C84E /* Build configuration list for PBXNativeTarget "ImageEffectsDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				688A50F01E2DC94A0058C84E /* Debug */,
-				688A50F11E2DC94A0058C84E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		688A50F21E2DC94A0058C84E /* Build configuration list for PBXNativeTarget "ImageEffectsDemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				688A50F31E2DC94A0058C84E /* Debug */,
-				688A50F41E2DC94A0058C84E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

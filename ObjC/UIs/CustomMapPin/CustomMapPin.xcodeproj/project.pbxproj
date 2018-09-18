@@ -13,29 +13,10 @@
 		68324B8D1E55C9FB00A0F3C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68324B8B1E55C9FB00A0F3C3 /* Main.storyboard */; };
 		68324B8F1E55C9FB00A0F3C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68324B8E1E55C9FB00A0F3C3 /* Assets.xcassets */; };
 		68324B921E55C9FB00A0F3C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68324B901E55C9FB00A0F3C3 /* LaunchScreen.storyboard */; };
-		68324B9D1E55C9FC00A0F3C3 /* CustomMapPinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68324B9C1E55C9FC00A0F3C3 /* CustomMapPinTests.m */; };
-		68324BA81E55C9FC00A0F3C3 /* CustomMapPinUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68324BA71E55C9FC00A0F3C3 /* CustomMapPinUITests.m */; };
 		68324BBB1E55CA3C00A0F3C3 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 68324BB61E55CA3C00A0F3C3 /* NSString+Extension.m */; };
 		68324BBC1E55CA3C00A0F3C3 /* tempAvatar.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 68324BB71E55CA3C00A0F3C3 /* tempAvatar.jpeg */; };
 		68324BBD1E55CA3C00A0F3C3 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 68324BBA1E55CA3C00A0F3C3 /* UIView+Frame.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		68324B991E55C9FC00A0F3C3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 68324B771E55C9FB00A0F3C3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 68324B7E1E55C9FB00A0F3C3;
-			remoteInfo = CustomMapPin;
-		};
-		68324BA41E55C9FC00A0F3C3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 68324B771E55C9FB00A0F3C3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 68324B7E1E55C9FB00A0F3C3;
-			remoteInfo = CustomMapPin;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		68324B7F1E55C9FB00A0F3C3 /* CustomMapPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomMapPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,12 +29,6 @@
 		68324B8E1E55C9FB00A0F3C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68324B911E55C9FB00A0F3C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68324B931E55C9FB00A0F3C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		68324B981E55C9FC00A0F3C3 /* CustomMapPinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomMapPinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		68324B9C1E55C9FC00A0F3C3 /* CustomMapPinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomMapPinTests.m; sourceTree = "<group>"; };
-		68324B9E1E55C9FC00A0F3C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		68324BA31E55C9FC00A0F3C3 /* CustomMapPinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomMapPinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		68324BA71E55C9FC00A0F3C3 /* CustomMapPinUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomMapPinUITests.m; sourceTree = "<group>"; };
-		68324BA91E55C9FC00A0F3C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68324BB51E55CA3C00A0F3C3 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		68324BB61E55CA3C00A0F3C3 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		68324BB71E55CA3C00A0F3C3 /* tempAvatar.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempAvatar.jpeg; sourceTree = "<group>"; };
@@ -70,20 +45,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		68324B951E55C9FC00A0F3C3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		68324BA01E55C9FC00A0F3C3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -91,8 +52,6 @@
 			isa = PBXGroup;
 			children = (
 				68324B811E55C9FB00A0F3C3 /* CustomMapPin */,
-				68324B9B1E55C9FC00A0F3C3 /* CustomMapPinTests */,
-				68324BA61E55C9FC00A0F3C3 /* CustomMapPinUITests */,
 				68324B801E55C9FB00A0F3C3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,8 +60,6 @@
 			isa = PBXGroup;
 			children = (
 				68324B7F1E55C9FB00A0F3C3 /* CustomMapPin.app */,
-				68324B981E55C9FC00A0F3C3 /* CustomMapPinTests.xctest */,
-				68324BA31E55C9FC00A0F3C3 /* CustomMapPinUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,24 +94,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		68324B9B1E55C9FC00A0F3C3 /* CustomMapPinTests */ = {
-			isa = PBXGroup;
-			children = (
-				68324B9C1E55C9FC00A0F3C3 /* CustomMapPinTests.m */,
-				68324B9E1E55C9FC00A0F3C3 /* Info.plist */,
-			);
-			path = CustomMapPinTests;
-			sourceTree = "<group>";
-		};
-		68324BA61E55C9FC00A0F3C3 /* CustomMapPinUITests */ = {
-			isa = PBXGroup;
-			children = (
-				68324BA71E55C9FC00A0F3C3 /* CustomMapPinUITests.m */,
-				68324BA91E55C9FC00A0F3C3 /* Info.plist */,
-			);
-			path = CustomMapPinUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,42 +114,6 @@
 			productReference = 68324B7F1E55C9FB00A0F3C3 /* CustomMapPin.app */;
 			productType = "com.apple.product-type.application";
 		};
-		68324B971E55C9FC00A0F3C3 /* CustomMapPinTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 68324BAF1E55C9FC00A0F3C3 /* Build configuration list for PBXNativeTarget "CustomMapPinTests" */;
-			buildPhases = (
-				68324B941E55C9FC00A0F3C3 /* Sources */,
-				68324B951E55C9FC00A0F3C3 /* Frameworks */,
-				68324B961E55C9FC00A0F3C3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				68324B9A1E55C9FC00A0F3C3 /* PBXTargetDependency */,
-			);
-			name = CustomMapPinTests;
-			productName = CustomMapPinTests;
-			productReference = 68324B981E55C9FC00A0F3C3 /* CustomMapPinTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		68324BA21E55C9FC00A0F3C3 /* CustomMapPinUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 68324BB21E55C9FC00A0F3C3 /* Build configuration list for PBXNativeTarget "CustomMapPinUITests" */;
-			buildPhases = (
-				68324B9F1E55C9FC00A0F3C3 /* Sources */,
-				68324BA01E55C9FC00A0F3C3 /* Frameworks */,
-				68324BA11E55C9FC00A0F3C3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				68324BA51E55C9FC00A0F3C3 /* PBXTargetDependency */,
-			);
-			name = CustomMapPinUITests;
-			productName = CustomMapPinUITests;
-			productReference = 68324BA31E55C9FC00A0F3C3 /* CustomMapPinUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -222,18 +125,8 @@
 				TargetAttributes = {
 					68324B7E1E55C9FB00A0F3C3 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = Y4FK8UXDXW;
+						DevelopmentTeam = L8C6M6B8E9;
 						ProvisioningStyle = Manual;
-					};
-					68324B971E55C9FC00A0F3C3 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 68324B7E1E55C9FB00A0F3C3;
-					};
-					68324BA21E55C9FC00A0F3C3 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 68324B7E1E55C9FB00A0F3C3;
 					};
 				};
 			};
@@ -251,8 +144,6 @@
 			projectRoot = "";
 			targets = (
 				68324B7E1E55C9FB00A0F3C3 /* CustomMapPin */,
-				68324B971E55C9FC00A0F3C3 /* CustomMapPinTests */,
-				68324BA21E55C9FC00A0F3C3 /* CustomMapPinUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -266,20 +157,6 @@
 				68324B921E55C9FB00A0F3C3 /* LaunchScreen.storyboard in Resources */,
 				68324B8F1E55C9FB00A0F3C3 /* Assets.xcassets in Resources */,
 				68324B8D1E55C9FB00A0F3C3 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		68324B961E55C9FC00A0F3C3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		68324BA11E55C9FC00A0F3C3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,36 +175,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		68324B941E55C9FC00A0F3C3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				68324B9D1E55C9FC00A0F3C3 /* CustomMapPinTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		68324B9F1E55C9FC00A0F3C3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				68324BA81E55C9FC00A0F3C3 /* CustomMapPinUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		68324B9A1E55C9FC00A0F3C3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 68324B7E1E55C9FB00A0F3C3 /* CustomMapPin */;
-			targetProxy = 68324B991E55C9FC00A0F3C3 /* PBXContainerItemProxy */;
-		};
-		68324BA51E55C9FC00A0F3C3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 68324B7E1E55C9FB00A0F3C3 /* CustomMapPin */;
-			targetProxy = 68324BA41E55C9FC00A0F3C3 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		68324B8B1E55C9FB00A0F3C3 /* Main.storyboard */ = {
@@ -441,13 +289,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = CustomMapPin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.CustomMapPin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Debug;
 		};
@@ -455,59 +304,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = CustomMapPin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.CustomMapPin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
-			};
-			name = Release;
-		};
-		68324BB01E55C9FC00A0F3C3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = CustomMapPinTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.CustomMapPinTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomMapPin.app/CustomMapPin";
-			};
-			name = Debug;
-		};
-		68324BB11E55C9FC00A0F3C3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = CustomMapPinTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.CustomMapPinTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomMapPin.app/CustomMapPin";
-			};
-			name = Release;
-		};
-		68324BB31E55C9FC00A0F3C3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = CustomMapPinUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.CustomMapPinUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = CustomMapPin;
-			};
-			name = Debug;
-		};
-		68324BB41E55C9FC00A0F3C3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = CustomMapPinUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.CustomMapPinUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = CustomMapPin;
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Release;
 		};
@@ -530,22 +334,7 @@
 				68324BAE1E55C9FC00A0F3C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		68324BAF1E55C9FC00A0F3C3 /* Build configuration list for PBXNativeTarget "CustomMapPinTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				68324BB01E55C9FC00A0F3C3 /* Debug */,
-				68324BB11E55C9FC00A0F3C3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		68324BB21E55C9FC00A0F3C3 /* Build configuration list for PBXNativeTarget "CustomMapPinUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				68324BB31E55C9FC00A0F3C3 /* Debug */,
-				68324BB41E55C9FC00A0F3C3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

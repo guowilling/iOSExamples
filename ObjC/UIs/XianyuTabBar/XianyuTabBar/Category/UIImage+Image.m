@@ -11,7 +11,6 @@
 @implementation UIImage (Image)
 
 + (UIImage *)imageWithColor:(UIColor *)color {
-
     CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
     CGContextRef ctx = UIGraphicsGetCurrentContext();

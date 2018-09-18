@@ -15,16 +15,14 @@
 static sqlite3 *sqlite3DB;
 
 + (void)initialize {
-    
-    NSString *cachePath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0];
-    NSString *filePath = [cachePath stringByAppendingPathComponent:@"contact.sqlite"];
+    NSString *cachesDirectory = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0];
+    NSString *filePath = [cachesDirectory stringByAppendingPathComponent:@"contact.sqlite"];
     int status = (sqlite3_open(filePath.UTF8String, &sqlite3DB));
     if (status == SQLITE_OK) {
         NSLog(@"数据库连接成功");
     } else {
         NSLog(@"数据库连接失败");
     }
-    
     NSString *sql = @"create table if not exists t_contact (id integer primary key autoincrement,name text,phone text);";
     char *error;
     sqlite3_exec(sqlite3DB, sql.UTF8String, NULL, NULL, &error);
@@ -33,8 +31,7 @@ static sqlite3 *sqlite3DB;
     }
 }
 
-+ (BOOL)executeWithSql:(NSString *)sql {
-    
++ (BOOL)executeWithSQL:(NSString *)sql {
     BOOL flag;
     char *error;
     sqlite3_exec(sqlite3DB, sql.UTF8String, NULL, NULL, &error);
@@ -47,10 +44,9 @@ static sqlite3 *sqlite3DB;
     return flag;
 }
 
-+ (void)saveWithContact:(Contact *)contact {
-    
++ (void)saveContact:(Contact *)contact {
     NSString *sql = [NSString stringWithFormat:@"insert into t_contact (name,phone) values ('%@','%@')", contact.name, contact.phone];
-    BOOL flag = [self executeWithSql:sql];
+    BOOL flag = [self executeWithSQL:sql];
     if (flag) {
         NSLog(@"插入数据成功");
     } else {
@@ -58,13 +54,7 @@ static sqlite3 *sqlite3DB;
     }
 }
 
-+ (NSArray *)contacts {
-    
-    return [self contactWithSql:@"select * from t_contact"];
-}
-
-+ (NSArray *)contactWithSql:(NSString *)sql {
-    
++ (NSArray *)contactWithSQL:(NSString *)sql {
     NSMutableArray *arrayM = [NSMutableArray array];
     sqlite3_stmt *stmt = nil;
     int status = sqlite3_prepare_v2(sqlite3DB, sql.UTF8String, -1, &stmt, NULL);
@@ -77,6 +67,10 @@ static sqlite3 *sqlite3DB;
         }
     }
     return arrayM;
+}
+
++ (NSArray *)contacts {
+    return [self contactWithSQL:@"select * from t_contact"];
 }
 
 @end

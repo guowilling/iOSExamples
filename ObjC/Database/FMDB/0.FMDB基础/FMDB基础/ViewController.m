@@ -17,7 +17,6 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     for (int i = 0; i < 10; i++) {
@@ -34,7 +33,6 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
     [SRShopTool deleteShop:100];
     
     NSArray *shops = [SRShopTool shops];

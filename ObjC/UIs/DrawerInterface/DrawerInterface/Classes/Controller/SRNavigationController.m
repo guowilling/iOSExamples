@@ -4,7 +4,6 @@
 @implementation SRNavigationController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     UINavigationBar *appearance = [UINavigationBar appearance];

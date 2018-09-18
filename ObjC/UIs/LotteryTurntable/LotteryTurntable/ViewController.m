@@ -18,7 +18,6 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     _wheelView = [WheelView wheel];
@@ -27,12 +26,10 @@
 }
 
 - (IBAction)start:(id)sender {
-    
     [self.wheelView startRotating];
 }
 
 - (IBAction)stop:(id)sender {
-    
     [self.wheelView stopRotating];
 }
 

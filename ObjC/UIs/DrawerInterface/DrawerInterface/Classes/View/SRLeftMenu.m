@@ -11,7 +11,6 @@
 @implementation SRLeftMenu
 
 - (id)initWithFrame:(CGRect)frame {
-    
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor clearColor];
         CGFloat alpha = 0.2;
@@ -26,7 +25,6 @@
 }
 
 - (UIButton *)setupBtnWithIcon:(NSString *)icon title:(NSString *)title bgColor:(UIColor *)bgColor {
-    
     UIButton *btn = [[UIButton alloc] init];
     [btn.titleLabel setFont:[UIFont systemFontOfSize:17]];
     [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -44,7 +42,6 @@
 }
 
 - (void)buttonClick:(UIButton *)button {
-    
     if ([self.delegate respondsToSelector:@selector(leftMenu:didSelectedButtonFromIndex:toIndex:)]) {
         [self.delegate leftMenu:self didSelectedButtonFromIndex:self.selectedButton.tag toIndex:button.tag];
     }
@@ -54,7 +51,6 @@
 }
 
 - (void)layoutSubviews {
-    
     [super layoutSubviews];
     
     NSInteger btnCount = self.subviews.count;

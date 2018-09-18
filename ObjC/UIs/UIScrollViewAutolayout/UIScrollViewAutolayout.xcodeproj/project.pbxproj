@@ -13,8 +13,6 @@
 		6836EA7D1E7A67C200E1C411 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6836EA7B1E7A67C200E1C411 /* Main.storyboard */; };
 		6836EA7F1E7A67C200E1C411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6836EA7E1E7A67C200E1C411 /* Assets.xcassets */; };
 		6836EA821E7A67C200E1C411 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6836EA801E7A67C200E1C411 /* LaunchScreen.storyboard */; };
-		6836EA8D1E7A67C200E1C411 /* UIScrollViewAutolayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6836EA8C1E7A67C200E1C411 /* UIScrollViewAutolayoutTests.m */; };
-		6836EA981E7A67C200E1C411 /* UIScrollViewAutolayoutUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6836EA971E7A67C200E1C411 /* UIScrollViewAutolayoutUITests.m */; };
 		6836EABF1E7A6C1500E1C411 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6836EAA71E7A6C1500E1C411 /* MASCompositeConstraint.m */; };
 		6836EAC01E7A6C1500E1C411 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6836EAAA1E7A6C1500E1C411 /* MASConstraint.m */; };
 		6836EAC11E7A6C1500E1C411 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6836EAAC1E7A6C1500E1C411 /* MASConstraintMaker.m */; };
@@ -27,23 +25,6 @@
 		6836EAC81E7A6C1500E1C411 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6836EABE1E7A6C1500E1C411 /* ViewController+MASAdditions.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		6836EA891E7A67C200E1C411 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6836EA671E7A67C200E1C411 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6836EA6E1E7A67C200E1C411;
-			remoteInfo = UIScrollViewAutolayout;
-		};
-		6836EA941E7A67C200E1C411 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6836EA671E7A67C200E1C411 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6836EA6E1E7A67C200E1C411;
-			remoteInfo = UIScrollViewAutolayout;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		6836EA6F1E7A67C200E1C411 /* UIScrollViewAutolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIScrollViewAutolayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6836EA731E7A67C200E1C411 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -55,12 +36,6 @@
 		6836EA7E1E7A67C200E1C411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6836EA811E7A67C200E1C411 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6836EA831E7A67C200E1C411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6836EA881E7A67C200E1C411 /* UIScrollViewAutolayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIScrollViewAutolayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6836EA8C1E7A67C200E1C411 /* UIScrollViewAutolayoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewAutolayoutTests.m; sourceTree = "<group>"; };
-		6836EA8E1E7A67C200E1C411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6836EA931E7A67C200E1C411 /* UIScrollViewAutolayoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIScrollViewAutolayoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6836EA971E7A67C200E1C411 /* UIScrollViewAutolayoutUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewAutolayoutUITests.m; sourceTree = "<group>"; };
-		6836EA991E7A67C200E1C411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6836EAA61E7A6C1500E1C411 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		6836EAA71E7A6C1500E1C411 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		6836EAA81E7A6C1500E1C411 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -96,20 +71,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6836EA851E7A67C200E1C411 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6836EA901E7A67C200E1C411 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -117,8 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				6836EA711E7A67C200E1C411 /* UIScrollViewAutolayout */,
-				6836EA8B1E7A67C200E1C411 /* UIScrollViewAutolayoutTests */,
-				6836EA961E7A67C200E1C411 /* UIScrollViewAutolayoutUITests */,
 				6836EA701E7A67C200E1C411 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,8 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				6836EA6F1E7A67C200E1C411 /* UIScrollViewAutolayout.app */,
-				6836EA881E7A67C200E1C411 /* UIScrollViewAutolayoutTests.xctest */,
-				6836EA931E7A67C200E1C411 /* UIScrollViewAutolayoutUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,24 +113,6 @@
 				6836EA831E7A67C200E1C411 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6836EA8B1E7A67C200E1C411 /* UIScrollViewAutolayoutTests */ = {
-			isa = PBXGroup;
-			children = (
-				6836EA8C1E7A67C200E1C411 /* UIScrollViewAutolayoutTests.m */,
-				6836EA8E1E7A67C200E1C411 /* Info.plist */,
-			);
-			path = UIScrollViewAutolayoutTests;
-			sourceTree = "<group>";
-		};
-		6836EA961E7A67C200E1C411 /* UIScrollViewAutolayoutUITests */ = {
-			isa = PBXGroup;
-			children = (
-				6836EA971E7A67C200E1C411 /* UIScrollViewAutolayoutUITests.m */,
-				6836EA991E7A67C200E1C411 /* Info.plist */,
-			);
-			path = UIScrollViewAutolayoutUITests;
 			sourceTree = "<group>";
 		};
 		6836EAA51E7A6C1500E1C411 /* Masonry */ = {
@@ -228,42 +167,6 @@
 			productReference = 6836EA6F1E7A67C200E1C411 /* UIScrollViewAutolayout.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6836EA871E7A67C200E1C411 /* UIScrollViewAutolayoutTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6836EA9F1E7A67C200E1C411 /* Build configuration list for PBXNativeTarget "UIScrollViewAutolayoutTests" */;
-			buildPhases = (
-				6836EA841E7A67C200E1C411 /* Sources */,
-				6836EA851E7A67C200E1C411 /* Frameworks */,
-				6836EA861E7A67C200E1C411 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6836EA8A1E7A67C200E1C411 /* PBXTargetDependency */,
-			);
-			name = UIScrollViewAutolayoutTests;
-			productName = UIScrollViewAutolayoutTests;
-			productReference = 6836EA881E7A67C200E1C411 /* UIScrollViewAutolayoutTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		6836EA921E7A67C200E1C411 /* UIScrollViewAutolayoutUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6836EAA21E7A67C200E1C411 /* Build configuration list for PBXNativeTarget "UIScrollViewAutolayoutUITests" */;
-			buildPhases = (
-				6836EA8F1E7A67C200E1C411 /* Sources */,
-				6836EA901E7A67C200E1C411 /* Frameworks */,
-				6836EA911E7A67C200E1C411 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6836EA951E7A67C200E1C411 /* PBXTargetDependency */,
-			);
-			name = UIScrollViewAutolayoutUITests;
-			productName = UIScrollViewAutolayoutUITests;
-			productReference = 6836EA931E7A67C200E1C411 /* UIScrollViewAutolayoutUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -275,18 +178,8 @@
 				TargetAttributes = {
 					6836EA6E1E7A67C200E1C411 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = Y4FK8UXDXW;
+						DevelopmentTeam = L8C6M6B8E9;
 						ProvisioningStyle = Manual;
-					};
-					6836EA871E7A67C200E1C411 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 6836EA6E1E7A67C200E1C411;
-					};
-					6836EA921E7A67C200E1C411 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 6836EA6E1E7A67C200E1C411;
 					};
 				};
 			};
@@ -304,8 +197,6 @@
 			projectRoot = "";
 			targets = (
 				6836EA6E1E7A67C200E1C411 /* UIScrollViewAutolayout */,
-				6836EA871E7A67C200E1C411 /* UIScrollViewAutolayoutTests */,
-				6836EA921E7A67C200E1C411 /* UIScrollViewAutolayoutUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -318,20 +209,6 @@
 				6836EA821E7A67C200E1C411 /* LaunchScreen.storyboard in Resources */,
 				6836EA7F1E7A67C200E1C411 /* Assets.xcassets in Resources */,
 				6836EA7D1E7A67C200E1C411 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6836EA861E7A67C200E1C411 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6836EA911E7A67C200E1C411 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,36 +235,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6836EA841E7A67C200E1C411 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6836EA8D1E7A67C200E1C411 /* UIScrollViewAutolayoutTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6836EA8F1E7A67C200E1C411 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6836EA981E7A67C200E1C411 /* UIScrollViewAutolayoutUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		6836EA8A1E7A67C200E1C411 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6836EA6E1E7A67C200E1C411 /* UIScrollViewAutolayout */;
-			targetProxy = 6836EA891E7A67C200E1C411 /* PBXContainerItemProxy */;
-		};
-		6836EA951E7A67C200E1C411 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6836EA6E1E7A67C200E1C411 /* UIScrollViewAutolayout */;
-			targetProxy = 6836EA941E7A67C200E1C411 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6836EA7B1E7A67C200E1C411 /* Main.storyboard */ = {
@@ -501,13 +349,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = UIScrollViewAutolayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.UIScrollViewAutolayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Debug;
 		};
@@ -515,59 +364,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = UIScrollViewAutolayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.UIScrollViewAutolayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
-			};
-			name = Release;
-		};
-		6836EAA01E7A67C200E1C411 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = UIScrollViewAutolayoutTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.UIScrollViewAutolayoutTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIScrollViewAutolayout.app/UIScrollViewAutolayout";
-			};
-			name = Debug;
-		};
-		6836EAA11E7A67C200E1C411 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = UIScrollViewAutolayoutTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.UIScrollViewAutolayoutTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIScrollViewAutolayout.app/UIScrollViewAutolayout";
-			};
-			name = Release;
-		};
-		6836EAA31E7A67C200E1C411 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = UIScrollViewAutolayoutUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.UIScrollViewAutolayoutUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = UIScrollViewAutolayout;
-			};
-			name = Debug;
-		};
-		6836EAA41E7A67C200E1C411 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = UIScrollViewAutolayoutUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.UIScrollViewAutolayoutUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = UIScrollViewAutolayout;
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Release;
 		};
@@ -590,22 +394,7 @@
 				6836EA9E1E7A67C200E1C411 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		6836EA9F1E7A67C200E1C411 /* Build configuration list for PBXNativeTarget "UIScrollViewAutolayoutTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6836EAA01E7A67C200E1C411 /* Debug */,
-				6836EAA11E7A67C200E1C411 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		6836EAA21E7A67C200E1C411 /* Build configuration list for PBXNativeTarget "UIScrollViewAutolayoutUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6836EAA31E7A67C200E1C411 /* Debug */,
-				6836EAA41E7A67C200E1C411 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

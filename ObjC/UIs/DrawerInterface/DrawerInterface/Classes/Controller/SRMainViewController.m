@@ -8,9 +8,13 @@
 #import "SRRightMenuController.h"
 
 #define SRCoverTag 100
+
 #define SRNavShowAnimDuration 0.25
+
 #define SRLeftMenuY 50
+
 #define SRLeftMenuW 150
+
 #define SRLeftMenuH 300
 
 @interface SRMainViewController () <SRLeftMenuDelegate>
@@ -24,7 +28,6 @@
 @implementation SRMainViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     [self setupAllChildVcs];
@@ -35,7 +38,6 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    
     [super viewWillAppear:animated];
     
     self.showingNavC = self.childViewControllers[0];
@@ -43,7 +45,6 @@
 }
 
 - (void)setupAllChildVcs {
-    
     UIViewController *news = [[UIViewController alloc] init];
     [self addVc:news title:@"新闻"];
     UIViewController *reading = [[UIViewController alloc] init];
@@ -59,19 +60,17 @@
 }
 
 - (void)addVc:(UIViewController *)vc title:(NSString *)title {
-    
     vc.view.backgroundColor = SRRandomColor;
     SRNavTitleView *titleView = [[SRNavTitleView alloc] init];
     titleView.title = title;
     vc.navigationItem.titleView = titleView;
     vc.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(leftMenuClick) norImage:@"top_navigation_menuicon" highImage:nil];
     vc.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(rightMenuClick) norImage:@"top_navigation_infoicon" highImage:nil];
-    SRNavigationController *nav = [[SRNavigationController alloc] initWithRootViewController:vc];
-    [self addChildViewController:nav];
+    SRNavigationController *navC = [[SRNavigationController alloc] initWithRootViewController:vc];
+    [self addChildViewController:navC];
 }
 
 - (void)setupLeftMenu {
-    
     SRLeftMenu *leftMenu = [[SRLeftMenu alloc] init];
     leftMenu.frame = CGRectMake(0, SRLeftMenuY, SRLeftMenuW, SRLeftMenuH);
     leftMenu.delegate = self;
@@ -80,7 +79,6 @@
 }
 
 - (void)setupRightMenu {
-    
     SRRightMenuController *rightMenuVC = [[SRRightMenuController alloc] init];
     rightMenuVC.view.frame = self.view.bounds;
     rightMenuVC.view.sr_width = 250;
@@ -92,7 +90,6 @@
 #pragma mark - Monitor Methods
 
 - (void)leftMenuClick {
-    
     self.leftMenu.hidden = NO;
     self.rightMenuVC.view.hidden = YES;
     [UIView animateWithDuration:SRNavShowAnimDuration animations:^{
@@ -109,7 +106,6 @@
 }
 
 - (void)coverClick:(UIView *)cover {
-    
     [UIView animateWithDuration:SRNavShowAnimDuration animations:^{
         self.showingNavC.view.transform = CGAffineTransformIdentity;
     } completion:^(BOOL finished) {
@@ -118,7 +114,6 @@
 }
 
 - (void)rightMenuClick {
-    
     self.leftMenu.hidden = YES;
     self.rightMenuVC.view.hidden = NO;
     [UIView animateWithDuration:SRNavShowAnimDuration animations:^{
@@ -139,7 +134,6 @@
 #pragma mark - SRLeftMenuDelegate
 
 - (void)leftMenu:(SRLeftMenu *)menu didSelectedButtonFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex {
-    
     SRNavigationController *oldNav = self.childViewControllers[fromIndex];
     [oldNav.view removeFromSuperview];
     SRNavigationController *newNav = self.childViewControllers[toIndex];

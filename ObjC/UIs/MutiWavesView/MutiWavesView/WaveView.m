@@ -19,7 +19,6 @@
 @implementation WaveView
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    
     if (self = [super initWithFrame:frame]) {
         _waveHSpeed = 2.0f;
         _waveVSpeed = 1.0f;
@@ -29,7 +28,6 @@
 }
 
 - (void)startWave {
-    
     if (self.waveShapeLayer) {
         return;
     }
@@ -43,7 +41,6 @@
 }
 
 - (void)updateWaveShapeLayer {
-    
     switch (self.waveDirection) {
         case WaveDirectionForward: {
             self.waveOffsetX += self.waveHSpeed;
@@ -73,7 +70,6 @@
 }
 
 - (void)stopWave {
-    
     if (!self.waveDisplayLink) {
         return;
     }

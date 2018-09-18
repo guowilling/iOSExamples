@@ -18,7 +18,6 @@
 @implementation MyNavigationController
 
 + (void)initialize {
-    
     {
         UIBarButtonItem *barButtonItemAppearance = [UIBarButtonItem appearance];
         NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
@@ -37,12 +36,10 @@
 }
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    
     if (self.viewControllers.count > 0) {
         viewController.hidesBottomBarWhenPushed = YES;
     }

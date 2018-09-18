@@ -31,7 +31,6 @@
 @implementation SRCustomSegmentedControl
 
 - (NSMutableArray *)allTitleButtons {
-    
     if (!_allTitleButtons) {
         _allTitleButtons = [NSMutableArray array];
     }
@@ -39,7 +38,6 @@
 }
 
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray *)titles didTapTitleBlock:(DidTapTitleBlock)didTapTitleBlock {
-    
     if (self = [super initWithFrame:frame]) {
         _titles = titles;
         _didTapTitleBlock = didTapTitleBlock;
@@ -63,7 +61,6 @@
 }
 
 - (void)setupSliderView {
-    
     UIView *sliderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width / self.titles.count, self.frame.size.height)];
     sliderView.backgroundColor = _sliderColor;
     [sliderView.layer setCornerRadius:(sliderView.frame.size.height * 0.5)];
@@ -73,7 +70,6 @@
 }
 
 - (void)setupTitleButtons {
-    
     NSInteger count = self.titles.count;
     CGFloat btnW = self.frame.size.width / count;
     CGFloat btnH = self.frame.size.height;
@@ -97,7 +93,6 @@
 }
 
 - (void)buttonClick:(UIButton *)button {
-    
     [self.selectButton setTitleColor:self.titleNormalColor forState:UIControlStateNormal];
     
     [button setTitleColor:self.titleSelectColor forState:UIControlStateNormal];
@@ -116,7 +111,6 @@
 #pragma mark - Public Methods
 
 - (void)setTitleNormalColor:(UIColor *)titleNormalColor {
-    
     _titleNormalColor = titleNormalColor;
     
     for (UIButton *button in self.allTitleButtons) {
@@ -127,14 +121,12 @@
 }
 
 - (void)setTitleSelectColor:(UIColor *)titleSelectColor {
-    
     _titleSelectColor = titleSelectColor;
     
     [self.selectButton setTitleColor:self.titleSelectColor forState:UIControlStateNormal];
 }
 
 - (void)setTitleFont:(UIFont *)titleFont {
-    
     _titleFont = titleFont;
     
     for (UIButton *button in self.allTitleButtons) {
@@ -143,33 +135,28 @@
 }
 
 - (void)setSliderColor:(UIColor *)sliderColor {
-    
     _sliderColor = sliderColor;
     
     self.sliderView.backgroundColor = self.sliderColor;
 }
 
 - (void)setBorderColor:(UIColor *)borderColor {
-    
     _borderColor = borderColor;
     
     self.layer.borderColor = self.borderColor.CGColor;
 }
 
 - (void)setBorderWidth:(CGFloat)borderWidth {
-    
     _borderWidth = borderWidth;
     
     self.layer.borderWidth = self.borderWidth;
 }
 
 - (void)setSliderOffset:(CGPoint)offset {
-    
     [self setSliderOffset:offset animated:NO];
 }
 
 - (void)setSliderOffset:(CGPoint)offset animated:(BOOL)animated {
-    
     CGRect frame = self.sliderView.frame;
     frame.origin.x = offset.x;
     [UIView animateWithDuration:animated ? 0.3 : 0.0 animations:^{

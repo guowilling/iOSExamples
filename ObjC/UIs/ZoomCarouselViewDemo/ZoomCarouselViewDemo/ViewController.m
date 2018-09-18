@@ -23,7 +23,6 @@
 @implementation ViewController
 
 - (NSMutableArray *)images {
-    
     if (!_images) {
         _images = [NSMutableArray array];
         for (int index = 0; index < 5; index++) {
@@ -36,7 +35,6 @@
 }
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     /****************************
@@ -52,7 +50,6 @@
 }
 
 - (void)setupZoomCarouselViewNoCarousel {
-    
     ZoomCarouselView *zoomCarouselView = [[ZoomCarouselView alloc] initWithFrame:CGRectMake(0, 50, ScreenWidth, ScreenWidth * 0.5)];
     zoomCarouselView.delegate = self;
     zoomCarouselView.dataSource = self;
@@ -64,7 +61,6 @@
 }
 
 - (void)setupZoomCarouselViewCarousel {
-    
     ZoomCarouselView *zoomCarouselView = [[ZoomCarouselView alloc] initWithFrame:CGRectMake(0, 300, ScreenWidth, ScreenWidth * 0.5 + 25)];
     zoomCarouselView.delegate = self;
     zoomCarouselView.dataSource = self;
@@ -79,12 +75,10 @@
 #pragma mark - ZoomCarouselViewDataSource
 
 - (NSInteger)numberOfPagesInZoomCarouselView:(ZoomCarouselView *)zoomCarouselView {
-    
     return self.images.count;
 }
 
 - (UIView *)zoomCarouselView:(ZoomCarouselView *)zoomCarouselView cellForPageAtIndex:(NSInteger)index {
-    
     ZoomCarouselViewCell *cell = (ZoomCarouselViewCell *)[zoomCarouselView dequeueReusableCell];
     if (!cell) {
         cell = [[ZoomCarouselViewCell alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth - 100, ScreenWidth * 0.5)];
@@ -99,17 +93,14 @@
 #pragma mark - ZoomCarouselViewDelegate
 
 - (CGSize)sizeForCurrentPageInZoomCarouselView:(ZoomCarouselView *)zoomCarouselView {
-    
     return CGSizeMake(ScreenWidth - 100, ScreenWidth * 0.5);
 }
 
 - (void)zoomCarouselView:(ZoomCarouselView *)zoomCarouselView didScrollToPageAtIndex:(NSInteger)index {
-    
     NSLog(@"%zd", index);
 }
 
 - (void)zoomCarouselView:(ZoomCarouselView *)zoomCarouselView didSelectPage:(ZoomCarouselViewCell *)zoomCarouselViewCell atIndex:(NSInteger)index {
-    
     NSLog(@"%zd", index);
 }
 

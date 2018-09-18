@@ -13,27 +13,8 @@
 		688A508B1E2DC4120058C84E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688A50891E2DC4120058C84E /* Main.storyboard */; };
 		688A508D1E2DC4120058C84E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688A508C1E2DC4120058C84E /* Assets.xcassets */; };
 		688A50901E2DC4120058C84E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688A508E1E2DC4120058C84E /* LaunchScreen.storyboard */; };
-		688A509B1E2DC4120058C84E /* DynamicViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 688A509A1E2DC4120058C84E /* DynamicViewDemoTests.m */; };
-		688A50A61E2DC4120058C84E /* DynamicViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 688A50A51E2DC4120058C84E /* DynamicViewDemoUITests.m */; };
 		688A50B51E2DC4300058C84E /* DynamicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 688A50B41E2DC4300058C84E /* DynamicView.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		688A50971E2DC4120058C84E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 688A50751E2DC4120058C84E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 688A507C1E2DC4120058C84E;
-			remoteInfo = DynamicViewDemo;
-		};
-		688A50A21E2DC4120058C84E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 688A50751E2DC4120058C84E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 688A507C1E2DC4120058C84E;
-			remoteInfo = DynamicViewDemo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		688A507D1E2DC4120058C84E /* DynamicViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,32 +27,12 @@
 		688A508C1E2DC4120058C84E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		688A508F1E2DC4120058C84E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		688A50911E2DC4120058C84E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		688A50961E2DC4120058C84E /* DynamicViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		688A509A1E2DC4120058C84E /* DynamicViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicViewDemoTests.m; sourceTree = "<group>"; };
-		688A509C1E2DC4120058C84E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		688A50A11E2DC4120058C84E /* DynamicViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		688A50A51E2DC4120058C84E /* DynamicViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicViewDemoUITests.m; sourceTree = "<group>"; };
-		688A50A71E2DC4120058C84E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		688A50B31E2DC4300058C84E /* DynamicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicView.h; sourceTree = "<group>"; };
 		688A50B41E2DC4300058C84E /* DynamicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		688A507A1E2DC4120058C84E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688A50931E2DC4120058C84E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688A509E1E2DC4120058C84E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -85,8 +46,6 @@
 			isa = PBXGroup;
 			children = (
 				688A507F1E2DC4120058C84E /* DynamicViewDemo */,
-				688A50991E2DC4120058C84E /* DynamicViewDemoTests */,
-				688A50A41E2DC4120058C84E /* DynamicViewDemoUITests */,
 				688A507E1E2DC4120058C84E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,8 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				688A507D1E2DC4120058C84E /* DynamicViewDemo.app */,
-				688A50961E2DC4120058C84E /* DynamicViewDemoTests.xctest */,
-				688A50A11E2DC4120058C84E /* DynamicViewDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,10 +61,10 @@
 		688A507F1E2DC4120058C84E /* DynamicViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				688A50861E2DC4120058C84E /* ViewController.h */,
-				688A50871E2DC4120058C84E /* ViewController.m */,
 				688A50B31E2DC4300058C84E /* DynamicView.h */,
 				688A50B41E2DC4300058C84E /* DynamicView.m */,
+				688A50861E2DC4120058C84E /* ViewController.h */,
+				688A50871E2DC4120058C84E /* ViewController.m */,
 				688A50801E2DC4120058C84E /* Supporting Files */,
 			);
 			path = DynamicViewDemo;
@@ -125,24 +82,6 @@
 				688A50911E2DC4120058C84E /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		688A50991E2DC4120058C84E /* DynamicViewDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				688A509A1E2DC4120058C84E /* DynamicViewDemoTests.m */,
-				688A509C1E2DC4120058C84E /* Info.plist */,
-			);
-			path = DynamicViewDemoTests;
-			sourceTree = "<group>";
-		};
-		688A50A41E2DC4120058C84E /* DynamicViewDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				688A50A51E2DC4120058C84E /* DynamicViewDemoUITests.m */,
-				688A50A71E2DC4120058C84E /* Info.plist */,
-			);
-			path = DynamicViewDemoUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,42 +104,6 @@
 			productReference = 688A507D1E2DC4120058C84E /* DynamicViewDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		688A50951E2DC4120058C84E /* DynamicViewDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 688A50AD1E2DC4120058C84E /* Build configuration list for PBXNativeTarget "DynamicViewDemoTests" */;
-			buildPhases = (
-				688A50921E2DC4120058C84E /* Sources */,
-				688A50931E2DC4120058C84E /* Frameworks */,
-				688A50941E2DC4120058C84E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				688A50981E2DC4120058C84E /* PBXTargetDependency */,
-			);
-			name = DynamicViewDemoTests;
-			productName = DynamicViewDemoTests;
-			productReference = 688A50961E2DC4120058C84E /* DynamicViewDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		688A50A01E2DC4120058C84E /* DynamicViewDemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 688A50B01E2DC4120058C84E /* Build configuration list for PBXNativeTarget "DynamicViewDemoUITests" */;
-			buildPhases = (
-				688A509D1E2DC4120058C84E /* Sources */,
-				688A509E1E2DC4120058C84E /* Frameworks */,
-				688A509F1E2DC4120058C84E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				688A50A31E2DC4120058C84E /* PBXTargetDependency */,
-			);
-			name = DynamicViewDemoUITests;
-			productName = DynamicViewDemoUITests;
-			productReference = 688A50A11E2DC4120058C84E /* DynamicViewDemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -212,18 +115,8 @@
 				TargetAttributes = {
 					688A507C1E2DC4120058C84E = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = Y4FK8UXDXW;
+						DevelopmentTeam = L8C6M6B8E9;
 						ProvisioningStyle = Manual;
-					};
-					688A50951E2DC4120058C84E = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 688A507C1E2DC4120058C84E;
-					};
-					688A50A01E2DC4120058C84E = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 688A507C1E2DC4120058C84E;
 					};
 				};
 			};
@@ -241,8 +134,6 @@
 			projectRoot = "";
 			targets = (
 				688A507C1E2DC4120058C84E /* DynamicViewDemo */,
-				688A50951E2DC4120058C84E /* DynamicViewDemoTests */,
-				688A50A01E2DC4120058C84E /* DynamicViewDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -255,20 +146,6 @@
 				688A50901E2DC4120058C84E /* LaunchScreen.storyboard in Resources */,
 				688A508D1E2DC4120058C84E /* Assets.xcassets in Resources */,
 				688A508B1E2DC4120058C84E /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688A50941E2DC4120058C84E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688A509F1E2DC4120058C84E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,36 +163,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		688A50921E2DC4120058C84E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				688A509B1E2DC4120058C84E /* DynamicViewDemoTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688A509D1E2DC4120058C84E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				688A50A61E2DC4120058C84E /* DynamicViewDemoUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		688A50981E2DC4120058C84E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 688A507C1E2DC4120058C84E /* DynamicViewDemo */;
-			targetProxy = 688A50971E2DC4120058C84E /* PBXContainerItemProxy */;
-		};
-		688A50A31E2DC4120058C84E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 688A507C1E2DC4120058C84E /* DynamicViewDemo */;
-			targetProxy = 688A50A21E2DC4120058C84E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		688A50891E2DC4120058C84E /* Main.storyboard */ = {
@@ -429,14 +277,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = DynamicViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.DynamicViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Debug;
 		};
@@ -444,60 +292,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = DynamicViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.DynamicViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
-			};
-			name = Release;
-		};
-		688A50AE1E2DC4120058C84E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = DynamicViewDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.DynamicViewDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DynamicViewDemo.app/DynamicViewDemo";
-			};
-			name = Debug;
-		};
-		688A50AF1E2DC4120058C84E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = DynamicViewDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.DynamicViewDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DynamicViewDemo.app/DynamicViewDemo";
-			};
-			name = Release;
-		};
-		688A50B11E2DC4120058C84E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = DynamicViewDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.DynamicViewDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = DynamicViewDemo;
-			};
-			name = Debug;
-		};
-		688A50B21E2DC4120058C84E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = DynamicViewDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.DynamicViewDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = DynamicViewDemo;
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Release;
 		};
@@ -518,24 +320,6 @@
 			buildConfigurations = (
 				688A50AB1E2DC4120058C84E /* Debug */,
 				688A50AC1E2DC4120058C84E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		688A50AD1E2DC4120058C84E /* Build configuration list for PBXNativeTarget "DynamicViewDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				688A50AE1E2DC4120058C84E /* Debug */,
-				688A50AF1E2DC4120058C84E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		688A50B01E2DC4120058C84E /* Build configuration list for PBXNativeTarget "DynamicViewDemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				688A50B11E2DC4120058C84E /* Debug */,
-				688A50B21E2DC4120058C84E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

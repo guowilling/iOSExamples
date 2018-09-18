@@ -11,7 +11,6 @@
 @implementation ZoomCarouselViewCell
 
 - (UIImageView *)contentImageView {
-    
     if (!_contentImageView) {
         _contentImageView = [[UIImageView alloc] initWithFrame:self.bounds];
         _contentImageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -21,7 +20,6 @@
 }
 
 - (UIView *)coverView {
-    
     if (!_coverView) {
         _coverView = [[UIView alloc] initWithFrame:self.bounds];
         _coverView.backgroundColor = [UIColor blackColor];
@@ -30,7 +28,6 @@
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    
     self = [super initWithFrame:frame];
     if (self) {
         [self addSubview:self.contentImageView];

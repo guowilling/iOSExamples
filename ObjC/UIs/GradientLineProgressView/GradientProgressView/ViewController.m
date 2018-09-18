@@ -18,12 +18,11 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     self.title = @"GradientProgressView";
     
-    _gradientProgressView = [[GradientProgressView alloc] initWithFrame:CGRectMake(0, 64, CGRectGetWidth(self.view.frame), 5)];
+    _gradientProgressView = [[GradientProgressView alloc] initWithFrame:CGRectMake(0, 88, CGRectGetWidth(self.view.frame), 5)];
     [self.view addSubview:_gradientProgressView];
     
     // Starts the moving gradient effect
@@ -34,7 +33,6 @@
 }
 
 - (void)simulateUpdateProgress {
-    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         CGFloat progress = _gradientProgressView.progress + 0.2;
         _gradientProgressView.progress = progress;

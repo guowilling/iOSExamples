@@ -12,9 +12,9 @@
 
 @interface ContactTool : NSObject
 
-+ (void)saveWithContact:(Contact *)contact;
++ (void)saveContact:(Contact *)contact;
 
-+ (NSArray *)contactWithSql:(NSString *)sql;
++ (NSArray *)contactWithSQL:(NSString *)sql;
 
 + (NSArray *)contacts;
 

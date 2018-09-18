@@ -16,7 +16,6 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     MuticolorCircleView *muticolorCircleView = [[MuticolorCircleView alloc] initWithFrame:self.view.bounds];
@@ -25,7 +24,6 @@
 }
 
 - (void)gradientLayer {
-    
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
     gradientLayer.frame = CGRectMake(0, 0, self.view.frame.size.width, 250);
     gradientLayer.startPoint = CGPointMake(0.0, 0.0);

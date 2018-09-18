@@ -17,7 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
     CGFloat width  = self.view.bounds.size.width;
     CGFloat height = self.view.bounds.size.height;
@@ -39,17 +38,17 @@
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), ^{
             UIImage *image = nil;
             if (i == 0) {
-                // Normal image.
+                // Normal image
                 image = [UIImage imageNamed:@"naruto"];
             } else if (i == 1) {
-                // Blured image.
+                // Blured image
                 image = [[UIImage imageNamed:@"naruto"] blurImage];
             } else if (i == 2) {
-                // Blured image at frame.
+                // Blured image at frame
                 image = [UIImage imageNamed:@"naruto"];
                 image = [image blurImageAtFrame:CGRectMake(0, 0, image.size.width, image.size.height * 0.5)];
             } else {
-                // GrayScale image.
+                // GrayScale image
                 image = [[UIImage imageNamed:@"naruto"] grayImage];
             }
             dispatch_async(dispatch_get_main_queue(), ^{

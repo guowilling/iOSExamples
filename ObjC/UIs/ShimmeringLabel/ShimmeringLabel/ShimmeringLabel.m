@@ -29,12 +29,10 @@
 @implementation ShimmeringLabel
 
 - (void)dealloc {
-    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (instancetype)init {
-    
     if (self = [super init]) {
         self.frame = CGRectMake(0, 0, 60, 30);
         [self setup];
@@ -43,7 +41,6 @@
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    
     if (self = [super initWithFrame:frame]) {
         [self setup];
     }
@@ -51,7 +48,6 @@
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    
     if (self = [super initWithCoder:aDecoder]) {
         [self setup];
     }
@@ -59,7 +55,6 @@
 }
 
 - (void)setup {
-    
     [self addSubview:self.contentLabel];
     [self addSubview:self.maskLabel];
     
@@ -83,7 +78,6 @@
 }
 
 - (void)applicationWillEnterForeground {
-    
     dispatch_async(dispatch_get_main_queue(), ^{
         self.shimmering = NO;
         [self startShimmering];
@@ -91,7 +85,6 @@
 }
 
 - (void)layoutSubviews {
-    
     [super layoutSubviews];
     
     self.contentLabel.frame = self.bounds;
@@ -102,7 +95,6 @@
 #pragma mark - Getters and Setters
 
 - (UILabel *)contentLabel {
-    
     if (!_contentLabel) {
         _contentLabel = [[UILabel alloc] initWithFrame:self.bounds];
         _contentLabel.font = [UIFont systemFontOfSize:17];
@@ -112,7 +104,6 @@
 }
 
 - (UILabel *)maskLabel {
-    
     if (!_maskLabel) {
         _maskLabel = [[UILabel alloc] initWithFrame:self.bounds];
         _maskLabel.font = [UIFont systemFontOfSize:17];
@@ -123,7 +114,6 @@
 }
 
 - (CALayer *)maskLayer {
-    
     if (!_maskLayer) {
         _maskLayer = [[CAGradientLayer alloc] init];
         _maskLayer.backgroundColor = [UIColor clearColor].CGColor;
@@ -133,7 +123,6 @@
 }
 
 - (void)setText:(NSString *)text {
-    
     _text = text;
     
     self.contentLabel.text = text;
@@ -146,7 +135,6 @@
 }
 
 - (void)setFont:(UIFont *)font {
-    
     _font = font;
     
     self.contentLabel.font = font;
@@ -159,7 +147,6 @@
 }
 
 - (void)setTextColor:(UIColor *)textColor {
-    
     _textColor = textColor;
     
     self.contentLabel.textColor = textColor;
@@ -168,7 +155,6 @@
 }
 
 - (void)setAttributedText:(NSAttributedString *)attributedText {
-    
     _attributedText = attributedText;
     
     self.contentLabel.attributedText = attributedText;
@@ -177,7 +163,6 @@
 }
 
 - (void)setNumberOfLines:(NSInteger)numberOfLines {
-    
     _numberOfLines = numberOfLines;
     
     self.contentLabel.numberOfLines = numberOfLines;
@@ -186,35 +171,30 @@
 }
 
 - (void)setShimmeringType:(ShimmeringType)shimmeringType {
-    
     _shimmeringType = shimmeringType;
     
     [self update];
 }
 
 - (void)setInfiniteLoop:(BOOL)infiniteLoop {
-    
     _infiniteLoop = infiniteLoop;
     
     [self update];
 }
 
 - (void)setShimmeringWidth:(CGFloat)shimmeringWidth {
-    
     _shimmeringWidth = shimmeringWidth;
     
     [self update];
 }
 
 - (void)setShimmeringRadius:(CGFloat)shimmeringRadius {
-    
     _shimmeringRadius = shimmeringRadius;
     
     [self update];
 }
 
 - (void)setShimmeringColor:(UIColor *)shimmeringColor {
-    
     _shimmeringColor = shimmeringColor;
     
     self.maskLabel.textColor = shimmeringColor;
@@ -223,7 +203,6 @@
 }
 
 - (void)setShimmeringDuration:(NSTimeInterval)shimmeringDuration {
-    
     _shimmeringDuration = shimmeringDuration;
     
     [self update];
@@ -232,7 +211,6 @@
 #pragma mark - Assist Methods
 
 - (void)update {
-    
     if (self.isShimmering) {
         [self stopShimmering];
         [self startShimmering];
@@ -240,7 +218,6 @@
 }
 
 - (void)freshMaskLayer {
-    
     if (self.shimmeringType == ShimmeringFull) {
         _maskLayer.backgroundColor = self.shimmeringColor.CGColor;
         _maskLayer.colors = nil;
@@ -271,7 +248,6 @@
 }
 
 - (CABasicAnimation *)transformAnimation {
-    
     if (!_transformAnimation) {
         _transformAnimation = [CABasicAnimation animationWithKeyPath:@"transform"];
     }
@@ -282,7 +258,6 @@
 }
 
 - (CABasicAnimation *)opacityAnimation {
-    
     if (!_opacityAnimation) {
         _opacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
         _opacityAnimation.repeatCount = MAXFLOAT;
@@ -297,7 +272,6 @@
 #pragma mark - Public Methods
 
 - (void)startShimmering {
-    
     dispatch_async(dispatch_get_main_queue(), ^{
         // 切换到主线程串行队列, 下面代码打包成一个事件(原子操作), 加到 runloop 不用担心 isPlaying 被多个线程同时修改.
         if (self.isShimmering) {
@@ -357,7 +331,6 @@
 }
 
 - (void)stopShimmering {
-    
     dispatch_async(dispatch_get_main_queue(), ^{
         if (!self.isShimmering) {
             return;

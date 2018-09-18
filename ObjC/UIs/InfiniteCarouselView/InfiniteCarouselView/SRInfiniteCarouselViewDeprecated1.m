@@ -104,7 +104,6 @@ currentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor
 }
 
 - (void)setupWithLocalImage {
-    
     CGFloat scrollW = self.frame.size.width;
     CGFloat scrollH = self.frame.size.height;
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, scrollW, scrollH)];
@@ -155,7 +154,6 @@ currentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor
 }
 
 - (void)setupWithInternetImage {
-    
     CGFloat scrollW = self.frame.size.width;
     CGFloat scrollH = self.frame.size.height;
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, scrollW, scrollH)];
@@ -206,7 +204,6 @@ currentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor
 }
 
 - (void)imageViewTaped:(UITapGestureRecognizer *)tap {
-    
     if ([self.delegate respondsToSelector:@selector(infiniteCarouselView:didClickImageAtIndex:)]) {
         [self.delegate infiniteCarouselView:self didClickImageAtIndex:tap.view.tag - 1];
     }
@@ -215,7 +212,6 @@ currentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor
 #pragma mark - Timer
 
 - (void)startTimer {
-    
     self.timer = [NSTimer scheduledTimerWithTimeInterval:self.timeInterval
                                                   target:self
                                                 selector:@selector(nextImage) userInfo:nil repeats:YES];
@@ -223,7 +219,6 @@ currentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor
 }
 
 - (void)stopTimer {
-    
     if (self.timer) {
         [self.timer invalidate];
         self.timer = nil;
@@ -231,7 +226,6 @@ currentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor
 }
 
 - (void)nextImage {
-    
     CGFloat scrollViewW = self.scrollView.frame.size.width;
     [self.scrollView setContentOffset:CGPointMake(scrollViewW + scrollViewW * (self.pageControl.currentPage + 1), 0) animated:YES];
 }
@@ -239,12 +233,10 @@ currentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
-    
     [self scrollViewDidEndDecelerating:scrollView];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    
     CGFloat scrollViewW = scrollView.frame.size.width;
     NSInteger currentPage = scrollView.contentOffset.x / scrollViewW;
     if (currentPage == self.imageCount + 1) {
@@ -259,19 +251,16 @@ currentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    
     [self stopTimer];
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    
     [self startTimer];
 }
 
 #pragma mark - Public method
 
 - (void)setPageControlBottomDistance:(CGFloat)pageControlBottomDistance {
-    
     _pageControlBottomDistance = pageControlBottomDistance;
     
     CGRect frame = self.pageControl.frame;
@@ -280,7 +269,6 @@ currentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor
 }
 
 - (void)setForbidScrolling:(BOOL)forbidScrolling {
-    
     _forbidScrolling = forbidScrolling;
     
     if (forbidScrolling) {
@@ -291,14 +279,12 @@ currentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor
 }
 
 - (void)setCurrentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor {
-    
     _currentPageIndicatorTintColor = currentPageIndicatorTintColor;
     
     self.pageControl.currentPageIndicatorTintColor = currentPageIndicatorTintColor ?: [UIColor whiteColor];
 }
 
 - (void)setPageIndicatorTintColor:(UIColor *)pageIndicatorTintColor {
-    
     _pageIndicatorTintColor = pageIndicatorTintColor;
     
     self.pageControl.pageIndicatorTintColor = pageIndicatorTintColor ?: [UIColor grayColor];

@@ -20,7 +20,6 @@
 @implementation CircularProgressViewBackgroundLayer
 
 - (id)init {
-    
     self = [super init];
     if (self) {
         self.contentsScale = [UIScreen mainScreen].scale;
@@ -29,14 +28,12 @@
 }
 
 - (void)setTintColor:(UIColor *)tintColor {
-    
     _tintColor = tintColor;
     
     [self setNeedsDisplay];
 }
 
 - (void)drawInContext:(CGContextRef)ctx {
-    
     CGContextSetFillColorWithColor(ctx, _tintColor.CGColor);
     CGFloat WH = self.bounds.size.width * 0.3;
     CGContextFillRect(ctx, CGRectMake(CGRectGetMidX(self.bounds) - WH * 0.5, CGRectGetMidY(self.bounds) - WH * 0.5, WH, WH));
@@ -54,13 +51,11 @@
 
 @end
 
-@implementation CircularDotProgressView
-{
+@implementation CircularDotProgressView {
     UIColor *_progressTintColor;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    
     self = [super initWithFrame:frame];
     if (self) {
         [self setup];
@@ -69,7 +64,6 @@
 }
 
 - (instancetype)initWithCoder:(NSCoder *)coder {
-    
     self = [super initWithCoder:coder];
     if (self) {
         [self setup];
@@ -78,7 +72,6 @@
 }
 
 - (void)setup {
-    
     _progressTintColor = [UIColor blackColor];
     
     // Set up the background layer.
@@ -98,7 +91,6 @@
 }
 
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated {
-    
     _progress = progress;
     
     if (progress > 0) {
@@ -131,28 +123,22 @@
 }
 
 - (void)setProgress:(CGFloat)progress {
-    
     [self setProgress:progress animated:NO];
 }
 
 - (void)setProgressTintColor:(UIColor *)progressTintColor {
-    
     _progressTintColor = progressTintColor;
-    
     _backgroundLayer.tintColor = progressTintColor;
-    
     _shapeLayer.strokeColor = progressTintColor.CGColor;
 }
 
 - (UIColor *)progressTintColor {
-    
     return _progressTintColor;
 }
 
 #pragma mark - Indeterminate Animation
 
 - (void)startIndeterminateAnimation {
-    
     [CATransaction begin];
     [CATransaction setDisableActions:YES];
     self.backgroundLayer.hidden = YES;
@@ -174,7 +160,6 @@
 }
 
 - (void)stopIndeterminateAnimation {
-    
     [self.shapeLayer removeAnimationForKey:@"indeterminateAnimation"];
     
     [CATransaction begin];

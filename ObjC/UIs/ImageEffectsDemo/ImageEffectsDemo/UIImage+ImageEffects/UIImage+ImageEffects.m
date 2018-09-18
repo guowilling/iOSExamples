@@ -99,56 +99,40 @@
 
 @implementation UIImage (ImageEffects)
 
-
-- (UIImage *)applyLightEffect{
-    
+- (UIImage *)applyLightEffect {
     UIColor *tintColor = [UIColor colorWithWhite:1.0 alpha:0.3];
     return [self applyBlurWithRadius:30 tintColor:tintColor saturationDeltaFactor:1.8 maskImage:nil];
 }
 
-
 - (UIImage *)applyExtraLightEffect {
-    
     UIColor *tintColor = [UIColor colorWithWhite:0.97 alpha:0.82];
     return [self applyBlurWithRadius:20 tintColor:tintColor saturationDeltaFactor:1.8 maskImage:nil];
 }
 
-
 - (UIImage *)applyDarkEffect {
-    
     UIColor *tintColor = [UIColor colorWithWhite:0.11 alpha:0.73];
     return [self applyBlurWithRadius:20 tintColor:tintColor saturationDeltaFactor:1.8 maskImage:nil];
 }
 
-
 - (UIImage *)applyTintEffectWithColor:(UIColor *)tintColor {
-    
     const CGFloat EffectColorAlpha = 0.6;
     UIColor      *effectColor      = tintColor;
     int           componentCount   = (int)CGColorGetNumberOfComponents(tintColor.CGColor);
-    
     if (componentCount == 2) {
-        
         CGFloat b;
         if ([tintColor getWhite:&b alpha:NULL]) {
-            
             effectColor = [UIColor colorWithWhite:b alpha:EffectColorAlpha];
         }
-        
     } else {
-        
         CGFloat r, g, b;
         if ([tintColor getRed:&r green:&g blue:&b alpha:NULL]) {
-            
             effectColor = [UIColor colorWithRed:r green:g blue:b alpha:EffectColorAlpha];
         }
     }
-    
     return [self applyBlurWithRadius:20 tintColor:effectColor saturationDeltaFactor:1.4 maskImage:nil];
 }
 
 - (UIImage *)blurImage {
-    
     return [self applyBlurWithRadius:20
                            tintColor:[UIColor colorWithWhite:0 alpha:0.0]
                saturationDeltaFactor:1.4
@@ -156,7 +140,6 @@
 }
 
 - (UIImage *)blurImageWithRadius:(CGFloat)radius {
-    
     return [self applyBlurWithRadius:radius
                            tintColor:[UIColor colorWithWhite:0 alpha:0.0]
                saturationDeltaFactor:1.4
@@ -164,7 +147,6 @@
 }
 
 - (UIImage *)blurImageWithMask:(UIImage *)maskImage {
-    
     return [self applyBlurWithRadius:20
                            tintColor:[UIColor colorWithWhite:0 alpha:0.0]
                saturationDeltaFactor:1.4
@@ -172,7 +154,6 @@
 }
 
 - (UIImage *)blurImageAtFrame:(CGRect)frame {
-    
     return [self applyBlurWithRadius:20
                            tintColor:[UIColor colorWithWhite:0 alpha:0.0]
                saturationDeltaFactor:1.4
@@ -181,33 +162,24 @@
 }
 
 - (UIImage *)applyBlurWithRadius:(CGFloat)blurRadius tintColor:(UIColor *)tintColor saturationDeltaFactor:(CGFloat)saturationDeltaFactor maskImage:(UIImage *)maskImage {
-    
     // Check pre-conditions.
     if (self.size.width < 1 || self.size.height < 1) {
-        
         NSLog (@"*** error: invalid size: (%.2f x %.2f). Both dimensions must be >= 1: %@", self.size.width, self.size.height, self);
         return nil;
     }
-    
     if (!self.CGImage) {
-        
         NSLog (@"*** error: image must be backed by a CGImage: %@", self);
         return nil;
     }
-    
     if (maskImage && !maskImage.CGImage) {
-        
         NSLog (@"*** error: maskImage must be backed by a CGImage: %@", maskImage);
         return nil;
     }
-
     CGRect   imageRect   = { CGPointZero, self.size };
     UIImage *effectImage = self;
-    
     BOOL hasBlur             = blurRadius > __FLT_EPSILON__;
     BOOL hasSaturationChange = fabs(saturationDeltaFactor - 1.) > __FLT_EPSILON__;
     if (hasBlur || hasSaturationChange) {
-        
         UIGraphicsBeginImageContextWithOptions(self.size, NO, [[UIScreen mainScreen] scale]);
         CGContextRef effectInContext = UIGraphicsGetCurrentContext();
         CGContextScaleCTM(effectInContext, 1.0, -1.0);
@@ -229,7 +201,6 @@
         effectOutBuffer.rowBytes = CGBitmapContextGetBytesPerRow(effectOutContext);
 
         if (hasBlur) {
-            
             // A description of how to compute the box kernel width from the Gaussian
             // radius (aka standard deviation) appears in the SVG spec:
             // http://www.w3.org/TR/SVG/filters.html#feGaussianBlurElement
@@ -256,7 +227,6 @@
         
         BOOL effectImageBuffersAreSwapped = NO;
         if (hasSaturationChange) {
-            
             CGFloat s = saturationDeltaFactor;
             CGFloat floatingPointSaturationMatrix[] = {
                 0.0722 + 0.9278 * s,  0.0722 - 0.0722 * s,  0.0722 - 0.0722 * s,  0,
@@ -269,33 +239,27 @@
             int16_t saturationMatrix[matrixSize];
             
             for (NSUInteger i = 0; i < matrixSize; ++i) {
-                
                 saturationMatrix[i] = (int16_t)roundf(floatingPointSaturationMatrix[i] * divisor);
             }
             
             if (hasBlur) {
-                
                 vImageMatrixMultiply_ARGB8888(&effectOutBuffer, &effectInBuffer, saturationMatrix, divisor, NULL, NULL, kvImageNoFlags);
                 effectImageBuffersAreSwapped = YES;
-                
             } else {
-                
                 vImageMatrixMultiply_ARGB8888(&effectInBuffer, &effectOutBuffer, saturationMatrix, divisor, NULL, NULL, kvImageNoFlags);
             }
         }
         
         if (!effectImageBuffersAreSwapped) {
-            
             effectImage = UIGraphicsGetImageFromCurrentImageContext();
         }
         
         UIGraphicsEndImageContext();
 
         if (effectImageBuffersAreSwapped) {
-            
             effectImage = UIGraphicsGetImageFromCurrentImageContext();
         }
-        
+
         UIGraphicsEndImageContext();
     }
 
@@ -310,21 +274,16 @@
 
     // Draw effect image.
     if (hasBlur) {
-        
         CGContextSaveGState(outputContext);
-        
         if (maskImage) {
-            
             CGContextClipToMask(outputContext, imageRect, maskImage.CGImage);
         }
-        
         CGContextDrawImage(outputContext, imageRect, effectImage.CGImage);
         CGContextRestoreGState(outputContext);
     }
 
     // Add in color tint.
     if (tintColor) {
-        
         CGContextSaveGState(outputContext);
         CGContextSetFillColorWithColor(outputContext, tintColor.CGColor);
         CGContextFillRect(outputContext, imageRect);
@@ -339,12 +298,9 @@
 }
 
 - (UIImage *)grayImage {
-    
     int width  = self.size.width;
     int height = self.size.height;
-    
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceGray();
-    
     CGContextRef context = CGBitmapContextCreate(nil,
                                                  width,
                                                  height,
@@ -352,26 +308,20 @@
                                                  0,
                                                  colorSpace,
                                                  kCGBitmapByteOrderDefault);
-    
     CGColorSpaceRelease(colorSpace);
-    
     if (context == NULL) {
-        
         return nil;
     }
-    
     CGContextDrawImage(context,
                        CGRectMake(0, 0, width, height), self.CGImage);
     CGImageRef image   = CGBitmapContextCreateImage(context);
     UIImage *grayImage = [UIImage imageWithCGImage:image];
     CFRelease(image);
     CGContextRelease(context);
-    
     return grayImage;
 }
 
 - (UIImage *)croppedImageAtFrame:(CGRect)frame {
-    
     frame = CGRectMake(frame.origin.x * self.scale,
                        frame.origin.y * self.scale,
                        frame.size.width * self.scale,
@@ -385,7 +335,6 @@
 }
 
 - (UIImage *)addImageToImage:(UIImage *)img atRect:(CGRect)cropRect {
-    
     CGSize size = CGSizeMake(self.size.width, self.size.height);
     UIGraphicsBeginImageContextWithOptions(size, NO, self.scale);
     
@@ -395,7 +344,7 @@
     CGPoint pointImg2 = cropRect.origin;
     [img drawAtPoint: pointImg2];
     
-    UIImage* result = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     return result;

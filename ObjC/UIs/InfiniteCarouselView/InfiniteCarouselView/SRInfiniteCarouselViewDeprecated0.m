@@ -39,7 +39,6 @@ static NSString * const cacheDirectoryName = @"SRInfiniteCarouselView";
 @implementation SRInfiniteCarouselViewDeprecated0
 
 - (void)dealloc {
-    
     if (_timer) {
         [_timer invalidate];
         _timer = nil;
@@ -49,7 +48,6 @@ static NSString * const cacheDirectoryName = @"SRInfiniteCarouselView";
 #pragma mark - Lazy Load
 
 - (UILabel *)descLabel {
-    
     if (!_descLabel) {
         _descLabel = [[UILabel alloc] init];
         _descLabel.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
@@ -65,27 +63,22 @@ static NSString * const cacheDirectoryName = @"SRInfiniteCarouselView";
 #pragma mark - Init Methods
 
 + (instancetype)sr_infiniteCarouselViewWithImageArrary:(NSArray *)imageArrary {
-    
     return [self sr_infiniteCarouselViewWithImageArrary:imageArrary describeArray:nil];
 }
 
 + (instancetype)sr_infiniteCarouselViewWithImageArrary:(NSArray *)imageArrary describeArray:(NSArray *)describeArray {
-    
     return [self sr_infiniteCarouselViewWithImageArrary:imageArrary describeArray:describeArray placeholderImage:nil];
 }
 
 + (instancetype)sr_infiniteCarouselViewWithImageArrary:(NSArray *)imageArrary describeArray:(NSArray *)describeArray placeholderImage:(UIImage *)placeholderImage {
-    
     return [self sr_infiniteCarouselViewWithImageArrary:imageArrary describeArray:describeArray placeholderImage:placeholderImage delegate:nil];
 }
 
 + (instancetype)sr_infiniteCarouselViewWithImageArrary:(NSArray *)imageArrary describeArray:(NSArray *)describeArray placeholderImage:(UIImage *)placeholderImage delegate:(id<SRInfiniteCarouselViewDelegate>)delegate {
-    
     return [[self alloc] initWithImageArrary:imageArrary describeArray:describeArray placeholderImage:placeholderImage delegate:delegate];
 }
 
 - (instancetype)initWithImageArrary:(NSArray *)imageArrary describeArray:(NSArray *)describeArray placeholderImage:(UIImage *)placeholderImage delegate:(id<SRInfiniteCarouselViewDelegate>)delegate {
-    
     if (self = [super init]) {
         _imageArray       = imageArrary;
         _describeArray    = describeArray;
@@ -105,7 +98,6 @@ static NSString * const cacheDirectoryName = @"SRInfiniteCarouselView";
 #pragma mark - Setup UI
 
 - (void)setupContent {
-    
     if (_imageArray.count == 0) {
         return;
     }
@@ -152,7 +144,6 @@ static NSString * const cacheDirectoryName = @"SRInfiniteCarouselView";
 }
 
 - (void)setupImages {
-    
     for (int i = 0; i < _imageArray.count; i++) {
         if ([_imageArray[i] isKindOfClass:[UIImage class]]) {
             [_images addObject:_imageArray[i]];
@@ -175,7 +166,6 @@ static NSString * const cacheDirectoryName = @"SRInfiniteCarouselView";
 }
 
 - (void)setupImageDescribes {
-    
     if (_describeArray && _describeArray.count > 0) {
         if (_describeArray.count < _images.count) {
             NSMutableArray *arrayM = [NSMutableArray arrayWithArray:_describeArray];
@@ -190,7 +180,6 @@ static NSString * const cacheDirectoryName = @"SRInfiniteCarouselView";
 }
 
 - (void)layoutSubviews {
-    
     [super layoutSubviews];
     
     _scrollView.frame = self.bounds;
@@ -222,7 +211,6 @@ static NSString * const cacheDirectoryName = @"SRInfiniteCarouselView";
 #pragma mark - Timer
 
 - (void)startTimer {
-    
     if (_images.count <= 1) {
         return;
     }
@@ -240,20 +228,17 @@ static NSString * const cacheDirectoryName = @"SRInfiniteCarouselView";
 }
 
 - (void)stopTimer {
-    
     [_timer invalidate];
     _timer = nil;
 }
 
 - (void)nextPage {
-    
     [_scrollView setContentOffset:CGPointMake(self.width * 2, 0) animated:YES];
 }
 
 #pragma mark - Download Images
 
 - (void)downloadImageAtIndex:(int)index {
-    
     NSString *cachekey = self.imageArray[index];
     UIImage *image = self.imageDic[cachekey];
     if (image) { // if memory already has image
@@ -300,7 +285,6 @@ static NSString * const cacheDirectoryName = @"SRInfiniteCarouselView";
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
     CGFloat offsetX = scrollView.contentOffset.x;
     
     if (offsetX == self.width) {
@@ -331,31 +315,26 @@ static NSString * const cacheDirectoryName = @"SRInfiniteCarouselView";
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    
     // Stop timer when dragging scrollview manually.
     [self stopTimer];
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    
     // Start timer when stop dragging scrollview manually.
     [self startTimer];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    
     // Update content when paging finishes manually.
     [self updateContent];
 }
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
-    
     // Update content when paging finishes automatically.
     [self updateContent];
 }
 
 - (void)updateContent {
-    
     if (_scrollView.contentOffset.x == self.width) {
         return; // if paging not finished do not update content
     }
@@ -375,7 +354,6 @@ static NSString * const cacheDirectoryName = @"SRInfiniteCarouselView";
 #pragma mark - Others
 
 + (void)initialize {
-    
     NSString *cacheDirectory = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]
                                 stringByAppendingPathComponent:cacheDirectoryName];
     BOOL isDirectory = NO;
@@ -386,17 +364,14 @@ static NSString * const cacheDirectoryName = @"SRInfiniteCarouselView";
 }
 
 - (CGFloat)height {
-    
     return _scrollView.frame.size.height;
 }
 
 - (CGFloat)width {
-    
     return _scrollView.frame.size.width;
 }
 
 - (void)tapImageAction {
-    
     if ([self.delegate respondsToSelector:@selector(infiniteCarouselViewDidTapImageAtIndex:)]) {
         [self.delegate infiniteCarouselViewDidTapImageAtIndex:self.currentIndex];
     }
@@ -405,7 +380,6 @@ static NSString * const cacheDirectoryName = @"SRInfiniteCarouselView";
 #pragma mark - Public Methods
 
 - (void)clearImagesCache {
-
     NSString *cacheDirectory = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]
                                 stringByAppendingString:cacheDirectoryName];
     NSArray *fileNames = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:cacheDirectory error:NULL];
@@ -415,7 +389,6 @@ static NSString * const cacheDirectoryName = @"SRInfiniteCarouselView";
 }
 
 - (void)setCurrentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor {
-    
     if (_currentPageIndicatorTintColor != currentPageIndicatorTintColor) {
         _currentPageIndicatorTintColor = currentPageIndicatorTintColor;
         _pageControl.currentPageIndicatorTintColor = currentPageIndicatorTintColor;
@@ -423,7 +396,6 @@ static NSString * const cacheDirectoryName = @"SRInfiniteCarouselView";
 }
 
 - (void)setPageIndicatorTintColor:(UIColor *)pageIndicatorTintColor {
-    
     if (_pageIndicatorTintColor != pageIndicatorTintColor) {
         _pageIndicatorTintColor = pageIndicatorTintColor;
         _pageControl.pageIndicatorTintColor = pageIndicatorTintColor;
@@ -431,7 +403,6 @@ static NSString * const cacheDirectoryName = @"SRInfiniteCarouselView";
 }
 
 - (void)setCurrentPageIndicatorImage:(UIImage *)currentPageIndicatorImage {
-
     if (_currentPageIndicatorImage != currentPageIndicatorImage) {
         _currentPageIndicatorImage = currentPageIndicatorImage;
         [_pageControl setValue:currentPageIndicatorImage forKey:@"currentPageImage"];
@@ -439,7 +410,6 @@ static NSString * const cacheDirectoryName = @"SRInfiniteCarouselView";
 }
 
 - (void)setPageIndicatorImage:(UIImage *)pageIndicatorImage {
-    
     if (_pageIndicatorImage != pageIndicatorImage) {
         _pageIndicatorImage = pageIndicatorImage;
         [_pageControl setValue:pageIndicatorImage forKey:@"pageImage"];
@@ -447,7 +417,6 @@ static NSString * const cacheDirectoryName = @"SRInfiniteCarouselView";
 }
 
 - (void)setTimeInterval:(NSTimeInterval)timeInterval {
-    
     if (_timeInterval != timeInterval) {
         _timeInterval = timeInterval;
         [self startTimer];

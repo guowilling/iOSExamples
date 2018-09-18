@@ -13,18 +13,7 @@
 		6EE01F091E22870000ABF6AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EE01F071E22870000ABF6AE /* Main.storyboard */; };
 		6EE01F0B1E22870000ABF6AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EE01F0A1E22870000ABF6AE /* Assets.xcassets */; };
 		6EE01F0E1E22870000ABF6AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EE01F0C1E22870000ABF6AE /* LaunchScreen.storyboard */; };
-		6EE01F191E22870000ABF6AE /* SlideEditingTableViewCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE01F181E22870000ABF6AE /* SlideEditingTableViewCellTests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		6EE01F151E22870000ABF6AE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6EE01EF31E22870000ABF6AE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6EE01EFA1E22870000ABF6AE;
-			remoteInfo = SlideEditingTableViewCell;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6EE01EFB1E22870000ABF6AE /* SlideEditingTableViewCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideEditingTableViewCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,20 +26,10 @@
 		6EE01F0A1E22870000ABF6AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EE01F0D1E22870000ABF6AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EE01F0F1E22870000ABF6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6EE01F141E22870000ABF6AE /* SlideEditingTableViewCellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlideEditingTableViewCellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EE01F181E22870000ABF6AE /* SlideEditingTableViewCellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideEditingTableViewCellTests.m; sourceTree = "<group>"; };
-		6EE01F1A1E22870000ABF6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6EE01EF81E22870000ABF6AE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6EE01F111E22870000ABF6AE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				6EE01EFD1E22870000ABF6AE /* SlideEditingTableViewCell */,
-				6EE01F171E22870000ABF6AE /* SlideEditingTableViewCellTests */,
 				6EE01EFC1E22870000ABF6AE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				6EE01EFB1E22870000ABF6AE /* SlideEditingTableViewCell.app */,
-				6EE01F141E22870000ABF6AE /* SlideEditingTableViewCellTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,15 +79,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6EE01F171E22870000ABF6AE /* SlideEditingTableViewCellTests */ = {
-			isa = PBXGroup;
-			children = (
-				6EE01F181E22870000ABF6AE /* SlideEditingTableViewCellTests.m */,
-				6EE01F1A1E22870000ABF6AE /* Info.plist */,
-			);
-			path = SlideEditingTableViewCellTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,24 +99,6 @@
 			productReference = 6EE01EFB1E22870000ABF6AE /* SlideEditingTableViewCell.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6EE01F131E22870000ABF6AE /* SlideEditingTableViewCellTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6EE01F201E22870000ABF6AE /* Build configuration list for PBXNativeTarget "SlideEditingTableViewCellTests" */;
-			buildPhases = (
-				6EE01F101E22870000ABF6AE /* Sources */,
-				6EE01F111E22870000ABF6AE /* Frameworks */,
-				6EE01F121E22870000ABF6AE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6EE01F161E22870000ABF6AE /* PBXTargetDependency */,
-			);
-			name = SlideEditingTableViewCellTests;
-			productName = SlideEditingTableViewCellTests;
-			productReference = 6EE01F141E22870000ABF6AE /* SlideEditingTableViewCellTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -160,13 +110,8 @@
 				TargetAttributes = {
 					6EE01EFA1E22870000ABF6AE = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = Y4FK8UXDXW;
+						DevelopmentTeam = L8C6M6B8E9;
 						ProvisioningStyle = Manual;
-					};
-					6EE01F131E22870000ABF6AE = {
-						CreatedOnToolsVersion = 8.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 6EE01EFA1E22870000ABF6AE;
 					};
 				};
 			};
@@ -184,7 +129,6 @@
 			projectRoot = "";
 			targets = (
 				6EE01EFA1E22870000ABF6AE /* SlideEditingTableViewCell */,
-				6EE01F131E22870000ABF6AE /* SlideEditingTableViewCellTests */,
 			);
 		};
 /* End PBXProject section */
@@ -197,13 +141,6 @@
 				6EE01F0E1E22870000ABF6AE /* LaunchScreen.storyboard in Resources */,
 				6EE01F0B1E22870000ABF6AE /* Assets.xcassets in Resources */,
 				6EE01F091E22870000ABF6AE /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6EE01F121E22870000ABF6AE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,23 +157,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6EE01F101E22870000ABF6AE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6EE01F191E22870000ABF6AE /* SlideEditingTableViewCellTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		6EE01F161E22870000ABF6AE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6EE01EFA1E22870000ABF6AE /* SlideEditingTableViewCell */;
-			targetProxy = 6EE01F151E22870000ABF6AE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6EE01F071E22870000ABF6AE /* Main.storyboard */ = {
@@ -351,13 +272,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = SlideEditingTableViewCell/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.SlideEditingTableViewCell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f3a55d34-a082-41a1-892a-f34e32cf7f46";
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
 				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Debug;
@@ -367,38 +288,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = SlideEditingTableViewCell/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.SlideEditingTableViewCell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f3a55d34-a082-41a1-892a-f34e32cf7f46";
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
 				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
-			};
-			name = Release;
-		};
-		6EE01F211E22870000ABF6AE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = SlideEditingTableViewCellTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.SlideEditingTableViewCellTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlideEditingTableViewCell.app/SlideEditingTableViewCell";
-			};
-			name = Debug;
-		};
-		6EE01F221E22870000ABF6AE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = SlideEditingTableViewCellTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.SlideEditingTableViewCellTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlideEditingTableViewCell.app/SlideEditingTableViewCell";
 			};
 			name = Release;
 		};
@@ -419,15 +316,6 @@
 			buildConfigurations = (
 				6EE01F1E1E22870000ABF6AE /* Debug */,
 				6EE01F1F1E22870000ABF6AE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6EE01F201E22870000ABF6AE /* Build configuration list for PBXNativeTarget "SlideEditingTableViewCellTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6EE01F211E22870000ABF6AE /* Debug */,
-				6EE01F221E22870000ABF6AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

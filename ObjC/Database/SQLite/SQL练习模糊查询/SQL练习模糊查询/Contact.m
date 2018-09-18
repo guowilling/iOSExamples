@@ -11,7 +11,6 @@
 @implementation Contact
 
 + (instancetype)contactWithName:(NSString *)name phone:(NSString *)phone {
-    
     Contact *contact = [[self alloc] init];
     contact.name = name;
     contact.phone = phone;

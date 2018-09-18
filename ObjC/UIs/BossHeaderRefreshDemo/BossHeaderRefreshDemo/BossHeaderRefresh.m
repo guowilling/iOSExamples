@@ -38,7 +38,6 @@ const CGFloat SURefreshPullLen      = 60.0;
 @implementation BossHeaderRefresh
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    
     if (self = [super initWithFrame:CGRectMake(0, 0, SURefreshHeaderHeight, SURefreshHeaderHeight)]) {
         CGFloat centerLine = SURefreshHeaderHeight / 2;
         CGFloat radius = SURefreshPointRadius;
@@ -86,7 +85,6 @@ const CGFloat SURefreshPullLen      = 60.0;
 }
 
 - (CAShapeLayer *)layerWithPoint:(CGPoint)center color:(CGColorRef)color {
-    
     CAShapeLayer * layer = [CAShapeLayer layer];
     layer.frame = CGRectMake(center.x - SURefreshPointRadius, center.y - SURefreshPointRadius, SURefreshPointRadius * 2, SURefreshPointRadius * 2);
     layer.fillColor = color;
@@ -102,7 +100,6 @@ const CGFloat SURefreshPullLen      = 60.0;
 #pragma mark - Override
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
-    
     [super willMoveToSuperview:newSuperview];
     
     if (newSuperview) {
@@ -117,14 +114,12 @@ const CGFloat SURefreshPullLen      = 60.0;
 #pragma mark - KVO
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
-    
     if ([keyPath isEqualToString:@"contentOffset"]) {
         self.progress = - self.scrollView.contentOffset.y;
     }
 }
 
 - (void)setProgress:(CGFloat)progress {
-    
     _progress = progress;
     
     if (!self.animating) {
@@ -149,7 +144,6 @@ const CGFloat SURefreshPullLen      = 60.0;
 }
 
 - (void)setLineLayerStrokeWithProgress:(CGFloat)progress {
-    
     float startProgress = 0.f;
     float endProgress = 0.f;
     
@@ -189,7 +183,6 @@ const CGFloat SURefreshPullLen      = 60.0;
 }
 
 - (void)adjustPointStateWithIndex:(NSInteger)index {
-    
     self.LeftPointLayer.hidden = index > 1 ? NO : YES;
     self.BottomPointLayer.hidden = index > 3 ? NO : YES;
     self.rightPointLayer.hidden = index > 5 ? NO : YES;
@@ -199,7 +192,6 @@ const CGFloat SURefreshPullLen      = 60.0;
 #pragma mark - Refreshing
 
 - (void)beginRefreshing {
-    
     self.animating = YES;
     
     [UIView animateWithDuration:0.5 animations:^{
@@ -225,7 +217,6 @@ const CGFloat SURefreshPullLen      = 60.0;
 }
 
 - (void)addAnimationToLayer:(CALayer *)layer valueX:(CGFloat)valueX valueY:(CGFloat)valueY {
-    
     CAKeyframeAnimation *translationKeyframeAni = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
     translationKeyframeAni.duration = 1.0;
     translationKeyframeAni.repeatCount = HUGE;
@@ -239,7 +230,6 @@ const CGFloat SURefreshPullLen      = 60.0;
 }
 
 - (void)endRefreshing {
-    
     [UIView animateWithDuration:0.5 animations:^{
         UIEdgeInsets inset = self.scrollView.contentInset;
         inset.top = 0.f;

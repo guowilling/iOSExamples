@@ -32,10 +32,6 @@
 		68C1A9551CA2472600D53220 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68C1A9581CA2472600D53220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68C1A95A1CA2472600D53220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		68C1A9631CA2472600D53220 /* FMDB_______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FMDB_______Tests.m"; sourceTree = "<group>"; };
-		68C1A9651CA2472600D53220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		68C1A96E1CA2472600D53220 /* FMDB_______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FMDB_______UITests.m"; sourceTree = "<group>"; };
-		68C1A9701CA2472600D53220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68C1A97D1CA2475000D53220 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		68C1A97E1CA2475000D53220 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		68C1A97F1CA2475000D53220 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -67,8 +63,6 @@
 			children = (
 				68C1A98D1CA2488500D53220 /* libsqlite3.0.tbd */,
 				68C1A9481CA2472600D53220 /* FMDB线程安全和事务 */,
-				68C1A9621CA2472600D53220 /* FMDB线程安全和事务Tests */,
-				68C1A96D1CA2472600D53220 /* FMDB线程安全和事务UITests */,
 				68C1A9471CA2472600D53220 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,24 +98,6 @@
 				68C1A95A1CA2472600D53220 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		68C1A9621CA2472600D53220 /* FMDB线程安全和事务Tests */ = {
-			isa = PBXGroup;
-			children = (
-				68C1A9631CA2472600D53220 /* FMDB_______Tests.m */,
-				68C1A9651CA2472600D53220 /* Info.plist */,
-			);
-			path = "FMDB线程安全和事务Tests";
-			sourceTree = "<group>";
-		};
-		68C1A96D1CA2472600D53220 /* FMDB线程安全和事务UITests */ = {
-			isa = PBXGroup;
-			children = (
-				68C1A96E1CA2472600D53220 /* FMDB_______UITests.m */,
-				68C1A9701CA2472600D53220 /* Info.plist */,
-			);
-			path = "FMDB线程安全和事务UITests";
 			sourceTree = "<group>";
 		};
 		68C1A97C1CA2475000D53220 /* fmdb */ = {

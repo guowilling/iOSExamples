@@ -26,7 +26,6 @@ blue:((float)(RGBValue & 0xFF))/255.0 alpha:Alpha]
 @implementation ViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     [self.view.layer addSublayer:[self backgroundGradientLayerWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 255)]];
@@ -75,7 +74,6 @@ blue:((float)(RGBValue & 0xFF))/255.0 alpha:Alpha]
 }
 
 - (CAGradientLayer *)backgroundGradientLayerWithFrame:(CGRect)frame {
-    
     CGPoint startPoint = CGPointMake(0.0, 0.0);
     CGPoint endPoint = CGPointMake(1.0, 0.0);
     NSMutableArray *colors = [NSMutableArray array];
@@ -85,7 +83,6 @@ blue:((float)(RGBValue & 0xFF))/255.0 alpha:Alpha]
 }
 
 - (CAGradientLayer *)backgroundGradientLayerWithFrame:(CGRect)frame StartPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint colors:(NSArray *)colors {
-    
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
     gradientLayer.frame = frame;
     gradientLayer.startPoint = startPoint;

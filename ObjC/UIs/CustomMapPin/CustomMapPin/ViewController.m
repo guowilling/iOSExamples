@@ -17,11 +17,20 @@
 
 @implementation ViewController
 
-- (void)customMapPinWithIcon {
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
+//    self.view.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.5];
+    
+    [self customMapPinWithIcon];
+    
+    [self customMapPinWithoutIcon];
+}
+
+- (void)customMapPinWithIcon {
     [self.view addSubview:({
         UIView *pinContainer = [[UIView alloc] init];
-        pinContainer.backgroundColor = COLOR_RANDOM;
+//        pinContainer.backgroundColor = COLOR_RANDOM;
         
         UIView *commentContainer = [[UIView alloc] init];
         [pinContainer addSubview:({
@@ -91,15 +100,14 @@
         })];
         
         pinContainer.frame = CGRectMake(0, 0, commentContainer.frame.size.width, commentContainer.frame.size.height * 2);
-        pinContainer.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.5);
+        pinContainer.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.5 - 100);
         pinContainer;
     })];
 }
 
 - (void)customMapPinWithoutIcon {
-    
     UIView *commentContainer = [[UIView alloc] init];
-    commentContainer.backgroundColor = COLOR_RANDOM;
+//    commentContainer.backgroundColor = COLOR_RANDOM;
     
     NSString *commentText = @"COLDPLAY";
     CGSize textSize = [commentText sizeWithFont:[UIFont systemFontOfSize:SCREEN_ADJUST(15)] maxHeight:SCREEN_ADJUST(20)];
@@ -163,17 +171,6 @@
     commentContainer.yx_centerX = self.view.yx_centerX;
     commentContainer.yx_centerY = self.view.yx_centerY + 100;
     [self.view addSubview:commentContainer];
-}
-
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-    
-    self.view.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.5];
-    
-    [self customMapPinWithIcon];
-    
-    [self customMapPinWithoutIcon];
 }
 
 @end

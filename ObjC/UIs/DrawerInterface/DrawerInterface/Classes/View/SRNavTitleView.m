@@ -4,7 +4,6 @@
 @implementation SRNavTitleView
 
 - (id)initWithFrame:(CGRect)frame {
-    
     self = [super initWithFrame:frame];
     if (self) {
         self.userInteractionEnabled = NO;
@@ -18,7 +17,6 @@
 }
 
 - (void)setTitle:(NSString *)title {
-    
     _title = [title copy];
     
     [self setTitle:title forState:UIControlStateNormal];

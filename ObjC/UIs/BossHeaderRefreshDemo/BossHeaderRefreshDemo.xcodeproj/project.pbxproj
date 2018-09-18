@@ -13,29 +13,10 @@
 		68F8ABD31E5DAF3E008D45E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68F8ABD11E5DAF3E008D45E1 /* Main.storyboard */; };
 		68F8ABD51E5DAF3E008D45E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68F8ABD41E5DAF3E008D45E1 /* Assets.xcassets */; };
 		68F8ABD81E5DAF3E008D45E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68F8ABD61E5DAF3E008D45E1 /* LaunchScreen.storyboard */; };
-		68F8ABE31E5DAF3E008D45E1 /* BossHeaderRefreshDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F8ABE21E5DAF3E008D45E1 /* BossHeaderRefreshDemoTests.m */; };
-		68F8ABEE1E5DAF3E008D45E1 /* BossHeaderRefreshDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F8ABED1E5DAF3E008D45E1 /* BossHeaderRefreshDemoUITests.m */; };
 		68F8ABFD1E5DAF5F008D45E1 /* UIScrollView+BossRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F8ABFC1E5DAF5F008D45E1 /* UIScrollView+BossRefresh.m */; };
 		68F8AC001E5DAF72008D45E1 /* BossHeaderRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F8ABFF1E5DAF72008D45E1 /* BossHeaderRefresh.m */; };
 		68F8AC031E5DAFA1008D45E1 /* UIView+SRFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F8AC021E5DAFA1008D45E1 /* UIView+SRFrame.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		68F8ABDF1E5DAF3E008D45E1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 68F8ABBD1E5DAF3E008D45E1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 68F8ABC41E5DAF3E008D45E1;
-			remoteInfo = BossHeaderRefreshDemo;
-		};
-		68F8ABEA1E5DAF3E008D45E1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 68F8ABBD1E5DAF3E008D45E1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 68F8ABC41E5DAF3E008D45E1;
-			remoteInfo = BossHeaderRefreshDemo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		68F8ABC51E5DAF3E008D45E1 /* BossHeaderRefreshDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BossHeaderRefreshDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,12 +29,6 @@
 		68F8ABD41E5DAF3E008D45E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68F8ABD71E5DAF3E008D45E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68F8ABD91E5DAF3E008D45E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		68F8ABDE1E5DAF3E008D45E1 /* BossHeaderRefreshDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BossHeaderRefreshDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		68F8ABE21E5DAF3E008D45E1 /* BossHeaderRefreshDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BossHeaderRefreshDemoTests.m; sourceTree = "<group>"; };
-		68F8ABE41E5DAF3E008D45E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		68F8ABE91E5DAF3E008D45E1 /* BossHeaderRefreshDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BossHeaderRefreshDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		68F8ABED1E5DAF3E008D45E1 /* BossHeaderRefreshDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BossHeaderRefreshDemoUITests.m; sourceTree = "<group>"; };
-		68F8ABEF1E5DAF3E008D45E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68F8ABFB1E5DAF5F008D45E1 /* UIScrollView+BossRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+BossRefresh.h"; sourceTree = "<group>"; };
 		68F8ABFC1E5DAF5F008D45E1 /* UIScrollView+BossRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+BossRefresh.m"; sourceTree = "<group>"; };
 		68F8ABFE1E5DAF72008D45E1 /* BossHeaderRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BossHeaderRefresh.h; sourceTree = "<group>"; };
@@ -70,20 +45,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		68F8ABDB1E5DAF3E008D45E1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		68F8ABE61E5DAF3E008D45E1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -91,8 +52,6 @@
 			isa = PBXGroup;
 			children = (
 				68F8ABC71E5DAF3E008D45E1 /* BossHeaderRefreshDemo */,
-				68F8ABE11E5DAF3E008D45E1 /* BossHeaderRefreshDemoTests */,
-				68F8ABEC1E5DAF3E008D45E1 /* BossHeaderRefreshDemoUITests */,
 				68F8ABC61E5DAF3E008D45E1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,8 +60,6 @@
 			isa = PBXGroup;
 			children = (
 				68F8ABC51E5DAF3E008D45E1 /* BossHeaderRefreshDemo.app */,
-				68F8ABDE1E5DAF3E008D45E1 /* BossHeaderRefreshDemoTests.xctest */,
-				68F8ABE91E5DAF3E008D45E1 /* BossHeaderRefreshDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,24 +87,6 @@
 				68F8ABD91E5DAF3E008D45E1 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		68F8ABE11E5DAF3E008D45E1 /* BossHeaderRefreshDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				68F8ABE21E5DAF3E008D45E1 /* BossHeaderRefreshDemoTests.m */,
-				68F8ABE41E5DAF3E008D45E1 /* Info.plist */,
-			);
-			path = BossHeaderRefreshDemoTests;
-			sourceTree = "<group>";
-		};
-		68F8ABEC1E5DAF3E008D45E1 /* BossHeaderRefreshDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				68F8ABED1E5DAF3E008D45E1 /* BossHeaderRefreshDemoUITests.m */,
-				68F8ABEF1E5DAF3E008D45E1 /* Info.plist */,
-			);
-			path = BossHeaderRefreshDemoUITests;
 			sourceTree = "<group>";
 		};
 		68F8AC041E5DB09D008D45E1 /* BossHeaderRefresh */ = {
@@ -183,42 +122,6 @@
 			productReference = 68F8ABC51E5DAF3E008D45E1 /* BossHeaderRefreshDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		68F8ABDD1E5DAF3E008D45E1 /* BossHeaderRefreshDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 68F8ABF51E5DAF3E008D45E1 /* Build configuration list for PBXNativeTarget "BossHeaderRefreshDemoTests" */;
-			buildPhases = (
-				68F8ABDA1E5DAF3E008D45E1 /* Sources */,
-				68F8ABDB1E5DAF3E008D45E1 /* Frameworks */,
-				68F8ABDC1E5DAF3E008D45E1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				68F8ABE01E5DAF3E008D45E1 /* PBXTargetDependency */,
-			);
-			name = BossHeaderRefreshDemoTests;
-			productName = BossHeaderRefreshDemoTests;
-			productReference = 68F8ABDE1E5DAF3E008D45E1 /* BossHeaderRefreshDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		68F8ABE81E5DAF3E008D45E1 /* BossHeaderRefreshDemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 68F8ABF81E5DAF3E008D45E1 /* Build configuration list for PBXNativeTarget "BossHeaderRefreshDemoUITests" */;
-			buildPhases = (
-				68F8ABE51E5DAF3E008D45E1 /* Sources */,
-				68F8ABE61E5DAF3E008D45E1 /* Frameworks */,
-				68F8ABE71E5DAF3E008D45E1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				68F8ABEB1E5DAF3E008D45E1 /* PBXTargetDependency */,
-			);
-			name = BossHeaderRefreshDemoUITests;
-			productName = BossHeaderRefreshDemoUITests;
-			productReference = 68F8ABE91E5DAF3E008D45E1 /* BossHeaderRefreshDemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -230,18 +133,8 @@
 				TargetAttributes = {
 					68F8ABC41E5DAF3E008D45E1 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = Y4FK8UXDXW;
+						DevelopmentTeam = L8C6M6B8E9;
 						ProvisioningStyle = Manual;
-					};
-					68F8ABDD1E5DAF3E008D45E1 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 68F8ABC41E5DAF3E008D45E1;
-					};
-					68F8ABE81E5DAF3E008D45E1 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 68F8ABC41E5DAF3E008D45E1;
 					};
 				};
 			};
@@ -259,8 +152,6 @@
 			projectRoot = "";
 			targets = (
 				68F8ABC41E5DAF3E008D45E1 /* BossHeaderRefreshDemo */,
-				68F8ABDD1E5DAF3E008D45E1 /* BossHeaderRefreshDemoTests */,
-				68F8ABE81E5DAF3E008D45E1 /* BossHeaderRefreshDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -273,20 +164,6 @@
 				68F8ABD81E5DAF3E008D45E1 /* LaunchScreen.storyboard in Resources */,
 				68F8ABD51E5DAF3E008D45E1 /* Assets.xcassets in Resources */,
 				68F8ABD31E5DAF3E008D45E1 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		68F8ABDC1E5DAF3E008D45E1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		68F8ABE71E5DAF3E008D45E1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,36 +183,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		68F8ABDA1E5DAF3E008D45E1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				68F8ABE31E5DAF3E008D45E1 /* BossHeaderRefreshDemoTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		68F8ABE51E5DAF3E008D45E1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				68F8ABEE1E5DAF3E008D45E1 /* BossHeaderRefreshDemoUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		68F8ABE01E5DAF3E008D45E1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 68F8ABC41E5DAF3E008D45E1 /* BossHeaderRefreshDemo */;
-			targetProxy = 68F8ABDF1E5DAF3E008D45E1 /* PBXContainerItemProxy */;
-		};
-		68F8ABEB1E5DAF3E008D45E1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 68F8ABC41E5DAF3E008D45E1 /* BossHeaderRefreshDemo */;
-			targetProxy = 68F8ABEA1E5DAF3E008D45E1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		68F8ABD11E5DAF3E008D45E1 /* Main.storyboard */ = {
@@ -449,13 +297,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = BossHeaderRefreshDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.BossHeaderRefreshDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Debug;
 		};
@@ -463,59 +312,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y4FK8UXDXW;
+				DEVELOPMENT_TEAM = L8C6M6B8E9;
 				INFOPLIST_FILE = BossHeaderRefreshDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willing.BossHeaderRefreshDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37cda96-8f5e-4e66-b454-438b5140edb4";
-				PROVISIONING_PROFILE_SPECIFIER = PPForAll;
-			};
-			name = Release;
-		};
-		68F8ABF61E5DAF3E008D45E1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = BossHeaderRefreshDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.BossHeaderRefreshDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BossHeaderRefreshDemo.app/BossHeaderRefreshDemo";
-			};
-			name = Debug;
-		};
-		68F8ABF71E5DAF3E008D45E1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = BossHeaderRefreshDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.BossHeaderRefreshDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BossHeaderRefreshDemo.app/BossHeaderRefreshDemo";
-			};
-			name = Release;
-		};
-		68F8ABF91E5DAF3E008D45E1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = BossHeaderRefreshDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.BossHeaderRefreshDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = BossHeaderRefreshDemo;
-			};
-			name = Debug;
-		};
-		68F8ABFA1E5DAF3E008D45E1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = BossHeaderRefreshDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willing.BossHeaderRefreshDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = BossHeaderRefreshDemo;
+				PROVISIONING_PROFILE = "41eaf476-bb76-4cb9-b2e9-b856cc3e9d97";
+				PROVISIONING_PROFILE_SPECIFIER = "PP For All";
 			};
 			name = Release;
 		};
@@ -538,22 +342,7 @@
 				68F8ABF41E5DAF3E008D45E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		68F8ABF51E5DAF3E008D45E1 /* Build configuration list for PBXNativeTarget "BossHeaderRefreshDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				68F8ABF61E5DAF3E008D45E1 /* Debug */,
-				68F8ABF71E5DAF3E008D45E1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		68F8ABF81E5DAF3E008D45E1 /* Build configuration list for PBXNativeTarget "BossHeaderRefreshDemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				68F8ABF91E5DAF3E008D45E1 /* Debug */,
-				68F8ABFA1E5DAF3E008D45E1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

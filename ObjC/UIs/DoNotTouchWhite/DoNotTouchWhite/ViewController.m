@@ -27,7 +27,6 @@ static float timeInterval = 0.01;
 @implementation ViewController
 
 - (NSMutableArray *)buttons {
-    
     if (!_buttons) {
         _buttons = [NSMutableArray array];
     }
@@ -35,21 +34,18 @@ static float timeInterval = 0.01;
 }
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:self selector:@selector(action) userInfo:nil repeats:YES];
 }
 
 - (void)action {
-    
     [self createBtns];
     
     [self moveBtns];
 }
 
 - (void)createBtns {
-    
     CGFloat btnW = [UIScreen mainScreen].bounds.size.width * 0.25;
     CGFloat btnH = 150;
     if (count % 72 == 0) {
@@ -77,7 +73,6 @@ static float timeInterval = 0.01;
 }
 
 - (void)moveBtns {
-    
     static int speedY = 2;
     static int newY = 0;
     for (int i = 0; i < self.buttons.count; i++) {
@@ -91,7 +86,6 @@ static float timeInterval = 0.01;
 }
 
 - (void)removeBtns {
-    
     [self.buttons makeObjectsPerformSelector:@selector(removeFromSuperview)];
     [self.buttons removeAllObjects];
 }
@@ -99,7 +93,6 @@ static float timeInterval = 0.01;
 #pragma mark - Actions
 
 - (void)blackBtnPress:(UIButton *)btn {
-    
     score += 1;
     self.scoreLabel.text = [NSString stringWithFormat:@"%d", score];
     if (score != 0 && score % 20 == 0) {
@@ -110,7 +103,6 @@ static float timeInterval = 0.01;
 }
 
 - (void)whiteBtnPress:(UIButton *)btn {
-    
     [self.timer invalidate];
     if (score > highestScore) {
         highestScore = score;
@@ -121,7 +113,6 @@ static float timeInterval = 0.01;
 }
 
 - (void)speedUp {
-    
     [self.timer invalidate];
     timeInterval *= 0.75;
     self.timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:self selector:@selector(action) userInfo:nil repeats:YES];
@@ -130,7 +121,6 @@ static float timeInterval = 0.01;
 #pragma mark - UIAlertViewDelegate
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
     if (buttonIndex == 1) {
         [self removeBtns];
         self.scoreLabel.text = @"0";

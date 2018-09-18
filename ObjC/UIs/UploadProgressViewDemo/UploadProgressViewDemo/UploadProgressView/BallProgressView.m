@@ -11,7 +11,6 @@
 @implementation BallProgressView
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor clearColor];
     }
@@ -19,14 +18,12 @@
 }
 
 - (void)setProgress:(CGFloat)progress {
-    
     _progress = progress;
     
     [self setNeedsDisplay];
 }
 
 - (void)drawRect:(CGRect)rect {
-    
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     
     CGFloat xCenter = rect.size.width * 0.5;
@@ -56,7 +53,6 @@
 }
 
 - (void)setCenterProgressText:(NSString *)text withAttributes:(NSDictionary *)attributes {
-    
     CGFloat xCenter = self.frame.size.width * 0.5;
     CGFloat yCenter = self.frame.size.height * 0.5;
     CGSize strSize = [text sizeWithAttributes:attributes];

@@ -105,7 +105,6 @@ currentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor
 }
 
 - (void)setupBasicSubviews {
-    
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     scrollView.frame = self.bounds;
     scrollView.showsHorizontalScrollIndicator = NO;
@@ -145,14 +144,12 @@ currentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor
 }
 
 - (void)tapAction:(UITapGestureRecognizer *)tapGesture {
-    
     if ([self.delegate respondsToSelector:@selector(infiniteCarouselView:didClickImageAtIndex:)]) {
         [self.delegate infiniteCarouselView:self didClickImageAtIndex:self.currentImageView.tag];
     }
 }
 
 - (void)setupWithImages {
-    
     self.currentImageView.image = self.images[0];
     self.currentImageView.tag   = 0;
     
@@ -176,7 +173,6 @@ currentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor
 }
 
 - (void)setupDownloadInternetImage {
-    
     NSMutableArray *imagesM = [NSMutableArray arrayWithCapacity:_imageURLStrings.count];
     
     // Download first image.
@@ -213,7 +209,6 @@ currentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor
 }
 
 - (void)startTimer {
-    
     if (self.images.count <= 1) {
         return;
     }
@@ -225,7 +220,6 @@ currentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor
 }
 
 - (void)stopTimer {
-    
     if (_timer) {
         [_timer invalidate];
          _timer = nil;
@@ -233,14 +227,12 @@ currentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor
 }
 
 - (void)nextPage {
-    
     if (self.scrollView.contentOffset.x != 0) {
         [self.scrollView setContentOffset:CGPointMake(self.scrollView.bounds.size.width * 2, 0) animated:YES];
     }
 }
 
 - (void)updateContent {
-    
     if (self.images.count <= 1) {
         return;
     }
@@ -266,7 +258,6 @@ currentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
     if (self.images.count <= 1) return;
     
     if (self.scrollView.contentOffset.x > self.scrollView.bounds.size.width * 1.5) {
@@ -279,27 +270,22 @@ currentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    
     [self updateContent];
 }
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
-    
     [self updateContent];
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    
     [self stopTimer];
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    
     [self startTimer];
 }
 
 - (void)layoutSubviews {
-    
     [super layoutSubviews];
     
     self.scrollView.frame = self.bounds;

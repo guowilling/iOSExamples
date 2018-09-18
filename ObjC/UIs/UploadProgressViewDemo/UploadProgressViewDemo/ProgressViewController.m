@@ -17,7 +17,6 @@
 @implementation ProgressViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
@@ -32,7 +31,6 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
     if (_uploadProgressView.progress <  1.0) {
         _uploadProgressView.progress += 0.2;
     }

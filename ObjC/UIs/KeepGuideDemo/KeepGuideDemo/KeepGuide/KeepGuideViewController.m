@@ -29,18 +29,15 @@
 
 @implementation KeepGuideViewController
 
-- (BOOL)prefersStatusBarHidden{
-    
+- (BOOL)prefersStatusBarHidden {
     return YES;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
-    
     return UIStatusBarStyleLightContent;
 }
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     self.avaudioSession = [AVAudioSession sharedInstance];
@@ -83,7 +80,6 @@
 }
 
 - (void)moviePlayerPlaybackStateDidChange {
-    
     MPMoviePlaybackState playbackState = [_moviePlayer playbackState];
     switch (playbackState) {
         case MPMoviePlaybackStateStopped:
@@ -104,7 +100,6 @@
 }
 
 - (void)updateViewConstraints {
-    
     [super updateViewConstraints];
     
     CGFloat screenWidth = CGRectGetWidth([UIScreen mainScreen].bounds);
@@ -121,37 +116,31 @@
 }
 
 - (void)setupTimer {
-    
     self.timer = [NSTimer timerWithTimeInterval:3.0f target:self selector:@selector(update) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
 - (void)update {
-    
     int page = (self.pageControl.currentPage + 1) % 4;
     self.pageControl.currentPage = page;
     [self pageChanged:self.pageControl];
 }
 
 - (void)pageChanged:(UIPageControl *)pageControl {
-    
     CGFloat x = (pageControl.currentPage) * [UIScreen mainScreen].bounds.size.width;
     [self.scrollView setContentOffset:CGPointMake(x, 0) animated:YES];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    
     double page = self.scrollView.contentOffset.x / self.scrollView.bounds.size.width;
     self.pageControl.currentPage = page;
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    
     [self.timer invalidate];
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    
     [self setupTimer];
 }
 

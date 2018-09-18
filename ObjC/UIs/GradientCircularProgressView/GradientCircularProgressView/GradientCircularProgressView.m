@@ -20,7 +20,6 @@
 @implementation GradientCircularProgressView
 
 + (void)initialize {
-    
     if (self == [GradientCircularProgressView class]) {
         id appearance = [self appearance];
         [appearance setInnerBackgroundColor:[[UIColor lightGrayColor] colorWithAlphaComponent:0.5]];
@@ -31,7 +30,6 @@
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor clearColor];
         
@@ -58,7 +56,6 @@
 #pragma mark - Drawing
 
 - (void)drawRect:(CGRect)rect {
-    
     CGFloat progressAngle = _progress * 360 - 90;
     CGPoint center = CGPointMake(rect.size.width / 2, rect.size.height / 2);
     CGFloat radius = rect.size.width / 2;
@@ -129,49 +126,42 @@
 #pragma mark - UIAppearance
 
 - (void)setInnerBackgroundColor:(UIColor *)innerBackgroundColor {
-    
     _innerBackgroundColor = innerBackgroundColor;
     
     [self setNeedsDisplay];
 }
 
 - (void)setOuterBackgroundColor:(UIColor *)outerBackgroundColor {
-    
     _outerBackgroundColor = outerBackgroundColor;
     
     [self setNeedsDisplay];
 }
 
 - (void)setProgressFillColor:(UIColor *)progressFillColor {
-    
     _progressFillColor = progressFillColor;
     
     [self setNeedsDisplay];
 }
 
 - (void)setProgressTopGradientColor:(UIColor *)progressTopGradientColor {
-    
     _progressTopGradientColor = progressTopGradientColor;
     
     [self setNeedsDisplay];
 }
 
 - (void)setProgressMidGradientColor:(UIColor *)progressMidGradientColor {
-    
     _progressMidGradientColor = progressMidGradientColor;
     
     [self setNeedsDisplay];
 }
 
 - (void)setProgressBottomGradientColor:(UIColor *)progressBottomGradientColor {
-    
     _progressBottomGradientColor = progressBottomGradientColor;
     
     [self setNeedsDisplay];
 }
 
 - (void)setProgress:(double)progress {
-    
     _progress = MIN(1.0, MAX(0.0, progress));
     
     [self setNeedsDisplay];

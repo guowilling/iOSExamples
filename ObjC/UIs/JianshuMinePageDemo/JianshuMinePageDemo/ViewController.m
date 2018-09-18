@@ -34,7 +34,6 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
 
     self.edgesForExtendedLayout = UIRectEdgeNone;
@@ -47,7 +46,6 @@
 }
 
 - (void)setupAvatar {
-    
     UIView *avatarView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 36, 36)];
     avatarView.backgroundColor = [UIColor clearColor];
     self.navigationItem.titleView = avatarView;
@@ -62,7 +60,6 @@
 }
 
 - (void)setupContentScrollView {
-    
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     scrollView.backgroundColor = [UIColor colorWithWhite:0.998 alpha:1];
     scrollView.delegate = self;
@@ -77,7 +74,6 @@
 }
 
 - (UITableView *)tableViewWithX:(CGFloat)x {
-    
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(x, 0, SRScreenW, SRScreenH - 0)];
     tableView.backgroundColor = [UIColor colorWithWhite:0.998 alpha:1];
     tableView.delegate = self;
@@ -90,8 +86,8 @@
 }
 
 - (void)setupHeaderContainer {
-    
     HeaderView *headerView = [HeaderView headerView:(CGRect){0, 0, SRScreenW, kHeaderViewH}];
+    
     SRCustomSegmentedControl *segmentedControl = [[SRCustomSegmentedControl alloc] initWithFrame:CGRectMake(0, kHeaderViewH, SRScreenW, kSegmentedControlH) titles:@[@"动态", @"文章", @"更多"] didTapTitleBlock:^(NSInteger fromIndex, NSInteger toIndex) {
         self.contentScrollView.contentOffset = CGPointMake(toIndex * SRScreenW, 0);
         [self synchronizationTableViewsOffsetY];
@@ -131,17 +127,14 @@
 #pragma mark - UITableViewDelegate && UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
     return 44;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellID"];
@@ -158,14 +151,12 @@
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    
     if (scrollView == self.contentScrollView) {
         [self synchronizationTableViewsOffsetY];
     }
 }
 
 - (void)synchronizationTableViewsOffsetY {
-    
     CGFloat maxOffsetY = self.leftTableView.contentOffset.y;
     if (self.middleTableView.contentOffset.y > maxOffsetY) {
         maxOffsetY = self.middleTableView.contentOffset.y;
@@ -188,7 +179,6 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
     if (scrollView == self.contentScrollView) {
         [self.segmentedControl setSliderOffset:CGPointMake(scrollView.contentOffset.x / 3, 0)];
         return;

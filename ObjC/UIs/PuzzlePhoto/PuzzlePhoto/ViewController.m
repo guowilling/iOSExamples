@@ -15,7 +15,6 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     UIImage *image = [UIImage imageNamed:@"coldplay.jpg"];
@@ -82,7 +81,6 @@
 }
 
 - (void)btnClick:(UIButton *)btn {
-    
     UIButton *blank = (UIButton *)[self.view viewWithTag:102];
     CGFloat x1 = blank.frame.origin.x;
     CGFloat y1 = blank.frame.origin.y;

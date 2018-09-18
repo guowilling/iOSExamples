@@ -33,7 +33,6 @@
 }
 
 - (void)updateProgress {
-    
     self.progressView.progress += 0.05;
     
     NSMutableAttributedString *mAString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%0.f%%", self.progressView.progress * 100]];

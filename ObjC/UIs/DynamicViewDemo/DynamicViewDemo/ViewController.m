@@ -23,7 +23,6 @@
 @implementation ViewController
 
 - (UIButton *)testButton {
-    
     if (!_testButton) {
         _testButton = ({
             UIButton *testButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -39,7 +38,6 @@
 }
 
 - (DynamicView *)dynamicView {
-    
     if (!_dynamicView) {
         _dynamicView = [[DynamicView alloc] initWithFrame:CGRectMake(0, -kScreenH + 1, kScreenW + 1, kScreenH + 1)
                                             referenceView:self.view];
@@ -51,7 +49,6 @@
 }
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     [self.view addSubview:self.testButton];
@@ -60,7 +57,6 @@
 }
 
 - (void)showAction {
-    
     [UIView animateWithDuration:0.5 animations:^{
         self.dynamicView.frame = CGRectMake(0, -kScreenH + 1, kScreenW + 1, kScreenH + 1);
     }];

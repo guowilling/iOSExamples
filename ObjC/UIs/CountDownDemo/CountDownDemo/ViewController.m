@@ -21,7 +21,6 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
 //    [SRCountDownLabel startCountDownWithNumber:3];
     
 //    [SRCountDownLabel startCountDownWithNumber:3 endTips:@"GO"];
@@ -35,6 +34,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end

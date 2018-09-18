@@ -18,7 +18,6 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
@@ -37,7 +36,6 @@
 }
 
 - (IBAction)add:(id)sender {
-    
     [self.databaseQueue inDatabase:^(FMDatabase *db) {
         BOOL flag = [db executeUpdate:@"insert into t_user (name,money) values (?,?)",@"a", @100];
         if (flag) {
@@ -50,7 +48,6 @@
 }
 
 - (IBAction)delete:(id)sender {
-    
     [self.databaseQueue inDatabase:^(FMDatabase *db) {
         BOOL flag = [db executeUpdate:@"delete from t_user;"];
         if (flag) {
@@ -62,7 +59,6 @@
 }
 
 - (IBAction)update:(id)sender {
-    
     [self.databaseQueue inDatabase:^(FMDatabase *db) {
         [db beginTransaction]; // 开启事务
         
@@ -87,7 +83,6 @@
 }
 
 - (IBAction)select:(id)sender {
-    
     [self.databaseQueue inDatabase:^(FMDatabase *db) {
         FMResultSet *result = [db executeQuery:@"select * from t_user"];
         while ([result next]) {

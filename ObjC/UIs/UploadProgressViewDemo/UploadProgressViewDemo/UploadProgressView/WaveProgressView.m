@@ -29,17 +29,14 @@
 @implementation WaveProgressView
 
 - (void)dealloc {
-    
     if (self.displayLink) {
         [self.displayLink invalidate];
         self.displayLink = nil;
     }
-    
     if (_firstWaveLayer) {
         [_firstWaveLayer removeFromSuperlayer];
         _firstWaveLayer = nil;
     }
-    
     if (_secondWaveLayer) {
         [_secondWaveLayer removeFromSuperlayer];
         _secondWaveLayer = nil;
@@ -47,7 +44,6 @@
 }
 
 - (CAShapeLayer *)firstWaveLayer {
-    
     if (!_firstWaveLayer) {
         _firstWaveLayer = [CAShapeLayer layer];
         _firstWaveLayer.frame = self.bounds;
@@ -57,7 +53,6 @@
 }
 
 - (CAShapeLayer *)secondWaveLayer {
-    
     if (!_secondWaveLayer) {
         _secondWaveLayer = [CAShapeLayer layer];
         _secondWaveLayer.frame = self.bounds;
@@ -67,7 +62,6 @@
 }
 
 - (UILabel *)progressLabel {
-    
     if (!_progressLabel) {
         _progressLabel               = [[UILabel alloc] init];
         _progressLabel.text          = @"0%";
@@ -81,7 +75,6 @@
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    
     if (self = [super initWithFrame:frame]) {
         self.bounds = CGRectMake(0, 0, MIN(frame.size.width, frame.size.height), MIN(frame.size.width, frame.size.height));
         self.layer.cornerRadius  = MIN(frame.size.width, frame.size.height) * 0.5;
@@ -105,7 +98,6 @@
 }
 
 - (void)setProgress:(CGFloat)progress {
-    
     _progress = progress;
     _waveHeight = self.bounds.size.height * (1 - progress);
     
@@ -117,7 +109,6 @@
 }
 
 - (void)startWaveAnimation {
-    
     if (!self.displayLink) {
         self.displayLink = [CADisplayLink displayLinkWithTarget:[YYWeakProxy proxyWithTarget:self]
                                                        selector:@selector(waveAnimation)];
@@ -126,7 +117,6 @@
 }
 
 - (void)stopWaveAnimation {
-    
     if (self.displayLink) {
         [self.displayLink invalidate];
         self.displayLink = nil;
@@ -134,7 +124,6 @@
 }
 
 - (void)waveAnimation {
-    
     CGFloat waveHeight = self.waveAmplitude;
     if (self.progress == 0.0f || self.progress == 1.0f) {
         waveHeight = 0.f;

@@ -38,7 +38,6 @@
 }
 
 - (void)sliderChanged:(UISlider*)slider {
-    
     _progressView.progress = slider.value;
 }
 
