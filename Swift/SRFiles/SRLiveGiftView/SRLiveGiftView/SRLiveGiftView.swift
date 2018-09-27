@@ -2,7 +2,7 @@
 //  SRLiveGiftView.swift
 //  SRLiveGiftViewDemo
 //
-//  Created by 郭伟林 on 2017/9/11.
+//  Created by Willing Guo on 2017/9/11.
 //  Copyright © 2017年 SR. All rights reserved.
 //
 
@@ -20,17 +20,16 @@ class SRLiveGiftView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         setupUI()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
 
 extension SRLiveGiftView {
-    
     fileprivate func setupUI() {
         //let w: CGFloat = frame.width
         let w: CGFloat = 0
@@ -40,16 +39,11 @@ extension SRLiveGiftView {
             let y: CGFloat = (h + kChannelViewMargin) * CGFloat(i)
             let channelView = SRLiveGiftChannelView.loadFromNib()
             channelView.frame = CGRect(x: x, y: y, width: w, height: h)
-            //channelView.frame.origin.y = y
             channelView.alpha = 0.0
-            addSubview(channelView)
-            channelViews.append(channelView)
-            
             channelView.lifecycleCompletion = { channelView in
                 guard self.cachedGiftModels.count != 0 else {
                     return
                 }
-                
                 let firstGiftModel = self.cachedGiftModels.first!
                 self.cachedGiftModels.removeFirst()
                 channelView.giftModel = firstGiftModel
@@ -62,6 +56,8 @@ extension SRLiveGiftView {
                     }
                 }
             }
+            addSubview(channelView)
+            channelViews.append(channelView)
         }
     }
 }
@@ -73,12 +69,10 @@ extension SRLiveGiftView {
             channelView.oneMoreTime()
             return
         }
-        
         if let channelView = getIdleChannelView() {
             channelView.giftModel = giftModel
             return
         }
-        
         cachedGiftModels.append(giftModel)
         print(cachedGiftModels)
     }
@@ -100,5 +94,4 @@ extension SRLiveGiftView {
         }
         return nil
     }
-    
 }

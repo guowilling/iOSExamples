@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  SRLiveGiftViewDemo
 //
-//  Created by 郭伟林 on 2017/9/11.
+//  Created by Willing Guo on 2017/9/11.
 //  Copyright © 2017年 SR. All rights reserved.
 //
 
@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         liveGiftView.frame = CGRect(x: 0, y: 64, width: 300, height: 98)
         view.addSubview(liveGiftView)
@@ -34,6 +33,4 @@ class ViewController: UIViewController {
         let gift3 = SRLiveGiftModel(iconURLString: "icon3", senderName: "coder3", giftName: "gift3", giftURLString: "gift3")
         liveGiftView.showGift(gift3)
     }
-    
 }
-

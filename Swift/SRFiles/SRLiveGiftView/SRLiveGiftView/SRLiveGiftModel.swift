@@ -2,7 +2,7 @@
 //  SRLiveGiftModel.swift
 //  SRLiveGiftViewDemo
 //
-//  Created by 郭伟林 on 2017/9/11.
+//  Created by Willing Guo on 2017/9/11.
 //  Copyright © 2017年 SR. All rights reserved.
 //
 
@@ -32,5 +32,4 @@ class SRLiveGiftModel: NSObject {
         }
         return true
     }
-
 }

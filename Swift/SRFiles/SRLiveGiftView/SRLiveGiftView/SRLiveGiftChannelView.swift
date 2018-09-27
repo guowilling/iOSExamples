@@ -2,7 +2,7 @@
 //  SRLiveGiftChannelView.swift
 //  SRLiveGiftViewDemo
 //
-//  Created by 郭伟林 on 2017/9/11.
+//  Created by Willing Guo on 2017/9/11.
 //  Copyright © 2017年 SR. All rights reserved.
 //
 
@@ -41,13 +41,12 @@ class SRLiveGiftChannelView: UIView {
             giftDescribeLabel.text = "送出礼物:【\(giftModel.giftName)】"
             giftImageView.image = UIImage(named: giftModel.giftURLString)
             
-            performAnimation()
+            performShowing()
         }
     }
 }
 
 extension SRLiveGiftChannelView {
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -59,7 +58,6 @@ extension SRLiveGiftChannelView {
         iconImageView.layer.borderWidth = 1
         iconImageView.layer.borderColor = UIColor.white.cgColor
     }
-    
 }
 
 extension SRLiveGiftChannelView {
@@ -76,12 +74,11 @@ extension SRLiveGiftChannelView {
             cachedNumber += 1
         }
     }
-    
 }
 
 extension SRLiveGiftChannelView {
     
-    fileprivate func performAnimation() {
+    fileprivate func performShowing() {
         state = .animating
         giftDigitalLabel.text = " x1 "
         giftDigitalLabel.alpha = 1.0
@@ -127,5 +124,4 @@ extension SRLiveGiftChannelView {
             }
         })
     }
-    
 }
