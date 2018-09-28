@@ -24,14 +24,12 @@ SRSingletonImplement(SRAudioRecorder)
 - (AVAudioRecorder *)recorder {
     
     if (!_recorder) {
-        
         // 设置录音会话
         [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
         [[AVAudioSession sharedInstance] setActive:YES error:nil];
 
         // 设置录音参数
         NSMutableDictionary *recordSettings = [NSMutableDictionary dictionary];
-        
         [recordSettings setValue :[NSNumber numberWithInt:kAudioFormatMPEG4AAC] forKey:AVFormatIDKey]; // 编码格式
         [recordSettings setValue :[NSNumber numberWithFloat:11025.0] forKey: AVSampleRateKey]; // 采样率
         [recordSettings setValue :[NSNumber numberWithInt:2] forKey: AVNumberOfChannelsKey]; // 通道数

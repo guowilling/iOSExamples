@@ -11,21 +11,22 @@
 
 @implementation ViewController
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (NSURL *)getFileURL {
-    
     NSString *urlStr = [[NSBundle mainBundle] pathForResource:@"jieshaoshiping.mp4" ofType:nil];
     return [NSURL fileURLWithPath:urlStr];
 }
 
 - (NSURL *)getNetworkURL {
-    
     NSString *urlStr = @"http://192.168.1.16/jieshaoshiping.mp4";
     urlStr = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     return [NSURL URLWithString:urlStr];
 }
 
 - (MPMoviePlayerController *)moviePlayerController {
-    
     if (!_moviePlayerController) {
         _moviePlayerController = [[MPMoviePlayerController alloc] initWithContentURL:[self getFileURL]];
         _moviePlayerController.view.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
@@ -36,13 +37,7 @@
     return _moviePlayerController;
 }
 
-- (void)dealloc {
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     [self.moviePlayerController play];
@@ -55,7 +50,6 @@
 }
 
 - (void)mediaPlayerPlaybackStateChange:(NSNotification *)notification {
-    
     switch (self.moviePlayerController.playbackState) {
         case MPMoviePlaybackStatePlaying:
             NSLog(@"正在播放.");
@@ -73,20 +67,17 @@
 }
 
 - (void)mediaPlayerPlaybackFinished:(NSNotification *)notification {
-    
     NSLog(@"mediaPlayerPlaybackFinished");
     NSLog(@"播放状态: %zd", self.moviePlayerController.playbackState);
 }
 
 - (void)mediaPlayerThumbnailRequestFinished:(NSNotification *)notification {
-    
     NSLog(@"视频截图完成!");
-    //UIImage *image = notification.userInfo[MPMoviePlayerThumbnailImageKey];
-    //UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+    UIImage *image = notification.userInfo[MPMoviePlayerThumbnailImageKey];
+    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
 }
 
 - (void)playWithAVPlayer {
-    
     AVPlayer *player = [AVPlayer playerWithURL:[self getFileURL]];
     AVPlayerLayer *playerLayer = [AVPlayerLayer layer];
     playerLayer.player = player;

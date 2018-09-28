@@ -24,12 +24,10 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 @implementation ViewController
 
 - (void)dealloc {
-    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     _enableRotation = YES;
@@ -84,38 +82,32 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    
     [super viewDidAppear:animated];
     
     [self.captureSession startRunning];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
-    
     [super viewDidDisappear:animated];
     
     [self.captureSession stopRunning];
 }
 
 - (BOOL)shouldAutorotate {
-    
     return self.enableRotation;
 }
 
 // Notifies when rotation begins, reaches halfway point and ends.
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    
     AVCaptureConnection *captureConnection = [self.captureVideoPreviewLayer connection];
     captureConnection.videoOrientation = (AVCaptureVideoOrientation)toInterfaceOrientation; // 屏幕旋转时调整视频预览图层的方向
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-    
     _captureVideoPreviewLayer.frame = self.viewContainer.bounds; // 屏幕旋转后调整视频预览图层的大小
 }
 
 - (IBAction)startRecording {
-
     if ([self.captureMovieFileOutput isRecording]) {
         return;
     }
@@ -133,12 +125,10 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 }
 
 - (IBAction)endRcording {
-    
     [self.captureMovieFileOutput stopRecording];
 }
 
 - (IBAction)toggleButtonClick:(UIButton *)sender {
-    
     AVCaptureDevice *currentDevice = [self.videoCaptureDeviceInput device];
     AVCaptureDevicePosition currentPosition = [currentDevice position];
     [self removeNotificationFromCaptureDevice:currentDevice];
@@ -164,12 +154,10 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 #pragma mark - AVCaptureFileOutputRecordingDelegate
 
 - (void)captureOutput:(AVCaptureFileOutput *)captureOutput didStartRecordingToOutputFileAtURL:(NSURL *)fileURL fromConnections:(NSArray *)connections {
-    
     NSLog(@"开始录像");
 }
 
 - (void)captureOutput:(AVCaptureFileOutput *)captureOutput didFinishRecordingToOutputFileAtURL:(NSURL *)outputFileURL fromConnections:(NSArray *)connections error:(NSError *)error {
-    
     NSLog(@"结束录像");
     
     self.enableRotation = YES;
@@ -195,7 +183,6 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 }
 
 - (void)addNotificationToCaptureDevice:(AVCaptureDevice *)captureDevice {
-    
     [self changeDeviceProperties:^(AVCaptureDevice *captureDevice) {
         captureDevice.subjectAreaChangeMonitoringEnabled = YES;
     }];
@@ -204,12 +191,10 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 }
 
 - (void)removeNotificationFromCaptureDevice:(AVCaptureDevice *)captureDevice {
-    
     [[NSNotificationCenter defaultCenter] removeObserver:self name:AVCaptureDeviceSubjectAreaDidChangeNotification object:captureDevice];
 }
 
 - (void)addNotificationToCaptureSession:(AVCaptureSession *)captureSession {
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sessionRuntimeError:) name:AVCaptureSessionRuntimeErrorNotification object:captureSession];
 }
 
@@ -222,7 +207,6 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 }
 
 - (AVCaptureDevice *)getCameraDeviceWithPosition:(AVCaptureDevicePosition )position {
-    
     NSArray *cameras= [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
     for (AVCaptureDevice *camera in cameras) {
         if ([camera position] == position) {
@@ -233,7 +217,6 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 }
 
 - (void)changeDeviceProperties:(ChangePropertyHandler)handler {
-    
     AVCaptureDevice *captureDevice = [self.videoCaptureDeviceInput device];
     NSError *error;
     if ([captureDevice lockForConfiguration:&error]) {
@@ -243,7 +226,6 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 }
 
 - (void)setFlashMode:(AVCaptureFlashMode )flashMode {
-    
     [self changeDeviceProperties:^(AVCaptureDevice *captureDevice) {
         if ([captureDevice isFlashModeSupported:flashMode]) {
             [captureDevice setFlashMode:flashMode];
@@ -252,7 +234,6 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 }
 
 - (void)setFocusMode:(AVCaptureFocusMode )focusMode {
-    
     [self changeDeviceProperties:^(AVCaptureDevice *captureDevice) {
         if ([captureDevice isFocusModeSupported:focusMode]) {
             [captureDevice setFocusMode:focusMode];
@@ -261,7 +242,6 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 }
 
 - (void)setExposureMode:(AVCaptureExposureMode)exposureMode {
-    
     [self changeDeviceProperties:^(AVCaptureDevice *captureDevice) {
         if ([captureDevice isExposureModeSupported:exposureMode]) {
             [captureDevice setExposureMode:exposureMode];
@@ -270,7 +250,6 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 }
 
 - (void)focusWithMode:(AVCaptureFocusMode)focusMode exposureMode:(AVCaptureExposureMode)exposureMode atPoint:(CGPoint)point {
-    
     [self changeDeviceProperties:^(AVCaptureDevice *captureDevice) {
         if ([captureDevice isFocusModeSupported:focusMode]) {
             [captureDevice setFocusMode:AVCaptureFocusModeAutoFocus];
@@ -288,7 +267,6 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 }
 
 - (void)setFocusCursorWithPoint:(CGPoint)point {
-    
     self.focusCursor.center = point;
     self.focusCursor.transform = CGAffineTransformMakeScale(1.5, 1.5);
     self.focusCursor.alpha = 1.0;
@@ -300,13 +278,11 @@ typedef void(^ChangePropertyHandler)(AVCaptureDevice *captureDevice);
 }
 
 - (void)addGenstureRecognizer {
-    
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapScreen:)];
     [self.viewContainer addGestureRecognizer:tapGesture];
 }
 
 - (void)tapScreen:(UITapGestureRecognizer *)tapGesture {
-    
     CGPoint point = [tapGesture locationInView:self.viewContainer];
     CGPoint cameraPoint = [self.captureVideoPreviewLayer captureDevicePointOfInterestForPoint:point];
     [self setFocusCursorWithPoint:point];

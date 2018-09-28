@@ -7,12 +7,10 @@
 static NSMutableDictionary *_soundIDs;
 
 + (void)initialize {
-    
     _soundIDs = [NSMutableDictionary dictionary];
 }
 
 + (void)playAudioWithFilename:(NSString *)filename {
-    
     if (!filename) {
         return;
     }
@@ -31,7 +29,6 @@ static NSMutableDictionary *_soundIDs;
 }
 
 + (void)disposeAudioWithFilename:(NSString *)filename {
-    
     if (!filename) {
         return;
     }

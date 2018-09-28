@@ -22,9 +22,7 @@ SRSingletonImplement(SRAudioPlayer)
 - (void)playAudioWithPath:(NSString *)path {
     
     _player = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:path] error:nil];
-    
     [_player prepareToPlay];
-    
     [_player play];
 }
 

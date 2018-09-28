@@ -10,31 +10,26 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-}
-
 - (void)dealloc {
-    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+}
+
 - (NSURL *)getFileURL {
-    
     NSString *urlStr = [[NSBundle mainBundle] pathForResource:@"yindaoshipinios.mp4" ofType:nil];
     return [NSURL fileURLWithPath:urlStr];
 }
 
 - (NSURL *)getNetworkURL {
-    
     NSString *urlStr = @"http://192.168.1.16/yindaoshipinios.mp4";
     urlStr = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     return [NSURL URLWithString:urlStr];
 }
 
 - (MPMoviePlayerViewController *)moviePlayerViewController {
-
     if (!_moviePlayerViewController) {
         _moviePlayerViewController = [[MPMoviePlayerViewController alloc] initWithContentURL:[self getFileURL]];
         
@@ -45,7 +40,6 @@
 }
 
 - (IBAction)playClick:(UIButton *)sender {
-    
     if (_moviePlayerViewController) {
         _moviePlayerViewController = nil;
     }
@@ -53,7 +47,6 @@
 }
 
 - (void)mediaPlayerPlaybackStateChange:(NSNotification *)notification {
-    
     switch (self.moviePlayerViewController.moviePlayer.playbackState) {
         case MPMoviePlaybackStatePlaying:
             NSLog(@"正在播放");
@@ -71,7 +64,6 @@
 }
 
 - (void)mediaPlayerPlaybackFinished:(NSNotification *)notification {
-    
     NSLog(@"mediaPlayerPlaybackFinished");
     NSLog(@"播放状态: %zd", self.moviePlayerViewController.moviePlayer.playbackState);
 }

@@ -14,7 +14,6 @@ static BOOL isPlaying;
 @implementation MainViewController
 
 - (SystemSoundID)soundID {
-    
     if (!_soundID) {
         NSURL *url = [[NSBundle mainBundle] URLForResource:@"buyao.wav" withExtension:nil];
         AudioServicesCreateSystemSoundID((__bridge CFURLRef)(url), &_soundID);
@@ -23,7 +22,6 @@ static BOOL isPlaying;
 }
 
 - (void)didReceiveMemoryWarning {
-    
     [AudioTool disposeAudioWithFilename:@"buyao.wav"];
 }
 
@@ -52,7 +50,6 @@ static BOOL isPlaying;
  @param fileName 音频文件名称
  */
 - (void)playSoundEffect:(NSString *)fileName {
-    
     if (isPlaying) {
         return;
     }
