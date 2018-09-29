@@ -13,7 +13,7 @@
 		68BAE5AD2154D628005E55C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68BAE5AC2154D628005E55C7 /* Assets.xcassets */; };
 		68BAE5B02154D628005E55C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68BAE5AE2154D628005E55C7 /* LaunchScreen.storyboard */; };
 		68BAE5B32154D628005E55C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BAE5B22154D628005E55C7 /* main.m */; };
-		68BAE60A2154D9F7005E55C7 /* ChannelsEditing.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68BAE5F92154D9F6005E55C7 /* ChannelsEditing.bundle */; };
+		68BAE60A2154D9F7005E55C7 /* SRChannelsEditing.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68BAE5F92154D9F6005E55C7 /* SRChannelsEditing.bundle */; };
 		68BAE60B2154D9F7005E55C7 /* SRChannelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BAE5FB2154D9F6005E55C7 /* SRChannelItem.m */; };
 		68BAE60C2154D9F7005E55C7 /* SRChannelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BAE5FD2154D9F6005E55C7 /* SRChannelModel.m */; };
 		68BAE60D2154D9F7005E55C7 /* SRChannelsEditing.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BAE5FF2154D9F6005E55C7 /* SRChannelsEditing.m */; };
@@ -35,7 +35,7 @@
 		68BAE5AF2154D628005E55C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68BAE5B12154D628005E55C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68BAE5B22154D628005E55C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		68BAE5F92154D9F6005E55C7 /* ChannelsEditing.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChannelsEditing.bundle; sourceTree = "<group>"; };
+		68BAE5F92154D9F6005E55C7 /* SRChannelsEditing.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SRChannelsEditing.bundle; sourceTree = "<group>"; };
 		68BAE5FA2154D9F6005E55C7 /* SRChannelItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRChannelItem.h; sourceTree = "<group>"; };
 		68BAE5FB2154D9F6005E55C7 /* SRChannelItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRChannelItem.m; sourceTree = "<group>"; };
 		68BAE5FC2154D9F6005E55C7 /* SRChannelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRChannelModel.h; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 		68BAE5A22154D626005E55C7 /* SRChannelsEditingDemo */ = {
 			isa = PBXGroup;
 			children = (
-				68BAE5F82154D9F6005E55C7 /* ChannelsEditing */,
+				68BAE5F82154D9F6005E55C7 /* SRChannelsEditing */,
 				68BAE5A32154D626005E55C7 /* AppDelegate.h */,
 				68BAE5A42154D626005E55C7 /* AppDelegate.m */,
 				68BAE5A62154D626005E55C7 /* ViewController.h */,
@@ -98,7 +98,7 @@
 			path = SRChannelsEditingDemo;
 			sourceTree = "<group>";
 		};
-		68BAE5F82154D9F6005E55C7 /* ChannelsEditing */ = {
+		68BAE5F82154D9F6005E55C7 /* SRChannelsEditing */ = {
 			isa = PBXGroup;
 			children = (
 				68BAE5FE2154D9F6005E55C7 /* SRChannelsEditing.h */,
@@ -117,10 +117,10 @@
 				68BAE6082154D9F6005E55C7 /* UIView+SRFrame.h */,
 				68BAE6092154D9F6005E55C7 /* UIView+SRFrame.m */,
 				68BAE6002154D9F6005E55C7 /* SRChannelsEditingHeader.h */,
-				68BAE5F92154D9F6005E55C7 /* ChannelsEditing.bundle */,
+				68BAE5F92154D9F6005E55C7 /* SRChannelsEditing.bundle */,
 			);
-			name = ChannelsEditing;
-			path = ../../ChannelsEditing;
+			name = SRChannelsEditing;
+			path = ../../SRChannelsEditing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,7 +183,7 @@
 				68BAE5B02154D628005E55C7 /* LaunchScreen.storyboard in Resources */,
 				68BAE6102154D9F7005E55C7 /* SRTitleView.xib in Resources */,
 				68BAE5AD2154D628005E55C7 /* Assets.xcassets in Resources */,
-				68BAE60A2154D9F7005E55C7 /* ChannelsEditing.bundle in Resources */,
+				68BAE60A2154D9F7005E55C7 /* SRChannelsEditing.bundle in Resources */,
 				68BAE5AB2154D626005E55C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

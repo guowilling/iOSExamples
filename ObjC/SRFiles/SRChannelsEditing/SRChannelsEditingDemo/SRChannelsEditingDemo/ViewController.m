@@ -19,7 +19,7 @@
     [super viewDidLoad];
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+- (IBAction)showSRChannelsEditing:(id)sender {
     NSArray *mineChannels = @[@"推荐", @"热点", @"北京", @"视频",
                               @"社会", @"图片", @"娱乐", @"问答",
                               @"科技", @"汽车", @"财经", @"军事",

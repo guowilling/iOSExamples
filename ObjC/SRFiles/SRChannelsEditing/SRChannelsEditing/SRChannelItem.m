@@ -79,7 +79,7 @@ static inline void configRecommondChannelItem(SRChannelItem *btn) {
         self.layer.shouldRasterize = YES;
         self.layer.rasterizationScale = [UIScreen mainScreen].scale;
         
-        UIImageView *deleteIcon = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"ChannelsEditing.bundle/delete_18x18_"]];
+        UIImageView *deleteIcon = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"SRChannelsEditing.bundle/delete_18x18_"]];
         deleteIcon.hidden = YES;
         [self addSubview:deleteIcon];
         _deleteIcon = deleteIcon;

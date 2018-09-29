@@ -1,3 +1,7 @@
+//
+//  Created by https://github.com/guowilling on 2017/8/16.
+//  Copyright © 2017年 SR. All rights reserved.
+//
 
 #import "SRChannelsEditing.h"
 #import "SRHeaderView.h"
@@ -243,9 +247,9 @@ static CGFloat itemHeight = 40;
     
     [self destLocationForChannelItem:item completion:^(SRChannelModel *destModel) {
         if (self.dividingModel == item.model) {
-            _dividingModel = self.allChannels[item.model.tag - 1];
+            self.dividingModel = self.allChannels[item.model.tag - 1];
         } else if (self.dividingModel == destModel) {
-            _dividingModel = item.model;
+            self.dividingModel = item.model;
         }
         
         [self.allChannels removeObject:item.model];

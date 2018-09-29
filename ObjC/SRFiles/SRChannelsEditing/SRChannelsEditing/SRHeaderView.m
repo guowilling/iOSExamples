@@ -7,7 +7,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        UIButton *closeBtn = UIButton.button(UIButtonTypeCustom).image([UIImage imageNamed:@"ChannelsEditing.bundle/close_14x14_"], UIControlStateNormal);
+        UIButton *closeBtn = UIButton.button(UIButtonTypeCustom).image([UIImage imageNamed:@"SRChannelsEditing.bundle/close_14x14_"], UIControlStateNormal);
         closeBtn.frame = CGRectMake(15, 0, 40, 40);
         [closeBtn addTarget:self action:@selector(closeBtnAction:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:closeBtn];
