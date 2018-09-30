@@ -10,44 +10,44 @@ import UIKit
 
 /// Frame
 extension UIView {
-    public var x: CGFloat {
+    public var sr_x: CGFloat {
         get { return frame.origin.x }
         set { frame.origin.x = newValue }
     }
     
-    public var y: CGFloat {
+    public var sr_y: CGFloat {
         get { return frame.origin.y }
         set { frame.origin.y = newValue }
     }
     
-    public var width: CGFloat {
+    public var sr_width: CGFloat {
         get { return frame.size.width }
         set { frame.size.width = newValue }
     }
     
-    public var height: CGFloat {
+    public var sr_height: CGFloat {
         get { return frame.size.height }
         set { frame.size.height = newValue }
     }
     
-    public var top: CGFloat {
-        get { return y }
-        set { y = newValue }
+    public var sr_top: CGFloat {
+        get { return sr_y }
+        set { sr_y = newValue }
     }
     
-    public var left: CGFloat {
-        get { return x }
-        set { x = newValue }
+    public var sr_left: CGFloat {
+        get { return sr_x }
+        set { sr_x = newValue }
     }
     
-    public var bottom: CGFloat {
-        get { return y + height }
-        set { y = newValue - height }
+    public var sr_bottom: CGFloat {
+        get { return sr_y + sr_height }
+        set { sr_y = newValue - sr_height }
     }
     
-    public var right: CGFloat {
-        get { return x + width }
-        set { x = newValue - width }
+    public var sr_right: CGFloat {
+        get { return sr_x + sr_width }
+        set { sr_x = newValue - sr_width }
     }
 }
 
