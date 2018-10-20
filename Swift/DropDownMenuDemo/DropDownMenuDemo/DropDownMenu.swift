@@ -130,3 +130,22 @@ extension DropDownMenu {
         })
     }
 }
+
+extension DropDownMenu {
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        var hitView = super.hitTest(point, with: event)
+        if hitView == nil {
+            for subView in self.subviews {
+                let cPoint = subView.convert(point, from: self)
+                if subView.bounds.contains(cPoint) {
+                    hitView = subView
+                }
+            }
+        }
+        if hitView?.alpha == 0 {
+            return super.hitTest(point, with: event)
+        }
+        return hitView
+    }
+}
+
