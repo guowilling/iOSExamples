@@ -1,68 +1,7 @@
-//
-//  UIView+SRFrame.swift
-//  SwiftExtensions
-//
-//  Created by 郭伟林 on 2018/9/28.
-//  Copyright © 2018年 SR. All rights reserved.
-//
 
 import UIKit
 
-/// Frame
-extension UIView {
-    public var sr_x: CGFloat {
-        get { return frame.origin.x }
-        set { frame.origin.x = newValue }
-    }
-    
-    public var sr_y: CGFloat {
-        get { return frame.origin.y }
-        set { frame.origin.y = newValue }
-    }
-    
-    public var sr_width: CGFloat {
-        get { return frame.size.width }
-        set { frame.size.width = newValue }
-    }
-    
-    public var sr_height: CGFloat {
-        get { return frame.size.height }
-        set { frame.size.height = newValue }
-    }
-    
-    public var sr_top: CGFloat {
-        get { return sr_y }
-        set { sr_y = newValue }
-    }
-    
-    public var sr_left: CGFloat {
-        get { return sr_x }
-        set { sr_x = newValue }
-    }
-    
-    public var sr_bottom: CGFloat {
-        get { return sr_y + sr_height }
-        set { sr_y = newValue - sr_height }
-    }
-    
-    public var sr_right: CGFloat {
-        get { return sr_x + sr_width }
-        set { sr_x = newValue - sr_width }
-    }
-}
-
 public extension UIView {
-    /// firstViewController
-    var firstViewController: UIViewController? {
-        get {
-            for view in sequence(first: self.superview, next: { $0?.superview }) {
-                if let responder = view?.next, responder.isKind(of: UIViewController.self) {
-                    return responder as? UIViewController
-                }
-            }
-            return nil
-        }
-    }
     
     /// round
     public func round(byRoundingCorners: UIRectCorner = UIRectCorner.allCorners, cornerRadi: CGFloat) {
@@ -83,6 +22,18 @@ public extension UIView {
             self.layer.mask = shapeLayer
             self.layer.masksToBounds = true
             return
+        }
+    }
+    
+    /// firstViewController
+    var firstViewController: UIViewController? {
+        get {
+            for view in sequence(first: self.superview, next: { $0?.superview }) {
+                if let responder = view?.next, responder.isKind(of: UIViewController.self) {
+                    return responder as? UIViewController
+                }
+            }
+            return nil
         }
     }
     
