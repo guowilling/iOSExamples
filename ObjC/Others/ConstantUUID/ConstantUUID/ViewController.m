@@ -26,7 +26,7 @@
         [SAMKeychain setPassword:UUID forService:@"UUID" account:@"SR"];
         [SAMKeychain setAccessibilityType:kSecAttrAccessibleAlwaysThisDeviceOnly];
         NSLog(@"init UUID: %@", UUID);
-    }else{
+    } else {
         NSLog(@"constant UUID: %@", UUID);
     }
     self.label.text = UUID;
