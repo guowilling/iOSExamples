@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19C4CAB821AF8A4A008003E6 /* NSObject+SRExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C4CAB721AF8A4A008003E6 /* NSObject+SRExtension.swift */; };
+		19C4CABA21AF8A66008003E6 /* UIColor+SRExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C4CAB921AF8A66008003E6 /* UIColor+SRExtension.swift */; };
+		19C4CABC21AF8D9F008003E6 /* UIView+SRInterfaceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C4CABB21AF8D9F008003E6 /* UIView+SRInterfaceBuilder.swift */; };
 		6837B3FA215E15AF0016B3E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837B3F9215E15AF0016B3E4 /* AppDelegate.swift */; };
 		6837B3FC215E15AF0016B3E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837B3FB215E15AF0016B3E4 /* ViewController.swift */; };
 		6837B3FF215E15AF0016B3E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6837B3FD215E15AF0016B3E4 /* Main.storyboard */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19C4CAB721AF8A4A008003E6 /* NSObject+SRExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+SRExtension.swift"; sourceTree = "<group>"; };
+		19C4CAB921AF8A66008003E6 /* UIColor+SRExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+SRExtension.swift"; sourceTree = "<group>"; };
+		19C4CABB21AF8D9F008003E6 /* UIView+SRInterfaceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SRInterfaceBuilder.swift"; sourceTree = "<group>"; };
 		6837B3F6215E15AF0016B3E4 /* SRSwiftyExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRSwiftyExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6837B3F9215E15AF0016B3E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6837B3FB215E15AF0016B3E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +89,9 @@
 				6EC5005F2189FF87005D5FF0 /* CGRect+SRExtension.swift */,
 				6EC500612189FFB4005D5FF0 /* UIScreen+SRExtension.swift */,
 				6EC500632189FFD6005D5FF0 /* UIDevice+SRExtension.swift */,
+				19C4CAB721AF8A4A008003E6 /* NSObject+SRExtension.swift */,
+				19C4CAB921AF8A66008003E6 /* UIColor+SRExtension.swift */,
+				19C4CABB21AF8D9F008003E6 /* UIView+SRInterfaceBuilder.swift */,
 			);
 			path = SRSwiftyExtension;
 			sourceTree = "<group>";
@@ -159,7 +168,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EC500642189FFD6005D5FF0 /* UIDevice+SRExtension.swift in Sources */,
+				19C4CABA21AF8A66008003E6 /* UIColor+SRExtension.swift in Sources */,
 				6EC500602189FF87005D5FF0 /* CGRect+SRExtension.swift in Sources */,
+				19C4CABC21AF8D9F008003E6 /* UIView+SRInterfaceBuilder.swift in Sources */,
+				19C4CAB821AF8A4A008003E6 /* NSObject+SRExtension.swift in Sources */,
 				6EC5005E2189FF4F005D5FF0 /* UIView+SRFrame.swift in Sources */,
 				6837B3FC215E15AF0016B3E4 /* ViewController.swift in Sources */,
 				6837B40D215E163B0016B3E4 /* UIView+SRExtension.swift in Sources */,

@@ -22,23 +22,22 @@
     
 //    [self testDispatch_group_enter]; // OK
     
-    [self testDispatch_semaphore]; // OK
+//    [self testDispatch_semaphore]; // OK
 }
 
 - (void)testDispatch_group_async {
-    NSURLSession *session = [NSURLSession sharedSession];
-    dispatch_queue_t dispatchQueue = dispatch_queue_create("test.dispatch_group_async", DISPATCH_QUEUE_CONCURRENT);
     dispatch_group_t dispatchGroup = dispatch_group_create();
+    dispatch_queue_t dispatchQueue = dispatch_queue_create("test.dispatch_group_async", DISPATCH_QUEUE_CONCURRENT);
     
     dispatch_group_async(dispatchGroup, dispatchQueue, ^(){
-        NSURLSessionDataTask *task = [session dataTaskWithURL:[NSURL URLWithString:@"https://www.baidu.com"] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:@"https://www.baidu.com"] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
             NSLog(@"https://www.baidu.com response");
         }];
         [task resume];
     });
     
     dispatch_group_async(dispatchGroup, dispatchQueue, ^(){
-        NSURLSessionDataTask *task = [session dataTaskWithURL:[NSURL URLWithString:@"https://www.google.com"] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:@"https://www.google.com"] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
             NSLog(@"https://www.google.com response");
         }];
         [task resume];
@@ -50,56 +49,66 @@
 }
 
 - (void)testDispatch_group_enter {
-    NSURLSession *session = [NSURLSession sharedSession];
     dispatch_group_t dispatchGroup = dispatch_group_create();
-    dispatch_group_enter(dispatchGroup);
+    
     {
-        NSURLSessionDataTask *task = [session dataTaskWithURL:[NSURL URLWithString:@"https://www.sogou.com"] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        dispatch_group_enter(dispatchGroup);
+        NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:@"https://www.sogou.com"] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
             NSLog(@"https://www.sogou.com response");
             dispatch_group_leave(dispatchGroup);
         }];
         [task resume];
     }
+    
     {
         dispatch_group_enter(dispatchGroup);
-        NSURLSessionDataTask *task = [session dataTaskWithURL:[NSURL URLWithString:@"https://www.baidu.com"] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:@"https://www.baidu.com"] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
             NSLog(@"https://www.baidu.com response");
             dispatch_group_leave(dispatchGroup);
         }];
         [task resume];
     }
+    
     dispatch_group_notify(dispatchGroup, dispatch_get_main_queue(), ^(){
         NSLog(@"dispatch_group_notify");
     });
 }
 
 - (void)testDispatch_semaphore {
-    NSURLSession *session = [NSURLSession sharedSession];
     dispatch_group_t group = dispatch_group_create();
-    dispatch_queue_t globalQueue = dispatch_get_global_queue(0, 0);
     
-    dispatch_group_async(group, globalQueue, ^{
+    dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
         dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-        NSURLSessionDataTask *task = [session dataTaskWithURL:[NSURL URLWithString:@"https://www.baidu.com"] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-            NSLog(@"https://www.baidu.com response");
+        NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:@"https://www.baidu.com"] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            NSLog(@"response https://www.baidu.com");
             dispatch_semaphore_signal(semaphore);
         }];
         [task resume];
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     });
     
-    dispatch_group_async(group, globalQueue, ^{
+    dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
         dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-        NSURLSessionDataTask *task = [session dataTaskWithURL:[NSURL URLWithString:@"https://www.google.com"] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-            NSLog(@"https://www.google.com response");
+        NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:@"https://www.google.com"] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            NSLog(@"response https://www.google.com");
             dispatch_semaphore_signal(semaphore);
         }];
         [task resume];
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     });
     
-    dispatch_group_notify(group, dispatch_get_global_queue(0, 0), ^{
-        NSLog(@"dispatch_group_notify");
+    dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
+        dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+        NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:@"https://cn.bing.com"] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            NSLog(@"response https://cn.bing.com");
+            dispatch_semaphore_signal(semaphore);
+        }];
+        [task resume];
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    });
+    
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        NSLog(@"dispatch_group_notify called");
     });
 }
 
