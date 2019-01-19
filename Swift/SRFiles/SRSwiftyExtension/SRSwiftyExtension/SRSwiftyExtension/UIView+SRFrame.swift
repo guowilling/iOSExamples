@@ -2,7 +2,7 @@
 import UIKit
 
 extension UIView {
-    
+
     public var sr_x: CGFloat {
         get { return frame.origin.x }
         set { frame.origin.x = newValue }
