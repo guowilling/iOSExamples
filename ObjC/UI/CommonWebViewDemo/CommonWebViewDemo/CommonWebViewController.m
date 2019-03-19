@@ -69,7 +69,7 @@ static CGFloat const Navigation_Bar_HEIGHT = 64;
 
 - (UIProgressView*)loadingProgressView {
     if (!_loadingProgressView) {
-        _loadingProgressView = [[UIProgressView alloc]initWithFrame:CGRectMake(0,
+        _loadingProgressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0,
                                                                                Navigation_Bar_HEIGHT,
                                                                                self.view.bounds.size.width,
                                                                                2)];
