@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YuA-1n-P1h">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SRQRCode-->
+        <scene sceneID="eHw-xM-mvQ">
+            <objects>
+                <viewController id="kvw-24-O0w" customClass="ViewController" customModule="SRQRCodeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OPj-07-rH5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YqC-g4-MY2">
+                                <rect key="frame" x="137.5" y="183.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="cVh-lP-Xif"/>
+                                    <constraint firstAttribute="width" constant="100" id="xuG-ec-AdE"/>
+                                </constraints>
+                                <state key="normal" title="生成二维码">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="createQRCodeBtnAction:" destination="kvw-24-O0w" eventType="touchUpInside" id="2HQ-br-gCv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvE-6x-j4Z">
+                                <rect key="frame" x="149" y="368.5" width="77" height="30"/>
+                                <state key="normal" title="扫描二维码">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="scanQRCodeBtnAction:" destination="kvw-24-O0w" eventType="touchUpInside" id="4UT-nL-qgc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nvE-6x-j4Z" firstAttribute="centerY" secondItem="OPj-07-rH5" secondAttribute="centerY" constant="50" id="LZX-jE-BIN"/>
+                            <constraint firstItem="nvE-6x-j4Z" firstAttribute="centerX" secondItem="OPj-07-rH5" secondAttribute="centerX" id="YHz-pQ-vUy"/>
+                            <constraint firstItem="YqC-g4-MY2" firstAttribute="centerX" secondItem="OPj-07-rH5" secondAttribute="centerX" id="t8R-RT-wQT"/>
+                            <constraint firstItem="YqC-g4-MY2" firstAttribute="centerY" secondItem="OPj-07-rH5" secondAttribute="centerY" constant="-100" id="y10-pw-ZKN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sgh-Jr-qCe"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SRQRCode" id="P0k-th-sw6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uMI-1X-F3q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796" y="-210.04497751124438"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aGu-12-oPM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YuA-1n-P1h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OUY-Vc-0Ys">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kvw-24-O0w" kind="relationship" relationship="rootViewController" id="R7S-jg-H66"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bmm-W1-hjo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-143.19999999999999" y="-210.04497751124438"/>
+        </scene>
+    </scenes>
+</document>
