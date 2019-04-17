@@ -19,20 +19,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    UIScrollView *scrollView = [[UIScrollView alloc] init];
-    [self.view addSubview:scrollView];
-    [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
-    
-    UIView *containerView = [[UIView alloc] init];
-    containerView.backgroundColor = [UIColor orangeColor];
-    [scrollView addSubview:containerView];
-    [containerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(scrollView); // 四周和 scrollView 一致
-        make.size.mas_equalTo(CGSizeMake([UIScreen mainScreen].bounds.size.width, 1000)); // 通过宽高设置 contentSize
-    }];
-    // 之后的控件全部添加到 containerView 上即可.
+//    UIScrollView *scrollView = [[UIScrollView alloc] init];
+//    [self.view addSubview:scrollView];
+//    [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(self.view);
+//    }];
+//
+//    UIView *containerView = [[UIView alloc] init];
+//    containerView.backgroundColor = [UIColor orangeColor];
+//    [scrollView addSubview:containerView];
+//    [containerView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(scrollView); // 四周和 scrollView 一致
+//        make.size.mas_equalTo(CGSizeMake([UIScreen mainScreen].bounds.size.width, 1000)); // 通过宽高设置 contentSize
+//    }];
+//    // 之后的控件全部添加到 containerView 上即可.
 }
 
 
