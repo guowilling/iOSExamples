@@ -3,15 +3,15 @@ import UIKit
 
 public extension UIScreen {
     
-    public class var sr_size: CGSize {
+    class var sr_size: CGSize {
         return UIScreen.main.bounds.size
     }
     
-    public class var sr_width: CGFloat {
+    class var sr_width: CGFloat {
         return sr_size.width
     }
     
-    public class var sr_height: CGFloat {
+    class var sr_height: CGFloat {
         return sr_size.height
     }
     

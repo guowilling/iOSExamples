@@ -4,11 +4,11 @@ import UIKit
 public extension UIView {
     
     /// round
-    public func round(byRoundingCorners: UIRectCorner = UIRectCorner.allCorners, cornerRadi: CGFloat) {
+    func round(byRoundingCorners: UIRectCorner = UIRectCorner.allCorners, cornerRadi: CGFloat) {
         self.round(byRoundingCorners: byRoundingCorners, cornerRadii: CGSize(width: cornerRadi, height: cornerRadi))
     }
     
-    public func round(byRoundingCorners: UIRectCorner = UIRectCorner.allCorners, cornerRadii: CGSize) {
+    func round(byRoundingCorners: UIRectCorner = UIRectCorner.allCorners, cornerRadii: CGSize) {
         guard let maskLayer = self.layer.mask else {
             let rect = self.bounds
             let bezierPath = UIBezierPath(roundedRect: rect,
@@ -38,11 +38,11 @@ public extension UIView {
     }
     
     /// snapshot
-    public var snapshotImage: UIImage? {
+    var snapshotImage: UIImage? {
         return snapshot()
     }
     
-    public func snapshot(rect: CGRect = CGRect.zero, scale: CGFloat = UIScreen.main.scale) -> UIImage? {
+    func snapshot(rect: CGRect = CGRect.zero, scale: CGFloat = UIScreen.main.scale) -> UIImage? {
         var snapRect = rect
         if __CGSizeEqualToSize(rect.size, CGSize.zero) {
             snapRect = calculateSnapshotRect()

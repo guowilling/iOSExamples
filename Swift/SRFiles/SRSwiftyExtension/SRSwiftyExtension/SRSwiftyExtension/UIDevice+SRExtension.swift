@@ -1,7 +1,7 @@
 
 import UIKit
 
-public extension UIDevice {
+extension UIDevice {
     
     /// 是否是 iPhone
     public class var isIphone: Bool {
