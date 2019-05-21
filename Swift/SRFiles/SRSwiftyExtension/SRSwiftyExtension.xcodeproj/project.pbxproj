@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19AD107B228970B4002AAC8A /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD107A228970B4002AAC8A /* Collection+Extension.swift */; };
+		19AD107D22897400002AAC8A /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD107C22897400002AAC8A /* UserDefaults+Extension.swift */; };
+		19AD107F228977E1002AAC8A /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD107E228977E1002AAC8A /* Common.swift */; };
 		19C4CAB821AF8A4A008003E6 /* NSObject+SRExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C4CAB721AF8A4A008003E6 /* NSObject+SRExtension.swift */; };
 		19C4CABA21AF8A66008003E6 /* UIColor+SRExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C4CAB921AF8A66008003E6 /* UIColor+SRExtension.swift */; };
 		19C4CABC21AF8D9F008003E6 /* UIView+SRInterfaceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C4CABB21AF8D9F008003E6 /* UIView+SRInterfaceBuilder.swift */; };
@@ -14,7 +17,6 @@
 		19C9E9B821F327A500C57BBB /* Date+SRExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C9E9B721F327A500C57BBB /* Date+SRExtension.swift */; };
 		19CDE39422718A2F00F5B66D /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CDE39322718A2F00F5B66D /* Haptics.swift */; };
 		19F7174E226EC1C4002263CD /* Collection+SRExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F7174D226EC1C4002263CD /* Collection+SRExtension.swift */; };
-		19F71750226F0D1F002263CD /* Array+SRExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F7174F226F0D1F002263CD /* Array+SRExtension.swift */; };
 		19F71752226F0E5A002263CD /* UITextField+SRExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F71751226F0E5A002263CD /* UITextField+SRExtension.swift */; };
 		19F71754226F1797002263CD /* CommonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F71753226F1797002263CD /* CommonProtocol.swift */; };
 		6837B3FA215E15AF0016B3E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837B3F9215E15AF0016B3E4 /* AppDelegate.swift */; };
@@ -30,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19AD107A228970B4002AAC8A /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		19AD107C22897400002AAC8A /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		19AD107E228977E1002AAC8A /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		19C4CAB721AF8A4A008003E6 /* NSObject+SRExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+SRExtension.swift"; sourceTree = "<group>"; };
 		19C4CAB921AF8A66008003E6 /* UIColor+SRExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+SRExtension.swift"; sourceTree = "<group>"; };
 		19C4CABB21AF8D9F008003E6 /* UIView+SRInterfaceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SRInterfaceBuilder.swift"; sourceTree = "<group>"; };
@@ -37,7 +42,6 @@
 		19C9E9B721F327A500C57BBB /* Date+SRExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+SRExtension.swift"; sourceTree = "<group>"; };
 		19CDE39322718A2F00F5B66D /* Haptics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		19F7174D226EC1C4002263CD /* Collection+SRExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SRExtension.swift"; sourceTree = "<group>"; };
-		19F7174F226F0D1F002263CD /* Array+SRExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+SRExtension.swift"; sourceTree = "<group>"; };
 		19F71751226F0E5A002263CD /* UITextField+SRExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SRExtension.swift"; sourceTree = "<group>"; };
 		19F71753226F1797002263CD /* CommonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonProtocol.swift; sourceTree = "<group>"; };
 		6837B3F6215E15AF0016B3E4 /* SRSwiftyExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRSwiftyExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,10 +113,12 @@
 				19C9E9B521F326CB00C57BBB /* UIimage+SRExtension.swift */,
 				19C9E9B721F327A500C57BBB /* Date+SRExtension.swift */,
 				19F7174D226EC1C4002263CD /* Collection+SRExtension.swift */,
-				19F7174F226F0D1F002263CD /* Array+SRExtension.swift */,
 				19F71751226F0E5A002263CD /* UITextField+SRExtension.swift */,
 				19F71753226F1797002263CD /* CommonProtocol.swift */,
+				19AD107A228970B4002AAC8A /* Collection+Extension.swift */,
+				19AD107C22897400002AAC8A /* UserDefaults+Extension.swift */,
 				19CDE39322718A2F00F5B66D /* Haptics.swift */,
+				19AD107E228977E1002AAC8A /* Common.swift */,
 			);
 			path = SRSwiftyExtension;
 			sourceTree = "<group>";
@@ -188,13 +194,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19F71750226F0D1F002263CD /* Array+SRExtension.swift in Sources */,
 				6EC500642189FFD6005D5FF0 /* UIDevice+SRExtension.swift in Sources */,
 				19CDE39422718A2F00F5B66D /* Haptics.swift in Sources */,
 				19F71752226F0E5A002263CD /* UITextField+SRExtension.swift in Sources */,
 				19C9E9B821F327A500C57BBB /* Date+SRExtension.swift in Sources */,
 				19C4CABA21AF8A66008003E6 /* UIColor+SRExtension.swift in Sources */,
 				6EC500602189FF87005D5FF0 /* CGRect+SRExtension.swift in Sources */,
+				19AD107B228970B4002AAC8A /* Collection+Extension.swift in Sources */,
 				19C4CABC21AF8D9F008003E6 /* UIView+SRInterfaceBuilder.swift in Sources */,
 				19C4CAB821AF8A4A008003E6 /* NSObject+SRExtension.swift in Sources */,
 				6EC5005E2189FF4F005D5FF0 /* UIView+SRFrame.swift in Sources */,
@@ -203,7 +209,9 @@
 				19F7174E226EC1C4002263CD /* Collection+SRExtension.swift in Sources */,
 				19F71754226F1797002263CD /* CommonProtocol.swift in Sources */,
 				6EC500622189FFB4005D5FF0 /* UIScreen+SRExtension.swift in Sources */,
+				19AD107F228977E1002AAC8A /* Common.swift in Sources */,
 				19C9E9B621F326CB00C57BBB /* UIimage+SRExtension.swift in Sources */,
+				19AD107D22897400002AAC8A /* UserDefaults+Extension.swift in Sources */,
 				6837B3FA215E15AF0016B3E4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
