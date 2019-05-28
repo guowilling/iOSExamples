@@ -75,4 +75,14 @@ public extension UIView {
         layer.shadowColor = color.cgColor
         layer.masksToBounds = false
     }
+    
+    /**
+     * Show a single shadow around the border of the view.
+     */
+    func setShadowBorder(shadowColor: CGColor = UIColor.black.cgColor, shadowRadious: CGFloat = 5) {
+        self.layer.shadowColor = shadowColor
+        self.layer.shadowOffset = .zero
+        self.layer.shadowRadius = shadowRadious
+        self.layer.shadowOpacity = 0.5
+    }
 }

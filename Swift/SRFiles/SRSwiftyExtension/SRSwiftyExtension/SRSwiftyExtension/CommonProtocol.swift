@@ -36,3 +36,15 @@ extension AlertPresentable where Self: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
 }
+
+protocol Reuseable {
+    
+    static var reuseIdentifier: String { get }
+}
+
+extension Reuseable where Self: UIView {
+    
+    static var reuseIdentifier: String {
+        return String(describing: self)
+    }
+}

@@ -42,4 +42,11 @@ extension UIView {
         get { return sr_x + sr_width }
         set { sr_x = newValue - sr_width }
     }
+    
+    /**
+     * Frame of the view relative to the app window.
+     */
+    var absoluteFrame: CGRect? {
+        return self.superview?.convert(self.frame, to: nil)
+    }
 }
